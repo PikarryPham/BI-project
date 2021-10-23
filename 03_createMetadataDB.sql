@@ -26,3 +26,11 @@ CREATE TABLE Metadata_Table (
 	LSET DATETIME,
 	CET DATETIME
 );
+-- TRUNCATE TABLE Metadata_Table;
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('Postcodes','1900-01-01',NULL);
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('UK_Area_Information','1900-01-01',NULL);
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('Vehicles2011_2014','1900-01-01',NULL);
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('Casualties2011_2014','1900-01-01',NULL);
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('Accidents2011_2014','1900-01-01',NULL);
+
+SELECT * FROM Metadata_Table;
