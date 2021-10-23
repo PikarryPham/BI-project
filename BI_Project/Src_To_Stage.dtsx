@@ -11,11 +11,23 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{57401B5A-13E8-4645-A82E-6CA0162D1F09}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{8133EF52-11B6-4011-810F-8CFD88B613C2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+      DTS:ObjectName="DESKTOP-ED2S73F\TRANGPHAM.QLBI_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
       DTS:CreationName="OLEDB"
@@ -41,7 +53,26 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{61CBB9FC-C5F0-42CE-BABE-D0F78A39D0DC}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETValue">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5AE4ABF8-6D4D-4B3A-BB2A-9A70F5069F3C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET_Result">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
@@ -82,7 +113,8 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM Postcodes
+WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND updatedate &lt; ?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -99,11 +131,11 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
+                  name="ParameterMapping">"Parameter0:Input",{5AE4ABF8-6D4D-4B3A-BB2A-9A70F5069F3C};"Parameter1:Input",{61CBB9FC-C5F0-42CE-BABE-D0F78A39D0DC};"Parameter2:Input",{5AE4ABF8-6D4D-4B3A-BB2A-9A70F5069F3C};"Parameter3:Input",{61CBB9FC-C5F0-42CE-BABE-D0F78A39D0DC};</property>
               </properties>
               <connections>
                 <connection
@@ -658,33 +690,45 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\get LSET for Postcodes flow"
+      DTS:refId="Package\Get LSET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{AFC608D6-CB84-4C5E-AC46-87570B1CB159}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="get LSET for Postcodes flow"
+      DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Postcodes'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET_Result" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CETValue" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Set CET for Postcode"
+      DTS:refId="Package\Set CET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{D0A7E879-5C15-41ED-8756-34450061318D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Set CET for Postcode"
+      DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;SET CET = GETDATE()&#xA;WHERE Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -699,7 +743,9 @@
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -714,7 +760,9 @@
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
+          SQLTask:SqlStatementSource="truncate table Postcodes_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -723,7 +771,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{807F6CAA-EB23-4C61-9211-051E23286512}"
-      DTS:From="Package\Set CET for Postcode"
+      DTS:From="Package\Set CET to Metadata"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Truncate stage Postcodes_Stage table" />
@@ -734,12 +782,12 @@
       DTS:From="Package\Truncate stage Postcodes_Stage table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\get LSET for Postcodes flow" />
+      DTS:To="Package\Get LSET to Metadata" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{BC35FF38-3058-412E-8A93-C673B963E5E2}"
-      DTS:From="Package\get LSET for Postcodes flow"
+      DTS:From="Package\Get LSET to Metadata"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Data Flow Task" />
@@ -766,7 +814,7 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="162.4,41.6"
-          Id="Package\Set CET for Postcode"
+          Id="Package\Set CET to Metadata"
           TopLeft="66.4285725598432,102.470589672405" />
         <NodeLayout
           Size="258.4,41.6"
@@ -774,18 +822,30 @@
           TopLeft="66.4285725598433,193.470590948646" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="150.028572559843,144.070589672405">
+          TopLeft="147.628572559843,144.070589672405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49.4000012762406"
+              EndConnector="48.0000000000001,49.4000012762406"
               Start="0,0"
-              End="0,41.9000012762406">
+              End="48.0000000000001,41.9000012762406">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.9000012762406" />
+                    End="0,20.7000006381203" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7000006381203"
+                    Point2="0,24.7000006381203"
+                    Point3="4,24.7000006381203" />
+                  <mssgle:LineSegment
+                    End="44.0000000000001,24.7000006381203" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.0000000000001,24.7000006381203"
+                    Point2="48.0000000000001,24.7000006381203"
+                    Point3="48.0000000000001,28.7000006381203" />
+                  <mssgle:LineSegment
+                    End="48.0000000000001,41.9000012762406" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -796,34 +856,34 @@
         </EdgeLayout>
         <NodeLayout
           Size="209.6,41.6"
-          Id="Package\get LSET for Postcodes flow"
-          TopLeft="70.7142869185429,277.588239187188" />
+          Id="Package\Get LSET to Metadata"
+          TopLeft="70.7142869185429,276.82353329411" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="195.628572559843,235.070590948646">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-20.1142856413004,42.517648238542"
+              EndConnector="-20.1142856413004,41.7529423454644"
               Start="0,0"
-              End="-20.1142856413004,35.017648238542">
+              End="-20.1142856413004,34.2529423454644">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.258824119271" />
+                    End="0,16.8764711727322" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.258824119271"
-                    Point2="0,21.258824119271"
-                    Point3="-4,21.258824119271" />
+                    Point1="0,16.8764711727322"
+                    Point2="0,20.8764711727322"
+                    Point3="-4,20.8764711727322" />
                   <mssgle:LineSegment
-                    End="-16.1142856413004,21.258824119271" />
+                    End="-16.1142856413004,20.8764711727322" />
                   <mssgle:CubicBezierSegment
-                    Point1="-16.1142856413004,21.258824119271"
-                    Point2="-20.1142856413004,21.258824119271"
-                    Point3="-20.1142856413004,25.258824119271" />
+                    Point1="-16.1142856413004,20.8764711727322"
+                    Point2="-20.1142856413004,20.8764711727322"
+                    Point3="-20.1142856413004,24.8764711727322" />
                   <mssgle:LineSegment
-                    End="-20.1142856413004,35.017648238542" />
+                    End="-20.1142856413004,34.2529423454644" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -838,30 +898,30 @@
           TopLeft="85.7142871739913,380.058828859593" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="175.514286918543,319.188239187188">
+          TopLeft="175.514286918543,318.42353329411">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.5999997445516,60.8705896724051"
+              EndConnector="-14.5999997445516,61.6352955654828"
               Start="0,0"
-              End="-14.5999997445516,53.3705896724051">
+              End="-14.5999997445516,54.1352955654828">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.4352948362026" />
+                    End="0,26.8176477827414" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.4352948362026"
-                    Point2="0,30.4352948362026"
-                    Point3="-4,30.4352948362026" />
+                    Point1="0,26.8176477827414"
+                    Point2="0,30.8176477827414"
+                    Point3="-4,30.8176477827414" />
                   <mssgle:LineSegment
-                    End="-10.5999997445516,30.4352948362026" />
+                    End="-10.5999997445516,30.8176477827414" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10.5999997445516,30.4352948362026"
-                    Point2="-14.5999997445516,30.4352948362026"
-                    Point3="-14.5999997445516,34.4352948362026" />
+                    Point1="-10.5999997445516,30.8176477827414"
+                    Point2="-14.5999997445516,30.8176477827414"
+                    Point3="-14.5999997445516,34.8176477827414" />
                   <mssgle:LineSegment
-                    End="-14.5999997445516,53.3705896724051" />
+                    End="-14.5999997445516,54.1352955654828" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -905,7 +965,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
+          Size="145.6,41.6"
           Id="Package\Data Flow Task\Src_Postcodes"
           TopLeft="310.000005279269,127.705884143968" />
         <NodeLayout
@@ -914,7 +974,7 @@
           TopLeft="302.142862288319,234.764709174839" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="382.871433783794,169.305884143968">
+          TopLeft="381.871433783794,169.305884143968">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
