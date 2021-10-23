@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{F8ABEA89-C252-4E2C-A5C6-F14CD0BE1620}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{5B97686D-58B7-496B-BFBE-38E0AF32EF05}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -251,8 +251,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Src_Postcodes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -586,7 +586,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
+                  name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -599,8 +599,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Stage_Postcodes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -861,8 +861,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1179,8 +1179,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1693,8 +1693,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1903,8 +1903,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2164,11 +2164,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Postcodes'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -2193,8 +2193,8 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
-          SQLTask:SqlStatementSource="SELECT LSET, CET FROM Metadata_Table"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Accidents2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
@@ -2214,12 +2214,12 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
-          SQLTask:SqlStatementSource=" SELECT LSET, CET FROM Metadata_Table"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Vehicles2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
@@ -2239,11 +2239,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;SET CET = GETDATE()&#xA;WHERE Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2260,7 +2260,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource=" UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2273,11 +2273,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2294,7 +2294,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2307,11 +2307,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2324,11 +2324,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2345,7 +2345,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table Accidents2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2358,11 +2358,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table Postcodes_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2375,11 +2375,11 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource=" truncate table Vehicles2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2495,25 +2495,65 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
+          Size="152.8,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="85.7142871739913,380.058828859593" />
+          TopLeft="85.7142871739913,380.823534752671" />
         <NodeLayout
-          Size="209.666666666667,41.6666666666667"
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task 1"
+          TopLeft="455.666666666667,378.243248201444" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task 2"
+          TopLeft="829.047619047619,382.278001534595" />
+        <NodeLayout
+          Size="209.6,41.6"
           Id="Package\Get LSET to Metadata"
           TopLeft="70.7142869185429,276.82353329411" />
         <NodeLayout
-          Size="162.333333333334,41.6666666666667"
+          Size="240,41.6"
+          Id="Package\Get LSET to Metadata - Accidents"
+          TopLeft="418.952380952381,288.323042413198" />
+        <NodeLayout
+          Size="234.4,41.6"
+          Id="Package\Get LSET to Metadata - Vehicles"
+          TopLeft="799.523809523809,276.563717256344" />
+        <NodeLayout
+          Size="162.4,41.6"
           Id="Package\Set CET to Metadata"
           TopLeft="66.4285725598432,102.470589672405" />
         <NodeLayout
-          Size="162.333333333334,41.6666666666667"
+          Size="233.6,41.6"
+          Id="Package\Set CET to Metadata - Accidents"
+          TopLeft="402.333333333333,99.4954981308133" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Set CET to Metadata - Vehicles"
+          TopLeft="791.904761904762,96.9498093173237" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Set LSET for Accidents"
+          TopLeft="413,460.567573775507" />
+        <NodeLayout
+          Size="162.4,41.6"
           Id="Package\Set LSET for Postcode"
           TopLeft="75.0000012772424,472.588241921989" />
         <NodeLayout
-          Size="258.333333333334,41.6666666666667"
+          Size="183.2,41.6"
+          Id="Package\Set LSET for Vehicles"
+          TopLeft="828.571428571429,458.571440777724" />
+        <NodeLayout
+          Size="259.2,41.6"
+          Id="Package\Truncate stage Accidents_Stage table"
+          TopLeft="400.666666666667,194.774780385013" />
+        <NodeLayout
+          Size="258.4,41.6"
           Id="Package\Truncate stage Postcodes_Stage table"
           TopLeft="66.4285725598433,193.470590948646" />
+        <NodeLayout
+          Size="252.8,41.6"
+          Id="Package\Truncate stage Vehicles_Stage table"
+          TopLeft="807.619047619048,188.803094721881" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="147.628572559843,144.070589672405">
@@ -2583,290 +2623,6 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="175.547620251876,318.490199960777">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13.3333330778849,61.5686288988163"
-              Start="0,0"
-              End="-13.3333330778849,54.0686288988163">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.7843144494082" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.7843144494082"
-                    Point2="0,30.7843144494082"
-                    Point3="-4,30.7843144494082" />
-                  <mssgle:LineSegment
-                    End="-9.33333307788493,30.7843144494082" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.33333307788493,30.7843144494082"
-                    Point2="-13.3333330778849,30.7843144494082"
-                    Point3="-13.3333330778849,34.7843144494082" />
-                  <mssgle:LineSegment
-                    End="-13.3333330778849,54.0686288988163" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="159.19047755895,422.058828859593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.529413062396"
-              Start="0,0"
-              End="0,43.029413062396">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.029413062396" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="233.666666666667,42"
-          Id="Package\Set CET to Metadata - Accidents"
-          TopLeft="402.333333333333,99.4954981308133" />
-        <NodeLayout
-          Size="259,42"
-          Id="Package\Truncate stage Accidents_Stage table"
-          TopLeft="400.666666666667,194.774780385013" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="519.166666666667,141.495498130813">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11,53.2792822541999"
-              Start="0,0"
-              End="11,45.7792822541999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.6396411270999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.6396411270999"
-                    Point2="0,26.6396411270999"
-                    Point3="4,26.6396411270999" />
-                  <mssgle:LineSegment
-                    End="7,26.6396411270999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7,26.6396411270999"
-                    Point2="11,26.6396411270999"
-                    Point3="11,30.6396411270999" />
-                  <mssgle:LineSegment
-                    End="11,45.7792822541999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="240.333333333334,42"
-          Id="Package\Get LSET to Metadata - Accidents"
-          TopLeft="418.952380952381,288.323042413198" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="530.166666666667,236.774780385013">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.95238095238085,51.5482620281852"
-              Start="0,0"
-              End="8.95238095238085,44.0482620281852">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.7741310140926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.7741310140926"
-                    Point2="0,25.7741310140926"
-                    Point3="4,25.7741310140926" />
-                  <mssgle:LineSegment
-                    End="4.95238095238085,25.7741310140926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.95238095238085,25.7741310140926"
-                    Point2="8.95238095238085,25.7741310140926"
-                    Point3="8.95238095238085,29.7741310140926" />
-                  <mssgle:LineSegment
-                    End="8.95238095238085,44.0482620281852" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161.666666666667,42"
-          Id="Package\Data Flow Task 1"
-          TopLeft="455.666666666667,378.243248201444" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="537.809523809524,330.323042413198">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.9202057882459"
-              Start="0,0"
-              End="0,40.4202057882459">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.4202057882459" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Set LSET for Accidents"
-          TopLeft="413,460.567573775507" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="536.5,420.243248201444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-29.0000000000002,40.3243255740626"
-              Start="0,0"
-              End="-29.0000000000002,32.8243255740626">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.1621627870313" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.1621627870313"
-                    Point2="0,20.1621627870313"
-                    Point3="-4,20.1621627870313" />
-                  <mssgle:LineSegment
-                    End="-25.0000000000002,20.1621627870313" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-25.0000000000002,20.1621627870313"
-                    Point2="-29.0000000000002,20.1621627870313"
-                    Point3="-29.0000000000002,24.1621627870313" />
-                  <mssgle:LineSegment
-                    End="-29.0000000000002,32.8243255740626" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="228,42"
-          Id="Package\Set CET to Metadata - Vehicles"
-          TopLeft="791.904761904762,96.9498093173237" />
-        <NodeLayout
-          Size="253,42"
-          Id="Package\Truncate stage Vehicles_Stage table"
-          TopLeft="807.619047619048,188.803094721881" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="905.904761904762,138.949809317324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28.2142857142857,49.853285404557"
-              Start="0,0"
-              End="28.2142857142857,42.353285404557">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.9266427022785" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.9266427022785"
-                    Point2="0,24.9266427022785"
-                    Point3="4,24.9266427022785" />
-                  <mssgle:LineSegment
-                    End="24.2142857142857,24.9266427022785" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.2142857142857,24.9266427022785"
-                    Point2="28.2142857142857,24.9266427022785"
-                    Point3="28.2142857142857,28.9266427022785" />
-                  <mssgle:LineSegment
-                    End="28.2142857142857,42.353285404557" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="234.333333333334,42"
-          Id="Package\Get LSET to Metadata - Vehicles"
-          TopLeft="799.523809523809,276.563717256344" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="934.119047619048,230.803094721881">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.4285714285717,45.760622534463"
-              Start="0,0"
-              End="-17.4285714285717,38.260622534463">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.8803112672315" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.8803112672315"
-                    Point2="0,22.8803112672315"
-                    Point3="-4,22.8803112672315" />
-                  <mssgle:LineSegment
-                    End="-13.4285714285717,22.8803112672315" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.4285714285717,22.8803112672315"
-                    Point2="-17.4285714285717,22.8803112672315"
-                    Point3="-17.4285714285717,26.8803112672315" />
-                  <mssgle:LineSegment
-                    End="-17.4285714285717,38.260622534463" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161.666666666667,42"
-          Id="Package\Data Flow Task 2"
-          TopLeft="829.047619047619,382.278001534595" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
           TopLeft="913.285714285714,318.563717256344">
           <EdgeLayout.Curve>
@@ -2888,10 +2644,6 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="183,42"
-          Id="Package\Set LSET for Vehicles"
-          TopLeft="828.571428571429,458.571440777724" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
           TopLeft="909.880952380952,424.278001534595">
@@ -2926,6 +2678,254 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="175.514286918543,318.42353329411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.3999997445516,62.4000014585607"
+              Start="0,0"
+              End="-13.3999997445516,54.9000014585607">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2000007292803" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2000007292803"
+                    Point2="0,31.2000007292803"
+                    Point3="-4,31.2000007292803" />
+                  <mssgle:LineSegment
+                    End="-9.39999974455159,31.2000007292803" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.39999974455159,31.2000007292803"
+                    Point2="-13.3999997445516,31.2000007292803"
+                    Point3="-13.3999997445516,35.2000007292803" />
+                  <mssgle:LineSegment
+                    End="-13.3999997445516,54.9000014585607" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="159.157144225617,422.423534752671">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.1647071693183"
+              Start="0,0"
+              End="0,42.6647071693183">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.6647071693183" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="519.166666666667,141.495498130813">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,53.2792822541999"
+              Start="0,0"
+              End="11,45.7792822541999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6396411270999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6396411270999"
+                    Point2="0,26.6396411270999"
+                    Point3="4,26.6396411270999" />
+                  <mssgle:LineSegment
+                    End="7,26.6396411270999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,26.6396411270999"
+                    Point2="11,26.6396411270999"
+                    Point3="11,30.6396411270999" />
+                  <mssgle:LineSegment
+                    End="11,45.7792822541999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="530.166666666667,236.774780385013">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.95238095238085,51.5482620281852"
+              Start="0,0"
+              End="8.95238095238085,44.0482620281852">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.7741310140926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.7741310140926"
+                    Point2="0,25.7741310140926"
+                    Point3="4,25.7741310140926" />
+                  <mssgle:LineSegment
+                    End="4.95238095238085,25.7741310140926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.95238095238085,25.7741310140926"
+                    Point2="8.95238095238085,25.7741310140926"
+                    Point3="8.95238095238085,29.7741310140926" />
+                  <mssgle:LineSegment
+                    End="8.95238095238085,44.0482620281852" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="537.809523809524,330.323042413198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.9202057882459"
+              Start="0,0"
+              End="0,40.4202057882459">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.4202057882459" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="536.5,420.243248201444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-29.0000000000002,40.3243255740626"
+              Start="0,0"
+              End="-29.0000000000002,32.8243255740626">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.1621627870313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1621627870313"
+                    Point2="0,20.1621627870313"
+                    Point3="-4,20.1621627870313" />
+                  <mssgle:LineSegment
+                    End="-25.0000000000002,20.1621627870313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.0000000000002,20.1621627870313"
+                    Point2="-29.0000000000002,20.1621627870313"
+                    Point3="-29.0000000000002,24.1621627870313" />
+                  <mssgle:LineSegment
+                    End="-29.0000000000002,32.8243255740626" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="905.904761904762,138.949809317324">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.2142857142857,49.853285404557"
+              Start="0,0"
+              End="28.2142857142857,42.353285404557">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9266427022785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9266427022785"
+                    Point2="0,24.9266427022785"
+                    Point3="4,24.9266427022785" />
+                  <mssgle:LineSegment
+                    End="24.2142857142857,24.9266427022785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.2142857142857,24.9266427022785"
+                    Point2="28.2142857142857,24.9266427022785"
+                    Point3="28.2142857142857,28.9266427022785" />
+                  <mssgle:LineSegment
+                    End="28.2142857142857,42.353285404557" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="934.119047619048,230.803094721881">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.4285714285717,45.760622534463"
+              Start="0,0"
+              End="-17.4285714285717,38.260622534463">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8803112672315" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8803112672315"
+                    Point2="0,22.8803112672315"
+                    Point3="-4,22.8803112672315" />
+                  <mssgle:LineSegment
+                    End="-13.4285714285717,22.8803112672315" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.4285714285717,22.8803112672315"
+                    Point2="-17.4285714285717,22.8803112672315"
+                    Point3="-17.4285714285717,26.8803112672315" />
+                  <mssgle:LineSegment
+                    End="-17.4285714285717,38.260622534463" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2933,13 +2933,13 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.666666666667,41.6666666666667"
+          Size="145.6,41.6"
           Id="Package\Data Flow Task\Src_Postcodes"
           TopLeft="310.000005279269,127.705884143968" />
         <NodeLayout
-          Size="157.666666666667,41.6666666666667"
+          Size="157.6,41.6"
           Id="Package\Data Flow Task\Stage_Postcodes"
           TopLeft="302.142862288319,234.764709174839" />
         <EdgeLayout
@@ -2961,7 +2961,9 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2997,62 +2999,40 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
     design-time-name="Package\Data Flow Task 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.666666666667,42"
+          Size="154.4,41.6"
           Id="Package\Data Flow Task 1\OLE DB Source"
-          TopLeft="959,64" />
+          TopLeft="515,67" />
         <NodeLayout
-          Size="174.333333333334,42"
+          Size="174.4,41.6"
           Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="986,178" />
+          TopLeft="510,204" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-          TopLeft="1036.33333333333,106">
+          TopLeft="594.7,108.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="36.8333333333333,72"
+              EndConnector="0,95.4"
               Start="0,0"
-              End="36.8333333333333,64.5">
+              End="0,87.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="4,36" />
-                  <mssgle:LineSegment
-                    End="32.8333333333333,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.8333333333333,36"
-                    Point2="36.8333333333333,36"
-                    Point3="36.8333333333333,40" />
-                  <mssgle:LineSegment
-                    End="36.8333333333333,64.5" />
+                    End="0,87.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-12.1018294270834,41,61.0369921875,11.2431640625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 1\OLE DB Destination">
     <Properties>
@@ -3066,66 +3046,64 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 2">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="154.666666666667,42"
-          Id="Package\Data Flow Task 2\OLE DB Source"
-          TopLeft="1103,66" />
-        <NodeLayout
-          Size="174.333333333334,42"
-          Id="Package\Data Flow Task 2\OLE DB Destination"
-          TopLeft="1130,165" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 2.Paths[OLE DB Source Output]"
-          TopLeft="1180.33333333333,108">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.8333333333335,57"
-              Start="0,0"
-              End="36.8333333333335,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5"
-                    Point2="0,28.5"
-                    Point3="4,28.5" />
-                  <mssgle:LineSegment
-                    End="32.8333333333335,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.8333333333335,28.5"
-                    Point2="36.8333333333335,28.5"
-                    Point3="36.8333333333335,32.5" />
-                  <mssgle:LineSegment
-                    End="36.8333333333335,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-16.0978059895833,33.5,69.0289453125,11.2431640625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 2\OLE DB Source">
+    design-time-name="Package\Data Flow Task 1\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task 2\OLE DB Source"
+          TopLeft="649,73" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task 2\OLE DB Destination"
+          TopLeft="648,211" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 2.Paths[OLE DB Source Output]"
+          TopLeft="726.2,114.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,96.4000000000001"
+              Start="0,0"
+              End="9,88.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2"
+                    Point2="0,48.2"
+                    Point3="4,48.2" />
+                  <mssgle:LineSegment
+                    End="5,48.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,48.2"
+                    Point2="9,48.2"
+                    Point3="9,52.2" />
+                  <mssgle:LineSegment
+                    End="9,88.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 2\OLE DB Destination">
     <Properties>
@@ -3136,6 +3114,14 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 2\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
