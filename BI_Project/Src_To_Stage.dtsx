@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{5B97686D-58B7-496B-BFBE-38E0AF32EF05}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{35CB645A-10E1-4CD0-9282-132F284886AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -88,6 +88,54 @@
           DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+      DTS:ObjectName="LocalHost.QLBI_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_METADATA 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DBBC78AD-93BA-408D-A72A-44F78D9CBCBB}"
+      DTS:ObjectName="LocalHost.QLBI_METADATA 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_SOURCE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2B699FF6-DD9B-4E3D-8579-2019D821C592}"
+      DTS:ObjectName="LocalHost.QLBI_SOURCE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_SOURCE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{90BD6D82-18C9-482B-AC26-3FB96D71E5F7}"
+      DTS:ObjectName="LocalHost.QLBI_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -105,6 +153,24 @@
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CET_Accidents">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BBB30168-E46C-47BF-9310-8A1286D3719D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET_Casualties">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CECAAB0D-80AE-4564-9970-00162B99986C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CET_UK_Area_Information">
       <DTS:VariableValue
         DTS:DataType="7">1/1/1900</DTS:VariableValue>
     </DTS:Variable>
@@ -138,6 +204,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{ADB057FA-FB10-4797-94B0-382AEA4D6163}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{D60A44F9-8122-4A83-972D-878FE8771072}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -157,10 +233,28 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{9E3DE831-57F5-4115-8660-19F829E2A5E9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET_Casualties">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{5AE4ABF8-6D4D-4B3A-BB2A-9A70F5069F3C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSET_Result">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C01F6509-5769-4969-B4C6-503B9C666C0A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSET_UK_Area_Information">
       <DTS:VariableValue
         DTS:DataType="7">1/1/1900</DTS:VariableValue>
     </DTS:Variable>
@@ -189,6 +283,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{0AFDF7C2-908A-479D-AB95-D23B3A5CC29E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -792,6 +887,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Data Flow Task 1"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{D1C0ED3F-9071-4A25-96C4-63ECA8863BA3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1624,6 +1720,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Data Flow Task 2"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{1F6A6DA4-CEBF-43CE-A3AC-DEF91D8E4798}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2156,15 +2253,1444 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Data Flow Task 3"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{16e9b085-a6c9-46cf-b98a-f7688280428c}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 3\Src_Casualties"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Src_Casualties"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties2011_2014]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM Casualties2011_2014
+WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND updatedate &lt; ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{9E3DE831-57F5-4115-8660-19F829E2A5E9};"Parameter1:Input",{BBB30168-E46C-47BF-9310-8A1286D3719D};"Parameter2:Input",{9E3DE831-57F5-4115-8660-19F829E2A5E9};"Parameter3:Input",{BBB30168-E46C-47BF-9310-8A1286D3719D};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 3\Src_Casualties.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_SOURCE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Vehicle_Reference]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Reference]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Reference]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Reference]"
+                      name="Casualty_Reference"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Class]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Class]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Class]"
+                      name="Casualty_Class"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]"
+                      name="Age_Band_of_Casualty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Severity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Location]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Location]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Location]"
+                      name="Pedestrian_Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Movement]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Movement]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Movement]"
+                      name="Pedestrian_Movement"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Car_Passenger]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Car_Passenger]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Car_Passenger]"
+                      name="Car_Passenger"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Bus_or_Coach_Passenger]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Bus_or_Coach_Passenger]"
+                      name="Bus_or_Coach_Passenger"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Road_Maintenance_Worker]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Road_Maintenance_Worker]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Road_Maintenance_Worker]"
+                      name="Pedestrian_Road_Maintenance_Worker"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Type]"
+                      name="Casualty_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Home_Area_Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Home_Area_Type]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Home_Area_Type]"
+                      name="Casualty_Home_Area_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[createdate]"
+                      name="createdate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      name="updatedate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Vehicle_Reference]"
+                      dataType="i4"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Reference]"
+                      dataType="i4"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Class]"
+                      dataType="i4"
+                      name="Casualty_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i4"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Age_of_Casualty]"
+                      dataType="i4"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Severity]"
+                      dataType="i4"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Location]"
+                      dataType="i4"
+                      name="Pedestrian_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Movement]"
+                      dataType="i4"
+                      name="Pedestrian_Movement" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Car_Passenger]"
+                      dataType="i4"
+                      name="Car_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
+                      dataType="i4"
+                      name="Bus_or_Coach_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Road_Maintenance_Worker]"
+                      dataType="i4"
+                      name="Pedestrian_Road_Maintenance_Worker" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Type]"
+                      dataType="i4"
+                      name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[Casualty_Home_Area_Type]"
+                      dataType="i4"
+                      name="Casualty_Home_Area_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      dataType="dbTimeStamp"
+                      name="createdate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      dataType="dbTimeStamp"
+                      name="updatedate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Accident_Index]"
+                      name="Accident_Index" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Vehicle_Reference]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Reference]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Reference]"
+                      name="Casualty_Reference" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Class]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Class]"
+                      name="Casualty_Class" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Sex_of_Casualty]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Age_of_Casualty]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Age_of_Casualty]"
+                      name="Age_of_Casualty" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Age_Band_of_Casualty]"
+                      name="Age_Band_of_Casualty" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Severity]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Location]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Location]"
+                      name="Pedestrian_Location" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Movement]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Movement]"
+                      name="Pedestrian_Movement" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Car_Passenger]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Car_Passenger]"
+                      name="Car_Passenger" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Bus_or_Coach_Passenger]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Bus_or_Coach_Passenger]"
+                      name="Bus_or_Coach_Passenger" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Road_Maintenance_Worker]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Pedestrian_Road_Maintenance_Worker]"
+                      name="Pedestrian_Road_Maintenance_Worker" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Type]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Type]"
+                      name="Casualty_Type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Home_Area_Type]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[Casualty_Home_Area_Type]"
+                      name="Casualty_Home_Area_Type" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      name="createdate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      name="updatedate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 3\Stage_Causualties"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Causualties"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties2011_2014_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 3\Stage_Causualties.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="i4"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Reference]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Class]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Class"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Class]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Class]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Sex_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_Band_of_Casualty"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Age_Band_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Severity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Pedestrian_Location]"
+                      cachedDataType="i4"
+                      cachedName="Pedestrian_Location"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Location]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Location]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Pedestrian_Movement]"
+                      cachedDataType="i4"
+                      cachedName="Pedestrian_Movement"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Movement]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Pedestrian_Movement]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Car_Passenger]"
+                      cachedDataType="i4"
+                      cachedName="Car_Passenger"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Car_Passenger]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Car_Passenger]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Bus_or_Coach_Passenger]"
+                      cachedDataType="i4"
+                      cachedName="Bus_or_Coach_Passenger"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Bus_or_Coach_Passenger]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Bus_or_Coach_Passenger]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Type]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Type"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Home_Area_Type]"
+                      cachedDataType="i4"
+                      cachedName="Casualty_Home_Area_Type"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Home_Area_Type]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[Casualty_Home_Area_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[createdate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createdate"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[createdate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].Columns[updatedate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updatedate"
+                      externalMetadataColumnId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output].Columns[updatedate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="i4"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      dataType="i4"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Class]"
+                      dataType="i4"
+                      name="Casualty_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i4"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
+                      dataType="i4"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
+                      dataType="i4"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
+                      dataType="i4"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Location]"
+                      dataType="i4"
+                      name="Pedestrian_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Movement]"
+                      dataType="i4"
+                      name="Pedestrian_Movement" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Car_Passenger]"
+                      dataType="i4"
+                      name="Car_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Bus_or_Coach_Passenger]"
+                      dataType="i4"
+                      name="Bus_or_Coach_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
+                      dataType="i4"
+                      name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Home_Area_Type]"
+                      dataType="i4"
+                      name="Casualty_Home_Area_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      dataType="dbTimeStamp"
+                      name="create_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      dataType="dbTimeStamp"
+                      name="update_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 3\Stage_Causualties.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Stage_Causualties.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 3\Stage_Causualties.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 3\Stage_Causualties.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 3.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 3\Stage_Causualties.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 3\Src_Casualties.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 4"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{853c85ca-76fa-4c6d-976d-3acb928adec2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 4"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 4\Src_UK_Area_Information"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              localeId="1033"
+              name="Src_UK_Area_Information"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM UK_Area_Information
+WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND updatedate &lt; ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{C01F6509-5769-4969-B4C6-503B9C666C0A};"Parameter1:Input",{CECAAB0D-80AE-4564-9970-00162B99986C};"Parameter2:Input",{C01F6509-5769-4969-B4C6-503B9C666C0A};"Parameter3:Input",{CECAAB0D-80AE-4564-9970-00162B99986C};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 4\Src_UK_Area_Information.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_SOURCE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd7]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd7]"
+                      name="pcd7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd8]"
+                      name="pcd8"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcds]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcds]"
+                      name="pcds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[dointr]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[dointr]"
+                      name="dointr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[doterm]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[doterm]"
+                      name="doterm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[usertype]"
+                      name="usertype"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[oa11cd]"
+                      name="oa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+                      name="lsoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+                      name="msoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladcd]"
+                      name="ladcd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+                      name="lsoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+                      name="msoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnm]"
+                      name="ladnm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnmw]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladnmw]"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnmw]"
+                      name="ladnmw"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[createdate]"
+                      name="createdate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      name="updatedate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="pcd7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="pcd8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+                      dataType="wstr"
+                      length="50"
+                      name="pcds" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+                      dataType="dbDate"
+                      name="dointr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+                      dataType="dbDate"
+                      name="doterm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="usertype" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="oa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="lsoa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="msoa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladcd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="lsoa11nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="msoa11nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladnm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[ladnmw]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladnmw" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      dataType="dbTimeStamp"
+                      name="createdate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      dataType="dbTimeStamp"
+                      name="updatedate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      name="pcd7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      name="pcd8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      name="pcds" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      name="dointr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      name="doterm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      name="usertype" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      name="oa11cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      name="lsoa11cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      name="msoa11cd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      name="ladcd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      name="lsoa11nm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      name="msoa11nm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      name="ladnm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladnmw]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ladnmw]"
+                      name="ladnmw" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      name="createdate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      name="updatedate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 4\Stage_UK_Area_Information"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_UK_Area_Information"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[UK_Area_Information_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[pcd7]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="pcd7"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd7]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[pcd8]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="pcd8"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[pcd8]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[oa11cd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="oa11cd"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[oa11cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="lsoa11cd"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="msoa11cd"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11cd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladcd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="ladcd"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladcd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="lsoa11nm"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[lsoa11nm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="msoa11nm"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[msoa11nm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladnm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="ladnm"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladnmw]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="ladnmw"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[ladnmw]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[createdate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createdate"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[createdate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[updatedate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updatedate"
+                      externalMetadataColumnId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output].Columns[updatedate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="pcd7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="pcd8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="oa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="lsoa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="msoa11cd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladcd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="lsoa11nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="msoa11nm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladnm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="ladnmw" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      dataType="dbTimeStamp"
+                      name="create_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      dataType="dbTimeStamp"
+                      name="update_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 4.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 4\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 4\Src_UK_Area_Information.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Get LSET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{AFC608D6-CB84-4C5E-AC46-87570B1CB159}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2184,12 +3710,13 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Get LSET to Metadata - Accidents"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{7485FFF5-34D4-4197-ABFB-61C386A9DF32}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2206,15 +3733,67 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Get LSET to Metadata - Casualties"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{54cae04a-3a6f-4a25-b7c0-0a8388eaa936}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET to Metadata - Casualties"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Casualties2011_2014'"
+          SQLTask:ResultType="ResultSetType_SingleRow"
+          SQLTask:TypeConversionMode="None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET_Casualties" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CET_Casualties" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get LSET to Metadata - UK_Area_Infomation"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4960e712-d872-4e94-892c-2fe6857fda52}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET to Metadata - UK_Area_Infomation"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'UK_Area_Information'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSET_UK_Area_Information" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CET_UK_Area_Information" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Get LSET to Metadata - Vehicles"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{71045FEC-735F-4A3F-A3D8-94D30F665911}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2231,15 +3810,33 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Set  CET to Metadata - UK_Area_Information"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5c4bf7b3-775d-4061-aaf2-43fe23737d49}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set  CET to Metadata - UK_Area_Information"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'UK_Area_Information'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Set CET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{D0A7E879-5C15-41ED-8756-34450061318D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2251,12 +3848,13 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Set CET to Metadata - Accidents"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{3481A0C5-F0E2-4A91-8B5D-7EDF9D36B251}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2265,15 +3863,33 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Set CET to Metadata - Casualty"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{02741c20-6c58-40af-a760-5d89f64cbdde}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set CET to Metadata - Casualty"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Casualties2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Set CET to Metadata - Vehicles"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{89FAE95E-4851-4895-9007-4EE103CFD0C6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2285,12 +3901,13 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Set LSET for Accidents"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{55D10F14-D015-41E8-9978-93DF99BE5A83}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2299,15 +3916,32 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Set LSET for Casualties"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{54bb01d8-bd24-436c-9a92-76d28cb1105e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set LSET for Casualties"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Casualties2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Set LSET for Postcode"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{20E266D5-BB90-40DA-B8CA-6FA8749058B6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2316,15 +3950,33 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Set LSET for UK_Area_Information"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{d200ea07-1ef0-4263-9f2a-d02f89ae8371}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set LSET for UK_Area_Information"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D480F3E5-F3E2-4579-84B1-DDF32B973486}"
+          SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'UK_Area_Information'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Set LSET for Vehicles"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{4A6560E7-9410-41A0-916F-89AD5A86EFF8}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2336,12 +3988,13 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:refId="Package\Truncate stage Accidents_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{05E19C14-E36E-477C-BFFF-6A2B9C717C2B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Accidents_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2350,15 +4003,33 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Truncate stage Casualties_Stage table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a9cf9ba9-17cc-4bf6-aa50-19aee1bb3bab}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate stage Casualties_Stage table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{90BD6D82-18C9-482B-AC26-3FB96D71E5F7}"
+          SQLTask:SqlStatementSource="truncate table Casualties2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Truncate stage Postcodes_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{F2EBEF22-7DBA-48C4-AA5A-FB40A3DA7849}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2367,15 +4038,33 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Truncate stage UK_Area_Information table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{eaf8bda9-91e1-4889-8554-e8b2f0c0fe62}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate stage UK_Area_Information table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{90BD6D82-18C9-482B-AC26-3FB96D71E5F7}"
+          SQLTask:SqlStatementSource="truncate table UK_Area_Information_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Truncate stage Vehicles_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{A6F36713-42AF-4802-AA3A-517064A3E857}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2417,6 +4106,70 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 11"
       DTS:To="Package\Set LSET for Vehicles" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{b49a1724-a76d-4ffb-a43d-b7b286d69144}"
+      DTS:From="Package\Set CET to Metadata - Casualty"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Truncate stage Casualties_Stage table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
+      DTS:CreationName=""
+      DTS:DTSID="{77c251dc-646a-4cda-9092-8af5cc523bca}"
+      DTS:From="Package\Truncate stage Casualties_Stage table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 13"
+      DTS:To="Package\Get LSET to Metadata - Casualties" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 14]"
+      DTS:CreationName=""
+      DTS:DTSID="{8a5f1c61-f922-41a9-a2ab-a9cf37e63491}"
+      DTS:From="Package\Get LSET to Metadata - Casualties"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 14"
+      DTS:To="Package\Data Flow Task 3" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 15]"
+      DTS:CreationName=""
+      DTS:DTSID="{fb403f1a-311e-4eed-9c29-35c63f762b73}"
+      DTS:From="Package\Data Flow Task 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 15"
+      DTS:To="Package\Set LSET for Casualties" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 16]"
+      DTS:CreationName=""
+      DTS:DTSID="{492934c3-2533-4c2b-919c-64525574d7ee}"
+      DTS:From="Package\Set  CET to Metadata - UK_Area_Information"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 16"
+      DTS:To="Package\Truncate stage UK_Area_Information table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
+      DTS:CreationName=""
+      DTS:DTSID="{4e664c13-1cf8-4c6a-8b00-b85eb426079b}"
+      DTS:From="Package\Truncate stage UK_Area_Information table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 17"
+      DTS:To="Package\Get LSET to Metadata - UK_Area_Infomation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 18]"
+      DTS:CreationName=""
+      DTS:DTSID="{dda8ef1a-6893-43bd-bb66-3086636f2044}"
+      DTS:From="Package\Get LSET to Metadata - UK_Area_Infomation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 18"
+      DTS:To="Package\Data Flow Task 4" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 19]"
+      DTS:CreationName=""
+      DTS:DTSID="{17ba2de8-6333-43c2-9512-087e8bb2d61c}"
+      DTS:From="Package\Data Flow Task 4"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 19"
+      DTS:To="Package\Set LSET for UK_Area_Information" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -2493,70 +4246,358 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="85.7142871739913,380.823534752671" />
+          Size="160.5,42"
+          Id="Package\Data Flow Task 3"
+          TopLeft="1229.125,384.916665251471" />
         <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task 1"
-          TopLeft="455.666666666667,378.243248201444" />
+          Size="160.5,42"
+          Id="Package\Data Flow Task 4"
+          TopLeft="1532,387.541665404828" />
         <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task 2"
-          TopLeft="829.047619047619,382.278001534595" />
+          Size="241.5,42"
+          Id="Package\Get LSET to Metadata - Casualties"
+          TopLeft="1205,277.708331705589" />
         <NodeLayout
-          Size="209.6,41.6"
-          Id="Package\Get LSET to Metadata"
-          TopLeft="70.7142869185429,276.82353329411" />
+          Size="289.5,42"
+          Id="Package\Get LSET to Metadata - UK_Area_Infomation"
+          TopLeft="1484,274.374998555209" />
         <NodeLayout
-          Size="240,41.6"
-          Id="Package\Get LSET to Metadata - Accidents"
-          TopLeft="418.952380952381,288.323042413198" />
+          Size="289.5,42"
+          Id="Package\Set  CET to Metadata - UK_Area_Information"
+          TopLeft="1517,102.708332738736" />
         <NodeLayout
-          Size="234.4,41.6"
-          Id="Package\Get LSET to Metadata - Vehicles"
-          TopLeft="799.523809523809,276.563717256344" />
+          Size="226.5,42"
+          Id="Package\Set CET to Metadata - Casualty"
+          TopLeft="1216,102.374999491498" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Set CET to Metadata"
-          TopLeft="66.4285725598432,102.470589672405" />
+          Size="191,42"
+          Id="Package\Set LSET for Casualties"
+          TopLeft="1216,473.749998143564" />
         <NodeLayout
-          Size="233.6,41.6"
-          Id="Package\Set CET to Metadata - Accidents"
-          TopLeft="402.333333333333,99.4954981308133" />
+          Size="203.5,45"
+          Id="Package\Set LSET for UK_Area_Information"
+          TopLeft="1493.5,462.291665033541" />
         <NodeLayout
-          Size="228,41.6"
-          Id="Package\Set CET to Metadata - Vehicles"
-          TopLeft="791.904761904762,96.9498093173237" />
+          Size="259.5,42"
+          Id="Package\Truncate stage Casualties_Stage table"
+          TopLeft="1210,189.249999047568" />
         <NodeLayout
-          Size="188.8,41.6"
-          Id="Package\Set LSET for Accidents"
-          TopLeft="413,460.567573775507" />
+          Size="278.5,42"
+          Id="Package\Truncate stage UK_Area_Information table"
+          TopLeft="1490.5,189.333332310949" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="1329.25,144.374999491498">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,44.8749995560701"
+              Start="0,0"
+              End="10.5,37.3749995560701">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4374997780351" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4374997780351"
+                    Point2="0,22.4374997780351"
+                    Point3="4,22.4374997780351" />
+                  <mssgle:LineSegment
+                    End="6.5,22.4374997780351" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,22.4374997780351"
+                    Point2="10.5,22.4374997780351"
+                    Point3="10.5,26.4374997780351" />
+                  <mssgle:LineSegment
+                    End="10.5,37.3749995560701" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="1339.75,231.249999047568">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.25,46.458332658021"
+              Start="0,0"
+              End="-11.25,38.958332658021">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2291663290105" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2291663290105"
+                    Point2="0,23.2291663290105"
+                    Point3="-4,23.2291663290105" />
+                  <mssgle:LineSegment
+                    End="-7.25,23.2291663290105" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.25,23.2291663290105"
+                    Point2="-11.25,23.2291663290105"
+                    Point3="-11.25,27.2291663290105" />
+                  <mssgle:LineSegment
+                    End="-11.25,38.958332658021" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="1325.75,319.708331705589">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.375,65.2083335458818"
+              Start="0,0"
+              End="-16.375,57.7083335458818">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6041667729409" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6041667729409"
+                    Point2="0,32.6041667729409"
+                    Point3="-4,32.6041667729409" />
+                  <mssgle:LineSegment
+                    End="-12.375,32.6041667729409" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.375,32.6041667729409"
+                    Point2="-16.375,32.6041667729409"
+                    Point3="-16.375,36.6041667729409" />
+                  <mssgle:LineSegment
+                    End="-16.375,57.7083335458818" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 15]"
+          TopLeft="1310.4375,426.916665251471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8333328920934"
+              Start="0,0"
+              End="0,39.3333328920934">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3333328920934" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 16]"
+          TopLeft="1661.75,144.708332738736">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32,44.6249995722131"
+              Start="0,0"
+              End="-32,37.1249995722131">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3124997861066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3124997861066"
+                    Point2="0,22.3124997861066"
+                    Point3="-4,22.3124997861066" />
+                  <mssgle:LineSegment
+                    End="-28,22.3124997861066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28,22.3124997861066"
+                    Point2="-32,22.3124997861066"
+                    Point3="-32,26.3124997861066" />
+                  <mssgle:LineSegment
+                    End="-32,37.1249995722131" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 17]"
+          TopLeft="1629.25,231.333332310949">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.0416662442597"
+              Start="0,0"
+              End="0,35.5416662442597">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5416662442597" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 18]"
+          TopLeft="1628.75,316.374998555209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.5,71.1666668496193"
+              Start="0,0"
+              End="-16.5,63.6666668496193">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5833334248096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5833334248096"
+                    Point2="0,35.5833334248096"
+                    Point3="-4,35.5833334248096" />
+                  <mssgle:LineSegment
+                    End="-12.5,35.5833334248096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.5,35.5833334248096"
+                    Point2="-16.5,35.5833334248096"
+                    Point3="-16.5,39.5833334248096" />
+                  <mssgle:LineSegment
+                    End="-16.5,63.6666668496193" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 19]"
+          TopLeft="1612.25,429.541665404828">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17,32.7499996287128"
+              Start="0,0"
+              End="-17,25.2499996287128">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3749998143564" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3749998143564"
+                    Point2="0,16.3749998143564"
+                    Point3="-4,16.3749998143564" />
+                  <mssgle:LineSegment
+                    End="-13,16.3749998143564" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13,16.3749998143564"
+                    Point2="-17,16.3749998143564"
+                    Point3="-17,20.3749998143564" />
+                  <mssgle:LineSegment
+                    End="-17,25.2499996287128" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Set LSET for Postcode"
-          TopLeft="75.0000012772424,472.588241921989" />
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Set LSET for Vehicles"
-          TopLeft="828.571428571429,458.571440777724" />
-        <NodeLayout
-          Size="259.2,41.6"
-          Id="Package\Truncate stage Accidents_Stage table"
-          TopLeft="400.666666666667,194.774780385013" />
-        <NodeLayout
-          Size="258.4,41.6"
-          Id="Package\Truncate stage Postcodes_Stage table"
-          TopLeft="66.4285725598433,193.470590948646" />
-        <NodeLayout
-          Size="252.8,41.6"
+          Size="253,41.5"
           Id="Package\Truncate stage Vehicles_Stage table"
-          TopLeft="807.619047619048,188.803094721881" />
+          TopLeft="860.619047619048,188.803094721881" />
+        <NodeLayout
+          Size="258.5,41.5"
+          Id="Package\Truncate stage Postcodes_Stage table"
+          TopLeft="119.428572559843,193.470590948646" />
+        <NodeLayout
+          Size="259,41.5"
+          Id="Package\Truncate stage Accidents_Stage table"
+          TopLeft="453.666666666667,194.774780385013" />
+        <NodeLayout
+          Size="183,41.5"
+          Id="Package\Set LSET for Vehicles"
+          TopLeft="881.571428571429,458.571440777724" />
+        <NodeLayout
+          Size="162.5,41.5"
+          Id="Package\Set LSET for Postcode"
+          TopLeft="128.000001277242,472.588241921989" />
+        <NodeLayout
+          Size="189,41.5"
+          Id="Package\Set LSET for Accidents"
+          TopLeft="466,460.567573775507" />
+        <NodeLayout
+          Size="228,41.5"
+          Id="Package\Set CET to Metadata - Vehicles"
+          TopLeft="844.904761904762,96.9498093173237" />
+        <NodeLayout
+          Size="233.5,41.5"
+          Id="Package\Set CET to Metadata - Accidents"
+          TopLeft="455.333333333333,99.4954981308133" />
+        <NodeLayout
+          Size="162.5,41.5"
+          Id="Package\Set CET to Metadata"
+          TopLeft="119.428572559843,102.470589672405" />
+        <NodeLayout
+          Size="234.5,41.5"
+          Id="Package\Get LSET to Metadata - Vehicles"
+          TopLeft="852.523809523809,276.563717256344" />
+        <NodeLayout
+          Size="240,41.5"
+          Id="Package\Get LSET to Metadata - Accidents"
+          TopLeft="471.952380952381,288.323042413198" />
+        <NodeLayout
+          Size="209.5,41.5"
+          Id="Package\Get LSET to Metadata"
+          TopLeft="123.714286918543,276.82353329411" />
+        <NodeLayout
+          Size="161.5,41.5"
+          Id="Package\Data Flow Task 2"
+          TopLeft="882.047619047619,382.278001534595" />
+        <NodeLayout
+          Size="161.5,41.5"
+          Id="Package\Data Flow Task 1"
+          TopLeft="508.666666666667,378.243248201444" />
+        <NodeLayout
+          Size="153,41.5"
+          Id="Package\Data Flow Task"
+          TopLeft="138.714287173991,380.823534752671" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="147.628572559843,144.070589672405">
+          TopLeft="200.628572559843,144.070589672405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2590,7 +4631,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="195.628572559843,235.070590948646">
+          TopLeft="248.628572559843,235.070590948646">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2624,7 +4665,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="913.285714285714,318.563717256344">
+          TopLeft="966.285714285714,318.563717256344">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2646,7 +4687,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="909.880952380952,424.278001534595">
+          TopLeft="962.880952380952,424.278001534595">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2680,7 +4721,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="175.514286918543,318.42353329411">
+          TopLeft="228.514286918543,318.42353329411">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2714,7 +4755,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="159.157144225617,422.423534752671">
+          TopLeft="212.157144225617,422.423534752671">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2736,7 +4777,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="519.166666666667,141.495498130813">
+          TopLeft="572.166666666667,141.495498130813">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2770,7 +4811,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="530.166666666667,236.774780385013">
+          TopLeft="583.166666666667,236.774780385013">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2804,7 +4845,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="537.809523809524,330.323042413198">
+          TopLeft="590.809523809524,330.323042413198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2826,7 +4867,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="536.5,420.243248201444">
+          TopLeft="589.5,420.243248201444">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2860,7 +4901,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="905.904761904762,138.949809317324">
+          TopLeft="958.904761904762,138.949809317324">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2894,7 +4935,7 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="934.119047619048,230.803094721881">
+          TopLeft="987.119047619048,230.803094721881">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2929,6 +4970,216 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.5,42"
+          Id="Package\Data Flow Task 3\Src_Casualties"
+          TopLeft="228.5,49.2916664218323" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data Flow Task 3\Stage_Causualties"
+          TopLeft="224,139.208332641878" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 3.Paths[OLE DB Source Output]"
+          TopLeft="305.375,91.2916664218323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.9166662200457"
+              Start="0,0"
+              End="0,40.4166662200457">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.4166662200457" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 3\Src_Casualties">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 3\Stage_Causualties">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 4">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="227.5,45"
+          Id="Package\Data Flow Task 4\Src_UK_Area_Information"
+          TopLeft="324,212" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Data Flow Task 4\Stage_UK_Area_Information"
+          TopLeft="338,336" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 4.Paths[OLE DB Source Output]"
+          TopLeft="441.125,257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79"
+              Start="0,0"
+              End="0,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 4\Src_UK_Area_Information">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 4\Stage_UK_Area_Information">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task 2\OLE DB Destination"
+          TopLeft="648,211" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task 2\OLE DB Source"
+          TopLeft="649,73" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 2.Paths[OLE DB Source Output]"
+          TopLeft="726.2,114.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,96.4000000000001"
+              Start="0,0"
+              End="9,88.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2"
+                    Point2="0,48.2"
+                    Point3="4,48.2" />
+                  <mssgle:LineSegment
+                    End="5,48.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,48.2"
+                    Point2="9,48.2"
+                    Point3="9,52.2" />
+                  <mssgle:LineSegment
+                    End="9,88.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task 1\OLE DB Destination"
+          TopLeft="510,204" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task 1\OLE DB Source"
+          TopLeft="515,67" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+          TopLeft="594.7,108.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95.4"
+              Start="0,0"
+              End="0,87.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
@@ -2969,161 +5220,5 @@ WHERE (createdate &gt;= ? AND createdate &lt; ?) OR (updatedate &gt;= ? AND upda
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Src_Postcodes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Stage_Postcodes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task 1\OLE DB Source"
-          TopLeft="515,67" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="510,204" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-          TopLeft="594.7,108.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,95.4"
-              Start="0,0"
-              End="0,87.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 2">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task 2\OLE DB Source"
-          TopLeft="649,73" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Data Flow Task 2\OLE DB Destination"
-          TopLeft="648,211" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 2.Paths[OLE DB Source Output]"
-          TopLeft="726.2,114.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9,96.4000000000001"
-              Start="0,0"
-              End="9,88.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.2"
-                    Point2="0,48.2"
-                    Point3="4,48.2" />
-                  <mssgle:LineSegment
-                    End="5,48.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,48.2"
-                    Point2="9,48.2"
-                    Point3="9,52.2" />
-                  <mssgle:LineSegment
-                    End="9,88.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 2\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 2\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
