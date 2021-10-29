@@ -1,51 +1,51 @@
-﻿-- TẠO CSDL CHO DB STAGE
+﻿-- TẠO CSDL CHO DB TEMP
 USE master 
 GO
-IF DB_ID('QLBI_STAGE') IS NOT NULL
-	DROP DATABASE QLBI_STAGE
+IF DB_ID('QLBI_TEMP') IS NOT NULL
+	DROP DATABASE QLBI_TEMP
 GO
-CREATE DATABASE QLBI_STAGE
+CREATE DATABASE QLBI_TEMP
 GO
-USE QLBI_STAGE
+USE QLBI_TEMP
 GO
 
 /*
 	Check if table exists? Drop before creating : create
 */
 
-IF OBJECT_ID(N'dbo.Postcodes_Stage', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Postcodes_Temp', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Postcodes_Stage;
+	DROP TABLE dbo.Postcodes_Temp;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.UK_Area_Information_Stage', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.UK_Area_Information_Temp', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.UK_Area_Information_Stage;
+	DROP TABLE dbo.UK_Area_Information_Temp;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Casualties2011_2014_Stage', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Casualties2011_2014_Temp', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Casualties2011_2014_Stage;
+	DROP TABLE dbo.Casualties2011_2014_Temp;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Vehicles2011_2014_Stage', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Vehicles2011_2014_Temp', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Vehicles2011_2014_Stage;
+	DROP TABLE dbo.Vehicles2011_2014_Temp;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Accidents2011_2014_Stage', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Accidents2011_2014_Temp', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Accidents2011_2014_Stage;
+	DROP TABLE dbo.Accidents2011_2014_Temp;
 	PRINT 'Delete Table Successfully';
 END;
 
 /* Create new table */
-CREATE TABLE Postcodes_Stage (
+CREATE TABLE Postcodes_Temp (
 	postcode VARCHAR(512) NOT NULL,
 	latitude VARCHAR(512) NOT NULL,
 	longitude VARCHAR(512) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE Postcodes_Stage (
 	trangthai VARCHAR(512)
 );
 
-CREATE TABLE UK_Area_Information_Stage (
+CREATE TABLE UK_Area_Information_Temp (
 	pcd7 VARCHAR(512) NOT NULL,
 	pcd8 VARCHAR(512) NOT NULL,
 	oa11cd VARCHAR(512),
@@ -76,7 +76,7 @@ CREATE TABLE UK_Area_Information_Stage (
 	trangthai VARCHAR(512)
 );
 
-CREATE TABLE Casualties2011_2014_Stage (
+CREATE TABLE Casualties2011_2014_Temp (
 	Accident_Index VARCHAR(512) NOT NULL,
 	Vehicle_Reference INTEGER,
 	Casualty_Reference INTEGER,
@@ -96,7 +96,7 @@ CREATE TABLE Casualties2011_2014_Stage (
 	trangthai VARCHAR(512)
 );
 
-CREATE TABLE Vehicles2011_2014_Stage (
+CREATE TABLE Vehicles2011_2014_Temp (
 	Accident_Index VARCHAR(512) NOT NULL,
 	Vehicle_Reference INTEGER,
 	Vehicle_Type INTEGER,
@@ -111,7 +111,7 @@ CREATE TABLE Vehicles2011_2014_Stage (
 	trangthai VARCHAR(512)
 );
 
-CREATE TABLE Accidents2011_2014_Stage (
+CREATE TABLE Accidents2011_2014_Temp (
 	Accident_Index VARCHAR(512) NOT NULL,
 	Longitude VARCHAR(512),
 	Latitude VARCHAR(512),
@@ -134,3 +134,11 @@ CREATE TABLE Accidents2011_2014_Stage (
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512)
 );
+
+--SELECT CAST('2021-10-29 19:07:06.953000000' AS datetime2);
+
+--SELECT 
+--	CASE
+--		WHEN '2021-10-29 19:07:30' < CAST(GETDATE() AS varchar) THEN 'true'
+--		ELSE 'false'
+--	END AS testing;

@@ -9,6 +9,8 @@ GO
 USE QLBI_SOURCE
 GO
 
+DROP TABLE IF EXISTS Accidents2011_2014;
+
 
 /* B3. Tạo và thêm dữ liệu vào bằng cách chọn csdl QLBI_SOURCE --> Task --> Import flat file tương ứng --> đặt tên new table cho từng source
 tương ứng vs các tên ở dưới đây --> next cho tới bước cuối cùng --> in process ---> done (tick màu xanh lá) là coi như đã thành công
@@ -21,6 +23,8 @@ ADD createdate DATETIME;
 ALTER TABLE Postcodes
 ADD updatedate DATETIME;
 
+ALTER TABLE Postcodes
+ADD TrangThai BIT;
 
 ALTER TABLE UK_Area_Information
 ADD createdate DATETIME;
@@ -28,11 +32,17 @@ ADD createdate DATETIME;
 ALTER TABLE UK_Area_Information
 ADD updatedate DATETIME;
 
+ALTER TABLE UK_Area_Information
+ADD TrangThai BIT;
+
 ALTER TABLE Casualties2011_2014
 ADD createdate DATETIME;
 
 ALTER TABLE Casualties2011_2014
 ADD updatedate DATETIME;
+
+ALTER TABLE Casualties2011_2014
+ADD TrangThai BIT;
 
 
 ALTER TABLE Vehicles2011_2014
@@ -41,6 +51,9 @@ ADD createdate DATETIME;
 ALTER TABLE Vehicles2011_2014
 ADD updatedate DATETIME;
 
+ALTER TABLE Vehicles2011_2014
+ADD TrangThai BIT;
+
 
 ALTER TABLE Accidents2011_2014
 ADD createdate DATETIME;
@@ -48,6 +61,20 @@ ADD createdate DATETIME;
 ALTER TABLE Accidents2011_2014
 ADD updatedate DATETIME;
 
+ALTER TABLE Accidents2011_2014
+ADD TrangThai BIT;
 
+UPDATE Postcodes
+SET TrangThai = 0;
 
+UPDATE Accidents2011_2014
+SET TrangThai = 0;
 
+UPDATE Vehicles2011_2014
+SET TrangThai = 0;
+
+UPDATE Casualties2011_2014
+SET TrangThai = 0;
+
+UPDATE UK_Area_Information
+SET TrangThai = 0;
