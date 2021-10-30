@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{7AD5290C-93C4-4F83-BAC7-BD7A03F3034E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{2C288CE8-21EA-49D4-B90B-D34729FA05D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -76,11 +76,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.5,41.5"
+          Size="182.666666666667,41.3333333333334"
           Id="Package\Phase 01"
           TopLeft="286.428576306421,130.764707716279" />
         <NodeLayout
-          Size="181.5,41.5"
+          Size="181.333333333334,41.3333333333334"
           Id="Package\Phase 02"
           TopLeft="287.857147759321,231.705885602529" />
         <EdgeLayout
