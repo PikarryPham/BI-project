@@ -1,6 +1,7 @@
 use QLBI_STAGE
 go
 
+truncate table Postcodes_Stage;
 select * from Postcodes_Stage;
 
 use QLBI_METADATA
@@ -48,9 +49,9 @@ TRUNCATE TABLE Accidents2011_2014_Temp
 
 
 SELECT GETDATE();
-SELECT 
-	CASE 
-		WHEN '2021-10-29 19:07:30.047000000' > '1900-01-01' THEN 'true'
-		ELSE 'false'
-	END AS testting;
+--SELECT 
+--	CASE 
+--		WHEN '2021-10-29 19:07:30.047000000' > '1900-01-01' THEN 'true'
+--		ELSE 'false'
+--	END AS testting;
 

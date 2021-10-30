@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="245"
-  DTS:VersionGUID="{522793FE-6E0A-45E3-9CD1-59D64BE70CE6}">
+  DTS:VersionBuild="277"
+  DTS:VersionGUID="{D4CF17C2-C9FE-4828-BF23-67431F299E63}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -273,6 +273,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{79306C9D-1AA9-445A-8F90-6030963CE36F}"
+      DTS:ObjectName="DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_SOURCE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
@@ -282,6 +294,30 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9B4CE405-623C-4429-A42A-A05F69B5EF66}"
+      DTS:ObjectName="DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
+      DTS:ObjectName="DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_TEMP;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -878,6 +914,134 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Test Postcodes Connection 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C8A53BD1-A146-4447-958C-3E9F143E20DD}"
+      DTS:ObjectName="Test Postcodes Connection 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 4\HK1\Data\DATH_data\postcodes.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postcode"
+              DTS:DTSID="{A72CABA8-2B54-42EB-99EB-92D1081F7866}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{0720B016-AD9D-4858-904C-92B3A01CED73}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{E33AC9B4-9A3E-4D30-92A2-943B2E907EDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{ABF3414A-7BD7-46AF-BE98-6CD982EEFC3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{1F1A5A22-34A3-4993-9648-4EC75ACC8D5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_code"
+              DTS:DTSID="{467C3FE1-6555-46F0-A64D-8780F27DF886}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{40C071F8-E61A-4B6C-9C0C-485C9A5E55C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_code"
+              DTS:DTSID="{08BB1CDB-7E36-402E-8C14-9626A1367D51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_name"
+              DTS:DTSID="{50C3AB06-520C-4A03-B598-3305F4DC0662}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdate"
+              DTS:DTSID="{EC55CAC4-065D-4A02-9190-43EEC1ED2683}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="updatedate"
+              DTS:DTSID="{92562967-2B4D-4BCE-A44E-B82237843DDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="512"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TrangThai"
+              DTS:DTSID="{C720E4CE-7196-44D9-823C-A5C65379466F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -5219,7 +5383,6 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
       DTS:refId="Package\Data Flow Main Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{402AB98A-A4CD-42AD-8666-77D6AC600212}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5289,8 +5452,8 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               <connections>
                 <connection
                   refId="Package\Data Flow Main Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5529,8 +5692,7 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM Postcodes_Temp
 WHERE (create_date &gt;= CAST( ? AS VARCHAR)
 AND create_date &lt; CAST(? AS VARCHAR) )
- OR (update_date &gt;= CAST( ? AS VARCHAR) AND update_date &lt; CAST(? AS VARCHAR))
-AND trangthai = 'FALSE'</property>
+ OR (update_date &gt;= CAST( ? AS VARCHAR) AND update_date &lt; CAST(? AS VARCHAR)) AND trangthai = 'FALSE'</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5556,8 +5718,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Main Task\Postcodes Temp Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5896,7 +6058,6 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Data Flow Temp Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{0AFDF7C2-908A-479D-AB95-D23B3A5CC29E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5920,7 +6081,7 @@ AND trangthai = 'FALSE'</property>
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -5929,8 +6090,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Temp Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="{57420D9A-C71B-40EA-AB70-E615B2DC3232}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Postcodes Connection]"
+                  connectionManagerID="Package.ConnectionManagers[Test Postcodes Connection 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Test Postcodes Connection 2]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -6367,8 +6528,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Temp Task\Postcodes Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6594,17 +6755,16 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Get LSET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{AFC608D6-CB84-4C5E-AC46-87570B1CB159}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Postcodes'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -6679,11 +6839,11 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - UK_Area_Infomation"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'UK_Area_Information'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -6705,7 +6865,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6731,11 +6891,11 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set  CET to Metadata - UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'UK_Area_Information'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6743,17 +6903,16 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Set CET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{D0A7E879-5C15-41ED-8756-34450061318D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;SET CET = GETDATE()&#xA;WHERE Name_DataFlow = 'Postcodes'&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6803,7 +6962,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6850,17 +7009,16 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Set LSET for Postcode"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{20E266D5-BB90-40DA-B8CA-6FA8749058B6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6874,11 +7032,11 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'UK_Area_Information'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6892,7 +7050,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6958,17 +7116,16 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Truncate stage Postcodes_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{F2EBEF22-7DBA-48C4-AA5A-FB40A3DA7849}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9A442A89-57DC-4E28-BB37-48593FD7CFCB}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table Postcodes_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6982,11 +7139,11 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage UK_Area_Information stage"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table UK_Area_Information_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7000,7 +7157,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7030,17 +7187,16 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\TRUNCATE TABLE Postcodes_Temp"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{4BFF7BB6-F7DA-49E2-B3C0-0CD9175B64BF}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Postcodes_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{373D0515-DC2B-4E15-A582-3583DD7B54CA}"
+          SQLTask:Connection="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Postcodes_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7054,7 +7210,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Table Vehicles2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7123,7 +7279,7 @@ AND trangthai = 'FALSE'</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -7136,8 +7292,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7229,6 +7385,24 @@ AND trangthai = 'FALSE'</property>
                       cachedName="ladnmw"
                       externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
                       lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnmw]" />
+                    <inputColumn
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[createdate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createdate"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]" />
+                    <inputColumn
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[updatedate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updatedate"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[updatedate]" />
+                    <inputColumn
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
+                      cachedDataType="bool"
+                      cachedName="TrangThai"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7392,8 +7566,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_SOURCE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7612,7 +7786,9 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
                       name="TrangThai" />
                   </externalMetadataColumns>
                 </output>
@@ -7703,7 +7879,9 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       name="updatedate" />
                     <outputColumn
                       refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
-                      dataType="bool"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
                       lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
                       name="TrangThai" />
                     <outputColumn
@@ -9205,163 +9383,163 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161.333333333334,41.3333333333334"
+          Size="161.6,41.6"
           Id="Package\Accidents_Data Flow Main Task"
-          TopLeft="533.041666303451,485.493246283665" />
+          TopLeft="487.803570294956,475.297167709296" />
         <NodeLayout
-          Size="210.666666666667,52"
+          Size="210.4,52"
           Id="Package\Accidents_Data Flow Temp Task"
           TopLeft="551.791664831961,384.449999383986" />
         <NodeLayout
-          Size="160.666666666667,41.3333333333334"
+          Size="160.8,41.6"
           Id="Package\Casualities Data Flow Temp Task"
           TopLeft="1309.12499880791,384.916665251471" />
         <NodeLayout
-          Size="208.333333333334,42"
+          Size="208,41.6"
           Id="Package\Casualities Data Main Flow"
           TopLeft="1284.81481481481,479.869874518655" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Data Flow Main Task"
-          TopLeft="219.999996721744,548.933330729802" />
+          TopLeft="16.4285646835145,551.482350373394" />
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
+          Size="181.6,42.4"
           Id="Package\Data Flow Temp Task"
           TopLeft="13.714289036636,460.206866726124" />
         <NodeLayout
-          Size="209.333333333334,41.3333333333334"
+          Size="209.6,41.6"
           Id="Package\Get LSET to Metadata"
           TopLeft="6.21428866942938,369.773531632035" />
         <NodeLayout
-          Size="240,41.3333333333334"
+          Size="240,41.6"
           Id="Package\Get LSET to Metadata - Accidents"
           TopLeft="551.952379760288,290.25637570004" />
         <NodeLayout
-          Size="241.333333333334,41.3333333333334"
+          Size="241.6,41.6"
           Id="Package\Get LSET to Metadata - Casualties"
           TopLeft="1284.99999880791,277.708331705589" />
         <NodeLayout
-          Size="289.333333333334,41.3333333333334"
+          Size="289.6,41.6"
           Id="Package\Get LSET to Metadata - UK_Area_Infomation"
           TopLeft="1581.99999880791,214.996617881116" />
         <NodeLayout
-          Size="234.666666666667,41.3333333333334"
+          Size="234.4,41.6"
           Id="Package\Get LSET to Metadata - Vehicles"
           TopLeft="932.523808331716,276.563717256344" />
         <NodeLayout
-          Size="289.333333333334,41.3333333333334"
+          Size="289.6,41.6"
           Id="Package\Set  CET to Metadata - UK_Area_Information"
           TopLeft="1596.16666547458,35.9515734009979" />
         <NodeLayout
-          Size="162.666666666667,41.3333333333334"
+          Size="175.2,41.6"
           Id="Package\Set CET to Metadata"
           TopLeft="226.928570957968,29.6705909741704" />
         <NodeLayout
-          Size="233.333333333334,41.3333333333334"
+          Size="233.6,41.6"
           Id="Package\Set CET to Metadata - Accidents"
           TopLeft="544.083332010855,29.9454993744642" />
         <NodeLayout
-          Size="226.666666666667,41.3333333333334"
+          Size="226.4,41.6"
           Id="Package\Set CET to Metadata - Casualty"
           TopLeft="1290.66666547458,37.0236456135018" />
         <NodeLayout
-          Size="228,41.3333333333334"
+          Size="228,41.6"
           Id="Package\Set CET to Metadata - Vehicles"
           TopLeft="926.154760694043,35.8498104098768" />
         <NodeLayout
-          Size="188.666666666667,41.3333333333334"
+          Size="188.8,41.6"
           Id="Package\Set LSET for Accidents"
-          TopLeft="536.624998947605,609.417571113862" />
+          TopLeft="558.053570741103,550.790119311242" />
         <NodeLayout
-          Size="191.333333333334,41.3333333333334"
+          Size="191.2,41.6"
           Id="Package\Set LSET for Casualties"
           TopLeft="1290.81481362272,613.509763306782" />
         <NodeLayout
-          Size="162.666666666667,41.3333333333334"
+          Size="162.4,41.6"
           Id="Package\Set LSET for Postcode"
-          TopLeft="224.249999843005,669.304906763859" />
+          TopLeft="244.488095425753,552.050003158619" />
         <NodeLayout
-          Size="203.333333333334,44.6666666666667"
+          Size="203.2,44.8"
           Id="Package\Set LSET for UK_Area_Information"
           TopLeft="1615.49999880791,397.643013885415" />
         <NodeLayout
-          Size="183.333333333334,41.3333333333334"
+          Size="183.2,41.6"
           Id="Package\Set LSET for Vehicles"
           TopLeft="938.446427723925,611.404771437789" />
         <NodeLayout
-          Size="260.333333333334,42"
+          Size="260,41.6"
           Id="Package\Truncate Casualties2011_2014_Temp"
           TopLeft="1275.55555555556,204.624630624274" />
         <NodeLayout
-          Size="259.333333333334,41.3333333333334"
+          Size="259.2,41.6"
           Id="Package\Truncate stage Accidents_Stage table"
           TopLeft="489.291666135813,134.97478145432" />
         <NodeLayout
-          Size="259.333333333334,41.3333333333334"
+          Size="259.2,41.6"
           Id="Package\Truncate stage Casualties_Stage table"
           TopLeft="1279.33333214124,118.979726060475" />
         <NodeLayout
-          Size="258.666666666667,41.3333333333334"
+          Size="258.4,41.6"
           Id="Package\Truncate stage Postcodes_Stage table"
           TopLeft="199.42857136775,135.620591983085" />
         <NodeLayout
-          Size="278.666666666667,41.3333333333334"
+          Size="278.4,41.6"
           Id="Package\Truncate stage UK_Area_Information stage"
           TopLeft="1598.83333214124,119.063059323856" />
         <NodeLayout
-          Size="252.666666666667,41.3333333333334"
+          Size="252.8,41.6"
           Id="Package\Truncate stage Vehicles_Stage table"
           TopLeft="906.869046929869,119.253095965532" />
         <NodeLayout
-          Size="166.666666666667,64.6666666666667"
+          Size="166.4,64.8"
           Id="Package\TRUNCATE TABLE Accidents2011_2014_Temp"
           TopLeft="317.458333361273,275.649996501505" />
         <NodeLayout
-          Size="248,42.6666666666667"
+          Size="248,42.4"
           Id="Package\TRUNCATE TABLE Postcodes_Temp"
           TopLeft="0.624999990686746,267.033331729372" />
         <NodeLayout
-          Size="237.333333333334,42.6666666666667"
+          Size="237.6,42.4"
           Id="Package\Truncate Table Vehicles2011_2014_Temp"
           TopLeft="878.624998649582,199.399999116659" />
         <NodeLayout
-          Size="258.333333333334,42"
+          Size="258.4,41.6"
           Id="Package\UK_Area_Information Data Main Flow"
           TopLeft="1592.33333333333,296.513512895437" />
         <NodeLayout
-          Size="224,42.6666666666667"
+          Size="224,42.4"
           Id="Package\Vehicles Data Flow Temp Task"
           TopLeft="949.333329459031,366.149998244941" />
         <NodeLayout
-          Size="161.333333333334,41.3333333333334"
+          Size="161.6,41.6"
           Id="Package\Vehicles Data Main Flow"
           TopLeft="986.42261749231,452.561335065517" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="308.261904291302,71.0039243075037">
+          TopLeft="314.528570957968,71.2705909741704">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.5000004097819,64.6166676755809"
+              EndConnector="14.100000409782,64.3500010089146"
               Start="0,0"
-              End="20.5000004097819,57.1166676755809">
+              End="14.100000409782,56.8500010089146">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.3083338377904" />
+                    End="0,28.1750005044573" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.3083338377904"
-                    Point2="0,32.3083338377904"
-                    Point3="4,32.3083338377904" />
+                    Point1="0,28.1750005044573"
+                    Point2="0,32.1750005044573"
+                    Point3="4,32.1750005044573" />
                   <mssgle:LineSegment
-                    End="16.5000004097819,32.3083338377904" />
+                    End="10.100000409782,32.1750005044573" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.5000004097819,32.3083338377904"
-                    Point2="20.5000004097819,32.3083338377904"
-                    Point3="20.5000004097819,36.3083338377904" />
+                    Point1="10.100000409782,32.1750005044573"
+                    Point2="14.100000409782,32.1750005044573"
+                    Point3="14.100000409782,36.1750005044573" />
                   <mssgle:LineSegment
-                    End="20.5000004097819,57.1166676755809" />
+                    End="14.100000409782,56.8500010089146" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9372,30 +9550,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="328.761904701083,176.953925316418">
+          TopLeft="328.62857136775,177.220591983085">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-204.136904710397,90.0794064129544"
+              EndConnector="-204.003571377063,89.812739746287"
               Start="0,0"
-              End="-204.136904710397,82.5794064129544">
+              End="-204.003571377063,82.312739746287">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.0397032064772" />
+                    End="0,40.9063698731435" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.0397032064772"
-                    Point2="0,45.0397032064772"
-                    Point3="-4,45.0397032064772" />
+                    Point1="0,40.9063698731435"
+                    Point2="0,44.9063698731435"
+                    Point3="-4,44.9063698731435" />
                   <mssgle:LineSegment
-                    End="-200.136904710397,45.0397032064772" />
+                    End="-200.003571377063,44.9063698731435" />
                   <mssgle:CubicBezierSegment
-                    Point1="-200.136904710397,45.0397032064772"
-                    Point2="-204.136904710397,45.0397032064772"
-                    Point3="-204.136904710397,49.0397032064772" />
+                    Point1="-200.003571377063,44.9063698731435"
+                    Point2="-204.003571377063,44.9063698731435"
+                    Point3="-204.003571377063,48.9063698731435" />
                   <mssgle:LineSegment
-                    End="-204.136904710397,82.5794064129544" />
+                    End="-204.003571377063,82.312739746287" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9574,18 +9752,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="1739.49999880791,77.2849067343312">
+          TopLeft="1739.49999880791,77.5515734009979">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.778152589525"
+              EndConnector="0,41.5114859228581"
               Start="0,0"
-              End="0,34.278152589525">
+              End="0,34.0114859228581">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.278152589525" />
+                    End="0,34.0114859228581" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9708,30 +9886,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="295.999996721744,591.599997396469">
+          TopLeft="168.428564683515,572.766176766007">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.58333645459402,77.7049093673901"
+              EndConnector="76.0595307422385,0"
               Start="0,0"
-              End="9.58333645459402,70.2049093673901">
+              End="68.5595307422385,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.852454683695" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.852454683695"
-                    Point2="0,38.852454683695"
-                    Point3="4,38.852454683695" />
-                  <mssgle:LineSegment
-                    End="5.58333645459402,38.852454683695" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.58333645459402,38.852454683695"
-                    Point2="9.58333645459402,38.852454683695"
-                    Point3="9.58333645459402,42.852454683695" />
-                  <mssgle:LineSegment
-                    End="9.58333645459402,70.2049093673901" />
+                    End="68.5595307422385,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9764,30 +9930,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="657.124998165295,436.449999383986">
+          TopLeft="656.991664831961,436.449999383986">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43.416665195177,49.0432468996787"
+              EndConnector="-88.3880945370055,38.8471683253103"
               Start="0,0"
-              End="-43.416665195177,41.5432468996787">
+              End="-88.3880945370055,31.3471683253103">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5216234498394" />
+                    End="0,15.4235841626551" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.5216234498394"
-                    Point2="0,24.5216234498394"
-                    Point3="-4,24.5216234498394" />
+                    Point1="0,15.4235841626551"
+                    Point2="0,19.4235841626551"
+                    Point3="-4,19.4235841626551" />
                   <mssgle:LineSegment
-                    End="-39.416665195177,24.5216234498394" />
+                    End="-84.3880945370055,19.4235841626551" />
                   <mssgle:CubicBezierSegment
-                    Point1="-39.416665195177,24.5216234498394"
-                    Point2="-43.416665195177,24.5216234498394"
-                    Point3="-43.416665195177,28.5216234498394" />
+                    Point1="-84.3880945370055,19.4235841626551"
+                    Point2="-88.3880945370055,19.4235841626551"
+                    Point3="-88.3880945370055,23.4235841626551" />
                   <mssgle:LineSegment
-                    End="-43.416665195177,41.5432468996787" />
+                    End="-88.3880945370055,31.3471683253103" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9920,30 +10086,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="104.380955703303,502.873533392791">
+          TopLeft="104.514289036636,502.606866726124">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="191.619041018442,46.0597973370113"
+              EndConnector="-12.0857243531215,48.8754836472702"
               Start="0,0"
-              End="191.619041018442,38.5597973370113">
+              End="-12.0857243531215,41.3754836472702">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.0298986685057" />
+                    End="0,20.4377418236351" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.0298986685057"
-                    Point2="0,23.0298986685057"
-                    Point3="4,23.0298986685057" />
+                    Point1="0,20.4377418236351"
+                    Point2="0,24.4377418236351"
+                    Point3="-4,24.4377418236351" />
                   <mssgle:LineSegment
-                    End="187.619041018442,23.0298986685057" />
+                    End="-8.08572435312146,24.4377418236351" />
                   <mssgle:CubicBezierSegment
-                    Point1="187.619041018442,23.0298986685057"
-                    Point2="191.619041018442,23.0298986685057"
-                    Point3="191.619041018442,27.0298986685057" />
+                    Point1="-8.08572435312146,24.4377418236351"
+                    Point2="-12.0857243531215,24.4377418236351"
+                    Point3="-12.0857243531215,28.4377418236351" />
                   <mssgle:LineSegment
-                    End="191.619041018442,38.5597973370113" />
+                    End="-12.0857243531215,41.3754836472702" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10056,30 +10222,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="613.708332970118,526.826579616998">
+          TopLeft="568.603570294956,516.897167709296">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.2499993108211,82.5909914968635"
+              EndConnector="83.8500004461473,33.8929516019458"
               Start="0,0"
-              End="17.2499993108211,75.0909914968635">
+              End="83.8500004461473,26.3929516019458">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.2954957484317" />
+                    End="0,12.9464758009729" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.2954957484317"
-                    Point2="0,41.2954957484317"
-                    Point3="4,41.2954957484317" />
+                    Point1="0,12.9464758009729"
+                    Point2="0,16.9464758009729"
+                    Point3="4,16.9464758009729" />
                   <mssgle:LineSegment
-                    End="13.2499993108211,41.2954957484317" />
+                    End="79.8500004461473,16.9464758009729" />
                   <mssgle:CubicBezierSegment
-                    Point1="13.2499993108211,41.2954957484317"
-                    Point2="17.2499993108211,41.2954957484317"
-                    Point3="17.2499993108211,45.2954957484317" />
+                    Point1="79.8500004461473,16.9464758009729"
+                    Point2="83.8500004461473,16.9464758009729"
+                    Point3="83.8500004461473,20.9464758009729" />
                   <mssgle:LineSegment
-                    End="17.2499993108211,75.0909914968635" />
+                    End="83.8500004461473,26.3929516019458" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10294,13 +10460,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167.333333333334,41.6666666666667"
+          Size="167.2,41.6"
           Id="Package\Casualities Data Flow Temp Task\Temp_Causualties"
           TopLeft="224,139.208332641878" />
         <NodeLayout
-          Size="153.666666666667,42"
+          Size="153.6,41.6"
           Id="Package\Casualities Data Flow Temp Task\Flat File Source"
           TopLeft="220.666666666667,52.4684693242675" />
         <EdgeLayout
@@ -10334,7 +10500,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10357,13 +10525,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,42"
+          Size="154.4,41.6"
           Id="Package\Casualities Data Main Flow\OLE DB Source"
           TopLeft="1156,51" />
         <NodeLayout
-          Size="174.333333333334,42"
+          Size="174.4,41.6"
           Id="Package\Casualities Data Main Flow\OLE DB Destination"
           TopLeft="1131.53846153846,166.153846153846" />
         <EdgeLayout
@@ -10397,7 +10565,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10433,13 +10603,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Data Flow Main Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Data Flow Main Task\OLE DB Destination"
           TopLeft="291,147" />
         <NodeLayout
-          Size="185.333333333334,42.6666666666667"
+          Size="185.6,42.4"
           Id="Package\Data Flow Main Task\Postcodes Temp Table"
           TopLeft="293,44.3333333333333" />
         <EdgeLayout
@@ -10473,9 +10643,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10511,49 +10679,47 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\Data Flow Temp Task\Postcodes Temp"
           TopLeft="284.999995753169,161.49999872148" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Data Flow Temp Task\Flat File Source"
-          TopLeft="184.999997243285,46.7999991631508" />
+          TopLeft="183.999997243285,46.7999991631508" />
         <EdgeLayout
           Id="Package\Data Flow Temp Task.Paths[Flat File Source Output]"
-          TopLeft="260.999997243285,89.4666658298175">
+          TopLeft="259.999997243285,89.1999991631508">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.666665176551,72.0333328916629"
+              EndConnector="103.799998509884,72.2999995583292"
               Start="0,0"
-              End="102.666665176551,64.5333328916629">
+              End="103.799998509884,64.7999995583292">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.0166664458314" />
+                    End="0,32.1499997791646" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.0166664458314"
-                    Point2="0,36.0166664458314"
-                    Point3="4,36.0166664458314" />
+                    Point1="0,32.1499997791646"
+                    Point2="0,36.1499997791646"
+                    Point3="4,36.1499997791646" />
                   <mssgle:LineSegment
-                    End="98.6666651765507,36.0166664458314" />
+                    End="99.799998509884,36.1499997791646" />
                   <mssgle:CubicBezierSegment
-                    Point1="98.6666651765507,36.0166664458314"
-                    Point2="102.666665176551,36.0166664458314"
-                    Point3="102.666665176551,40.0166664458314" />
+                    Point1="99.799998509884,36.1499997791646"
+                    Point2="103.799998509884,36.1499997791646"
+                    Point3="103.799998509884,40.1499997791646" />
                   <mssgle:LineSegment
-                    End="102.666665176551,64.5333328916629" />
+                    End="103.799998509884,64.7999995583292" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10578,27 +10744,39 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.333333333334,42"
+          Size="174.4,41.6"
           Id="Package\UK_Area_Information Data Main Flow\OLE DB Destination"
-          TopLeft="1321,154" />
+          TopLeft="946.714279340238,161.647058930777" />
         <NodeLayout
-          Size="154.666666666667,42"
+          Size="154.4,41.6"
           Id="Package\UK_Area_Information Data Main Flow\OLE DB Source"
-          TopLeft="1333,48" />
+          TopLeft="937.99999327319,48.7647058930776" />
         <EdgeLayout
           Id="Package\UK_Area_Information Data Main Flow.Paths[OLE DB Source Output]"
-          TopLeft="1409.25,90">
+          TopLeft="1015.19999327319,90.3647058930777">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64"
+              EndConnector="18.7142860670479,71.2823530376989"
               Start="0,0"
-              End="0,56.5">
+              End="18.7142860670479,63.7823530376989">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.5" />
+                    End="0,31.6411765188494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6411765188494"
+                    Point2="0,35.6411765188494"
+                    Point3="4,35.6411765188494" />
+                  <mssgle:LineSegment
+                    End="14.7142860670479,35.6411765188494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.7142860670479,35.6411765188494"
+                    Point2="18.7142860670479,35.6411765188494"
+                    Point3="18.7142860670479,39.6411765188494" />
+                  <mssgle:LineSegment
+                    End="18.7142860670479,63.7823530376989" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10700,7 +10878,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Vehicles Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,49.3333333333334"
           Id="Package\Vehicles Data Main Flow\OLE DB Destination"
@@ -10740,7 +10918,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

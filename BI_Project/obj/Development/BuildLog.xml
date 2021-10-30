@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BI_Project</Name>
-    <LastWriteTime>2021-10-30T06:40:11.5865831Z</LastWriteTime>
+    <LastWriteTime>2021-10-30T16:54:09.2727064Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Src_To_Stage.dtsx</Name>
-      <LastWriteTime>2021-10-30T15:22:58.0489682Z</LastWriteTime>
+      <LastWriteTime>2021-10-30T17:06:11.3540338Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
