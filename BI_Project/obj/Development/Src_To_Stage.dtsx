@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="237"
-  DTS:VersionGUID="{387A8BC3-87DD-4AF9-B902-59349E7E4D28}">
+  DTS:VersionBuild="240"
+  DTS:VersionGUID="{A3C3CDEE-DA16-4B15-B380-2C7828AF56F1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1149,6 +1149,143 @@
               DTS:TextQualified="True"
               DTS:ObjectName="TrangThai"
               DTS:DTSID="{149B707D-3546-4F1F-A88D-402D6CD59E41}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[UK Info 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{71BD10D5-09A9-4AA9-A2B6-095B8C199730}"
+      DTS:ObjectName="UK Info 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU (1).txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pcd7"
+              DTS:DTSID="{48FE3556-877D-4952-811A-6F8CE61FB41F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pcd8"
+              DTS:DTSID="{39FCF172-E5C6-4639-A510-4C4360C0194C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="oa11cd"
+              DTS:DTSID="{73C6935F-A9F3-4A79-A598-E0CF6E769260}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lsoa11cd"
+              DTS:DTSID="{2E39FA4E-3C2F-46AC-946C-F843EDB65C9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="msoa11cd"
+              DTS:DTSID="{6F0C7C36-F69C-4BB2-B851-1F70E8F1CBFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ladcd"
+              DTS:DTSID="{CB7BB08F-C573-4ABE-A5B1-1FC89DA4913C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lsoa11nm"
+              DTS:DTSID="{E413D666-F605-4D46-B8AF-92EDBC2DF7D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="msoa11nm"
+              DTS:DTSID="{30C30F6E-E6E3-4533-B088-51798E0F85A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ladnm"
+              DTS:DTSID="{CD5C28CB-4E86-4FA8-88F1-C719CD34FA39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ladnmw"
+              DTS:DTSID="{B860D022-F1EA-4A7E-8B80-D5101610D0A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdate"
+              DTS:DTSID="{92DECED8-6B99-4F5A-884C-DBB44794E1A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="updatedate"
+              DTS:DTSID="{4124A018-A60D-4DF6-9A42-77015745E358}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TrangThai"
+              DTS:DTSID="{1A2526FD-0BA2-49A1-AB36-621939741DC5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -6463,7 +6600,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6515,7 +6652,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6567,7 +6704,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6610,7 +6747,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6646,7 +6783,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Casualty"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6664,7 +6801,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6699,7 +6836,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6717,7 +6854,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6752,7 +6889,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6770,7 +6907,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Casualties2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6806,7 +6943,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Casualties_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6824,7 +6961,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6859,7 +6996,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6895,7 +7032,7 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Postcodes_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6913,29 +7050,12 @@ AND trangthai = 'FALSE'</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Table Vehicles2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{373D0515-DC2B-4E15-A582-3583DD7B54CA}"
           SQLTask:SqlStatementSource="Truncate Table Vehicles2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Truncate UK_Area_Information_Temp"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{972E999C-62C0-440C-8F0C-3D249C004586}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Truncate UK_Area_Information_Temp"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
-          SQLTask:SqlStatementSource="truncate table UK_Area_Information_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -6968,7 +7088,7 @@ AND trangthai = 'FALSE'</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[UK_Area_Information]</property>
+                  name="OpenRowset">[dbo].[UK_Area_Information_Stage]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7011,8 +7131,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7104,22 +7224,6 @@ AND trangthai = 'FALSE'</property>
                       cachedName="ladnmw"
                       externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
                       lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnmw]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[create_date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="create_date"
-                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[createdate]"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[create_date]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[update_date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="update_date"
-                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[updatedate]"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7184,13 +7288,23 @@ AND trangthai = 'FALSE'</property>
                       length="512"
                       name="ladnmw" />
                     <externalMetadataColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[createdate]"
-                      dataType="dbTimeStamp"
-                      name="createdate" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="create_date" />
                     <externalMetadataColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[updatedate]"
-                      dataType="dbTimeStamp"
-                      name="updatedate" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="update_date" />
+                    <externalMetadataColumn
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="trangthai" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7245,9 +7359,9 @@ AND trangthai = 'FALSE'</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-FROM  UK_Area_Information_Temp
-WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VARCHAR)) OR
-       (update_date &gt;= CAST(? AS VARCHAR)) AND (update_date &lt; CAST(? AS VARCHAR)) AND (trangthai = 'FALSE')</property>
+FROM  UK_Area_Information
+WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCHAR)) OR
+       (updatedate &gt;= CAST(? AS VARCHAR)) AND (updatedate &lt; CAST(? AS VARCHAR))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -7273,8 +7387,8 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               <connections>
                 <connection
                   refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_SOURCE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7394,37 +7508,31 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
                       name="ladnmw"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[create_date]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[create_date]"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[create_date]"
-                      name="create_date"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[createdate]"
+                      name="createdate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_date]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[update_date]"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_date]"
-                      name="update_date"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[updatedate]"
+                      name="updatedate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[trangthai]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trangthai]"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[trangthai]"
-                      name="trangthai"
+                      externalMetadataColumnId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrangThai]"
+                      name="TrangThai"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -7490,23 +7598,17 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
                       length="512"
                       name="ladnmw" />
                     <externalMetadataColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[create_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="create_date" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[createdate]"
+                      dataType="dbTimeStamp"
+                      name="createdate" />
                     <externalMetadataColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[update_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="update_date" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[updatedate]"
+                      dataType="dbTimeStamp"
+                      name="updatedate" />
                     <externalMetadataColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trangthai]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="trangthai" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrangThai]"
+                      dataType="bool"
+                      name="TrangThai" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -7585,26 +7687,20 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
                       lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ladnmw]"
                       name="ladnmw" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[create_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[create_date]"
-                      name="create_date" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[createdate]"
+                      name="createdate" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[update_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[update_date]"
-                      name="update_date" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[updatedate]"
+                      name="updatedate" />
                     <outputColumn
-                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trangthai]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trangthai]"
-                      name="trangthai" />
+                      refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      dataType="bool"
+                      lineageId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrangThai]"
+                      name="TrangThai" />
                     <outputColumn
                       refId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -7629,745 +7725,6 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               endId="Package\UK_Area_Information Data Main Flow\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\UK_Area_Information Data Main Flow\OLE DB Source.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\UK_Area_Information Flow Temp Task"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{853c85ca-76fa-4c6d-976d-3acb928adec2}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="UK_Area_Information Flow Temp Task"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\UK_Area_Information Flow Temp Task\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[UK Info 3]"
-                  connectionManagerRefId="Package.ConnectionManagers[UK Info 3]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pcd7]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd7]"
-                      name="pcd7"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pcd8]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd8]"
-                      name="pcd8"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[oa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[oa11cd]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[oa11cd]"
-                      name="oa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lsoa11cd]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11cd]"
-                      name="lsoa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[msoa11cd]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11cd]"
-                      name="msoa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladcd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladcd]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladcd]"
-                      name="ladcd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lsoa11nm]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11nm]"
-                      name="lsoa11nm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[msoa11nm]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11nm]"
-                      name="msoa11nm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladnm]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnm]"
-                      name="ladnm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladnmw]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnmw]"
-                      name="ladnmw"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]"
-                      name="createdate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]"
-                      name="updatedate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
-                      length="50"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]"
-                      name="TrangThai"
-                      truncationRowDisposition="IgnoreFailure">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="pcd7" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="pcd8" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[oa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="oa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lsoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="lsoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[msoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="msoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladcd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladcd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lsoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="lsoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[msoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="msoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladnm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladnm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladnmw" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="createdate" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="updatedate" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="TrangThai" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Stage_UK_Area_Information"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[UK_Area_Information_Temp]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[pcd7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd7"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd7]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[pcd8]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd8"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[pcd8]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[oa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="oa11cd"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[oa11cd]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="lsoa11cd"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11cd]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="msoa11cd"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11cd]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladcd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladcd"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladcd]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="lsoa11nm"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[lsoa11nm]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="msoa11nm"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[msoa11nm]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladnm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladnm"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnm]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[ladnmw]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladnmw"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[ladnmw]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[createdate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="createdate"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[updatedate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="updatedate"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]" />
-                    <inputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].Columns[TrangThai]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TrangThai"
-                      externalMetadataColumnId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="pcd7" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="pcd8" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="oa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="lsoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="msoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladcd" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="lsoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="msoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladnm" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="ladnmw" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="create_date" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="update_date" />
-                    <externalMetadataColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="trangthai" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\UK_Area_Information Flow Temp Task.Paths[Flat File Source Output]"
-              endId="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\UK_Area_Information Flow Temp Task\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9680,26 +9037,18 @@ AND trangthai = 'FALSE'</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
       DTS:CreationName=""
-      DTS:DTSID="{0543A08B-8CCA-4AF2-8CF3-49A6BD714F6E}"
+      DTS:DTSID="{565D0673-5250-41DC-ADC4-5D4182D720E7}"
       DTS:From="Package\Truncate stage UK_Area_Information stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 17"
-      DTS:To="Package\Truncate UK_Area_Information_Temp" />
+      DTS:To="Package\Get LSET to Metadata - UK_Area_Infomation" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 18]"
       DTS:CreationName=""
-      DTS:DTSID="{dda8ef1a-6893-43bd-bb66-3086636f2044}"
+      DTS:DTSID="{075440B0-A634-4EC7-B885-539DF794E9F9}"
       DTS:From="Package\Get LSET to Metadata - UK_Area_Infomation"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 18"
-      DTS:To="Package\UK_Area_Information Flow Temp Task" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 19]"
-      DTS:CreationName=""
-      DTS:DTSID="{AC70DA5E-1282-4FBC-A9CE-6EEB1B213F2E}"
-      DTS:From="Package\UK_Area_Information Flow Temp Task"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 19"
       DTS:To="Package\UK_Area_Information Data Main Flow" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
@@ -9773,14 +9122,6 @@ AND trangthai = 'FALSE'</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 27"
       DTS:To="Package\Set LSET for Casualties" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 28]"
-      DTS:CreationName=""
-      DTS:DTSID="{97D20190-4889-465E-880F-FF1EE05396D2}"
-      DTS:From="Package\Truncate UK_Area_Information_Temp"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 28"
-      DTS:To="Package\Get LSET to Metadata - UK_Area_Infomation" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 29]"
       DTS:CreationName=""
@@ -9857,7 +9198,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="161.333333333334,41.3333333333334"
           Id="Package\Accidents_Data Flow Main Task"
@@ -9897,7 +9238,7 @@ AND trangthai = 'FALSE'</property>
         <NodeLayout
           Size="289.333333333334,41.3333333333334"
           Id="Package\Get LSET to Metadata - UK_Area_Infomation"
-          TopLeft="1563.99999880791,274.374998555209" />
+          TopLeft="1581.99999880791,214.996617881116" />
         <NodeLayout
           Size="234.666666666667,41.3333333333334"
           Id="Package\Get LSET to Metadata - Vehicles"
@@ -9937,7 +9278,7 @@ AND trangthai = 'FALSE'</property>
         <NodeLayout
           Size="203.333333333334,44.6666666666667"
           Id="Package\Set LSET for UK_Area_Information"
-          TopLeft="1575.16666547458,608.102481481758" />
+          TopLeft="1615.49999880791,397.643013885415" />
         <NodeLayout
           Size="183.333333333334,41.3333333333334"
           Id="Package\Set LSET for Vehicles"
@@ -9979,17 +9320,9 @@ AND trangthai = 'FALSE'</property>
           Id="Package\Truncate Table Vehicles2011_2014_Temp"
           TopLeft="878.624998649582,199.399999116659" />
         <NodeLayout
-          Size="167.666666666667,42"
-          Id="Package\Truncate UK_Area_Information_Temp"
-          TopLeft="1602.5,193.457214525648" />
-        <NodeLayout
           Size="258.333333333334,42"
           Id="Package\UK_Area_Information Data Main Flow"
-          TopLeft="1610,485.540547230716" />
-        <NodeLayout
-          Size="160.666666666667,41.3333333333334"
-          Id="Package\UK_Area_Information Flow Temp Task"
-          TopLeft="1611.99999880791,387.541665404828" />
+          TopLeft="1592.33333333333,296.513512895437" />
         <NodeLayout
           Size="224,42.6666666666667"
           Id="Package\Vehicles Data Flow Temp Task"
@@ -10258,30 +9591,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="1738.16666547458,160.39639265719">
+          TopLeft="1738.16666547457,160.396392657189">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-51.833332141244,33.0608218684581"
+              EndConnector="-11.4999999999964,54.6002252239263"
               Start="0,0"
-              End="-51.833332141244,25.5608218684581">
+              End="-11.4999999999964,47.1002252239263">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5304109342291" />
+                    End="0,23.3001126119631" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.5304109342291"
-                    Point2="0,16.5304109342291"
-                    Point3="-4,16.5304109342291" />
+                    Point1="0,23.3001126119631"
+                    Point2="0,27.3001126119631"
+                    Point3="-4,27.3001126119631" />
                   <mssgle:LineSegment
-                    End="-47.833332141244,16.5304109342291" />
+                    End="-7.49999999999636,27.3001126119631" />
                   <mssgle:CubicBezierSegment
-                    Point1="-47.833332141244,16.5304109342291"
-                    Point2="-51.833332141244,16.5304109342291"
-                    Point3="-51.833332141244,20.5304109342291" />
+                    Point1="-7.49999999999636,27.3001126119631"
+                    Point2="-11.4999999999964,27.3001126119631"
+                    Point3="-11.4999999999964,31.3001126119631" />
                   <mssgle:LineSegment
-                    End="-51.833332141244,25.5608218684581" />
+                    End="-11.4999999999964,47.1002252239263" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10292,64 +9625,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="1708.74999880791,316.374998555209">
+          TopLeft="1724.08333273729,256.329951214449">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.5,71.1666668496193"
+              EndConnector="0,40.1835616809876"
               Start="0,0"
-              End="-16.5,63.6666668496193">
+              End="0,32.6835616809876">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5833334248096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5833334248096"
-                    Point2="0,35.5833334248096"
-                    Point3="-4,35.5833334248096" />
-                  <mssgle:LineSegment
-                    End="-12.5,35.5833334248096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.5,35.5833334248096"
-                    Point2="-16.5,35.5833334248096"
-                    Point3="-16.5,39.5833334248096" />
-                  <mssgle:LineSegment
-                    End="-16.5,63.6666668496193" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="1692.33333214124,428.874998738161">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.8333345254234,56.6655484925545"
-              Start="0,0"
-              End="46.8333345254234,49.1655484925545">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.3327742462773" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.3327742462773"
-                    Point2="0,28.3327742462773"
-                    Point3="4,28.3327742462773" />
-                  <mssgle:LineSegment
-                    End="42.8333345254234,28.3327742462773" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.8333345254234,28.3327742462773"
-                    Point2="46.8333345254234,28.3327742462773"
-                    Point3="46.8333345254234,32.3327742462773" />
-                  <mssgle:LineSegment
-                    End="46.8333345254234,49.1655484925545" />
+                    End="0,32.6835616809876" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10605,65 +9892,19 @@ AND trangthai = 'FALSE'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 28]"
-          TopLeft="1686.33333333333,235.457214525648">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="22.333332141244,38.9177840295613"
-              Start="0,0"
-              End="22.333332141244,31.4177840295613">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.4588920147806" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.4588920147806"
-                    Point2="0,19.4588920147806"
-                    Point3="4,19.4588920147806" />
-                  <mssgle:LineSegment
-                    End="18.333332141244,19.4588920147806" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.333332141244,19.4588920147806"
-                    Point2="22.333332141244,19.4588920147806"
-                    Point3="22.333332141244,23.4588920147806" />
-                  <mssgle:LineSegment
-                    End="22.333332141244,31.4177840295613" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 29]"
-          TopLeft="1739.16666666667,527.540547230716">
+          TopLeft="1719.33333273729,338.513512895437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-62.333334525423,80.5619342510425"
+              EndConnector="0,59.1295009899787"
               Start="0,0"
-              End="-62.333334525423,73.0619342510425">
+              End="0,51.6295009899787">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.2809671255213" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.2809671255213"
-                    Point2="0,40.2809671255213"
-                    Point3="-4,40.2809671255213" />
-                  <mssgle:LineSegment
-                    End="-58.333334525423,40.2809671255213" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-58.333334525423,40.2809671255213"
-                    Point2="-62.333334525423,40.2809671255213"
-                    Point3="-62.333334525423,44.2809671255213" />
-                  <mssgle:LineSegment
-                    End="-62.333334525423,73.0619342510425" />
+                    End="0,51.6295009899787" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11048,7 +10289,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="167.333333333334,41.6666666666667"
           Id="Package\Casualities Data Flow Temp Task\Temp_Causualties"
@@ -11088,7 +10329,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11111,7 +10354,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154.666666666667,42"
           Id="Package\Casualities Data Main Flow\OLE DB Source"
@@ -11151,7 +10394,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11386,69 +10631,6 @@ AND trangthai = 'FALSE'</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\UK_Area_Information Flow Temp Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="153.666666666667,42"
-          Id="Package\UK_Area_Information Flow Temp Task\Flat File Source"
-          TopLeft="339,180.666666666667" />
-        <NodeLayout
-          Size="212.666666666667,41.6666666666667"
-          Id="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information"
-          TopLeft="338,336" />
-        <EdgeLayout
-          Id="Package\UK_Area_Information Flow Temp Task.Paths[Flat File Source Output]"
-          TopLeft="415.833333333333,222.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28.5,113.333333333333"
-              Start="0,0"
-              End="28.5,105.833333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,52.6666666666667"
-                    Point2="0,56.6666666666667"
-                    Point3="4,56.6666666666667" />
-                  <mssgle:LineSegment
-                    End="24.5,56.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.5,56.6666666666667"
-                    Point2="28.5,56.6666666666667"
-                    Point3="28.5,60.6666666666667" />
-                  <mssgle:LineSegment
-                    End="28.5,105.833333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\UK_Area_Information Flow Temp Task\Stage_UK_Area_Information">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Vehicles Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
@@ -11517,7 +10699,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Vehicles Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,49.3333333333334"
           Id="Package\Vehicles Data Main Flow\OLE DB Destination"
@@ -11557,7 +10739,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
