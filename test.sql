@@ -3,6 +3,7 @@ go
 
 truncate table Postcodes_Stage;
 select * from Postcodes_Stage;
+select * from UK_Area_Information_Stage;
 
 use QLBI_METADATA
 GO
@@ -43,6 +44,17 @@ USE QLBI_TEMP;
 
 
 SELECT * FROM Postcodes_Temp
+
+
+SELECT * FROM Postcodes_Temp
+WHERE (create_date >= CAST( '1900-01-01' AS VARCHAR)
+AND create_date < CAST(getdate() AS VARCHAR) )
+ OR (update_date >= CAST( '1900-01-01' AS VARCHAR) AND update_date < CAST(getdate() AS VARCHAR)) AND trangthai = 'FALSE'
+
+USE QLBI_STAGE;
+
+SELECT COUNT(*) FROM Postcodes_Stage
+SELECT * FROM Postcodes_Stage ORDER BY postcode
 
 TRUNCATE TABLE Postcodes_Temp
 TRUNCATE TABLE Accidents2011_2014_Temp
