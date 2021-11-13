@@ -193,3 +193,6 @@ DROP COLUMN Did_Police_Officer_Attend_Scene_of_Accident
 
 ALTER TABLE Accidents2011_2014
 DROP COLUMN Did_Police_Officer_Attend_Scene_of_Accident
+
+ALTER TABLE Casualties2011_2014
+DROP COLUMN Pedestrian_Road_Maintenance_Worker
