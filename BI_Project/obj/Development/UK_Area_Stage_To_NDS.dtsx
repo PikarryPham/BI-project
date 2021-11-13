@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="101"
-  DTS:VersionGUID="{A3C9D04A-E8C8-4129-A9D8-3937BAFB75CB}">
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{31AB3210-F11C-4AF4-9AA9-A35137D8E46C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4033,7 +4033,7 @@ WHERE pcd8 LIKE '%AL4%'</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="Dùng component sort có thể&#xD;&#xA;remove các dòng bị duplicate với giá trị sort, ở đây&#xD;&#xA;ta có giá trị sort là pcd8, và lsoa11cd"
+          Text="Dùng component sort có thể&#xD;&#xA;remove các dòng bị duplicate với giá trị sort, ở đây&#xD;&#xA;ta có giá trị sort là pcd8 sau khi tach, và lsoa11cd"
           ParentId="Package\Data Flow Task"
           FontInfo="{assembly:Null}"
           Size="297.6,72"

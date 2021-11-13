@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="PostcodesStage_To_NDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="91"
-  DTS:VersionGUID="{72212D90-4943-4C75-B40B-E8F7AD65DC51}">
+  DTS:VersionBuild="94"
+  DTS:VersionGUID="{8817FC43-7803-4331-8535-A6030344754A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -791,11 +791,11 @@ WHERE source_sys_code = ? AND postcode = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
+              refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
+              name="Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
               usesDispositions="true"
               version="6">
               <properties>
@@ -859,7 +859,7 @@ where [refTable].[postcode] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
@@ -867,11 +867,11 @@ where [refTable].[postcode] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
+                  refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input].Columns[postcode]"
+                      refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input].Columns[postcode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="512"
@@ -894,38 +894,38 @@ where [refTable].[postcode] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2124,14 +2124,14 @@ where [refTable].[TenTrangThai] = ?</property>
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
+              endId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
               endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Task\No_Match Postcodes.Inputs[OLE DB Destination Input]"
@@ -2141,7 +2141,7 @@ where [refTable].[TenTrangThai] = ?</property>
               refId="Package\Data Flow Task.Paths[Lookup No Match Output1]"
               endId="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Thêm cột NguonDuLieu.Inputs[Derived Column Input]"
@@ -2189,7 +2189,7 @@ where [refTable].[TenTrangThai] = ?</property>
           Id="Package\Data Flow Task\Postcodes_Stage"
           TopLeft="252.301591598258,78.0000010939206" />
         <NodeLayout
-          Size="444,41.6"
+          Size="435.2,41.6"
           Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
           TopLeft="116.587303572771,266.882356684101" />
         <NodeLayout
@@ -2202,7 +2202,7 @@ where [refTable].[TenTrangThai] = ?</property>
           TopLeft="486.130166627437,384.647064218059" />
         <NodeLayout
           Size="450.4,41.6"
-          Id="Package\Data Flow Task\Kiểm dddtra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
+          Id="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
           TopLeft="252.304766024376,454.120267627259" />
         <NodeLayout
           Size="156,41.6"
@@ -2214,109 +2214,109 @@ where [refTable].[TenTrangThai] = ?</property>
           TopLeft="43.4126991520122,382.777783146092" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="366.904766024376,495.720267627259">
+          TopLeft="403.771432691043,495.720267627259">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-206.206351917617,97.2732039561593"
+              EndConnector="-243.073018584284,97.273203956159"
               Start="0,0"
-              End="-206.206351917617,89.7732039561593">
+              End="-243.073018584284,89.773203956159">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.8060893860384" />
+                    End="0,35.1158795377687" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.8060893860384"
-                    Point2="0,32.8060893860384"
-                    Point3="-4,32.8060893860384" />
+                    Point1="0,35.1158795377687"
+                    Point2="0,39.1158795377687"
+                    Point3="-4,39.1158795377687" />
                   <mssgle:LineSegment
-                    End="-202.206351917617,32.8060893860384" />
+                    End="-239.073018584284,39.1158795377687" />
                   <mssgle:CubicBezierSegment
-                    Point1="-202.206351917617,32.8060893860384"
-                    Point2="-206.206351917617,32.8060893860384"
-                    Point3="-206.206351917617,36.8060893860384" />
+                    Point1="-239.073018584284,39.1158795377687"
+                    Point2="-243.073018584284,39.1158795377687"
+                    Point3="-243.073018584284,43.1158795377687" />
                   <mssgle:LineSegment
-                    End="-206.206351917617,89.7732039561593" />
+                    End="-243.073018584284,89.773203956159" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-151.294562677559,37.8060893860384,96.3827734375,11.609375"
+              BoundingBox="-169.727896010892,44.1158795377687,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="338.587303572771,308.482356684101">
+          TopLeft="334.187303572771,308.482356684101">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="138.917462451604,145.637910943158"
+              EndConnector="143.317462451605,145.637910943158"
               Start="0,0"
-              End="138.917462451604,138.137910943158">
+              End="143.317462451605,138.137910943158">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.8189554715788" />
+                    End="0,68.818955471579" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,68.8189554715788"
-                    Point2="0,72.8189554715788"
-                    Point3="4,72.8189554715788" />
+                    Point1="0,68.818955471579"
+                    Point2="0,72.818955471579"
+                    Point3="4,72.818955471579" />
                   <mssgle:LineSegment
-                    End="134.917462451604,72.8189554715788" />
+                    End="139.317462451605,72.818955471579" />
                   <mssgle:CubicBezierSegment
-                    Point1="134.917462451604,72.8189554715788"
-                    Point2="138.917462451604,72.8189554715788"
-                    Point3="138.917462451604,76.8189554715788" />
+                    Point1="139.317462451605,72.818955471579"
+                    Point2="143.317462451605,72.818955471579"
+                    Point3="143.317462451605,76.818955471579" />
                   <mssgle:LineSegment
-                    End="138.917462451604,138.137910943158" />
+                    End="143.317462451605,138.137910943158" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="21.267344507052,77.8189554715788,96.3827734375,11.609375"
+              BoundingBox="23.4673445070525,77.818955471579,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Error Output]"
-          TopLeft="409.825398786538,308.482356684101">
+          TopLeft="440.987303572771,308.482356684101">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="161.504767840898,76.1647075339583"
+              EndConnector="130.342863054666,76.1647075339579"
               Start="0,0"
-              End="161.504767840898,68.6647075339583">
+              End="130.342863054666,68.6647075339579">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.6299721501017" />
+                    End="0,21.6974713604219" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.6299721501017"
-                    Point2="0,30.6299721501017"
-                    Point3="4,30.6299721501017" />
+                    Point1="0,21.6974713604219"
+                    Point2="0,25.6974713604219"
+                    Point3="4,25.6974713604219" />
                   <mssgle:LineSegment
-                    End="157.504767840898,30.6299721501017" />
+                    End="126.342863054666,25.6974713604219" />
                   <mssgle:CubicBezierSegment
-                    Point1="157.504767840898,30.6299721501017"
-                    Point2="161.504767840898,30.6299721501017"
-                    Point3="161.504767840898,34.6299721501017" />
+                    Point1="126.342863054666,25.6974713604219"
+                    Point2="130.342863054666,25.6974713604219"
+                    Point3="130.342863054666,29.6974713604219" />
                   <mssgle:LineSegment
-                    End="161.504767840898,68.6647075339583" />
+                    End="130.342863054666,68.6647075339579" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="26.0173448579489,35.6299721501017,109.470078125,16"
+              BoundingBox="10.436392464833,30.6974713604219,109.470078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2358,25 +2358,25 @@ where [refTable].[TenTrangThai] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="338.558733226815,210.600002370161">
+          TopLeft="336.358733226815,210.600002370161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56.2823543139397"
+              EndConnector="0,56.28235431394"
               Start="0,0"
-              End="0,48.7823543139397">
+              End="0,48.78235431394">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.7823543139397" />
+                    End="0,48.78235431394" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,16.3911771569698,16,16"
+              BoundingBox="-8,16.39117715697,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2406,61 +2406,73 @@ where [refTable].[TenTrangThai] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-          TopLeft="475.234925149196,495.720267627259">
+          TopLeft="551.238099357709,495.720267627259">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,136.201307506517"
+              EndConnector="-78.2730150836932,136.201307506517"
               Start="0,0"
-              End="0,128.701307506517">
+              End="-78.2730150836932,128.701307506517">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,128.701307506517" />
+                    End="0,50.769800115895" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.769800115895"
+                    Point2="0,54.769800115895"
+                    Point3="-4,54.769800115895" />
+                  <mssgle:LineSegment
+                    End="-74.2730150836932,54.769800115895" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.2730150836932,54.769800115895"
+                    Point2="-78.2730150836932,54.769800115895"
+                    Point3="-78.2730150836932,58.769800115895" />
+                  <mssgle:LineSegment
+                    End="-78.2730150836932,128.701307506517" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,58.5459662532585,111.6127734375,11.609375"
+              BoundingBox="-94.9428942605966,59.769800115895,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="229.587303572772,308.482356684101">
+          TopLeft="227.387303572771,308.482356684101">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98.1746044207592,74.2954264619906"
+              EndConnector="-95.9746044207588,74.295426461991"
               Start="0,0"
-              End="-98.1746044207592,66.7954264619906">
+              End="-95.9746044207588,66.795426461991">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.0608453438954" />
+                    End="0,21.0667882216462" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.0608453438954"
-                    Point2="0,25.0608453438954"
-                    Point3="-4,25.0608453438954" />
+                    Point1="0,21.0667882216462"
+                    Point2="0,25.0667882216462"
+                    Point3="-4,25.0667882216462" />
                   <mssgle:LineSegment
-                    End="-94.1746044207592,25.0608453438954" />
+                    End="-91.9746044207588,25.0667882216462" />
                   <mssgle:CubicBezierSegment
-                    Point1="-94.1746044207592,25.0608453438954"
-                    Point2="-98.1746044207592,25.0608453438954"
-                    Point3="-98.1746044207592,29.0608453438954" />
+                    Point1="-91.9746044207588,25.0667882216462"
+                    Point2="-95.9746044207588,25.0667882216462"
+                    Point3="-95.9746044207588,29.0667882216462" />
                   <mssgle:LineSegment
-                    End="-98.1746044207592,66.7954264619906" />
+                    End="-95.9746044207588,66.795426461991" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-113.76234127288,30.0608453438954,129.350078125,16"
+              BoundingBox="-112.662341272879,30.0667882216462,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

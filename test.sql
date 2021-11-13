@@ -5,6 +5,7 @@ go
 select count(*) from Postcodes_Stage;
 select count(*) from UK_Area_Information_Stage;
 select * from Accidents2011_2014_Stage;
+SELECT * FROM Casualties2011_2014_Stage
 
 use QLBI_METADATA
 GO
@@ -126,12 +127,13 @@ GO
 WITH metadata1 AS (
 	SELECT *,SUBSTRING(pcd8,0,CHARINDEX(' ',pcd8)) as pstcode
 	FROM UK_Area_Information
+	WHERE pcd8 LIKE '%AL4%'
 )
-SELECT DISTINCT pstcode,ladnm,lsoa11cd,lsoa11nm,ladnm,msoa11nm
+SELECT DISTINCT pstcode,ladnm,lsoa11cd,lsoa11nm,ladnm,msoa11nm -- bo distinct se co gia tri nhieu trung, bo du lieu > 1000 row, co distinct: 29 row
 FROM metadata1
-WHERE pcd8 LIKE '%AL4%' -- AND lsoa11cd = 'E01023626' pstcode = 'AL4' and 
+-- WHERE lsoa11cd = 'E01023584' AND pstcode = 'AL4' -- co distinct: 1 row, k co distinct: 4 row cung 1 ket qua
 -- WHERE lsoa11cd IS NULL
-GROUP BY pstcode,ladnm,lsoa11cd,lsoa11nm,ladnm,msoa11nm
+-- GROUP BY pstcode,ladnm,lsoa11cd,lsoa11nm,ladnm,msoa11nm
 
 SELECT * FROM Postcodes WHERE postcode = 'AL4'
 
@@ -175,7 +177,9 @@ DELETE FROM Postcodes_NDS;
 SELECT SKMaTrangThai, TenTrangThai
 FROM TrangThaiXoa;
 
+DELETE FROM UK_Area_Information_NDS
 SELECT * FROM UK_Area_Information_NDS
+WHERE lsoa11cd = 'E01023584';
 
 SELECT pcd8
 FROM UK_Area_Information_NDS

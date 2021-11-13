@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{1F2DFD78-2920-4251-BA03-DAA62B7A9B9D}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{F4E07FF0-8912-4B76-B31E-A58B92A890D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -297,10 +297,10 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="Các package chỉ được&#xA;chạy khi package trước đó trỏ tới nó chạy thành công"
+          Text="Lưu ý: Các package chỉ được&#xA;chạy khi package trước đó trỏ tới nó chạy thành công.&#xD;&#xA;Vui lòng disable các component của người khác trước khi chạy &#xD;&#xA;để tránh bị lỗi"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="312,56"
+          Size="363.2,88"
           Id="baf67604-e286-4aea-a431-63ef7b295279"
           TopLeft="5.00000008514948,183.529414338637" />
       </GraphLayout>
