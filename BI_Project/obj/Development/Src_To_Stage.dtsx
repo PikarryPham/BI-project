@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="285"
-  DTS:VersionGUID="{8842B7B6-309B-4C7B-B865-81220559180D}">
+  DTS:VersionBuild="288"
+  DTS:VersionGUID="{98F3FDC8-4D00-4619-976A-1BCECE5F7322}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6741,7 +6741,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6767,7 +6767,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6793,7 +6793,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6820,7 +6820,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - UK_Area_Infomation"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6872,7 +6872,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set  CET to Metadata - UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6889,7 +6889,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6907,7 +6907,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6925,7 +6925,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Casualty"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6961,7 +6961,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6978,7 +6978,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6995,7 +6995,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7013,7 +7013,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7049,7 +7049,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Casualties2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7067,7 +7067,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Accidents_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7085,7 +7085,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Casualties_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7102,7 +7102,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7120,7 +7120,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage UK_Area_Information stage"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7156,7 +7156,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Accidents2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7173,7 +7173,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Postcodes_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -9410,7 +9410,7 @@ AND trangthai = 'FALSE'</property>
         <NodeLayout
           Size="289.6,41.6"
           Id="Package\Set  CET to Metadata - UK_Area_Information"
-          TopLeft="1596.16666547458,35.9515734009979" />
+          TopLeft="1596.16666547458,36.7162792940756" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Set CET to Metadata"
@@ -9434,7 +9434,7 @@ AND trangthai = 'FALSE'</property>
         <NodeLayout
           Size="191.2,41.6"
           Id="Package\Set LSET for Casualties"
-          TopLeft="1290.81481362272,613.509763306782" />
+          TopLeft="1290.81481362272,582.921527583676" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Set LSET for Postcode"
@@ -9466,7 +9466,7 @@ AND trangthai = 'FALSE'</property>
         <NodeLayout
           Size="278.4,41.6"
           Id="Package\Truncate stage UK_Area_Information stage"
-          TopLeft="1598.83333214124,119.063059323856" />
+          TopLeft="1596.69047496189,114.47482396539" />
         <NodeLayout
           Size="252.8,41.6"
           Id="Package\Truncate stage Vehicles_Stage table"
@@ -9733,18 +9733,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="1739.49999880791,77.5515734009979">
+          TopLeft="1738.42857021824,78.3162792940756">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.5114859228581"
+              EndConnector="0,36.1585446713145"
               Start="0,0"
-              End="0,34.0114859228581">
+              End="0,28.6585446713145">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.0114859228581" />
+                    End="0,28.6585446713145" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9755,30 +9755,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="1738.16666547457,160.396392657189">
+          TopLeft="1735.89047496189,156.07482396539">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-11.4999999999964,54.6002252239263"
+              EndConnector="-9.09047615398026,58.9217939157259"
               Start="0,0"
-              End="-11.4999999999964,47.1002252239263">
+              End="-9.09047615398026,51.4217939157259">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.3001126119631" />
+                    End="0,25.460896957863" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.3001126119631"
-                    Point2="0,27.3001126119631"
-                    Point3="-4,27.3001126119631" />
+                    Point1="0,25.460896957863"
+                    Point2="0,29.460896957863"
+                    Point3="-4,29.460896957863" />
                   <mssgle:LineSegment
-                    End="-7.49999999999636,27.3001126119631" />
+                    End="-5.09047615398026,29.460896957863" />
                   <mssgle:CubicBezierSegment
-                    Point1="-7.49999999999636,27.3001126119631"
-                    Point2="-11.4999999999964,27.3001126119631"
-                    Point3="-11.4999999999964,31.3001126119631" />
+                    Point1="-5.09047615398026,29.460896957863"
+                    Point2="-9.09047615398026,29.460896957863"
+                    Point3="-9.09047615398026,33.460896957863" />
                   <mssgle:LineSegment
-                    End="-11.4999999999964,47.1002252239263" />
+                    End="-9.09047615398026,51.4217939157259" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10023,18 +10023,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 27]"
-          TopLeft="1387.73148088544,521.869874518655">
+          TopLeft="1387.61481421876,521.469874518655">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,91.6398887881265"
+              EndConnector="0,61.4516530650209"
               Start="0,0"
-              End="0,84.1398887881265">
+              End="0,53.9516530650209">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,84.1398887881265" />
+                    End="0,53.9516530650209" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10298,13 +10298,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Accidents_Data Flow Main Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Accidents_Data Flow Main Task\OLE DB Destination"
           TopLeft="411,172" />
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
+          Size="206.4,42.4"
           Id="Package\Accidents_Data Flow Main Task\Accidents2011_2014 Temp"
           TopLeft="383,63" />
         <EdgeLayout
@@ -10338,9 +10338,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

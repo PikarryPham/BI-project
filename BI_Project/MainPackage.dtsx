@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{2C288CE8-21EA-49D4-B90B-D34729FA05D4}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{21AAE681-9902-4B13-B074-7B1A0A808A68}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Phase 01"
+      DTS:refId="Package\Source To Stage"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
       DTS:DTSID="{22A60C24-0EC8-4C13-AB35-24D5792D4D15}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Phase 01"
+      DTS:ObjectName="Source To Stage"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -35,20 +35,19 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Phase 02"
+      DTS:refId="Package\Stage to NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
       DTS:DTSID="{67A81813-2FE5-4BD7-B171-7C7167225EB1}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Phase 02"
+      DTS:ObjectName="Stage to NDS"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Stage_To_NDS.dtsx</PackageName>
+          <PackageName>MainStage_To_NDS.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -58,10 +57,10 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{70C2BB3A-37E1-4D76-B610-4B484B82FB52}"
-      DTS:From="Package\Phase 01"
+      DTS:From="Package\Source To Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Phase 02" />
+      DTS:To="Package\Stage to NDS" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -76,12 +75,12 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.666666666667,41.3333333333334"
-          Id="Package\Phase 01"
+          Size="182.4,41.6"
+          Id="Package\Source To Stage"
           TopLeft="286.428576306421,130.764707716279" />
         <NodeLayout
-          Size="181.333333333334,41.3333333333334"
-          Id="Package\Phase 02"
+          Size="181.6,41.6"
+          Id="Package\Stage to NDS"
           TopLeft="287.857147759321,231.705885602529" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
