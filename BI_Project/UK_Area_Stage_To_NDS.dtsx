@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="107"
-  DTS:VersionGUID="{F00B8764-FFCF-4EBB-B436-F0B2206C5AB7}">
+  DTS:VersionBuild="117"
+  DTS:VersionGUID="{B793110F-65FF-4F0D-BBC5-8A32B00EC161}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -62,6 +62,54 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A46106B5-EDC6-4D25-8421-8BE8E045E5EC}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_Error">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_Error;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6C6630D0-6990-4583-B668-D58C46B16F75}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_NDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{945D7354-9C34-44EB-A599-F231F4C85BA4}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_NoMatch">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_NoMatch;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0AD0B90A-E33D-455F-83C6-1F53221CD606}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -185,8 +233,8 @@ WHERE source_sys_code = ? AND pcd8 = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Cập nhật dữ liệu.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -649,8 +697,8 @@ where [refTable].[postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem mã pcd8 sau khi tách của từng dòng có tồn tại trong Postcode_NDS không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -810,8 +858,8 @@ where [refTable].[pcd8] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem pcd8 của từng dòng có tồn tại trong UK_Area_Information NDS chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -897,14 +945,14 @@ where [refTable].[pcd8] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT SKMaTrangThai, TenTrangThai
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT SKMaTrangThai, TenTrangThai 
 FROM TrangThaiXoa;</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT SKMaTrangThai, TenTrangThai
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT SKMaTrangThai, TenTrangThai 
 FROM TrangThaiXoa;) [refTable]
 where [refTable].[TenTrangThai] = ?</property>
                 <property
@@ -955,8 +1003,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1899,8 +1947,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2188,8 +2236,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_No_Match.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2487,8 +2535,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_No_Match_.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2788,8 +2836,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Infor_Error.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3107,8 +3155,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Infor_Error_.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3420,8 +3468,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3864,7 +3912,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.333333333334,41.6666666666667"
           Id="Package\Data Flow Task"
           TopLeft="240.000004087176,108.588236817027" />
       </GraphLayout>
@@ -3876,67 +3924,67 @@ where [refTable].[TenTrangThai] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
-          TopLeft="353.571434592714,966.569943394271" />
-        <NodeLayout
-          Size="444,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
-          TopLeft="277.857147589022,254.541178615531" />
-        <NodeLayout
-          Size="170.4,41.6"
+          Size="170.333333333334,41.6666666666667"
           Id="Package\Data Flow Task\UK_Area_Information_NDS"
           TopLeft="408.507940724864,1052.44445254756" />
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Data Flow Task\Bỏ các whitespace"
-          TopLeft="579.936515072846,118.954250034302" />
-        <NodeLayout
-          Size="238.4,41.6"
-          Id="Package\Data Flow Task\UK_Area_Information_No_Match_"
-          TopLeft="10.7142858967489,706.811769928817" />
-        <NodeLayout
-          Size="228.8,41.6"
-          Id="Package\Data Flow Task\Tách cột pcd8 ra với 3 kí tự đầu"
-          TopLeft="397.301594067593,48.6013078711575" />
-        <NodeLayout
-          Size="496.8,41.6"
+          Size="496.666666666667,41.6666666666667"
           Id="Package\Data Flow Task\Kiểm tra xem mã pcd8 sau khi tách của từng dòng có tồn tại trong Postcode_NDS không"
           TopLeft="252.857147163275,605.670594777368" />
         <NodeLayout
-          Size="349.6,41.6"
+          Size="349.666666666667,41.6666666666667"
           Id="Package\Data Flow Task\Loại bỏ các record có cùng pcd8 sau khi tách và lsoa11cd"
           TopLeft="356.507942579231,419.823535299631" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="238.333333333334,41.6666666666667"
+          Id="Package\Data Flow Task\UK_Area_Information_No_Match_"
+          TopLeft="10.7142858967489,706.811769928817" />
+        <NodeLayout
+          Size="228.666666666667,41.6666666666667"
+          Id="Package\Data Flow Task\Tách cột pcd8 ra với 3 kí tự đầu"
+          TopLeft="397.301594067593,48.6013078711575" />
+        <NodeLayout
+          Size="275.333333333334,41.6666666666667"
+          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
+          TopLeft="353.571434592714,966.569943394271" />
+        <NodeLayout
+          Size="170.333333333334,41.6666666666667"
           Id="Package\Data Flow Task\UK_Area_Infor_Error"
           TopLeft="617.142867652738,358.647063853419" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="444,41.6666666666667"
+          Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
+          TopLeft="277.857147589022,254.541178615531" />
+        <NodeLayout
+          Size="191.333333333334,41.6666666666667"
           Id="Package\Data Flow Task\Thêm cột NguonDuLieu"
           TopLeft="397.61905439046,178.176473087093" />
         <NodeLayout
-          Size="204.8,41.6"
+          Size="204.666666666667,41.6666666666667"
           Id="Package\Data Flow Task\UK_Area_Stage"
           TopLeft="101.507938236607,9.68627464565027" />
         <NodeLayout
-          Size="469.6,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem pcd8 của từng dòng có tồn tại trong UK_Area_Information NDS chưa"
-          TopLeft="236.314288962131,802.094125518997" />
-        <NodeLayout
-          Size="232.8,41.6"
-          Id="Package\Data Flow Task\UK_Area_Information_No_Match"
-          TopLeft="150.000002554485,354.058828494953" />
-        <NodeLayout
-          Size="283.2,41.6"
-          Id="Package\Data Flow Task\Thay đổi kiểu dữ liệu của pcd8 sau khi tách"
-          TopLeft="372.857149206862,512.176477098135" />
-        <NodeLayout
-          Size="164.8,41.6"
+          Size="164.666666666667,41.6666666666667"
           Id="Package\Data Flow Task\Cập nhật dữ liệu"
           TopLeft="59.5238105374939,943.594776496938" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="469.666666666667,41.6666666666667"
+          Id="Package\Data Flow Task\Kiểm tra xem pcd8 của từng dòng có tồn tại trong UK_Area_Information NDS chưa"
+          TopLeft="236.314288962131,802.094125518997" />
+        <NodeLayout
+          Size="232.666666666667,41.6666666666667"
+          Id="Package\Data Flow Task\UK_Area_Information_No_Match"
+          TopLeft="150.000002554485,354.058828494953" />
+        <NodeLayout
+          Size="283.333333333334,41.6666666666667"
+          Id="Package\Data Flow Task\Thay đổi kiểu dữ liệu của pcd8 sau khi tách"
+          TopLeft="372.857149206862,512.176477098135" />
+        <NodeLayout
+          Size="172,41.6666666666667"
+          Id="Package\Data Flow Task\Bỏ các whitespace"
+          TopLeft="579.936515072846,118.954250034302" />
+        <NodeLayout
+          Size="170.333333333334,41.6666666666667"
           Id="Package\Data Flow Task\UK_Area_Infor_Error_"
           TopLeft="688.492075217014,714.713730823952" />
         <EdgeLayout
@@ -4093,7 +4141,7 @@ where [refTable].[TenTrangThai] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,10.3872545766444,16,16"
+              BoundingBox="-8,10.3872545766443,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4116,9 +4164,7 @@ where [refTable].[TenTrangThai] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,5.63235276421877,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4189,7 +4235,7 @@ where [refTable].[TenTrangThai] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-16.4253966861842,30.3764708992518,16,16"
+              BoundingBox="-16.4253966861843,30.3764708992518,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4224,9 +4270,7 @@ where [refTable].[TenTrangThai] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="37.4968279154933,-22,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4297,7 +4341,7 @@ where [refTable].[TenTrangThai] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-209.61313636243,28.9311561122355,129.350078125,16"
+              BoundingBox="-209.613136362429,28.9311561122355,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4449,14 +4493,27 @@ where [refTable].[TenTrangThai] = ?</property>
           Text="Dùng component sort có thể&#xA;remove các dòng bị duplicate với giá trị sort, ở đây&#xA;ta có giá trị sort là pcd8 sau khi tach, và lsoa11cd"
           ParentId="Package\Data Flow Task"
           FontInfo="{assembly:Null}"
-          Size="297.6,72"
+          Size="297.666666666667,72"
           Id="c2cd758b-aeb4-419e-9f03-fdb6fcd41a8e"
           TopLeft="69.8412710306595,97.2026157423149" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa">
+    design-time-name="Package\Data Flow Task\UK_Area_Information_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiểm tra xem mã pcd8 sau khi tách của từng dòng có tồn tại trong Postcode_NDS không">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4475,19 +4532,6 @@ where [refTable].[TenTrangThai] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\UK_Area_Information_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4514,6 +4558,29 @@ where [refTable].[TenTrangThai] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

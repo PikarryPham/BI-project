@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{1F2DFD78-2920-4251-BA03-DAA62B7A9B9D}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{3A91514F-5C10-455E-88C9-FB7F1567E39B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -153,23 +153,23 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182.333333333334,41.6666666666667"
           Id="Package\Accidents_NDS"
           TopLeft="362.857149036563,281.411768652576" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182.333333333334,41.6666666666667"
           Id="Package\Casualities_NDS"
           TopLeft="344.285720148865,487.882359783542" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182.333333333334,41.6666666666667"
           Id="Package\Postcodes_NDS"
           TopLeft="307.142862373469,76.4705893077653" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,41.6666666666667"
           Id="Package\UK_Area_InformationNDS"
           TopLeft="367.857149121713,191.941179162491" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182.333333333334,41.6666666666667"
           Id="Package\Vehicles_NDS"
           TopLeft="350.000005960465,390.000005469603" />
         <EdgeLayout
@@ -297,10 +297,10 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="Các package chỉ được&#xA;chạy khi package trước đó trỏ tới nó chạy thành công"
+          Text="Lưu ý: Các package chỉ được&#xA;chạy khi package trước đó trỏ tới nó chạy thành công.&#xA;Vui lòng disable các component của người khác trước khi chạy &#xA;để tránh bị lỗi"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="312,56"
+          Size="363.333333333334,88"
           Id="baf67604-e286-4aea-a431-63ef7b295279"
           TopLeft="5.00000008514948,183.529414338637" />
       </GraphLayout>

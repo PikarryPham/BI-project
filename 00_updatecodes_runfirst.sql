@@ -13,7 +13,6 @@ DROP TABLE Accidents2011_2014 IF EXISTS Accidents2011_2014;
 DROP TABLE Casualties2011_2014 IF EXISTS Casualties2011_2014;
 DROP TABLE Vehicles2011_2014 IF EXISTS Vehicles2011_2014;
 
-
 /* B3. Tạo và thêm dữ liệu vào bằng cách chọn csdl QLBI_SOURCE --> Task --> Import flat file tương ứng --> đặt tên new table cho từng source
 tương ứng vs các tên ở dưới đây --> next cho tới bước cuối cùng --> in process ---> done (tick màu xanh lá) là coi như đã thành công
 Xem thêm : https://www.sqlshack.com/importing-and-working-with-csv-files-in-sql-server/
@@ -194,5 +193,6 @@ DROP COLUMN Did_Police_Officer_Attend_Scene_of_Accident
 ALTER TABLE Accidents2011_2014
 DROP COLUMN Did_Police_Officer_Attend_Scene_of_Accident
 
+-- FOR CASUALTIES
 ALTER TABLE Casualties2011_2014
 DROP COLUMN Pedestrian_Road_Maintenance_Worker

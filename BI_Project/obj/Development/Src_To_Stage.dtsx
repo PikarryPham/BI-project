@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="288"
-  DTS:VersionGUID="{98F3FDC8-4D00-4619-976A-1BCECE5F7322}">
+  DTS:VersionBuild="309"
+  DTS:VersionGUID="{1373DF7F-6F40-436A-B500-BAD825DF281F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -614,6 +614,471 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FA0C10BF-A71C-4177-ADE8-A162DA864482}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\postcodes (1).csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postcode"
+              DTS:DTSID="{17DAE2EF-D095-4B95-884F-9DC484B6F918}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{FF3CFEFB-102D-408C-BDAE-A9CB3EC142D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{525342EA-4CB4-4362-AF40-58CCC2DCEF0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{3B041734-FD35-465A-AA1F-9B69C29D8F6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{83BAB792-633B-4256-BD02-1D102159D615}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_code"
+              DTS:DTSID="{771ABB33-582C-4AF2-A743-690875C0D200}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{9933BCEA-CA32-4528-A5DD-0F14B9CDAD23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_code"
+              DTS:DTSID="{A18611B1-D6BC-4114-9DDB-B9619501734E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_name"
+              DTS:DTSID="{1C2F6556-A44D-4E26-9FD1-D8CE7D51FBCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdate"
+              DTS:DTSID="{08E11576-A51B-49DD-AEA7-9E2BEE2CFE91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="updatedate"
+              DTS:DTSID="{BCC9BEB5-A764-4761-9700-B11F86BF4698}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TrangThai"
+              DTS:DTSID="{38F93AFA-2A58-479B-AD71-0D17C3655FDD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8385193A-3D4A-4F02-B5B1-07C5FD8FC1D5}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\New_Accidents.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{C27BF5FF-4CE8-46D7-A3F7-3C571934001A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{F6A5E69C-A96B-4B2E-90D7-D32A1FBB80FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{3DB9DC0C-4AE4-4073-98EB-8086B6E7125E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Severity"
+              DTS:DTSID="{7FB2813D-9DE3-4C8B-820F-3D129F1E5270}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Vehicles"
+              DTS:DTSID="{EEBA30F8-89C6-4807-8353-0E4E07C9493C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Casualties"
+              DTS:DTSID="{5E9FB74D-BB1D-4A84-9109-94A230AF0720}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{915791C1-BC8E-4A1E-99BF-978A30920F30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Day_of_Week"
+              DTS:DTSID="{0B8C82C5-89B3-4E75-8357-29DE1AF203A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{D5868944-9665-443D-BA00-5D55366566F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_District"
+              DTS:DTSID="{622FB8F9-88C1-463D-8B92-33987FA28F96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_Highway"
+              DTS:DTSID="{F60D821E-14A3-4259-BB1E-F78699EAA017}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Type"
+              DTS:DTSID="{8BBB16DC-6E10-4833-8DDF-66D8E5B9837D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Speed_limit"
+              DTS:DTSID="{7F47FD26-01F3-469D-B9E8-7C8D31FF4765}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Light_Conditions"
+              DTS:DTSID="{E2B44FCE-F2CA-4F27-8F59-B6060E3B1A70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weather_Conditions"
+              DTS:DTSID="{CB652087-9198-4EAE-AFD4-3C8D705EC741}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Surface_Conditions"
+              DTS:DTSID="{DFF9FE79-DB37-408B-87B2-C0CF9A5DF33D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Urban_or_Rural_Area"
+              DTS:DTSID="{496EB108-673A-4C26-A400-DBE32B07EED3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA_of_Accident_Location"
+              DTS:DTSID="{39E235A5-0684-431F-AEEB-402177440B4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdate"
+              DTS:DTSID="{6B75BBED-51CD-4278-88E3-647F92D076BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="updatedate"
+              DTS:DTSID="{537EB773-7E34-431E-9960-BB5CC8C7268C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TrangThai"
+              DTS:DTSID="{5D7FB044-3EAD-4B4B-8204-DDB66FB2CAD2}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6239B534-4A87-4DB5-8C08-853B6E7E3B02}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\Vehicles1114.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{ADBBB4BF-823C-4973-B0FF-351048481616}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{B6642C5E-08FD-4EAA-A6BD-25C2860A289C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Type"
+              DTS:DTSID="{2109A8EA-EDBD-497F-AC58-DBE20EB545E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive"
+              DTS:DTSID="{10CAFECD-D6FA-413D-98BC-1B48075C85AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Journey_Purpose_of_Driver"
+              DTS:DTSID="{AC25865C-7B55-4F7E-A2E5-9950EF793208}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Driver"
+              DTS:DTSID="{43E544CB-7652-4382-9395-D2995403F65F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Driver"
+              DTS:DTSID="{60D58097-F77F-4FD8-A729-82182C7819FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Driver"
+              DTS:DTSID="{5C413851-38B5-4585-98C6-FD91E45BE8BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_Home_Area_Type"
+              DTS:DTSID="{26CD1EEE-016D-4536-8A4A-865F5FC9C8B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdate"
+              DTS:DTSID="{208B69EB-C09B-470E-B087-7A9F15DB5AE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="updatedate"
+              DTS:DTSID="{23DE9B71-F1AC-42AF-8F31-290DD1339466}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TrangThai"
+              DTS:DTSID="{3D22F8C4-6736-4F03-A414-E28BA2FD9372}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Info UK 2]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{FD78C618-A0F0-4E0A-8CDB-BD2A7A0BF8FF}"
@@ -914,6 +1379,134 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Postcode Path]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{73F1C659-FB25-405E-B133-E1D4CC016F44}"
+      DTS:ObjectName="Postcode Path">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\postcodes.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postcode"
+              DTS:DTSID="{F63D48DD-4AB8-4917-ABBF-23D00ABFEC09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="easting"
+              DTS:DTSID="{3DE40E68-9189-486B-BF31-8DAD3E139E87}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="northing"
+              DTS:DTSID="{01052D1D-9C00-4327-AC11-E706533C22D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{2F125D8A-6981-4FB8-9FBD-EBA942678A27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{97557866-20C4-4383-A1AF-FDD781462CE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{0BCF230B-7C1E-4F32-8325-E150B188138B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{CE4B19F6-652E-4FF7-86A8-756DFC8C4B96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_code"
+              DTS:DTSID="{0A7616C0-ABD8-48D0-93F4-6C3B53C08D50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_name"
+              DTS:DTSID="{2CC3EAC4-7D4D-4EB1-AEF8-37446E06D2F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="iso3166-2"
+              DTS:DTSID="{64C58824-C480-416B-AA3A-8FB03F61E3B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_code"
+              DTS:DTSID="{4E908595-A2D5-40C1-AF9A-2B45AEF4AC6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_name"
+              DTS:DTSID="{4D1C1DB9-CC4A-4837-8D98-15FE610B593D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -1942,8 +2535,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Main Task\Accidents2011_2014 Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2467,8 +3060,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Main Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2840,8 +3433,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3149,8 +3742,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Accidents Connection]"
-                  connectionManagerRefId="Package.ConnectionManagers[Accidents Connection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -3601,101 +4194,127 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="Accident_Index" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="Longitude" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="Latitude" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Accident_Severity" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Number_of_Vehicles" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
-                      dataType="date"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
-                      dataType="dbTime2"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_District]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Local_Authority_District" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_Highway]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="Local_Authority_Highway" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Road_Type" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Speed_limit" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Light_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Weather_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Road_Surface_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Urban_or_Rural_Area" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="LSOA_of_Accident_Location" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="createdate" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="TrangThai" />
                   </externalMetadataColumns>
                 </output>
@@ -5364,6 +5983,7 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
       DTS:refId="Package\Data Flow Main Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{402AB98A-A4CD-42AD-8666-77D6AC600212}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5433,8 +6053,8 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               <connections>
                 <connection
                   refId="Package\Data Flow Main Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5699,8 +6319,8 @@ AND create_date &lt; CAST(? AS VARCHAR) )
               <connections>
                 <connection
                   refId="Package\Data Flow Main Task\Postcodes Temp Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6039,6 +6659,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Data Flow Temp Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{0AFDF7C2-908A-479D-AB95-D23B3A5CC29E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -6071,8 +6692,8 @@ AND create_date &lt; CAST(? AS VARCHAR) )
               <connections>
                 <connection
                   refId="Package\Data Flow Temp Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Test Postcodes Connection 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[Test Postcodes Connection 2]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -6285,7 +6906,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]"
                       name="createdate"
                       truncationRowDisposition="FailComponent">
@@ -6307,7 +6928,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]"
                       name="updatedate"
                       truncationRowDisposition="FailComponent">
@@ -6329,7 +6950,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]"
                       name="TrangThai"
                       truncationRowDisposition="FailComponent">
@@ -6351,73 +6972,73 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[postcode]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="postcode" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="latitude" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="longitude" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="city" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[county]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="county" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_code]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="country_code" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[country_name]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="country_name" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region_code]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="region_code" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region_name]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="region_name" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="createdate" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="TrangThai" />
                   </externalMetadataColumns>
                 </output>
@@ -6509,8 +7130,8 @@ AND create_date &lt; CAST(? AS VARCHAR) )
               <connections>
                 <connection
                   refId="Package\Data Flow Temp Task\Postcodes Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6598,7 +7219,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       refId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].Columns[TrangThai]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="TrangThai"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]" />
@@ -6606,7 +7227,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       refId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].Columns[updatedate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="updatedate"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]" />
@@ -6614,7 +7235,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
                       refId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].Columns[createdate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="createdate"
                       externalMetadataColumnId="Package\Data Flow Temp Task\Postcodes Temp.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
                       lineageId="Package\Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]" />
@@ -6736,16 +7357,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Get LSET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{AFC608D6-CB84-4C5E-AC46-87570B1CB159}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Postcodes'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -6771,7 +7393,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Accidents2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -6793,7 +7415,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6820,7 +7442,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - UK_Area_Infomation"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6846,11 +7468,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Vehicles2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -6872,7 +7494,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set  CET to Metadata - UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6884,16 +7506,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Set CET to Metadata"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{D0A7E879-5C15-41ED-8756-34450061318D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;SET CET = GETDATE()&#xA;WHERE Name_DataFlow = 'Postcodes'&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6911,7 +7534,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource=" UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6925,7 +7548,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Casualty"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6943,11 +7566,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6965,7 +7588,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -6978,7 +7601,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Casualties"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -6990,16 +7613,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Set LSET for Postcode"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{20E266D5-BB90-40DA-B8CA-6FA8749058B6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Postcodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7013,7 +7637,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7031,11 +7655,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{26461A8C-0583-4691-AE01-F4AA8E5F5A05}"
+          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7049,7 +7673,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Casualties2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7071,7 +7695,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9A442A89-57DC-4E28-BB37-48593FD7CFCB}"
+          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
           SQLTask:SqlStatementSource="truncate table Accidents2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7085,7 +7709,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Casualties_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7097,16 +7721,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Truncate stage Postcodes_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{F2EBEF22-7DBA-48C4-AA5A-FB40A3DA7849}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
+          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
           SQLTask:SqlStatementSource="truncate table Postcodes_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7120,7 +7745,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage UK_Area_Information stage"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7138,11 +7763,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9A442A89-57DC-4E28-BB37-48593FD7CFCB}"
+          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
           SQLTask:SqlStatementSource=" truncate table Vehicles2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7160,7 +7785,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{373D0515-DC2B-4E15-A582-3583DD7B54CA}"
+          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Accidents2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7168,16 +7793,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\TRUNCATE TABLE Postcodes_Temp"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{4BFF7BB6-F7DA-49E2-B3C0-0CD9175B64BF}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Postcodes_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
+          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Postcodes_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7191,11 +7817,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Table Vehicles2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{373D0515-DC2B-4E15-A582-3583DD7B54CA}"
+          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
           SQLTask:SqlStatementSource="Truncate Table Vehicles2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7930,8 +8556,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Vehicles Connection]"
-                  connectionManagerRefId="Package.ConnectionManagers[Vehicles Connection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -8194,57 +8820,73 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="Accident_Index" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vehicle_Reference" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vehicle_Type" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Was_Vehicle_Left_Hand_Drive" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Journey_Purpose_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Sex_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Age_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Age_Band_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Driver_Home_Area_Type" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="createdate" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
                       codePage="1252"
                       dataType="str"
-                      length="512"
+                      length="50"
                       name="TrangThai" />
                   </externalMetadataColumns>
                 </output>
@@ -8336,8 +8978,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8601,8 +9243,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\Vehicles Data Main Flow\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8836,8 +9478,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Data Main Flow\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[4V1P8D3\SQLEXPRESS.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9364,135 +10006,135 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161.6,41.6"
+          Size="161.666666666667,41.6666666666667"
           Id="Package\Accidents_Data Flow Main Task"
           TopLeft="487.803570294956,475.297167709296" />
         <NodeLayout
-          Size="210.4,52"
+          Size="210.333333333334,52"
           Id="Package\Accidents_Data Flow Temp Task"
           TopLeft="551.791664831961,384.449999383986" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="160.666666666667,41.6666666666667"
           Id="Package\Casualities Data Flow Temp Task"
           TopLeft="1309.12499880791,384.916665251471" />
         <NodeLayout
-          Size="208,41.6"
+          Size="208,41.6666666666667"
           Id="Package\Casualities Data Main Flow"
           TopLeft="1284.81481481481,479.869874518655" />
         <NodeLayout
-          Size="152,42.4"
+          Size="152,42.3333333333334"
           Id="Package\Data Flow Main Task"
-          TopLeft="16.4285646835145,551.482350373394" />
+          TopLeft="28.0952313501812,546.212079899362" />
         <NodeLayout
-          Size="181.6,42.4"
+          Size="181.666666666667,42.3333333333334"
           Id="Package\Data Flow Temp Task"
           TopLeft="13.714289036636,460.206866726124" />
         <NodeLayout
-          Size="209.6,41.6"
+          Size="209.666666666667,41.6666666666667"
           Id="Package\Get LSET to Metadata"
           TopLeft="6.21428866942938,369.773531632035" />
         <NodeLayout
-          Size="240,41.6"
+          Size="240,41.6666666666667"
           Id="Package\Get LSET to Metadata - Accidents"
           TopLeft="551.952379760288,290.25637570004" />
         <NodeLayout
-          Size="241.6,41.6"
+          Size="241.666666666667,41.6666666666667"
           Id="Package\Get LSET to Metadata - Casualties"
           TopLeft="1284.99999880791,277.708331705589" />
         <NodeLayout
-          Size="289.6,41.6"
+          Size="289.666666666667,41.6666666666667"
           Id="Package\Get LSET to Metadata - UK_Area_Infomation"
           TopLeft="1581.99999880791,214.996617881116" />
         <NodeLayout
-          Size="234.4,41.6"
+          Size="234.333333333334,41.6666666666667"
           Id="Package\Get LSET to Metadata - Vehicles"
           TopLeft="932.523808331716,276.563717256344" />
         <NodeLayout
-          Size="289.6,41.6"
+          Size="289.666666666667,41.6666666666667"
           Id="Package\Set  CET to Metadata - UK_Area_Information"
           TopLeft="1596.16666547458,36.7162792940756" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175.333333333334,41.6666666666667"
           Id="Package\Set CET to Metadata"
           TopLeft="226.928570957968,29.6705909741704" />
         <NodeLayout
-          Size="233.6,41.6"
+          Size="233.666666666667,41.6666666666667"
           Id="Package\Set CET to Metadata - Accidents"
           TopLeft="544.083332010855,29.9454993744642" />
         <NodeLayout
-          Size="226.4,41.6"
+          Size="226.333333333334,41.6666666666667"
           Id="Package\Set CET to Metadata - Casualty"
           TopLeft="1290.66666547458,37.0236456135018" />
         <NodeLayout
-          Size="228,41.6"
+          Size="228,41.6666666666667"
           Id="Package\Set CET to Metadata - Vehicles"
           TopLeft="926.154760694043,35.8498104098768" />
         <NodeLayout
-          Size="188.8,41.6"
+          Size="188.666666666667,41.6666666666667"
           Id="Package\Set LSET for Accidents"
           TopLeft="558.053570741103,550.790119311242" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191.333333333334,41.6666666666667"
           Id="Package\Set LSET for Casualties"
           TopLeft="1290.81481362272,582.921527583676" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162.333333333334,41.6666666666667"
           Id="Package\Set LSET for Postcode"
           TopLeft="244.488095425753,552.050003158619" />
         <NodeLayout
-          Size="203.2,44.8"
+          Size="203.333333333334,44.6666666666667"
           Id="Package\Set LSET for UK_Area_Information"
           TopLeft="1615.49999880791,397.643013885415" />
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183.333333333334,41.6666666666667"
           Id="Package\Set LSET for Vehicles"
-          TopLeft="938.446427723925,611.404771437789" />
+          TopLeft="946.779761057258,559.756120792276" />
         <NodeLayout
-          Size="260,41.6"
+          Size="260,41.6666666666667"
           Id="Package\Truncate Casualties2011_2014_Temp"
           TopLeft="1275.55555555556,204.624630624274" />
         <NodeLayout
-          Size="259.2,41.6"
+          Size="259.333333333334,41.6666666666667"
           Id="Package\Truncate stage Accidents_Stage table"
           TopLeft="489.291666135813,134.97478145432" />
         <NodeLayout
-          Size="259.2,41.6"
+          Size="259.333333333334,41.6666666666667"
           Id="Package\Truncate stage Casualties_Stage table"
           TopLeft="1279.33333214124,118.979726060475" />
         <NodeLayout
-          Size="258.4,41.6"
+          Size="258.333333333334,41.6666666666667"
           Id="Package\Truncate stage Postcodes_Stage table"
           TopLeft="199.42857136775,135.620591983085" />
         <NodeLayout
-          Size="278.4,41.6"
+          Size="278.333333333334,41.6666666666667"
           Id="Package\Truncate stage UK_Area_Information stage"
           TopLeft="1596.69047496189,114.47482396539" />
         <NodeLayout
-          Size="252.8,41.6"
+          Size="252.666666666667,41.6666666666667"
           Id="Package\Truncate stage Vehicles_Stage table"
           TopLeft="906.869046929869,119.253095965532" />
         <NodeLayout
-          Size="166.4,64.8"
+          Size="166.333333333334,64.6666666666667"
           Id="Package\TRUNCATE TABLE Accidents2011_2014_Temp"
           TopLeft="317.458333361273,275.649996501505" />
         <NodeLayout
-          Size="248,42.4"
+          Size="248,42.3333333333334"
           Id="Package\TRUNCATE TABLE Postcodes_Temp"
           TopLeft="0.624999990686746,267.033331729372" />
         <NodeLayout
-          Size="237.6,42.4"
+          Size="237.666666666667,42.3333333333334"
           Id="Package\Truncate Table Vehicles2011_2014_Temp"
           TopLeft="878.624998649582,199.399999116659" />
         <NodeLayout
-          Size="258.4,41.6"
+          Size="258.333333333334,41.6666666666667"
           Id="Package\UK_Area_Information Data Main Flow"
           TopLeft="1592.33333333333,296.513512895437" />
         <NodeLayout
-          Size="224,42.4"
+          Size="224,42.3333333333334"
           Id="Package\Vehicles Data Flow Temp Task"
           TopLeft="949.333329459031,366.149998244941" />
         <NodeLayout
-          Size="161.6,41.6"
+          Size="161.666666666667,41.6666666666667"
           Id="Package\Vehicles Data Main Flow"
           TopLeft="986.42261749231,452.561335065517" />
         <EdgeLayout
@@ -9599,30 +10241,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="1067.08928415898,493.894668398851">
+          TopLeft="1067.25595082564,494.228001732184">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-36.9761897683848,117.510103038938"
+              EndConnector="-28.8095231017185,65.5281190600921"
               Start="0,0"
-              End="-36.9761897683848,110.010103038938">
+              End="-28.8095231017185,58.0281190600921">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.755051519469" />
+                    End="0,28.7640595300461" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.755051519469"
-                    Point2="0,58.755051519469"
-                    Point3="-4,58.755051519469" />
+                    Point1="0,28.7640595300461"
+                    Point2="0,32.7640595300461"
+                    Point3="-4,32.7640595300461" />
                   <mssgle:LineSegment
-                    End="-32.9761897683848,58.755051519469" />
+                    End="-24.8095231017185,32.7640595300461" />
                   <mssgle:CubicBezierSegment
-                    Point1="-32.9761897683848,58.755051519469"
-                    Point2="-36.9761897683848,58.755051519469"
-                    Point3="-36.9761897683848,62.755051519469" />
+                    Point1="-24.8095231017185,32.7640595300461"
+                    Point2="-28.8095231017185,32.7640595300461"
+                    Point3="-28.8095231017185,36.7640595300461" />
                   <mssgle:LineSegment
-                    End="-36.9761897683848,110.010103038938" />
+                    End="-28.8095231017185,58.0281190600921" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9867,18 +10509,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="168.428564683515,572.766176766007">
+          TopLeft="180.095231350181,570.13104152899">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="76.0595307422385,0"
+              EndConnector="64.3928640755718,0"
               Start="0,0"
-              End="68.5595307422385,0">
+              End="56.8928640755718,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="68.5595307422385,0" />
+                    End="56.8928640755718,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10067,30 +10709,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="104.514289036636,502.606866726124">
+          TopLeft="104.321426860075,502.540200059457">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12.0857243531215,48.8754836472702"
+              EndConnector="0,43.6718798399046"
               Start="0,0"
-              End="-12.0857243531215,41.3754836472702">
+              End="0,36.1718798399046">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4377418236351" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4377418236351"
-                    Point2="0,24.4377418236351"
-                    Point3="-4,24.4377418236351" />
-                  <mssgle:LineSegment
-                    End="-8.08572435312146,24.4377418236351" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.08572435312146,24.4377418236351"
-                    Point2="-12.0857243531215,24.4377418236351"
-                    Point3="-12.0857243531215,28.4377418236351" />
-                  <mssgle:LineSegment
-                    End="-12.0857243531215,41.3754836472702" />
+                    End="0,36.1718798399046" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10300,11 +10930,11 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.3333333333334"
           Id="Package\Accidents_Data Flow Main Task\OLE DB Destination"
           TopLeft="411,172" />
         <NodeLayout
-          Size="206.4,42.4"
+          Size="206.333333333334,42.3333333333334"
           Id="Package\Accidents_Data Flow Main Task\Accidents2011_2014 Temp"
           TopLeft="383,63" />
         <EdgeLayout
@@ -10374,7 +11004,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Accidents_Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\Accidents_Data Flow Temp Task\Flat File Source"
@@ -10414,9 +11044,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10582,13 +11210,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Data Flow Main Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.3333333333334"
           Id="Package\Data Flow Main Task\OLE DB Destination"
           TopLeft="291,147" />
         <NodeLayout
-          Size="185.6,42.4"
+          Size="185.666666666667,42.3333333333334"
           Id="Package\Data Flow Main Task\Postcodes Temp Table"
           TopLeft="292.28571427355,45.0980392264109" />
         <EdgeLayout
@@ -10622,7 +11250,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10658,13 +11288,13 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157.6,42.4"
+          Size="157.666666666667,42.3333333333334"
           Id="Package\Data Flow Temp Task\Postcodes Temp"
           TopLeft="284.999995753169,161.49999872148" />
         <NodeLayout
-          Size="152,42.4"
+          Size="152,42.3333333333334"
           Id="Package\Data Flow Temp Task\Flat File Source"
           TopLeft="183.999997243285,46.7999991631508" />
         <EdgeLayout
@@ -10698,7 +11328,9 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10794,7 +11426,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Vehicles Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Vehicles Data Flow Temp Task\OLE DB Destination"
@@ -10834,9 +11466,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10859,7 +11489,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Vehicles Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="172,49.3333333333334"
           Id="Package\Vehicles Data Main Flow\OLE DB Destination"
@@ -10899,9 +11529,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

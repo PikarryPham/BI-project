@@ -68,8 +68,8 @@ CREATE TABLE TrangThaiXoa (
   [NgayCapNhat] [datetime]
 );
 
-INSERT INTO TrangThaiXoa VALUES(1,'False','The record has been soft-deleted',GETDATE(),GETDATE());
-INSERT INTO TrangThaiXoa VALUES(2,'True','The record not has been soft-deleted',GETDATE(),GETDATE());
+INSERT INTO TrangThaiXoa VALUES(1,'False','The record has not been soft-deleted',GETDATE(),GETDATE());
+INSERT INTO TrangThaiXoa VALUES(2,'True','The record has been soft-deleted',GETDATE(),GETDATE());
 
 IF OBJECT_ID(N'dbo.NguonDuLieu', N'U') IS NOT NULL
 BEGIN
