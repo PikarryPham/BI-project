@@ -196,5 +196,5 @@ WHERE source_sys_code = ? AND pcd8 = ?
 
 Use QLBI_NoMatch
 
-TRUNCATE TABLE UK_Area_Information_No_Match
+--TRUNCATE TABLE UK_Area_Information_No_Match
 SELECT * FROM UK_Area_Information_No_Match
