@@ -181,7 +181,7 @@ CREATE TABLE Accidents2011_2014_NDS (
 	Day_of_Week INTEGER,
 	Time_ TIME,
 	Local_Authority_District INTEGER,
-	Local_Authority_Highway VARCHAR(512),
+	Local_Authority_Highway INTEGER,
 	Road_Type INTEGER,
 	Speed_limit INTEGER,
 	Light_Conditions INTEGER,
@@ -194,7 +194,9 @@ CREATE TABLE Accidents2011_2014_NDS (
     [source_sys_code] int,
     LSOA_of_Accident_Location INT DEFAULT NULL
 );
-
+--USE QLBI_NDS;
+--ALTER TABLE Accidents2011_2014_NDS
+--ALTER COLUMN Local_Authority_Highway INTEGER;
 ---- Tao khoa ngoai cho cac bang
 IF (OBJECT_ID('dbo.FK_Postcodes_TrangThai', 'F') IS NOT NULL)
 BEGIN
