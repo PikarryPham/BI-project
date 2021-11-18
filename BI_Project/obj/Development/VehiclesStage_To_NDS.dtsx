@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{942C18EA-98F9-414F-87F5-079EC860CE04}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{9A57D920-40F1-4188-8DD3-4A22B57963CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -74,6 +74,54 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{640E8BA7-7B1C-4135-9087-1CEF65294C52}"
+      DTS:ObjectName="LocalHost.QLBI_NDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_NDS 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{89D81BB6-5E25-4E07-ABE4-8B3931FEC10D}"
+      DTS:ObjectName="LocalHost.QLBI_NDS 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9D3C6A68-E70B-4FF1-916B-6113A2124319}"
+      DTS:ObjectName="LocalHost.QLBI_NoMatch">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_NoMatch;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9CB22154-0374-43AE-AB5A-9AC3861902A4}"
+      DTS:ObjectName="LocalHost.QLBI_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=QLBI_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -152,8 +200,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Accident_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -378,8 +426,8 @@ WHERE source_sys_code = ? AND SKVehicle= ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Cập nhật dữ liệu.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -825,8 +873,8 @@ where [refTable].[Accident_Index] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -928,13 +976,13 @@ where [refTable].[Accident_Index] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Vehicles2011_2014_NDS]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Vehicles2011_2014_NDS]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Vehicles2011_2014_NDS]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Vehicles2011_2014_NDS]) [refTable]
 where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -984,8 +1032,8 @@ where [refTable].[Accident_Index] = ? and [refTable].[Vehicle_Reference] = ?</pr
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1161,8 +1209,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1320,8 +1368,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS 1]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1479,8 +1527,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1640,8 +1688,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1799,8 +1847,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1962,8 +2010,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2063,13 +2111,13 @@ where [refTable].[Code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from TrangThaiXoa</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[TrangThaiXoa]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from TrangThaiXoa) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[TrangThaiXoa]) [refTable]
 where [refTable].[TenTrangThai] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -2119,8 +2167,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2267,8 +2315,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatchTable_AgeBand.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2520,8 +2568,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatchTable_Gender.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2773,8 +2821,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatchTable_Home_Area_Type.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3026,8 +3074,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatchTable_JourneyPurpose.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3279,8 +3327,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatchTable_WasVehicleLeftDrive.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3532,8 +3580,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatch_Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3785,8 +3833,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\NoMatch_Table_VehicleType.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4038,8 +4086,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4284,8 +4332,8 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4648,49 +4696,49 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
               startId="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output7]"
-              endId="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output6]"
-              endId="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
-              endId="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
-              endId="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output8]"
-              endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
-              endId="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
-              endId="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
               endId="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
+              refId="Package\Data Flow Task.Paths[Lookup Match Output6]"
+              endId="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
+              endId="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
+              endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output8]"
               endId="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
+              endId="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
+              endId="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
+              endId="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
+              endId="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Task\NoMatch_Table.Inputs[OLE DB Destination Input]"
@@ -4759,7 +4807,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Data Flow Task"
           TopLeft="249.071432719425,141.617648967822" />
       </GraphLayout>
@@ -4771,47 +4819,477 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="389.6,41.6"
-          Id="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua"
-          TopLeft="1252.15874899839,1362.36219579904" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Data Flow Task\Cập nhật dữ liệu"
-          TopLeft="1030.01588807247,1473.13866651597" />
-        <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
-          TopLeft="1399.82541737751,1498.30206399094" />
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="1707.92064790931,1349.4160179502" />
-        <NodeLayout
-          Size="435.2,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
-          TopLeft="377.460322866634,268.658825030872" />
-        <NodeLayout
-          Size="364,41.6"
+          Size="364,41.3333333333334"
           Id="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua"
           TopLeft="1427.25398124264,1265.0196232654" />
         <NodeLayout
-          Size="149.6,41.6"
+          Size="179.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatchTable_JourneyPurpose"
+          TopLeft="748.619059215599,777.142504259913" />
+        <NodeLayout
+          Size="179.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatchTable_WasVehicleLeftDrive"
+          TopLeft="504.571432653198,624.653599704609" />
+        <NodeLayout
+          Size="149.333333333334,41.3333333333334"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="473.571435614509,60" />
         <NodeLayout
-          Size="148,41.6"
+          Size="526.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không"
+          TopLeft="1417.73018045004,1070.88107000973" />
+        <NodeLayout
+          Size="618.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không"
+          TopLeft="656.158738335785,490.915038006345" />
+        <NodeLayout
+          Size="148,41.3333333333334"
           Id="Package\Data Flow Task\Accident_NDS"
           TopLeft="1478.36509844668,1623.17650088792" />
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Them nguon du lieu"
-          TopLeft="465.85714971776,150.586646427806" />
+          Size="275.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
+          TopLeft="1399.82541737751,1498.30206399094" />
         <NodeLayout
-          Size="154.4,41.6"
+          Size="389.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua"
+          TopLeft="1252.15874899839,1362.36219579904" />
+        <NodeLayout
+          Size="235.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatchTable_Home_Area_Type"
+          TopLeft="1281.65080603126,1180.5621044325" />
+        <NodeLayout
+          Size="154.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\NoMatch_Table"
           TopLeft="226.428574262833,371.554251310542" />
+        <NodeLayout
+          Size="435.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
+          TopLeft="377.460322866634,268.658825030872" />
+        <NodeLayout
+          Size="304.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không"
+          TopLeft="1299.19049555861,907.743812819836" />
+        <NodeLayout
+          Size="590.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không"
+          TopLeft="821.634931961156,624.802632381104" />
+        <NodeLayout
+          Size="156,41.3333333333334"
+          Id="Package\Data Flow Task\Cập nhật dữ liệu"
+          TopLeft="1030.01588807247,1473.13866651597" />
+        <NodeLayout
+          Size="154.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatch_Table_VehicleType"
+          TopLeft="352.587306439472,498.371260165742" />
+        <NodeLayout
+          Size="179.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatchTable_Gender"
+          TopLeft="1077.98414418973,906.044466390774" />
+        <NodeLayout
+          Size="179.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\NoMatchTable_AgeBand"
+          TopLeft="1101.00001759756,1066.63270393708" />
+        <NodeLayout
+          Size="304.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không"
+          TopLeft="1134.41270746828,777.712424532902" />
+        <NodeLayout
+          Size="423.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa"
+          TopLeft="555.441275458433,365.84575215354" />
+        <NodeLayout
+          Size="174.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="1707.92064790931,1349.4160179502" />
+        <NodeLayout
+          Size="152.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Them nguon du lieu"
+          TopLeft="465.85714971776,150.586646427806" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output7]"
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="545.297625999468,101.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.9199797611397"
+              Start="0,0"
+              End="0,41.4199797611397">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.4199797611397" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[NoMatch_Table 2]"
+          TopLeft="965.358738335785,532.515038006345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-371.187305682587,92.1385616982641"
+              Start="0,0"
+              End="-371.187305682587,84.6385616982641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.069280849132" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.069280849132"
+                    Point2="0,46.069280849132"
+                    Point3="-4,46.069280849132" />
+                  <mssgle:LineSegment
+                    End="-367.187305682587,46.069280849132" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-367.187305682587,46.069280849132"
+                    Point2="-371.187305682587,46.069280849132"
+                    Point3="-371.187305682587,50.069280849132" />
+                  <mssgle:LineSegment
+                    End="-371.187305682587,84.6385616982641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-241.400039560043,51.069280849132,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output7]"
+          TopLeft="697.841275458433,407.44575215354">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-268.053969018962,90.9255080122022"
+              Start="0,0"
+              End="-268.053969018962,83.4255080122022">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5756845789198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5756845789198"
+                    Point2="0,36.5756845789198"
+                    Point3="-4,36.5756845789198" />
+                  <mssgle:LineSegment
+                    End="-264.053969018962,36.5756845789198" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-264.053969018962,36.5756845789198"
+                    Point2="-268.053969018962,36.5756845789198"
+                    Point3="-268.053969018962,40.5756845789198" />
+                  <mssgle:LineSegment
+                    End="-268.053969018962,83.4255080122022" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-189.833371228231,41.5756845789198,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output6]"
+          TopLeft="1451.59049555861,949.343812819836">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-260.990477961045,117.288891117246"
+              Start="0,0"
+              End="-260.990477961045,109.788891117246">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.6444455586229" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.6444455586229"
+                    Point2="0,58.6444455586229"
+                    Point3="-4,58.6444455586229" />
+                  <mssgle:LineSegment
+                    End="-256.990477961045,58.6444455586229" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-256.990477961045,58.6444455586229"
+                    Point2="-260.990477961045,58.6444455586229"
+                    Point3="-260.990477961045,62.6444455586229" />
+                  <mssgle:LineSegment
+                    End="-260.990477961045,109.788891117246" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-186.301625699272,63.6444455586229,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output5]"
+          TopLeft="1286.81270746828,819.312424532902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-119.228563278547,86.7320418578713"
+              Start="0,0"
+              End="-119.228563278547,79.2320418578713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3660209289357" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.3660209289357"
+                    Point2="0,43.3660209289357"
+                    Point3="-4,43.3660209289357" />
+                  <mssgle:LineSegment
+                    End="-115.228563278547,43.3660209289357" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-115.228563278547,43.3660209289357"
+                    Point2="-119.228563278547,43.3660209289357"
+                    Point3="-119.228563278547,47.3660209289357" />
+                  <mssgle:LineSegment
+                    End="-119.228563278547,79.2320418578713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-115.420668358024,48.3660209289357,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output4]"
+          TopLeft="1510.38097122062,1404.36219579904">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.1111128235605,93.939868191896"
+              Start="0,0"
+              End="27.1111128235605,86.439868191896">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8066318098354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.8066318098354"
+                    Point2="0,37.8066318098354"
+                    Point3="4,37.8066318098354" />
+                  <mssgle:LineSegment
+                    End="23.1111128235605,37.8066318098354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.1111128235605,37.8066318098354"
+                    Point2="27.1111128235605,37.8066318098354"
+                    Point3="27.1111128235605,41.8066318098354" />
+                  <mssgle:LineSegment
+                    End="27.1111128235605,86.439868191896" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.2508303069698,42.8066318098354,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output3]"
+          TopLeft="1116.83493196116,666.402632381104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-278.615872745557,110.739871878809"
+              Start="0,0"
+              End="-278.615872745557,103.239871878809">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.3699359394047" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.3699359394047"
+                    Point2="0,55.3699359394047"
+                    Point3="-4,55.3699359394047" />
+                  <mssgle:LineSegment
+                    End="-274.615872745557,55.3699359394047" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-274.615872745557,55.3699359394047"
+                    Point2="-278.615872745557,55.3699359394047"
+                    Point3="-278.615872745557,59.3699359394047" />
+                  <mssgle:LineSegment
+                    End="-278.615872745557,103.239871878809" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-195.114323091529,60.3699359394047,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="1668.58731457598,1307.0196232654">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.5,42.3963946847985"
+              Start="0,0"
+              End="126.5,34.8963946847985">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.069883199131" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.069883199131"
+                    Point2="0,17.069883199131"
+                    Point3="4,17.069883199131" />
+                  <mssgle:LineSegment
+                    End="122.5,17.069883199131" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.5,17.069883199131"
+                    Point2="126.5,17.069883199131"
+                    Point3="126.5,21.069883199131" />
+                  <mssgle:LineSegment
+                    End="126.5,34.8963946847985" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.44361328125,22.069883199131,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+          TopLeft="1594.61906933893,1113.5477366764">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-195.301596641002,67.0143677561034"
+              Start="0,0"
+              End="-195.301596641002,59.5143677561034">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9275299009886" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.9275299009886"
+                    Point2="0,26.9275299009886"
+                    Point3="-4,26.9275299009886" />
+                  <mssgle:LineSegment
+                    End="-191.301596641002,26.9275299009886" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-191.301596641002,26.9275299009886"
+                    Point2="-195.301596641002,26.9275299009886"
+                    Point3="-195.301596641002,30.9275299009886" />
+                  <mssgle:LineSegment
+                    End="-195.301596641002,59.5143677561034" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-153.457185039251,31.9275299009886,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="523.904767311078,310.325491697539">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-220.309526381579,61.2287596130033"
+              Start="0,0"
+              End="-220.309526381579,53.7287596130033">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.626031483045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.626031483045"
+                    Point2="0,24.626031483045"
+                    Point3="-4,24.626031483045" />
+                  <mssgle:LineSegment
+                    End="-216.309526381579,24.626031483045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-216.309526381579,24.626031483045"
+                    Point2="-220.309526381579,24.626031483045"
+                    Point3="-220.309526381579,28.626031483045" />
+                  <mssgle:LineSegment
+                    End="-220.309526381579,53.7287596130033" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-165.961149909539,29.626031483045,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
+          TopLeft="1383.26986010951,1404.36219579904">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-275.253972037039,68.7764707169331"
+              Start="0,0"
+              End="-275.253972037039,61.2764707169331">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.6794800293251" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.6794800293251"
+                    Point2="0,27.6794800293251"
+                    Point3="-4,27.6794800293251" />
+                  <mssgle:LineSegment
+                    End="-271.253972037039,27.6794800293251" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-271.253972037039,27.6794800293251"
+                    Point2="-275.253972037039,27.6794800293251"
+                    Point3="-275.253972037039,31.6794800293251" />
+                  <mssgle:LineSegment
+                    End="-275.253972037039,61.2764707169331" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-185.818372737269,32.6794800293251,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="1609.25398124264,1307.0196232654">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4847,38 +5325,254 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output8]"
-          TopLeft="1383.26986010951,1404.36219579904">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="1767.50795822782,1113.5477366764">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-275.253972037039,68.7764707169331"
+              EndConnector="-158.253976985178,151.471886589003"
               Start="0,0"
-              End="-275.253972037039,61.2764707169331">
+              End="-158.253976985178,143.971886589003">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.6794800293251" />
+                    End="0,56.864019043335" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.6794800293251"
-                    Point2="0,27.6794800293251"
-                    Point3="-4,27.6794800293251" />
+                    Point1="0,56.864019043335"
+                    Point2="0,60.864019043335"
+                    Point3="-4,60.864019043335" />
                   <mssgle:LineSegment
-                    End="-271.253972037039,27.6794800293251" />
+                    End="-154.253976985178,60.864019043335" />
                   <mssgle:CubicBezierSegment
-                    Point1="-271.253972037039,27.6794800293251"
-                    Point2="-275.253972037039,27.6794800293251"
-                    Point3="-275.253972037039,31.6794800293251" />
+                    Point1="-154.253976985178,60.864019043335"
+                    Point2="-158.253976985178,60.864019043335"
+                    Point3="-158.253976985178,64.864019043335" />
                   <mssgle:LineSegment
-                    End="-275.253972037039,61.2764707169331" />
+                    End="-158.253976985178,143.971886589003" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-185.818372737269,32.6794800293251,96.3827734375,11.609375"
+              BoundingBox="-127.318375211339,65.864019043335,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="666.260322866634,310.258825030872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100.780952591799,55.5869271226676"
+              Start="0,0"
+              End="100.780952591799,48.0869271226676">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3569399196663" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3569399196663"
+                    Point2="0,22.3569399196663"
+                    Point3="4,22.3569399196663" />
+                  <mssgle:LineSegment
+                    End="96.7809525917994,22.3569399196663" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96.7809525917994,22.3569399196663"
+                    Point2="100.780952591799,22.3569399196663"
+                    Point3="100.780952591799,26.3569399196663" />
+                  <mssgle:LineSegment
+                    End="100.780952591799,48.0869271226676" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.1990895771497,27.3569399196663,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
+          TopLeft="836.241275458433,407.44575215354">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="129.117462877351,83.4692858528055"
+              Start="0,0"
+              End="129.117462877351,75.9692858528055">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5763454955918" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5763454955918"
+                    Point2="0,33.5763454955918"
+                    Point3="4,33.5763454955918" />
+                  <mssgle:LineSegment
+                    End="125.117462877351,33.5763454955918" />
+                  <mssgle:CubicBezierSegment
+                    Point1="125.117462877351,33.5763454955918"
+                    Point2="129.117462877351,33.5763454955918"
+                    Point3="129.117462877351,37.5763454955918" />
+                  <mssgle:LineSegment
+                    End="129.117462877351,75.9692858528055" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.3673447199257,38.5763454955918,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output8]"
+          TopLeft="1067.09207166912,532.515038006345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.7428602920377,92.2875943747589"
+              Start="0,0"
+              End="49.7428602920377,84.7875943747589">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.0579346702258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.0579346702258"
+                    Point2="0,37.0579346702258"
+                    Point3="4,37.0579346702258" />
+                  <mssgle:LineSegment
+                    End="45.7428602920377,37.0579346702258" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.7428602920377,37.0579346702258"
+                    Point2="49.7428602920377,37.0579346702258"
+                    Point3="49.7428602920377,41.0579346702258" />
+                  <mssgle:LineSegment
+                    End="49.7428602920377,84.7875943747589" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.3199565727312,42.0579346702258,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
+          TopLeft="1213.90159862782,666.402632381104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.9111088404568,111.309792151798"
+              Start="0,0"
+              End="72.9111088404568,103.809792151798">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.7044192263709" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.7044192263709"
+                    Point2="0,44.7044192263709"
+                    Point3="4,44.7044192263709" />
+                  <mssgle:LineSegment
+                    End="68.9111088404568,44.7044192263709" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68.9111088404568,44.7044192263709"
+                    Point2="72.9111088404568,44.7044192263709"
+                    Point3="72.9111088404568,48.7044192263709" />
+                  <mssgle:LineSegment
+                    End="72.9111088404568,103.809792151798" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.7358322985216,49.7044192263709,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output6]"
+          TopLeft="1336.27937413495,819.312424532902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.311121423662,88.431388286933"
+              Start="0,0"
+              End="115.311121423662,80.931388286933">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6496249386488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6496249386488"
+                    Point2="0,35.6496249386488"
+                    Point3="4,35.6496249386488" />
+                  <mssgle:LineSegment
+                    End="111.311121423662,35.6496249386488" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.311121423662,35.6496249386488"
+                    Point2="115.311121423662,35.6496249386488"
+                    Point3="115.311121423662,39.6496249386488" />
+                  <mssgle:LineSegment
+                    End="115.311121423662,80.931388286933" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.46417399308107,40.6496249386488,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output7]"
+          TopLeft="1500.96827333639,949.077146153169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180.095240446985,121.803923856561"
+              Start="0,0"
+              End="180.095240446985,114.303923856561">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.1033667789182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.1033667789182"
+                    Point2="0,49.1033667789182"
+                    Point3="4,49.1033667789182" />
+                  <mssgle:LineSegment
+                    End="176.095240446985,49.1033667789182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176.095240446985,49.1033667789182"
+                    Point2="180.095240446985,49.1033667789182"
+                    Point3="180.095240446985,53.1033667789182" />
+                  <mssgle:LineSegment
+                    End="180.095240446985,114.303923856561" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="41.8562335047427,54.1033667789182,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4950,672 +5644,26 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="545.297625999468,101.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.9199797611397"
-              Start="0,0"
-              End="0,41.4199797611397">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.4199797611397" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="523.904767311078,310.325491697539">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-220.309526381579,61.2287596130033"
-              Start="0,0"
-              End="-220.309526381579,53.7287596130033">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.626031483045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.626031483045"
-                    Point2="0,24.626031483045"
-                    Point3="-4,24.626031483045" />
-                  <mssgle:LineSegment
-                    End="-216.309526381579,24.626031483045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-216.309526381579,24.626031483045"
-                    Point2="-220.309526381579,24.626031483045"
-                    Point3="-220.309526381579,28.626031483045" />
-                  <mssgle:LineSegment
-                    End="-220.309526381579,53.7287596130033" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-165.961149909539,29.626031483045,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-          TopLeft="1668.58731457598,1307.0196232654">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="126.5,42.3963946847985"
-              Start="0,0"
-              End="126.5,34.8963946847985">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.069883199131" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.069883199131"
-                    Point2="0,17.069883199131"
-                    Point3="4,17.069883199131" />
-                  <mssgle:LineSegment
-                    End="122.5,17.069883199131" />
-                  <mssgle:CubicBezierSegment
-                    Point1="122.5,17.069883199131"
-                    Point2="126.5,17.069883199131"
-                    Point3="126.5,21.069883199131" />
-                  <mssgle:LineSegment
-                    End="126.5,34.8963946847985" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="7.44361328125,22.069883199131,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output4]"
-          TopLeft="1510.38097122062,1404.36219579904">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="27.1111128235605,93.939868191896"
-              Start="0,0"
-              End="27.1111128235605,86.439868191896">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.8066318098354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.8066318098354"
-                    Point2="0,37.8066318098354"
-                    Point3="4,37.8066318098354" />
-                  <mssgle:LineSegment
-                    End="23.1111128235605,37.8066318098354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.1111128235605,37.8066318098354"
-                    Point2="27.1111128235605,37.8066318098354"
-                    Point3="27.1111128235605,41.8066318098354" />
-                  <mssgle:LineSegment
-                    End="27.1111128235605,86.439868191896" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-42.2508303069698,42.8066318098354,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="423.2,41.6"
-          Id="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa"
-          TopLeft="555.441275458433,365.84575215354" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
-          TopLeft="666.260322866634,310.258825030872">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100.780952591799,55.5869271226676"
-              Start="0,0"
-              End="100.780952591799,48.0869271226676">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.3569399196663" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.3569399196663"
-                    Point2="0,22.3569399196663"
-                    Point3="4,22.3569399196663" />
-                  <mssgle:LineSegment
-                    End="96.7809525917994,22.3569399196663" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96.7809525917994,22.3569399196663"
-                    Point2="100.780952591799,22.3569399196663"
-                    Point3="100.780952591799,26.3569399196663" />
-                  <mssgle:LineSegment
-                    End="100.780952591799,48.0869271226676" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="2.1990895771497,27.3569399196663,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="618.4,41.6"
-          Id="Package\Data Flow Task\Kiểm tra Was_Vehicle_Left_Hand_Drive của từng dòng có tồn tại trong bảng Was_Vehicle_Left_Hand_Drive không"
-          TopLeft="656.158738335785,490.915038006345" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
-          TopLeft="836.241275458433,407.44575215354">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="129.117462877351,83.4692858528055"
-              Start="0,0"
-              End="129.117462877351,75.9692858528055">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5763454955918" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5763454955918"
-                    Point2="0,33.5763454955918"
-                    Point3="4,33.5763454955918" />
-                  <mssgle:LineSegment
-                    End="125.117462877351,33.5763454955918" />
-                  <mssgle:CubicBezierSegment
-                    Point1="125.117462877351,33.5763454955918"
-                    Point2="129.117462877351,33.5763454955918"
-                    Point3="129.117462877351,37.5763454955918" />
-                  <mssgle:LineSegment
-                    End="129.117462877351,75.9692858528055" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="16.3673447199257,38.5763454955918,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task\NoMatch_Table_VehicleType"
-          TopLeft="352.587306439472,498.371260165742" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output7]"
-          TopLeft="697.841275458433,407.44575215354">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-268.053969018962,90.9255080122022"
-              Start="0,0"
-              End="-268.053969018962,83.4255080122022">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5756845789198" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5756845789198"
-                    Point2="0,36.5756845789198"
-                    Point3="-4,36.5756845789198" />
-                  <mssgle:LineSegment
-                    End="-264.053969018962,36.5756845789198" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-264.053969018962,36.5756845789198"
-                    Point2="-268.053969018962,36.5756845789198"
-                    Point3="-268.053969018962,40.5756845789198" />
-                  <mssgle:LineSegment
-                    End="-268.053969018962,83.4255080122022" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-189.833371228231,41.5756845789198,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\NoMatchTable_WasVehicleLeftDrive"
-          TopLeft="504.571432653198,624.653599704609" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[NoMatch_Table 2]"
-          TopLeft="965.358738335785,532.515038006345">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-371.187305682587,92.1385616982641"
-              Start="0,0"
-              End="-371.187305682587,84.6385616982641">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.069280849132" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.069280849132"
-                    Point2="0,46.069280849132"
-                    Point3="-4,46.069280849132" />
-                  <mssgle:LineSegment
-                    End="-367.187305682587,46.069280849132" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-367.187305682587,46.069280849132"
-                    Point2="-371.187305682587,46.069280849132"
-                    Point3="-371.187305682587,50.069280849132" />
-                  <mssgle:LineSegment
-                    End="-371.187305682587,84.6385616982641" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-241.400039560043,51.069280849132,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="590.4,41.6"
-          Id="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không"
-          TopLeft="821.634931961156,624.802632381104" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
-          TopLeft="1067.09207166912,532.515038006345">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="49.7428602920377,92.2875943747589"
-              Start="0,0"
-              End="49.7428602920377,84.7875943747589">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.0579346702258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.0579346702258"
-                    Point2="0,37.0579346702258"
-                    Point3="4,37.0579346702258" />
-                  <mssgle:LineSegment
-                    End="45.7428602920377,37.0579346702258" />
-                  <mssgle:CubicBezierSegment
-                    Point1="45.7428602920377,37.0579346702258"
-                    Point2="49.7428602920377,37.0579346702258"
-                    Point3="49.7428602920377,41.0579346702258" />
-                  <mssgle:LineSegment
-                    End="49.7428602920377,84.7875943747589" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-23.3199565727312,42.0579346702258,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\NoMatchTable_JourneyPurpose"
-          TopLeft="748.619059215599,777.142504259913" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output3]"
-          TopLeft="1116.83493196116,666.402632381104">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-278.615872745557,110.739871878809"
-              Start="0,0"
-              End="-278.615872745557,103.239871878809">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.3699359394047" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.3699359394047"
-                    Point2="0,55.3699359394047"
-                    Point3="-4,55.3699359394047" />
-                  <mssgle:LineSegment
-                    End="-274.615872745557,55.3699359394047" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-274.615872745557,55.3699359394047"
-                    Point2="-278.615872745557,55.3699359394047"
-                    Point3="-278.615872745557,59.3699359394047" />
-                  <mssgle:LineSegment
-                    End="-278.615872745557,103.239871878809" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-195.114323091529,60.3699359394047,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="304.8,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không"
-          TopLeft="1134.41270746828,777.712424532902" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="1213.90159862782,666.402632381104">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72.9111088404568,111.309792151798"
-              Start="0,0"
-              End="72.9111088404568,103.809792151798">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.7044192263709" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.7044192263709"
-                    Point2="0,44.7044192263709"
-                    Point3="4,44.7044192263709" />
-                  <mssgle:LineSegment
-                    End="68.9111088404568,44.7044192263709" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.9111088404568,44.7044192263709"
-                    Point2="72.9111088404568,44.7044192263709"
-                    Point3="72.9111088404568,48.7044192263709" />
-                  <mssgle:LineSegment
-                    End="72.9111088404568,103.809792151798" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-11.7358322985216,49.7044192263709,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\NoMatchTable_Gender"
-          TopLeft="1077.98414418973,906.044466390774" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output5]"
-          TopLeft="1286.81270746828,819.312424532902">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-119.228563278547,86.7320418578713"
-              Start="0,0"
-              End="-119.228563278547,79.2320418578713">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3660209289357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.3660209289357"
-                    Point2="0,43.3660209289357"
-                    Point3="-4,43.3660209289357" />
-                  <mssgle:LineSegment
-                    End="-115.228563278547,43.3660209289357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-115.228563278547,43.3660209289357"
-                    Point2="-119.228563278547,43.3660209289357"
-                    Point3="-119.228563278547,47.3660209289357" />
-                  <mssgle:LineSegment
-                    End="-119.228563278547,79.2320418578713" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-115.420668358024,48.3660209289357,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="304.8,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem Age_Band của từng dòng có tồn tại trong Age_Band không"
-          TopLeft="1299.19049555861,907.743812819836" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="1336.27937413495,819.312424532902">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="115.311121423662,88.431388286933"
-              Start="0,0"
-              End="115.311121423662,80.931388286933">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6496249386488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6496249386488"
-                    Point2="0,35.6496249386488"
-                    Point3="4,35.6496249386488" />
-                  <mssgle:LineSegment
-                    End="111.311121423662,35.6496249386488" />
-                  <mssgle:CubicBezierSegment
-                    Point1="111.311121423662,35.6496249386488"
-                    Point2="115.311121423662,35.6496249386488"
-                    Point3="115.311121423662,39.6496249386488" />
-                  <mssgle:LineSegment
-                    End="115.311121423662,80.931388286933" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="9.46417399308107,40.6496249386488,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\NoMatchTable_AgeBand"
-          TopLeft="1101.00001759756,1066.63270393708" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output6]"
-          TopLeft="1451.59049555861,949.343812819836">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-260.990477961045,117.288891117246"
-              Start="0,0"
-              End="-260.990477961045,109.788891117246">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.6444455586229" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54.6444455586229"
-                    Point2="0,58.6444455586229"
-                    Point3="-4,58.6444455586229" />
-                  <mssgle:LineSegment
-                    End="-256.990477961045,58.6444455586229" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-256.990477961045,58.6444455586229"
-                    Point2="-260.990477961045,58.6444455586229"
-                    Point3="-260.990477961045,62.6444455586229" />
-                  <mssgle:LineSegment
-                    End="-260.990477961045,109.788891117246" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-186.301625699272,63.6444455586229,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="304.8,41.6"
-          Id="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không"
-          TopLeft="1417.73018045004,1070.88107000973" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="1501.05716222527,949.343812819836">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69.0730182247642,121.537257189899"
-              Start="0,0"
-              End="69.0730182247642,114.037257189899">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.9956984598444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.9956984598444"
-                    Point2="0,48.9956984598444"
-                    Point3="4,48.9956984598444" />
-                  <mssgle:LineSegment
-                    End="65.0730182247642,48.9956984598444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="65.0730182247642,48.9956984598444"
-                    Point2="69.0730182247642,48.9956984598444"
-                    Point3="69.0730182247642,52.9956984598444" />
-                  <mssgle:LineSegment
-                    End="69.0730182247642,114.037257189899" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-13.6548776063679,53.9956984598444,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Data Flow Task\NoMatchTable_Home_Area_Type"
-          TopLeft="1281.65080603126,1180.5621044325" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-          TopLeft="1570.13018045004,1112.48107000973">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-170.879374418779,68.0810344227689"
-              Start="0,0"
-              End="-170.879374418779,60.5810344227689">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.0405172113844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.0405172113844"
-                    Point2="0,34.0405172113844"
-                    Point3="-4,34.0405172113844" />
-                  <mssgle:LineSegment
-                    End="-166.879374418779,34.0405172113844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-166.879374418779,34.0405172113844"
-                    Point2="-170.879374418779,34.0405172113844"
-                    Point3="-170.879374418779,38.0405172113844" />
-                  <mssgle:LineSegment
-                    End="-170.879374418779,60.5810344227689" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-141.246073928139,39.0405172113844,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output6]"
-          TopLeft="1619.5968471167,1112.48107000973">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.3428658740602,152.538553255666"
-              Start="0,0"
-              End="-10.3428658740602,145.038553255666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.4933488842686" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,57.4933488842686"
-                    Point2="0,61.4933488842686"
-                    Point3="-4,61.4933488842686" />
-                  <mssgle:LineSegment
-                    End="-6.34286587406018,61.4933488842686" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.34286587406018,61.4933488842686"
-                    Point2="-10.3428658740602,61.4933488842686"
-                    Point3="-10.3428658740602,65.4933488842686" />
-                  <mssgle:LineSegment
-                    End="-10.3428658740602,145.038553255666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-53.3628196557801,66.4933488842686,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua">
+    design-time-name="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[Vehicles2011_2014_NDS]</Value>
+          type="q3:string">[dbo].[Accidents2011_2014_NDS]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5623,7 +5671,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\NoMatchTable_JourneyPurpose">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5636,48 +5684,15 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa">
+    design-time-name="Package\Data Flow Task\NoMatchTable_WasVehicleLeftDrive">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiem tra Accident_index da ton tai trong bang Accident chua">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accidents2011_2014_NDS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5695,33 +5710,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NoMatch_Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa">
+    design-time-name="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5767,7 +5756,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NoMatchTable_WasVehicleLeftDrive">
+    design-time-name="Package\Data Flow Task\Accident_NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5780,7 +5769,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không">
+    design-time-name="Package\Data Flow Task\Kiem tra xem ma vehicle_index da ton tai trong bang vehicle chua">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5790,7 +5779,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[Vehicles2011_2014_NDS]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5803,7 +5792,33 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không">
+    design-time-name="Package\Data Flow Task\NoMatchTable_Home_Area_Type">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\NoMatch_Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5813,7 +5828,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[dbo].[TrangThaiXoa]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5849,7 +5864,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiểm tra xem Home_Area_Type_Drive của từng dòng có tồn tại trong Home_Area_Type không">
+    design-time-name="Package\Data Flow Task\Kiểm tra Journey_Purpose_of_Driver của từng dòng có tồn tại trong bảng Journey_Purpose_of_Driver không">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5868,6 +5883,104 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\NoMatch_Table_VehicleType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\NoMatchTable_Gender">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\NoMatchTable_AgeBand">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiểm tra xem Gender của từng dòng có tồn tại trong bảng Gender không">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiểm tra Vehicle_Type của từng dòng có tồn tại trong Vehicle_Type chưa">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
