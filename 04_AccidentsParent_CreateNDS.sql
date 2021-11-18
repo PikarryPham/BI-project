@@ -64,7 +64,7 @@ END;
 /* Create new table */
 CREATE TABLE Accident_Severity (
   SKAccident_Severity INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -76,7 +76,7 @@ INSERT INTO Accident_Severity  VALUES(3,'Slight');
 
 CREATE TABLE Local_Authority_District (
   SKLocal_Authority_District INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -717,7 +717,7 @@ INSERT INTO Local_Authority_Highway(Code,Description) VALUES ('E06000014','York'
 
 CREATE TABLE Road_Type (
   SKRoad_Type INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -734,7 +734,7 @@ INSERT INTO Road_Type(Code,Description) VALUES (-1,'Data missing or out of range
 
 CREATE TABLE Light_Conditions (
   SKLight_Conditions INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -749,7 +749,7 @@ INSERT INTO Light_Conditions(Code,Description) VALUES (-1,'Data missing or out o
 
 CREATE TABLE Day_of_Week (
   SKDay_of_Week INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -765,7 +765,7 @@ INSERT INTO Day_of_Week(Code,Description) VALUES (7,'Saturday');
 
 CREATE TABLE Weather_Conditions (
   SKWeather_Conditions INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -784,7 +784,7 @@ INSERT INTO Weather_Conditions(Code,Description) VALUES (-1,'Data missing or out
 
 CREATE TABLE Road_Surface_Conditions (
   SKRoad_Surface_Conditions INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -801,7 +801,7 @@ INSERT INTO Road_Surface_Conditions(Code,Description) VALUES (-1,'Data missing o
 
 CREATE TABLE Urban_or_Rural_Area (
   SKUrban_or_Rural_Area INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]

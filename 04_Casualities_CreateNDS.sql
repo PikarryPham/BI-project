@@ -55,7 +55,7 @@ END;
 /* Create new table */
 CREATE TABLE Casualty_Class (
   SKCasualty_Class INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -67,7 +67,7 @@ INSERT INTO Casualty_Class(Code,Description) VALUES (3,'Pedestrian');
 
 CREATE TABLE Casualty_Severity (
   SKCasualty_Severity INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -80,7 +80,7 @@ INSERT INTO Casualty_Severity(Code,Description) VALUES (3,'Slight');
 
 CREATE TABLE Pedestrian_Location (
   SKPedestrian_Location INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -101,7 +101,7 @@ INSERT INTO Pedestrian_Location(Code,Description) VALUES (-1,'Data missing or ou
 
 CREATE TABLE Pedestrian_Movement (
   SKPedestrian_Movement INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -121,7 +121,7 @@ INSERT INTO Pedestrian_Movement(Code,Description) VALUES (-1,'Data missing or ou
 
 CREATE TABLE Car_Passenger (
   SKCar_Passenger INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -134,7 +134,7 @@ INSERT INTO Car_Passenger(Code,Description) VALUES (-1,'Data missing or out of r
 
 CREATE TABLE Bus_or_Coach_Passenger (
   SKBus_or_Coach_Passenger INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -149,7 +149,7 @@ INSERT INTO Bus_or_Coach_Passenger(Code,Description) VALUES (-1,'Data missing or
 
 CREATE TABLE Casualty_Type (
   SKCasualty_Type INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]

@@ -46,7 +46,7 @@ END;
 /* Create new table */
 CREATE TABLE Vehicle_Type (
   SKVehicle_Type INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -76,7 +76,7 @@ INSERT INTO Vehicle_Type(Code,Description) VALUES (-1,'Data missing or out of ra
 
 CREATE TABLE Was_Vehicle_Left_Hand_Drive (
   SKWas_Vehicle_Left_Hand_Drive INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -88,7 +88,7 @@ INSERT INTO Was_Vehicle_Left_Hand_Drive VALUES(-1,'Data missing or out of range'
 
 CREATE TABLE Journey_Purpose_of_Driver (
   SKJourney_Purpose_of_Driver INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -105,7 +105,7 @@ INSERT INTO Journey_Purpose_of_Driver(Code,Description) VALUES (-1,'Data missing
 
 CREATE TABLE Gender (
   SKGender INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -119,7 +119,7 @@ INSERT INTO Gender(Code,Description) VALUES (-1,'Data missing or out of range');
 
 CREATE TABLE Age_Band (
   SKAge_Band INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
@@ -141,7 +141,7 @@ INSERT INTO Age_Band(Code,Description) VALUES (-1,'Data missing or out of range'
 
 CREATE TABLE Home_Area_Type (
   SKHome_Area_Type INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-  Code VARCHAR(255),
+  Code INTEGER,
   Description VARCHAR(255)
   --[NgayTao] [datetime],
   --[NgayCapNhat] [datetime]
