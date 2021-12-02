@@ -147,27 +147,10 @@ CREATE TABLE Home_Area_Type (
   --[NgayCapNhat] [datetime]
 );
 DELETE FROM Home_Area_Type;
-INSERT INTO Home_Area_Type(Code,Description) VALUES (0,'Pedestrian');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (1,'Cyclist');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (2,'Motorcycle 50cc and under rider or passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (3,'Motorcycle 125cc and under rider or passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (4,'Motorcycle over 125cc and up to 500cc rider or  passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (5,'Motorcycle over 500cc rider or passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (8,'Taxi/Private hire car occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (9,'Car occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (10,'Minibus (8 - 16 passenger seats) occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (11,'Bus or coach occupant (17 or more pass seats)');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (16,'Horse rider');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (17,'Agricultural vehicle occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (18,'Tram occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (19,'Van / Goods vehicle (3.5 tonnes mgw or under) occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (20,'Goods vehicle (over 3.5t. and under 7.5t.) occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (21,'Goods vehicle (7.5 tonnes mgw and over) occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (22,'Mobility scooter rider');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (23,'Electric motorcycle rider or passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (90,'Other vehicle occupant');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (97,'Motorcycle - unknown cc rider or passenger');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (98,'Goods vehicle (unknown weight) occupant');
+INSERT INTO Home_Area_Type(Code,Description) VALUES (1,'Urban area');
+INSERT INTO Home_Area_Type(Code,Description) VALUES (2,'Small town');
+INSERT INTO Home_Area_Type(Code,Description) VALUES (3,'Rural');
+INSERT INTO Home_Area_Type(Code,Description) VALUES (4,'Data missing or out of range');
 
 -- Tạo khóa ngoại 
 IF (OBJECT_ID('dbo.FK_Vehicle_VehicleType', 'F') IS NOT NULL)
