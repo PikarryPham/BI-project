@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{3A91514F-5C10-455E-88C9-FB7F1567E39B}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{8D0B39EB-C422-4759-B3C0-AFC745B4B79F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,6 @@
       DTS:refId="Package\Accidents_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
       DTS:DTSID="{CEE57D82-DAD4-435A-B6D6-A9E198793CED}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -39,7 +38,6 @@
       DTS:refId="Package\Casualities_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
       DTS:DTSID="{BCDFE0AA-1345-4A9B-BFBF-71A14E356AE3}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -50,6 +48,23 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <PackageName>CasualitiesStage_To_NDS.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Country_NDS and Region_NDS"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Country_NDS and Region_NDS"
+      DTS:DTSID="{FA926C9F-EC9B-4F4C-85A1-797CF9C51961}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Country_NDS and Region_NDS"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Country_Region_To_NDS.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -91,7 +106,6 @@
       DTS:refId="Package\Vehicles_NDS"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
       DTS:DTSID="{656A21FD-3107-4AE6-9813-AE72DE41AEEE}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -139,6 +153,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Casualities_NDS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{4FD79CC1-12BA-44F2-B3B2-FD06655D1B14}"
+      DTS:From="Package\Country_NDS and Region_NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Postcodes_NDS" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -153,28 +175,32 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.333333333334,41.6666666666667"
+          Size="182.4,41.6"
           Id="Package\Accidents_NDS"
-          TopLeft="362.857149036563,281.411768652576" />
+          TopLeft="404.285721170659,315.82353384107" />
         <NodeLayout
-          Size="182.333333333334,41.6666666666667"
+          Size="182.4,41.6"
           Id="Package\Casualities_NDS"
-          TopLeft="344.285720148865,487.882359783542" />
+          TopLeft="385.714292282961,522.294124972036" />
         <NodeLayout
-          Size="182.333333333334,41.6666666666667"
+          Size="182.4,41.6"
+          Id="Package\Country_NDS and Region_NDS"
+          TopLeft="80.7142870888419,3.82352946538827" />
+        <NodeLayout
+          Size="182.4,41.6"
           Id="Package\Postcodes_NDS"
-          TopLeft="307.142862373469,76.4705893077653" />
+          TopLeft="348.571434507565,110.88235449626" />
         <NodeLayout
-          Size="200,41.6666666666667"
+          Size="200,41.6"
           Id="Package\UK_Area_InformationNDS"
-          TopLeft="367.857149121713,191.941179162491" />
+          TopLeft="409.285721255809,226.352944350985" />
         <NodeLayout
-          Size="182.333333333334,41.6666666666667"
+          Size="182.4,41.6"
           Id="Package\Vehicles_NDS"
-          TopLeft="350.000005960465,390.000005469603" />
+          TopLeft="391.428578094561,424.411770658097" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="398.342862373469,118.070589307765">
+          TopLeft="439.771434507565,152.482354496259">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -208,7 +234,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="467.857149121713,233.541179162491">
+          TopLeft="509.285721255809,267.952944350985">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -242,7 +268,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="454.057149036563,323.011768652576">
+          TopLeft="495.485721170659,357.42353384107">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -276,7 +302,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="438.342863054665,431.600005469603">
+          TopLeft="479.771435188761,466.011770658097">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -296,13 +322,47 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="171.914287088842,45.4235294653883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="267.857147418723,65.4588250308718"
+              Start="0,0"
+              End="267.857147418723,57.9588250308718">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7294125154359" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.7294125154359"
+                    Point2="0,32.7294125154359"
+                    Point3="4,32.7294125154359" />
+                  <mssgle:LineSegment
+                    End="263.857147418723,32.7294125154359" />
+                  <mssgle:CubicBezierSegment
+                    Point1="263.857147418723,32.7294125154359"
+                    Point2="267.857147418723,32.7294125154359"
+                    Point3="267.857147418723,36.7294125154359" />
+                  <mssgle:LineSegment
+                    End="267.857147418723,57.9588250308718" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="Lưu ý: Các package chỉ được&#xA;chạy khi package trước đó trỏ tới nó chạy thành công.&#xA;Vui lòng disable các component của người khác trước khi chạy &#xA;để tránh bị lỗi"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="363.333333333334,88"
+          Size="363.2,88"
           Id="baf67604-e286-4aea-a431-63ef7b295279"
-          TopLeft="5.00000008514948,183.529414338637" />
+          TopLeft="0,276.823533294111" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

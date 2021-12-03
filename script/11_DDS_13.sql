@@ -88,10 +88,10 @@ CREATE TABLE Dim_Local_Authority_Highway (
 
 CREATE TABLE Dim_Date (
     SKDate INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    Year_ VARCHAR(255) NOT NULL,
-    Quarter_ VARCHAR(255) NOT NULL,
-    Month_ VARCHAR(255) NOT NULL,
-    Day_ VARCHAR(255) NOT NULL,
+    Year_ INT NOT NULL,
+    Quarter_ INT NOT NULL,
+    Month_ INT NOT NULL,
+    Day_ DATE NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME,
 );
@@ -123,3 +123,10 @@ FOREIGN KEY (SKLocal_Authority_Highway) REFERENCES Dim_Local_Authority_Highway(S
 ALTER TABLE Fact_Accidents
 ADD CONSTRAINT FK_Fact_Accident_Date
 FOREIGN KEY (SKDate) REFERENCES Dim_Date(SKDate);
+
+------------------------ CREATE METADATA FOR FLOW DDS_1236
+USE QLBI_METADATA;
+
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_To_DDS13','1900-01-01',NULL);
+
+SELECT * FROM Metadata_Table

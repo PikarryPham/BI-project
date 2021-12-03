@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/2/2021 10:16:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-ED2S73F"
+  DTS:CreatorName="DESKTOP-ED2S73F\MON"
+  DTS:DTSID="{7337C255-75F4-457A-93D5-AA50D764750D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{AC035C93-0981-4FBA-B030-18F50CD8286D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\NDS_DDS_1236"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{54DCDE79-4A50-4ADE-8024-4A76137A3D45}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="NDS_DDS_1236"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>DDS_1236.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\NDS_DDS_457"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{17f7d6e8-53ce-4ff9-be4a-86bf71123a37}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="NDS_DDS_457"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>DDS_1236.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <AnnotationLayout
+          Text="DDS 1-2-3-6"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="95.2,60"
+          Id="a84dbdd6-9aa2-4fc6-aabd-a87502e5bf5e"
+          TopLeft="53.5714294837446,74.1764716285323" />
+        <AnnotationLayout
+          Text="DDS 4-5-7"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="84,40"
+          Id="cf68792d-ce0e-4a8e-9f23-dad78446e70c"
+          TopLeft="55.7142866630945,190.352942163144" />
+        <AnnotationLayout
+          Text="DDS 13"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="68,40"
+          Id="dfbd4e4d-ff86-46e3-9a77-8b968ca0b695"
+          TopLeft="321.428576902468,185.058826124792" />
+        <AnnotationLayout
+          Text="DDS 10"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="68,40"
+          Id="5e00cebc-b25b-4314-a7c1-09dc3638a5ea"
+          TopLeft="318.571433996668,78.7647069869982" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\NDS_DDS_1236"
+          TopLeft="13.5714288025486,116.235295747803" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\NDS_DDS_457"
+          TopLeft="13.5714288025486,241.411765006174" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

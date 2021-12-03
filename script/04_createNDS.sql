@@ -46,6 +46,18 @@ BEGIN
 	DROP TABLE dbo.Postcodes_NDS;
 	PRINT 'Delete Table Successfully';
 END;
+IF OBJECT_ID(N'dbo.Country_NDS', N'U') IS NOT NULL
+BEGIN
+    PRINT 'Table Exists';
+	DROP TABLE dbo.Country_NDS;
+	PRINT 'Delete Table Successfully';
+END;
+IF OBJECT_ID(N'dbo.Region_NDS', N'U') IS NOT NULL
+BEGIN
+    PRINT 'Table Exists';
+	DROP TABLE dbo.Region_NDS;
+	PRINT 'Delete Table Successfully';
+END;
 IF OBJECT_ID(N'dbo.TrangThaiXoa', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
@@ -95,6 +107,7 @@ INSERT INTO NguonDuLieu VALUES(3,'academe/UK-Postcodes',GETDATE(),GETDATE());
 SELECT * FROM NguonDuLieu;
 
 /* Create new table */
+DROP TABLE Postcodes_NDS
 CREATE TABLE Postcodes_NDS (
     SKPostcodes INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	postcode VARCHAR(512) NOT NULL, -- Natural Key
@@ -102,8 +115,26 @@ CREATE TABLE Postcodes_NDS (
 	longitude VARCHAR(512) NOT NULL,
 	city VARCHAR(512),
 	county VARCHAR(512),
+	create_date DATETIME,
+	update_date DATETIME,
+	country INT NOT NULL,
+	region INT NOT NULL,
+	[status_code] int,
+    [source_sys_code] int
+);
+
+CREATE TABLE Country_NDS (
+    SKCountry INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	country_code VARCHAR(512),
 	country_name VARCHAR(512),
+	create_date DATETIME,
+	update_date DATETIME,
+	[status_code] int,
+    [source_sys_code] int
+);
+
+CREATE TABLE Region_NDS (
+    SKRegion INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	region_code VARCHAR(512),
 	region_name VARCHAR(512),
 	create_date DATETIME,
@@ -317,6 +348,66 @@ END
 ALTER TABLE Casualties2011_2014_NDS
 ADD CONSTRAINT FK_Casuality_Vehicles
 FOREIGN KEY (VehicleRef_AccidentInd_Ref) REFERENCES Vehicles2011_2014_NDS(SKVehicle);
+
 ---- flow cua casuality: them cot nguon 
 --> so sánh cả 2 giá trị Vehicle_Reference vs Accident_Index với Vehicle_Reference vs Accident_Index_Ref của Vehicles
 --> but Accident_Index_Ref thay = 1 con số --> viết script task để lấy ra được Accident_Index của Accident tương ứng Accident_Index_Ref của Vehicles = cách join 2 bảng vs nhau
+
+------------------------- Country
+IF (OBJECT_ID('dbo.FK_Country_TrangThai', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Country_NDS DROP CONSTRAINT FK_Country_TrangThai
+END
+ALTER TABLE dbo.Country_NDS
+ADD CONSTRAINT FK_Country_TrangThai
+FOREIGN KEY (status_code) REFERENCES TrangThaiXoa(SKMaTrangThai);
+
+IF (OBJECT_ID('dbo.FK_Country_Nguondl', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Country_NDS DROP CONSTRAINT FK_Country_Nguondl
+END
+ALTER TABLE dbo.Country_NDS
+ADD CONSTRAINT FK_Country_Nguondl
+FOREIGN KEY (source_sys_code) REFERENCES NguonDuLieu(SKMaNguon);
+
+IF (OBJECT_ID('dbo.FK_Postcode_Country', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Postcodes_NDS DROP CONSTRAINT FK_Postcode_Country
+END
+ALTER TABLE dbo.Postcodes_NDS
+ADD CONSTRAINT FK_Postcode_Country
+FOREIGN KEY (country) REFERENCES Country_NDS(SKCountry);
+------------------------------ Region 
+
+IF (OBJECT_ID('dbo.FK_Postcode_Region', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Postcodes_NDS DROP CONSTRAINT FK_Postcode_Region
+END
+ALTER TABLE dbo.Postcodes_NDS
+ADD CONSTRAINT FK_Postcode_Region
+FOREIGN KEY (region) REFERENCES Region_NDS(SKRegion);
+
+IF (OBJECT_ID('dbo.FK_Region_TrangThai', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Region_NDS DROP CONSTRAINT FK_Region_TrangThai
+END
+ALTER TABLE dbo.Region_NDS
+ADD CONSTRAINT FK_Region_TrangThai
+FOREIGN KEY (status_code) REFERENCES TrangThaiXoa(SKMaTrangThai);
+
+IF (OBJECT_ID('dbo.FK_Region_Nguondl', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Region_NDS DROP CONSTRAINT FK_Region_Nguondl
+END
+ALTER TABLE dbo.Region_NDS
+ADD CONSTRAINT FK_Region_Nguondl
+FOREIGN KEY (source_sys_code) REFERENCES NguonDuLieu(SKMaNguon);
+
+--DELETE FROM UK_Area_Information_NDS
+--DELETE FROM Accidents2011_2014_NDS
+--DELETE FROM Vehicles2011_2014_NDS
+--DELETE FROM Casualties2011_2014_NDS
+
+
+--SELECT country_code, country_name
+--FROM Postcodes_Stage

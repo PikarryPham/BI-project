@@ -138,7 +138,7 @@ INSERT INTO Age_Band(Code,Description) VALUES (10,'66 - 75');
 INSERT INTO Age_Band(Code,Description) VALUES (11,'Over 75');
 INSERT INTO Age_Band(Code,Description) VALUES (-1,'Data missing or out of range');
 
-
+DROP TABLE Home_Area_Type
 CREATE TABLE Home_Area_Type (
   SKHome_Area_Type INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
   Code INTEGER,
@@ -150,7 +150,9 @@ DELETE FROM Home_Area_Type;
 INSERT INTO Home_Area_Type(Code,Description) VALUES (1,'Urban area');
 INSERT INTO Home_Area_Type(Code,Description) VALUES (2,'Small town');
 INSERT INTO Home_Area_Type(Code,Description) VALUES (3,'Rural');
-INSERT INTO Home_Area_Type(Code,Description) VALUES (4,'Data missing or out of range');
+INSERT INTO Home_Area_Type(Code,Description) VALUES (-1,'Data missing or out of range');
+
+select * from Home_Area_Type
 
 -- Tạo khóa ngoại 
 IF (OBJECT_ID('dbo.FK_Vehicle_VehicleType', 'F') IS NOT NULL)

@@ -148,3 +148,23 @@ CREATE TABLE Accidents2011_2014_No_Match (
 	trangthai VARCHAR(512),
     [source_sys_code] int
 );
+
+CREATE TABLE Country_NDS (
+    SKCountry INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	country_code VARCHAR(512),
+	country_name VARCHAR(512),
+	create_date DATETIME,
+	update_date DATETIME,
+	trangthai VARCHAR(512),
+    [source_sys_code] int
+);
+
+CREATE TABLE Region_NDS (
+    SKRegion INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	region_code VARCHAR(512),
+	region_name VARCHAR(512),
+	create_date DATETIME,
+	update_date DATETIME,
+	trangthai VARCHAR(512),
+    [source_sys_code] int
+);

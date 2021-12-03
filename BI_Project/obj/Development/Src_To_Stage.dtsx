@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="309"
-  DTS:VersionGUID="{1373DF7F-6F40-436A-B500-BAD825DF281F}">
+  DTS:VersionBuild="325"
+  DTS:VersionGUID="{19436AE2-E173-43B9-A7C3-242A3099BEAE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -454,151 +454,138 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\Casualities1114.csv">
+          DTS:ConnectionString="C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 4\HK1\DATH_processed_newdata\Casualties1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{FE78F723-0DDB-4127-9E03-A9A8A33E1709}"
+              DTS:DTSID="{FA0ECCBA-9CC5-4B35-A436-7DFB9D9ED871}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{45C694DF-547D-431A-AF78-08F437A51482}"
+              DTS:DTSID="{431C57C4-DADA-4CCC-A113-28507C8A05D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{46930168-1120-4978-81BB-C153470697D2}"
+              DTS:DTSID="{09F8C72D-D57B-4C9B-A1EC-CCD3749F2124}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{35F90EB6-4E6F-4FC8-949B-00FAC63218F3}"
+              DTS:DTSID="{1CFBE298-A4E8-4B5D-96A1-CF13505D4722}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{C5E14BD9-9249-4E04-9C6B-2D3819B72C67}"
+              DTS:DTSID="{5DCE6573-DD47-4BD7-8ACD-07F44CC723BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{7C58AB02-FF2A-448B-8AA6-F1F9B512DD3B}"
+              DTS:DTSID="{525DE254-18BB-498A-A192-88D5510264C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{B72D3BC6-B69A-4606-AA96-DB295C630C92}"
+              DTS:DTSID="{B88D9ACE-0013-4F3E-9802-47C924E07309}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{F1A28C13-596B-4679-B233-E8E477E50A7A}"
+              DTS:DTSID="{1011AEF7-F8F3-47BF-9E6C-D64F6B81BC09}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{0CF9D591-5C72-4103-B6E5-4A688481FE98}"
+              DTS:DTSID="{94990C69-B123-4718-B48D-51EBBF6AEB5F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{4591B7B4-CA4B-414B-8633-5ED61E3DF319}"
+              DTS:DTSID="{A04AC713-7E81-4C73-9B3A-B20411FDAA48}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{FE517F35-4061-4DE2-AE89-A70DC5704FD5}"
+              DTS:DTSID="{ABC320E5-ACE1-47A7-8FFE-BF97ABD6A45B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{454AED9E-2E10-449E-85D7-642EE073C4BF}"
+              DTS:DTSID="{C271682A-9A5B-4145-994D-23034F4094CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{C1D1FED2-FE3A-4622-A1AD-984115DE1BBC}"
+              DTS:DTSID="{A3B63EEA-9A81-4784-9999-2C2F28237211}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{2A31B4A5-DCAE-467A-9B42-672EE9E64715}"
+              DTS:DTSID="{3DA95D95-9A85-40D8-813D-6E5CEEAAACEE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="createdate"
-              DTS:DTSID="{E611BD39-AFFD-4F89-AE91-EF1A5665F4F0}"
+              DTS:DTSID="{431E00F4-CFEB-480B-B4F2-751F4AA14C4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="updatedate"
-              DTS:DTSID="{8B530475-E5E6-4815-938D-EE5802CBCF93}"
+              DTS:DTSID="{A9C7BC0D-DD17-43BA-9D4B-5ABCBE86D3F9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -607,7 +594,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TrangThai"
-              DTS:DTSID="{A6F2C7B7-7126-4DA6-9DB3-E20ECB31BE07}"
+              DTS:DTSID="{A4A48B10-11B1-4AFB-A03D-B8FD67CE7ADA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -755,169 +742,157 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\New_Accidents.csv">
+          DTS:ConnectionString="C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 4\HK1\DATH_processed_newdata\Accident1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{C27BF5FF-4CE8-46D7-A3F7-3C571934001A}"
+              DTS:DTSID="{88048B12-20DA-4CBD-9C58-B90BAA7F0D1D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longitude"
-              DTS:DTSID="{F6A5E69C-A96B-4B2E-90D7-D32A1FBB80FA}"
+              DTS:DTSID="{B8D07523-0FAD-45AD-953C-3D3E8A3EEB02}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Latitude"
-              DTS:DTSID="{3DB9DC0C-4AE4-4073-98EB-8086B6E7125E}"
+              DTS:DTSID="{7274C9F4-401D-475E-A905-41836ABFA218}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Severity"
-              DTS:DTSID="{7FB2813D-9DE3-4C8B-820F-3D129F1E5270}"
+              DTS:DTSID="{0F1566E7-79B5-4425-AF43-B8DBBB26B0CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Vehicles"
-              DTS:DTSID="{EEBA30F8-89C6-4807-8353-0E4E07C9493C}"
+              DTS:DTSID="{D850A8E7-84A9-4C02-A028-556706D74E33}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Casualties"
-              DTS:DTSID="{5E9FB74D-BB1D-4A84-9109-94A230AF0720}"
+              DTS:DTSID="{7C3BCDFE-38B5-434F-A075-A45D3E1E39B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{915791C1-BC8E-4A1E-99BF-978A30920F30}"
+              DTS:DTSID="{8E485947-50C1-4DD5-A09D-3A9C692A4D29}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Day_of_Week"
-              DTS:DTSID="{0B8C82C5-89B3-4E75-8357-29DE1AF203A5}"
+              DTS:DTSID="{4920CBED-ABB4-4F55-832A-C25C996454E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="145"
               DTS:TextQualified="True"
               DTS:ObjectName="Time"
-              DTS:DTSID="{D5868944-9665-443D-BA00-5D55366566F4}"
+              DTS:DTSID="{8782A000-EC2F-4DD2-B6F1-4B785DA2B9E8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_District"
-              DTS:DTSID="{622FB8F9-88C1-463D-8B92-33987FA28F96}"
+              DTS:DTSID="{ADFE608D-708E-4DF5-922A-23C430C05C2C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_Highway"
-              DTS:DTSID="{F60D821E-14A3-4259-BB1E-F78699EAA017}"
+              DTS:DTSID="{F3E358C9-3D65-403A-81BB-1937187AB5C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Type"
-              DTS:DTSID="{8BBB16DC-6E10-4833-8DDF-66D8E5B9837D}"
+              DTS:DTSID="{9DB55B77-2356-4BE2-80EE-7B6E81C9DB90}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Speed_limit"
-              DTS:DTSID="{7F47FD26-01F3-469D-B9E8-7C8D31FF4765}"
+              DTS:DTSID="{903D10F0-89CE-4C7B-A01F-E6E738A71F7E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Light_Conditions"
-              DTS:DTSID="{E2B44FCE-F2CA-4F27-8F59-B6060E3B1A70}"
+              DTS:DTSID="{007CCB7C-9091-487B-A101-9DF7EDADF678}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Weather_Conditions"
-              DTS:DTSID="{CB652087-9198-4EAE-AFD4-3C8D705EC741}"
+              DTS:DTSID="{9673019E-CDEF-41EC-89AC-BBBD0EF8AA81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Surface_Conditions"
-              DTS:DTSID="{DFF9FE79-DB37-408B-87B2-C0CF9A5DF33D}"
+              DTS:DTSID="{5E4C20CF-10E1-44A4-BAB5-8E64C01AF5C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Urban_or_Rural_Area"
-              DTS:DTSID="{496EB108-673A-4C26-A400-DBE32B07EED3}"
+              DTS:DTSID="{81249552-B734-4650-909C-5257E5C5852D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LSOA_of_Accident_Location"
-              DTS:DTSID="{39E235A5-0684-431F-AEEB-402177440B4B}"
+              DTS:DTSID="{2EC45AF9-DB4D-4898-BFEC-5B6E479748FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -926,7 +901,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="createdate"
-              DTS:DTSID="{6B75BBED-51CD-4278-88E3-647F92D076BD}"
+              DTS:DTSID="{C997E9A7-53B1-45E1-B9F2-DAEEC021224D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -935,7 +910,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="updatedate"
-              DTS:DTSID="{537EB773-7E34-431E-9960-BB5CC8C7268C}"
+              DTS:DTSID="{9961F9A7-FCF2-4536-BAA9-BBAA6CF145DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -944,7 +919,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TrangThai"
-              DTS:DTSID="{5D7FB044-3EAD-4B4B-8204-DDB66FB2CAD2}"
+              DTS:DTSID="{4BBAA393-40C2-4F1E-A18F-36D68478C891}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -964,106 +939,98 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Jane Hwang\Downloads\Vehicles1114.csv">
+          DTS:ConnectionString="C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 4\HK1\DATH_processed_newdata\Vehicles1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{ADBBB4BF-823C-4973-B0FF-351048481616}"
+              DTS:DTSID="{BF050063-CBEE-4C8B-8C54-7B839CD1A7B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{B6642C5E-08FD-4EAA-A6BD-25C2860A289C}"
+              DTS:DTSID="{7C727436-D4E8-4F65-813C-CCA4FAA86D3A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{2109A8EA-EDBD-497F-AC58-DBE20EB545E9}"
+              DTS:DTSID="{EAFAA0A2-A999-4D0C-A499-A9333E0BA736}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Was_Vehicle_Left_Hand_Drive"
-              DTS:DTSID="{10CAFECD-D6FA-413D-98BC-1B48075C85AF}"
+              DTS:DTSID="{24766C3A-A2CA-4207-8AA9-89EAF7A624E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{AC25865C-7B55-4F7E-A2E5-9950EF793208}"
+              DTS:DTSID="{D97F1BB2-3ADF-4E91-9407-9BE3E5F9F581}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{43E544CB-7652-4382-9395-D2995403F65F}"
+              DTS:DTSID="{1CF38FEE-3655-446F-BDFC-3A886E4790ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{60D58097-F77F-4FD8-A729-82182C7819FD}"
+              DTS:DTSID="{204F351C-B159-47C2-A526-9C4A10E895B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{5C413851-38B5-4585-98C6-FD91E45BE8BD}"
+              DTS:DTSID="{46C01D21-C290-4174-84D9-E0D0CB96C69B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{26CD1EEE-016D-4536-8A4A-865F5FC9C8B3}"
+              DTS:DTSID="{D20E15E4-0183-409A-B1AF-EEDC1DFA317D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="createdate"
-              DTS:DTSID="{208B69EB-C09B-470E-B087-7A9F15DB5AE2}"
+              DTS:DTSID="{BF2A86C2-03A4-4C43-A7BC-214D8BDA4233}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="512"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="updatedate"
-              DTS:DTSID="{23DE9B71-F1AC-42AF-8F31-290DD1339466}"
+              DTS:DTSID="{85645ED0-60B1-4B29-9C04-06E564FECB8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1072,7 +1039,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TrangThai"
-              DTS:DTSID="{3D22F8C4-6736-4F03-A414-E28BA2FD9372}"
+              DTS:DTSID="{B968641A-7F0C-45EE-B8F4-D200751DA75A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2535,8 +2502,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Main Task\Accidents2011_2014 Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3060,8 +3027,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Main Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3433,8 +3400,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3450,7 +3417,7 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[TrangThai]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="TrangThai"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]" />
@@ -3458,7 +3425,7 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[updatedate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="updatedate"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]" />
@@ -3466,7 +3433,7 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[createdate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="createdate"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]" />
@@ -3496,19 +3463,19 @@ AND trangthai = 'FALSE'</property>
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Accident_Severity]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Accident_Severity"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Severity]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Number_of_Vehicles]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Number_of_Vehicles"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Number_of_Casualties]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Number_of_Casualties"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Casualties]" />
@@ -3520,7 +3487,7 @@ AND trangthai = 'FALSE'</property>
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Day_of_Week"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]" />
@@ -3532,7 +3499,9 @@ AND trangthai = 'FALSE'</property>
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Local_Authority_District]"
-                      cachedDataType="i8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
                       cachedName="Local_Authority_District"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_District]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_District]" />
@@ -3546,37 +3515,37 @@ AND trangthai = 'FALSE'</property>
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_Highway]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Road_Type]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Road_Type"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Type]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Speed_limit]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Speed_limit"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Speed_limit]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Light_Conditions]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Light_Conditions"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Light_Conditions]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Weather_Conditions]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Weather_Conditions"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Weather_Conditions]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Road_Surface_Conditions]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Road_Surface_Conditions"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]" />
                     <inputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Urban_or_Rural_Area"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Accidents Temp.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]" />
@@ -3819,7 +3788,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Severity]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
@@ -3839,7 +3808,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
@@ -3859,7 +3828,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Casualties]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
@@ -3899,7 +3868,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
@@ -3939,10 +3908,12 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_District]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_District]"
+                      length="512"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_District]"
                       name="Local_Authority_District"
                       truncationRowDisposition="FailComponent">
@@ -3981,7 +3952,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Type]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
@@ -4001,7 +3972,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Speed_limit]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
@@ -4021,7 +3992,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Light_Conditions]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
@@ -4041,7 +4012,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
@@ -4061,7 +4032,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
@@ -4081,7 +4052,7 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
@@ -4128,7 +4099,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]"
                       name="createdate"
                       truncationRowDisposition="FailComponent">
@@ -4150,7 +4121,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]"
                       name="updatedate"
                       truncationRowDisposition="FailComponent">
@@ -4172,7 +4143,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]"
                       name="TrangThai"
                       truncationRowDisposition="FailComponent">
@@ -4194,109 +4165,85 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Accident_Index" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Longitude" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Latitude" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Accident_Severity" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Number_of_Vehicles" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="date"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTime2"
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_District]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Local_Authority_District" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_Highway]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Local_Authority_Highway" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Road_Type" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Speed_limit" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Light_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Weather_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Road_Surface_Conditions" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Urban_or_Rural_Area" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="LSOA_of_Accident_Location" />
                     <externalMetadataColumn
                       refId="Package\Accidents_Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
@@ -4362,7 +4309,6 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Casualities Data Flow Temp Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{16e9b085-a6c9-46cf-b98a-f7688280428c}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -4411,7 +4357,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
-                      length="50"
+                      length="512"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]"
                       name="Accident_Index"
                       truncationRowDisposition="FailComponent">
@@ -4428,12 +4374,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
                       name="Vehicle_Reference"
                       truncationRowDisposition="FailComponent">
@@ -4450,12 +4394,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
                       name="Casualty_Reference"
                       truncationRowDisposition="FailComponent">
@@ -4472,12 +4414,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Class]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Class]"
                       name="Casualty_Class"
                       truncationRowDisposition="FailComponent">
@@ -4494,12 +4434,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
                       name="Sex_of_Casualty"
                       truncationRowDisposition="FailComponent">
@@ -4516,12 +4454,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_of_Casualty]"
                       name="Age_of_Casualty"
                       truncationRowDisposition="FailComponent">
@@ -4538,12 +4474,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]"
                       name="Age_Band_of_Casualty"
                       truncationRowDisposition="FailComponent">
@@ -4560,12 +4494,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
                       name="Casualty_Severity"
                       truncationRowDisposition="FailComponent">
@@ -4582,12 +4514,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Location]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Location]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Location]"
                       name="Pedestrian_Location"
                       truncationRowDisposition="FailComponent">
@@ -4604,12 +4534,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Movement]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Movement]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Movement]"
                       name="Pedestrian_Movement"
                       truncationRowDisposition="FailComponent">
@@ -4626,12 +4554,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Car_Passenger]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Car_Passenger]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Car_Passenger]"
                       name="Car_Passenger"
                       truncationRowDisposition="FailComponent">
@@ -4648,12 +4574,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Bus_or_Coach_Passenger]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Bus_or_Coach_Passenger]"
                       name="Bus_or_Coach_Passenger"
                       truncationRowDisposition="FailComponent">
@@ -4670,12 +4594,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Type]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Type]"
                       name="Casualty_Type"
                       truncationRowDisposition="FailComponent">
@@ -4692,12 +4614,10 @@ AND trangthai = 'FALSE'</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Home_Area_Type]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Home_Area_Type]"
-                      length="50"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Home_Area_Type]"
                       name="Casualty_Home_Area_Type"
                       truncationRowDisposition="FailComponent">
@@ -4719,7 +4639,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
-                      length="50"
+                      length="512"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]"
                       name="createdate"
                       truncationRowDisposition="FailComponent">
@@ -4741,7 +4661,7 @@ AND trangthai = 'FALSE'</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
-                      length="50"
+                      length="512"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]"
                       name="updatedate"
                       truncationRowDisposition="FailComponent">
@@ -4785,97 +4705,71 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Accident_Index" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Vehicle_Reference" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Casualty_Reference" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Casualty_Class" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Sex_of_Casualty" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Age_of_Casualty" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Age_Band_of_Casualty" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Casualty_Severity" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Location]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Pedestrian_Location" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Movement]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Pedestrian_Movement" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Car_Passenger]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Car_Passenger" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Bus_or_Coach_Passenger" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Casualty_Type" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Casualty_Home_Area_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Casualty_Home_Area_Type" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="createdate" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
@@ -4973,8 +4867,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4990,111 +4884,85 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="512"
                       cachedName="Accident_Index"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Vehicle_Reference"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Reference]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Casualty_Reference"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Reference]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Class]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Casualty_Class"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Class]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Class]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Sex_of_Casualty"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Casualty]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Age_of_Casualty]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Age_of_Casualty"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Casualty]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_of_Casualty]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Casualty]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Age_Band_of_Casualty"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Casualty]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_Band_of_Casualty]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Casualty_Severity"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Severity]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Severity]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Pedestrian_Location]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Pedestrian_Location"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Location]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Location]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Pedestrian_Movement]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Pedestrian_Movement"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Movement]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Movement]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Car_Passenger]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Car_Passenger"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Car_Passenger]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Car_Passenger]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Bus_or_Coach_Passenger]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Bus_or_Coach_Passenger"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Bus_or_Coach_Passenger]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Bus_or_Coach_Passenger]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Casualty_Type"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Type]" />
                     <inputColumn
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[Casualty_Home_Area_Type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Casualty_Home_Area_Type"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Home_Area_Type]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Casualty_Home_Area_Type]" />
@@ -5102,7 +4970,7 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[createdate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="512"
                       cachedName="createdate"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[createdate]" />
@@ -5110,7 +4978,7 @@ AND trangthai = 'FALSE'</property>
                       refId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].Columns[updatedate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="512"
                       cachedName="updatedate"
                       externalMetadataColumnId="Package\Casualities Data Flow Temp Task\Temp_Causualties.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
                       lineageId="Package\Casualities Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[updatedate]" />
@@ -5244,7 +5112,6 @@ AND trangthai = 'FALSE'</property>
       DTS:refId="Package\Casualities Data Main Flow"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{E8A75CA0-C880-481A-B64E-27D7BD6051CB}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -5317,8 +5184,8 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               <connections>
                 <connection
                   refId="Package\Casualities Data Main Flow\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE 1]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5601,8 +5468,8 @@ WHERE (create_date &gt;= CAST(? AS VARCHAR)) AND (create_date &lt; CAST(? AS VAR
               <connections>
                 <connection
                   refId="Package\Casualities Data Main Flow\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7363,7 +7230,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7389,11 +7256,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Accidents2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -7409,7 +7276,6 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Get LSET to Metadata - Casualties"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{54cae04a-3a6f-4a25-b7c0-0a8388eaa936}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7419,7 +7285,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET, CET &#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'Casualties2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow"
           SQLTask:TypeConversionMode="None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
@@ -7442,7 +7308,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - UK_Area_Infomation"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7468,11 +7334,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="SELECT LSET,CET FROM Metadata_Table where Name_DataFlow = 'Vehicles2011_2014'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -7494,7 +7360,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set  CET to Metadata - UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7512,7 +7378,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7530,11 +7396,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource=" UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7542,7 +7408,6 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Set CET to Metadata - Casualty"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{02741c20-6c58-40af-a760-5d89f64cbdde}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7552,7 +7417,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Casualties2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7566,11 +7431,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set CET to Metadata - Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table SET CET = GETDATE() WHERE Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7584,18 +7449,17 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Accidents"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Accidents2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Set LSET for Casualties"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Disabled="True"
       DTS:DTSID="{54bb01d8-bd24-436c-9a92-76d28cb1105e}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7605,7 +7469,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Casualties2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7619,7 +7483,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Postcode"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7637,7 +7501,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for UK_Area_Information"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7655,11 +7519,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Set LSET for Vehicles"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{99891308-7448-4624-82BE-850D24E648FE}"
+          SQLTask:Connection="{A1B2C174-CFC7-451E-806E-36C655485C29}"
           SQLTask:SqlStatementSource="update Metadata_Table set LSET = CET where Name_DataFlow = 'Vehicles2011_2014'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7667,7 +7531,6 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Truncate Casualties2011_2014_Temp"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{59842A2C-AAB2-4ED1-BD67-A75880B9A4E5}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7677,7 +7540,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
+          SQLTask:Connection="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
           SQLTask:SqlStatementSource="truncate table Casualties2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7691,11 +7554,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Accidents_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table Accidents2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7703,7 +7566,6 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:refId="Package\Truncate stage Casualties_Stage table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{a9cf9ba9-17cc-4bf6-aa50-19aee1bb3bab}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7713,7 +7575,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource="truncate table Casualties2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7727,7 +7589,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Postcodes_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7745,7 +7607,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage UK_Area_Information stage"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7763,11 +7625,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate stage Vehicles_Stage table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A5BB23C9-01F4-4F44-BB6B-279BA8653273}"
+          SQLTask:Connection="{17324B07-393F-4517-8527-0F2DBD9EC63B}"
           SQLTask:SqlStatementSource=" truncate table Vehicles2011_2014_Stage" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7781,11 +7643,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Accidents2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
+          SQLTask:Connection="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Accidents2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -7799,7 +7661,7 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="TRUNCATE TABLE Postcodes_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -7817,11 +7679,11 @@ AND create_date &lt; CAST(? AS VARCHAR) )
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Table Vehicles2011_2014_Temp"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{79DC7524-6231-419B-A9BF-8282FF30E598}"
+          SQLTask:Connection="{D4678280-B3AB-4F05-80A1-339DF9AEC27E}"
           SQLTask:SqlStatementSource="Truncate Table Vehicles2011_2014_Temp" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -8589,7 +8451,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
@@ -8609,7 +8471,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
@@ -8629,7 +8491,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive]"
@@ -8649,7 +8511,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
@@ -8669,7 +8531,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
@@ -8689,7 +8551,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
@@ -8709,7 +8571,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
@@ -8729,7 +8591,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                     </outputColumn>
                     <outputColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]"
-                      dataType="i8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
@@ -8798,7 +8660,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
-                      length="512"
+                      length="50"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]"
                       name="TrangThai"
                       truncationRowDisposition="FailComponent">
@@ -8820,67 +8682,51 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="Accident_Index" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Vehicle_Reference" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Vehicle_Type" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Was_Vehicle_Left_Hand_Drive" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Journey_Purpose_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Sex_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Age_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Age_Band_of_Driver" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Driver_Home_Area_Type" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[createdate]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="createdate" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[updatedate]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="512"
                       name="updatedate" />
                     <externalMetadataColumn
                       refId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TrangThai]"
@@ -8978,8 +8824,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9001,49 +8847,49 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Vehicle_Reference"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Vehicle_Type"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Vehicle_Type]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Was_Vehicle_Left_Hand_Drive]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Was_Vehicle_Left_Hand_Drive"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Was_Vehicle_Left_Hand_Drive]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Journey_Purpose_of_Driver"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Journey_Purpose_of_Driver]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Sex_of_Driver"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex_of_Driver]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Age_of_Driver"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_of_Driver]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Driver]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Age_Band_of_Driver"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Age_Band_of_Driver]" />
                     <inputColumn
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Driver_Home_Area_Type]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="Driver_Home_Area_Type"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[Driver_Home_Area_Type]" />
@@ -9051,7 +8897,7 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
                       refId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrangThai]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="512"
+                      cachedLength="50"
                       cachedName="TrangThai"
                       externalMetadataColumnId="Package\Vehicles Data Flow Temp Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
                       lineageId="Package\Vehicles Data Flow Temp Task\Flat File Source.Outputs[Flat File Source Output].Columns[TrangThai]" />
@@ -9243,8 +9089,8 @@ WHERE (createdate &gt;= CAST(? AS VARCHAR)) AND (createdate &lt; CAST(? AS VARCH
               <connections>
                 <connection
                   refId="Package\Vehicles Data Main Flow\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9478,8 +9324,8 @@ AND trangthai = 'FALSE'</property>
               <connections>
                 <connection
                   refId="Package\Vehicles Data Main Flow\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_TEMP]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_TEMP]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10006,135 +9852,135 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161.666666666667,41.6666666666667"
+          Size="161.6,41.6"
           Id="Package\Accidents_Data Flow Main Task"
           TopLeft="487.803570294956,475.297167709296" />
         <NodeLayout
-          Size="210.333333333334,52"
+          Size="231.2,41.6"
           Id="Package\Accidents_Data Flow Temp Task"
           TopLeft="551.791664831961,384.449999383986" />
         <NodeLayout
-          Size="160.666666666667,41.6666666666667"
+          Size="160.8,41.6"
           Id="Package\Casualities Data Flow Temp Task"
           TopLeft="1309.12499880791,384.916665251471" />
         <NodeLayout
-          Size="208,41.6666666666667"
+          Size="208,41.6"
           Id="Package\Casualities Data Main Flow"
           TopLeft="1284.81481481481,479.869874518655" />
         <NodeLayout
-          Size="152,42.3333333333334"
+          Size="152,42.4"
           Id="Package\Data Flow Main Task"
           TopLeft="28.0952313501812,546.212079899362" />
         <NodeLayout
-          Size="181.666666666667,42.3333333333334"
+          Size="181.6,42.4"
           Id="Package\Data Flow Temp Task"
           TopLeft="13.714289036636,460.206866726124" />
         <NodeLayout
-          Size="209.666666666667,41.6666666666667"
+          Size="209.6,41.6"
           Id="Package\Get LSET to Metadata"
           TopLeft="6.21428866942938,369.773531632035" />
         <NodeLayout
-          Size="240,41.6666666666667"
+          Size="236,41.6"
           Id="Package\Get LSET to Metadata - Accidents"
           TopLeft="551.952379760288,290.25637570004" />
         <NodeLayout
-          Size="241.666666666667,41.6666666666667"
+          Size="241.6,41.6"
           Id="Package\Get LSET to Metadata - Casualties"
           TopLeft="1284.99999880791,277.708331705589" />
         <NodeLayout
-          Size="289.666666666667,41.6666666666667"
+          Size="289.6,41.6"
           Id="Package\Get LSET to Metadata - UK_Area_Infomation"
           TopLeft="1581.99999880791,214.996617881116" />
         <NodeLayout
-          Size="234.333333333334,41.6666666666667"
+          Size="234.4,41.6"
           Id="Package\Get LSET to Metadata - Vehicles"
           TopLeft="932.523808331716,276.563717256344" />
         <NodeLayout
-          Size="289.666666666667,41.6666666666667"
+          Size="289.6,41.6"
           Id="Package\Set  CET to Metadata - UK_Area_Information"
           TopLeft="1596.16666547458,36.7162792940756" />
         <NodeLayout
-          Size="175.333333333334,41.6666666666667"
+          Size="175.2,41.6"
           Id="Package\Set CET to Metadata"
           TopLeft="226.928570957968,29.6705909741704" />
         <NodeLayout
-          Size="233.666666666667,41.6666666666667"
+          Size="233.6,41.6"
           Id="Package\Set CET to Metadata - Accidents"
           TopLeft="544.083332010855,29.9454993744642" />
         <NodeLayout
-          Size="226.333333333334,41.6666666666667"
+          Size="226.4,41.6"
           Id="Package\Set CET to Metadata - Casualty"
           TopLeft="1290.66666547458,37.0236456135018" />
         <NodeLayout
-          Size="228,41.6666666666667"
+          Size="228,41.6"
           Id="Package\Set CET to Metadata - Vehicles"
           TopLeft="926.154760694043,35.8498104098768" />
         <NodeLayout
-          Size="188.666666666667,41.6666666666667"
+          Size="188.8,41.6"
           Id="Package\Set LSET for Accidents"
           TopLeft="558.053570741103,550.790119311242" />
         <NodeLayout
-          Size="191.333333333334,41.6666666666667"
+          Size="191.2,41.6"
           Id="Package\Set LSET for Casualties"
           TopLeft="1290.81481362272,582.921527583676" />
         <NodeLayout
-          Size="162.333333333334,41.6666666666667"
+          Size="162.4,41.6"
           Id="Package\Set LSET for Postcode"
           TopLeft="244.488095425753,552.050003158619" />
         <NodeLayout
-          Size="203.333333333334,44.6666666666667"
+          Size="203.2,44.8"
           Id="Package\Set LSET for UK_Area_Information"
           TopLeft="1615.49999880791,397.643013885415" />
         <NodeLayout
-          Size="183.333333333334,41.6666666666667"
+          Size="183.2,41.6"
           Id="Package\Set LSET for Vehicles"
           TopLeft="946.779761057258,559.756120792276" />
         <NodeLayout
-          Size="260,41.6666666666667"
+          Size="260,41.6"
           Id="Package\Truncate Casualties2011_2014_Temp"
           TopLeft="1275.55555555556,204.624630624274" />
         <NodeLayout
-          Size="259.333333333334,41.6666666666667"
+          Size="259.2,41.6"
           Id="Package\Truncate stage Accidents_Stage table"
           TopLeft="489.291666135813,134.97478145432" />
         <NodeLayout
-          Size="259.333333333334,41.6666666666667"
+          Size="259.2,41.6"
           Id="Package\Truncate stage Casualties_Stage table"
           TopLeft="1279.33333214124,118.979726060475" />
         <NodeLayout
-          Size="258.333333333334,41.6666666666667"
+          Size="258.4,41.6"
           Id="Package\Truncate stage Postcodes_Stage table"
           TopLeft="199.42857136775,135.620591983085" />
         <NodeLayout
-          Size="278.333333333334,41.6666666666667"
+          Size="278.4,41.6"
           Id="Package\Truncate stage UK_Area_Information stage"
           TopLeft="1596.69047496189,114.47482396539" />
         <NodeLayout
-          Size="252.666666666667,41.6666666666667"
+          Size="252.8,41.6"
           Id="Package\Truncate stage Vehicles_Stage table"
           TopLeft="906.869046929869,119.253095965532" />
         <NodeLayout
-          Size="166.333333333334,64.6666666666667"
+          Size="166.4,64.8"
           Id="Package\TRUNCATE TABLE Accidents2011_2014_Temp"
           TopLeft="317.458333361273,275.649996501505" />
         <NodeLayout
-          Size="248,42.3333333333334"
+          Size="248,42.4"
           Id="Package\TRUNCATE TABLE Postcodes_Temp"
           TopLeft="0.624999990686746,267.033331729372" />
         <NodeLayout
-          Size="237.666666666667,42.3333333333334"
+          Size="237.6,42.4"
           Id="Package\Truncate Table Vehicles2011_2014_Temp"
           TopLeft="878.624998649582,199.399999116659" />
         <NodeLayout
-          Size="258.333333333334,41.6666666666667"
+          Size="258.4,41.6"
           Id="Package\UK_Area_Information Data Main Flow"
           TopLeft="1592.33333333333,296.513512895437" />
         <NodeLayout
-          Size="224,42.3333333333334"
+          Size="224,42.4"
           Id="Package\Vehicles Data Flow Temp Task"
           TopLeft="949.333329459031,366.149998244941" />
         <NodeLayout
-          Size="161.666666666667,41.6666666666667"
+          Size="161.6,41.6"
           Id="Package\Vehicles Data Main Flow"
           TopLeft="986.42261749231,452.561335065517" />
         <EdgeLayout
@@ -10531,18 +10377,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="484.12500002794,309.453186100773">
+          TopLeft="483.858333361273,309.553186100772">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.8273797323484,0"
+              EndConnector="68.0940463990149,0"
               Start="0,0"
-              End="60.3273797323484,0">
+              End="60.5940463990149,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="60.3273797323484,0" />
+                    End="60.5940463990149,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10553,30 +10399,30 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="656.991664831961,436.449999383986">
+          TopLeft="667.391664831961,426.049999383986">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-88.3880945370055,38.8471683253103"
+              EndConnector="-98.7880945370051,49.24716832531"
               Start="0,0"
-              End="-88.3880945370055,31.3471683253103">
+              End="-98.7880945370051,41.74716832531">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.4235841626551" />
+                    End="0,20.623584162655" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.4235841626551"
-                    Point2="0,19.4235841626551"
-                    Point3="-4,19.4235841626551" />
+                    Point1="0,20.623584162655"
+                    Point2="0,24.623584162655"
+                    Point3="-4,24.623584162655" />
                   <mssgle:LineSegment
-                    End="-84.3880945370055,19.4235841626551" />
+                    End="-94.7880945370051,24.623584162655" />
                   <mssgle:CubicBezierSegment
-                    Point1="-84.3880945370055,19.4235841626551"
-                    Point2="-88.3880945370055,19.4235841626551"
-                    Point3="-88.3880945370055,23.4235841626551" />
+                    Point1="-94.7880945370051,24.623584162655"
+                    Point2="-98.7880945370051,24.623584162655"
+                    Point3="-98.7880945370051,28.623584162655" />
                   <mssgle:LineSegment
-                    End="-88.3880945370055,31.3471683253103" />
+                    End="-98.7880945370051,41.74716832531" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10799,30 +10645,18 @@ AND trangthai = 'FALSE'</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="671.952379760288,331.589709033373">
+          TopLeft="668.672022296125,331.85637570004">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.8273815949933,52.860290350613"
+              EndConnector="0,52.593623683946"
               Start="0,0"
-              End="-14.8273815949933,45.360290350613">
+              End="0,45.093623683946">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.4301451753065" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.4301451753065"
-                    Point2="0,26.4301451753065"
-                    Point3="-4,26.4301451753065" />
-                  <mssgle:LineSegment
-                    End="-10.8273815949933,26.4301451753065" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.8273815949933,26.4301451753065"
-                    Point2="-14.8273815949933,26.4301451753065"
-                    Point3="-14.8273815949933,30.4301451753065" />
-                  <mssgle:LineSegment
-                    End="-14.8273815949933,45.360290350613" />
+                    End="0,45.093623683946" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10930,11 +10764,11 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.3333333333334"
+          Size="172,42.4"
           Id="Package\Accidents_Data Flow Main Task\OLE DB Destination"
           TopLeft="411,172" />
         <NodeLayout
-          Size="206.333333333334,42.3333333333334"
+          Size="206.4,42.4"
           Id="Package\Accidents_Data Flow Main Task\Accidents2011_2014 Temp"
           TopLeft="383,63" />
         <EdgeLayout
@@ -11006,11 +10840,11 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Accidents_Data Flow Temp Task\Flat File Source"
           TopLeft="135,56" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Accidents_Data Flow Temp Task\Accidents Temp"
           TopLeft="159.999998509884,174.69999955833" />
         <EdgeLayout
@@ -11067,7 +10901,7 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Flow Temp Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="167.2,41.6"
           Id="Package\Casualities Data Flow Temp Task\Temp_Causualties"
@@ -11107,9 +10941,7 @@ AND trangthai = 'FALSE'</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11132,9 +10964,9 @@ AND trangthai = 'FALSE'</property>
     design-time-name="Package\Casualities Data Main Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.4,41.6"
+          Size="149.6,41.6"
           Id="Package\Casualities Data Main Flow\OLE DB Source"
           TopLeft="1156,51" />
         <NodeLayout
@@ -11143,38 +10975,36 @@ AND trangthai = 'FALSE'</property>
           TopLeft="1131.53846153846,166.153846153846" />
         <EdgeLayout
           Id="Package\Casualities Data Main Flow.Paths[OLE DB Source Output]"
-          TopLeft="1233.33333333333,93">
+          TopLeft="1230.8,92.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.6282051282053,73.1538461538461"
+              EndConnector="-12.0615384615398,73.553846153846"
               Start="0,0"
-              End="-14.6282051282053,65.6538461538461">
+              End="-12.0615384615398,66.053846153846">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5769230769231" />
+                    End="0,32.776923076923" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.5769230769231"
-                    Point2="0,36.5769230769231"
-                    Point3="-4,36.5769230769231" />
+                    Point1="0,32.776923076923"
+                    Point2="0,36.776923076923"
+                    Point3="-4,36.776923076923" />
                   <mssgle:LineSegment
-                    End="-10.6282051282053,36.5769230769231" />
+                    End="-8.06153846153984,36.776923076923" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10.6282051282053,36.5769230769231"
-                    Point2="-14.6282051282053,36.5769230769231"
-                    Point3="-14.6282051282053,40.5769230769231" />
+                    Point1="-8.06153846153984,36.776923076923"
+                    Point2="-12.0615384615398,36.776923076923"
+                    Point3="-12.0615384615398,40.776923076923" />
                   <mssgle:LineSegment
-                    End="-14.6282051282053,65.6538461538461" />
+                    End="-12.0615384615398,66.053846153846" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11428,11 +11258,11 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Vehicles Data Flow Temp Task\OLE DB Destination"
           TopLeft="447,122" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Vehicles Data Flow Temp Task\Flat File Source"
           TopLeft="308,22" />
         <EdgeLayout
@@ -11491,11 +11321,11 @@ AND trangthai = 'FALSE'</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,49.3333333333334"
+          Size="172,49.6"
           Id="Package\Vehicles Data Main Flow\OLE DB Destination"
           TopLeft="622,169.666666666667" />
         <NodeLayout
-          Size="154.666666666667,41.3333333333334"
+          Size="154.4,41.6"
           Id="Package\Vehicles Data Main Flow\OLE DB Source"
           TopLeft="649,73" />
         <EdgeLayout

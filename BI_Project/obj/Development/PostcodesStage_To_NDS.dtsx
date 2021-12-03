@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="PostcodesStage_To_NDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{20707AC0-6976-43DA-8620-EB1EC03CE91D}">
+  DTS:VersionBuild="113"
+  DTS:VersionGUID="{055031E9-5E98-4DE7-9A50-73B98F541C5F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -160,7 +160,7 @@
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE Postcodes_NDS
-SET update_date = GETDATE(), latitude=?, longitude = ?, city = ? , county = ?, country_code = ? , country_name = ?, region_code = ?, region_name = ? , status_code = ?
+SET update_date = GETDATE(), latitude=?, longitude = ?, city = ? , county = ?, country = ?, region = ? , status_code = ?
 WHERE source_sys_code = ? AND postcode = ?</property>
                 <property
                   dataType="System.Int32"
@@ -170,8 +170,8 @@ WHERE source_sys_code = ? AND postcode = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Cập nhật dữ liệu.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -216,48 +216,28 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[county]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[country_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="country_code"
+                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[SKCountry]"
+                      cachedDataType="i4"
+                      cachedName="SKCountry"
                       externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]" />
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output].Columns[SKCountry]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[country_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="country_name"
+                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[SKRegion]"
+                      cachedDataType="i4"
+                      cachedName="SKRegion"
                       externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_name]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[region_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="region_code"
-                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[region_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="region_name"
-                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_name]" />
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output].Columns[SKRegion]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[AddSKMaTrangThai]"
                       cachedDataType="i4"
                       cachedName="AddSKMaTrangThai"
-                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output].Columns[AddSKMaTrangThai]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[SourceSystem]"
                       cachedDataType="i4"
                       cachedName="SourceSystem"
-                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\Data Flow Task\Thêm cột NguonDuLieu.Outputs[Derived Column Output].Columns[SourceSystem]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].Columns[postcode]"
@@ -265,7 +245,7 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                       cachedDataType="str"
                       cachedLength="512"
                       cachedName="postcode"
-                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[postcode]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -324,9 +304,7 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
+                      dataType="i4"
                       name="Param_4">
                       <properties>
                         <property
@@ -337,9 +315,7 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
+                      dataType="i4"
                       name="Param_5">
                       <properties>
                         <property
@@ -350,9 +326,7 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
+                      dataType="i4"
                       name="Param_6">
                       <properties>
                         <property
@@ -363,9 +337,7 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
+                      dataType="i4"
                       name="Param_7">
                       <properties>
                         <property
@@ -376,37 +348,15 @@ WHERE source_sys_code = ? AND postcode = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
                       name="Param_8">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
-                      dataType="i4"
-                      name="Param_9">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="Param_10">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -604,8 +554,8 @@ WHERE source_sys_code = ? AND postcode = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Error_Postcodes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -920,8 +870,8 @@ where [refTable].[postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1065,8 +1015,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1155,6 +1105,325 @@ where [refTable].[TenTrangThai] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lấy giá trị từ bảng Country_NDS dựa trên country_code"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Country_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Country_NDS]) [refTable]
+where [refTable].[country_code] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SKCountry" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country_code" dataType="DT_STR" length="512" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country_name" dataType="DT_STR" length="512" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="create_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="update_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="status_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="source_sys_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input].Columns[country_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="country_code"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">country_code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output].Columns[SKCountry]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output].Columns[SKCountry]"
+                      name="SKCountry"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SKCountry</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lấy giá trị từ bảng Region_NDS dựa trên region_code"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Region_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Region_NDS]) [refTable]
+where [refTable].[region_code] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="SKRegion" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="region_code" dataType="DT_STR" length="512" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="region_name" dataType="DT_STR" length="512" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="create_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="update_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="status_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="source_sys_code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input].Columns[region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="region_code"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">region_code</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output].Columns[SKRegion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output].Columns[SKRegion]"
+                      name="SKRegion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SKRegion</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\No_Match Postcodes"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1213,8 +1482,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\No_Match Postcodes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1440,6 +1709,576 @@ where [refTable].[TenTrangThai] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\No_Match Postcodes 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="No_Match Postcodes 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Postcodes_No_Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\No_Match Postcodes 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="postcode"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[postcode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[country_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="country_code"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="region_code"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[region_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="region_name"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[create_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="create_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[create_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[update_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="update_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[update_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[trangthai]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="trangthai"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[trangthai]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].Columns[SourceSystem]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystem"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      lineageId="Package\Data Flow Task\Thêm cột NguonDuLieu.Outputs[Derived Column Output].Columns[SourceSystem]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[SKPostcodes]"
+                      dataType="i4"
+                      name="SKPostcodes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="country_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="create_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="update_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="trangthai" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      dataType="i4"
+                      name="source_sys_code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\No_Match Postcodes 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Postcodes 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Postcodes 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\No_Match Postcodes 1 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="No_Match Postcodes 1 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Postcodes_No_Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\No_Match Postcodes 1 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="postcode"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[postcode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[country_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="country_code"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="region_code"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[region_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="region_name"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[create_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="create_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[create_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[update_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="update_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[update_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[trangthai]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="trangthai"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[trangthai]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].Columns[SourceSystem]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystem"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      lineageId="Package\Data Flow Task\Thêm cột NguonDuLieu.Outputs[Derived Column Output].Columns[SourceSystem]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[SKPostcodes]"
+                      dataType="i4"
+                      name="SKPostcodes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="country_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="create_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="update_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="trangthai" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      dataType="i4"
+                      name="source_sys_code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\No_Match Postcodes 1 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Postcodes 1 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Postcodes 1 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Postcodes 1 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Postcodes_Stage"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -1490,8 +2329,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Postcodes_Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1874,8 +2713,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Postcode_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1928,38 +2767,6 @@ where [refTable].[TenTrangThai] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[county]"
                       lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[county]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[country_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="country_code"
-                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[country_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="country_name"
-                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[country_name]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[region_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="region_code"
-                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[region_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="512"
-                      cachedName="region_name"
-                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
-                      lineageId="Package\Data Flow Task\Postcodes_Stage.Outputs[OLE DB Source Output].Columns[region_name]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[create_date]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1987,6 +2794,18 @@ where [refTable].[TenTrangThai] = ?</property>
                       cachedName="SourceSystem"
                       externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
                       lineageId="Package\Data Flow Task\Thêm cột NguonDuLieu.Outputs[Derived Column Output].Columns[SourceSystem]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[SKCountry]"
+                      cachedDataType="i4"
+                      cachedName="SKCountry"
+                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output].Columns[SKCountry]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].Columns[SKRegion]"
+                      cachedDataType="i4"
+                      cachedName="SKRegion"
+                      externalMetadataColumnId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      lineageId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output].Columns[SKRegion]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2021,30 +2840,6 @@ where [refTable].[TenTrangThai] = ?</property>
                       length="512"
                       name="county" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="country_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="country_name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="region_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="512"
-                      name="region_name" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
                       dataType="dbTimeStamp"
                       name="create_date" />
@@ -2064,6 +2859,14 @@ where [refTable].[TenTrangThai] = ?</property>
                       refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
                       dataType="i4"
                       name="source_sys_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      dataType="i4"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Postcode_NDS.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      dataType="i4"
+                      name="region" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2184,14 +2987,24 @@ where [refTable].[TenTrangThai] = ?</property>
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
               endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
+              endId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
+              endId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
+              endId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Task\No_Match Postcodes.Inputs[OLE DB Destination Input]"
@@ -2202,6 +3015,16 @@ where [refTable].[TenTrangThai] = ?</property>
               endId="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+              endId="Package\Data Flow Task\No_Match Postcodes 1.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output3]"
+              endId="Package\Data Flow Task\No_Match Postcodes 1 1.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Thêm cột NguonDuLieu.Inputs[Derived Column Input]"
@@ -2225,7 +3048,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.333333333334,41.6666666666667"
+          Size="150.4,41.6"
           Id="Package\Data Flow Task"
           TopLeft="202.14286058533,162.88235522554" />
       </GraphLayout>
@@ -2237,206 +3060,74 @@ where [refTable].[TenTrangThai] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
+          Size="152,41.6"
           Id="Package\Data Flow Task\Postcode_NDS"
-          TopLeft="339.047624821566,755.817000947518" />
+          TopLeft="341.190482000916,893.464060972215" />
         <NodeLayout
-          Size="275.333333333334,41.6666666666667"
+          Size="275.2,41.6"
           Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
-          TopLeft="335.365084274016,631.921575133776" />
+          TopLeft="337.507941453366,769.568635158473" />
         <NodeLayout
-          Size="157.666666666667,41.6666666666667"
+          Size="157.6,41.6"
           Id="Package\Data Flow Task\Postcodes_Stage"
           TopLeft="252.301591598258,78.0000010939206" />
         <NodeLayout
-          Size="435.333333333334,41.6666666666667"
+          Size="435.2,41.6"
           Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
           TopLeft="116.587303572771,266.882356684101" />
         <NodeLayout
-          Size="170.333333333334,41.6666666666667"
-          Id="Package\Data Flow Task\Error_Postcodes"
-          TopLeft="486.130166627437,384.647064218059" />
-        <NodeLayout
-          Size="450.333333333334,41.6666666666667"
-          Id="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
-          TopLeft="252.304766024376,454.120267627259" />
-        <NodeLayout
-          Size="156,41.6666666666667"
-          Id="Package\Data Flow Task\Cập nhật dữ liệu"
-          TopLeft="82.6984141067583,592.993471583418" />
-        <NodeLayout
-          Size="189.666666666667,41.6666666666667"
+          Size="189.6,41.6"
           Id="Package\Data Flow Task\Thêm cột NguonDuLieu"
           TopLeft="243.730162880859,169.000002370161" />
         <NodeLayout
-          Size="176,41.6666666666667"
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\Error_Postcodes"
+          TopLeft="578.987311065928,343.352945991866" />
+        <NodeLayout
+          Size="450.4,41.6"
+          Id="Package\Data Flow Task\Kiểm tra xem mã postcode của từng dòng có tồn tại trong Postcode_NDS chưa"
+          TopLeft="258.019051835975,622.355564104343" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Data Flow Task\Cập nhật dữ liệu"
+          TopLeft="26.9841274436639,774.993474135899" />
+        <NodeLayout
+          Size="176,41.6"
           Id="Package\Data Flow Task\No_Match Postcodes"
           TopLeft="43.4126991520122,382.777783146092" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="334.815877239559,119.600001093921">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.4000012762406"
-              Start="0,0"
-              End="0,41.9000012762406">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.9000012762406" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,12.9500006381203,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-          TopLeft="551.238099357709,495.720267627259">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78.2730150836932,136.201307506517"
-              Start="0,0"
-              End="-78.2730150836932,128.701307506517">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.769800115895" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.769800115895"
-                    Point2="0,54.769800115895"
-                    Point3="-4,54.769800115895" />
-                  <mssgle:LineSegment
-                    End="-74.2730150836932,54.769800115895" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-74.2730150836932,54.769800115895"
-                    Point2="-78.2730150836932,54.769800115895"
-                    Point3="-78.2730150836932,58.769800115895" />
-                  <mssgle:LineSegment
-                    End="-78.2730150836932,128.701307506517" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-94.9428942605966,59.769800115895,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="227.387303572771,308.482356684101">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-95.9746044207588,74.295426461991"
-              Start="0,0"
-              End="-95.9746044207588,66.795426461991">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.0667882216462" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.0667882216462"
-                    Point2="0,25.0667882216462"
-                    Point3="-4,25.0667882216462" />
-                  <mssgle:LineSegment
-                    End="-91.9746044207588,25.0667882216462" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-91.9746044207588,25.0667882216462"
-                    Point2="-95.9746044207588,25.0667882216462"
-                    Point3="-95.9746044207588,29.0667882216462" />
-                  <mssgle:LineSegment
-                    End="-95.9746044207588,66.795426461991" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-112.662341272879,30.0667882216462,129.350078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="403.771432691043,495.720267627259">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-243.073018584284,97.273203956159"
-              Start="0,0"
-              End="-243.073018584284,89.773203956159">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.1158795377687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.1158795377687"
-                    Point2="0,39.1158795377687"
-                    Point3="-4,39.1158795377687" />
-                  <mssgle:LineSegment
-                    End="-239.073018584284,39.1158795377687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-239.073018584284,39.1158795377687"
-                    Point2="-243.073018584284,39.1158795377687"
-                    Point3="-243.073018584284,43.1158795377687" />
-                  <mssgle:LineSegment
-                    End="-243.073018584284,89.773203956159" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-169.727896010892,44.1158795377687,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="334.187303572771,308.482356684101">
+          TopLeft="409.485718502642,663.955564104343">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="143.317462451605,145.637910943158"
+              EndConnector="-304.501591058978,111.037910031557"
               Start="0,0"
-              End="143.317462451605,138.137910943158">
+              End="-304.501591058978,103.537910031557">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.818955471579" />
+                    End="0,40.6509967418933" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,68.818955471579"
-                    Point2="0,72.818955471579"
-                    Point3="4,72.818955471579" />
+                    Point1="0,40.6509967418933"
+                    Point2="0,44.6509967418933"
+                    Point3="-4,44.6509967418933" />
                   <mssgle:LineSegment
-                    End="139.317462451605,72.818955471579" />
+                    End="-300.501591058978,44.6509967418933" />
                   <mssgle:CubicBezierSegment
-                    Point1="139.317462451605,72.818955471579"
-                    Point2="143.317462451605,72.818955471579"
-                    Point3="143.317462451605,76.818955471579" />
+                    Point1="-300.501591058978,44.6509967418933"
+                    Point2="-304.501591058978,44.6509967418933"
+                    Point3="-304.501591058978,48.6509967418933" />
                   <mssgle:LineSegment
-                    End="143.317462451605,138.137910943158" />
+                    End="-304.501591058978,103.537910031557" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="23.4673445070525,77.818955471579,96.3827734375,11.609375"
+              BoundingBox="-200.442182248239,49.6509967418933,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2446,39 +3137,39 @@ where [refTable].[TenTrangThai] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.342863054666,76.1647075339579"
+              EndConnector="223.200007493157,34.8705893077647"
               Start="0,0"
-              End="130.342863054666,68.6647075339579">
+              End="223.200007493157,27.3705893077647">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.6974713604219" />
+                    End="0,7.76510747655398" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.6974713604219"
-                    Point2="0,25.6974713604219"
-                    Point3="4,25.6974713604219" />
+                    Point1="0,7.76510747655398"
+                    Point2="0,11.765107476554"
+                    Point3="4,11.765107476554" />
                   <mssgle:LineSegment
-                    End="126.342863054666,25.6974713604219" />
+                    End="219.200007493157,11.765107476554" />
                   <mssgle:CubicBezierSegment
-                    Point1="126.342863054666,25.6974713604219"
-                    Point2="130.342863054666,25.6974713604219"
-                    Point3="130.342863054666,29.6974713604219" />
+                    Point1="219.200007493157,11.765107476554"
+                    Point2="223.200007493157,11.765107476554"
+                    Point3="223.200007493157,15.765107476554" />
                   <mssgle:LineSegment
-                    End="130.342863054666,68.6647075339579" />
+                    End="223.200007493157,27.3705893077647" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="10.436392464833,30.6974713604219,109.470078125,16"
+              BoundingBox="56.8649646840783,16.765107476554,109.470078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="473.031750940683,673.588241800443">
+          TopLeft="475.174608120033,811.23530182514">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2536,6 +3227,298 @@ where [refTable].[TenTrangThai] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="334.815877239559,119.600001093921">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.4000012762406"
+              Start="0,0"
+              End="0,41.9000012762406">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.9000012762406" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,12.9500006381203,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+          TopLeft="483.219051835975,663.955564104343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.11111038260964,105.61307105413"
+              Start="0,0"
+              End="-8.11111038260964,98.1130710541304">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.8065355270652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.8065355270652"
+                    Point2="0,52.8065355270652"
+                    Point3="-4,52.8065355270652" />
+                  <mssgle:LineSegment
+                    End="-4.11111038260964,52.8065355270652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.11111038260964,52.8065355270652"
+                    Point2="-8.11111038260964,52.8065355270652"
+                    Point3="-8.11111038260964,56.8065355270652" />
+                  <mssgle:LineSegment
+                    End="-8.11111038260964,98.1130710541304" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-59.8619419100548,57.8065355270652,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="227.387303572771,308.482356684101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.9746044207588,74.295426461991"
+              Start="0,0"
+              End="-95.9746044207588,66.795426461991">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0667882216462" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0667882216462"
+                    Point2="0,25.0667882216462"
+                    Point3="-4,25.0667882216462" />
+                  <mssgle:LineSegment
+                    End="-91.9746044207588,25.0667882216462" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.9746044207588,25.0667882216462"
+                    Point2="-95.9746044207588,25.0667882216462"
+                    Point3="-95.9746044207588,29.0667882216462" />
+                  <mssgle:LineSegment
+                    End="-95.9746044207588,66.795426461991" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-112.662341272879,30.0667882216462,129.350078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="264.8,41.6"
+          Id="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code"
+          TopLeft="304.285719467669,422.894121143315" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="334.187303572771,308.482356684101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.498415894898,114.411764459214"
+              Start="0,0"
+              End="102.498415894898,106.911764459214">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.2058822296069" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.2058822296069"
+                    Point2="0,57.2058822296069"
+                    Point3="4,57.2058822296069" />
+                  <mssgle:LineSegment
+                    End="98.4984158948984,57.2058822296069" />
+                  <mssgle:CubicBezierSegment
+                    Point1="98.4984158948984,57.2058822296069"
+                    Point2="102.498415894898,57.2058822296069"
+                    Point3="102.498415894898,61.2058822296069" />
+                  <mssgle:LineSegment
+                    End="102.498415894898,106.911764459214" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="3.0578212286992,62.2058822296069,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Data Flow Task\No_Match Postcodes 1"
+          TopLeft="1.26984129146649,475.828759572489" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="304.285719467669,443.694121143315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.015878176203,52.9346384291741"
+              Start="0,0"
+              End="-119.515878176203,52.9346384291741">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-59.5079390881015,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59.5079390881015,0"
+                    Point2="-63.5079390881015,0"
+                    Point3="-63.5079390881015,4" />
+                  <mssgle:LineSegment
+                    End="-63.5079390881015,48.9346384291741" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.5079390881015,48.9346384291741"
+                    Point2="-63.5079390881015,52.9346384291741"
+                    Point3="-67.5079390881015,52.9346384291741" />
+                  <mssgle:LineSegment
+                    End="-119.515878176203,52.9346384291741" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-119.314325806851,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="289.6,41.6"
+          Id="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code"
+          TopLeft="420.714292879008,513.28235522554" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="479.485719467669,464.494121143315">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.0285734113382,48.7882340822253"
+              Start="0,0"
+              End="86.0285734113382,41.2882340822253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.6911070890423" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.6911070890423"
+                    Point2="0,19.6911070890423"
+                    Point3="4,19.6911070890423" />
+                  <mssgle:LineSegment
+                    End="82.0285734113382,19.6911070890423" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.0285734113382,19.6911070890423"
+                    Point2="86.0285734113382,19.6911070890423"
+                    Point3="86.0285734113382,23.6911070890423" />
+                  <mssgle:LineSegment
+                    End="86.0285734113382,41.2882340822253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.17710001308091,24.6911070890423,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
+          TopLeft="565.514292879008,554.88235522554">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-82.2952410430321,67.4732088788026"
+              Start="0,0"
+              End="-82.2952410430321,59.9732088788026">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7366044394013" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.7366044394013"
+                    Point2="0,33.7366044394013"
+                    Point3="-4,33.7366044394013" />
+                  <mssgle:LineSegment
+                    End="-78.2952410430321,33.7366044394013" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.2952410430321,33.7366044394013"
+                    Point2="-82.2952410430321,33.7366044394013"
+                    Point3="-82.2952410430321,37.7366044394013" />
+                  <mssgle:LineSegment
+                    End="-82.2952410430321,59.9732088788026" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-89.3390072402661,38.7366044394013,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Data Flow Task\No_Match Postcodes 1 1"
+          TopLeft="97.6984143622068,549.240525307944" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output3]"
+          TopLeft="420.714292879008,534.08235522554">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.015878516801,35.9581700824036"
+              Start="0,0"
+              End="-139.515878516801,35.9581700824036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-69.5079392584004,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-69.5079392584004,0"
+                    Point2="-73.5079392584004,0"
+                    Point3="-73.5079392584004,4" />
+                  <mssgle:LineSegment
+                    End="-73.5079392584004,31.9581700824036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73.5079392584004,31.9581700824036"
+                    Point2="-73.5079392584004,35.9581700824036"
+                    Point3="-77.5079392584004,35.9581700824036" />
+                  <mssgle:LineSegment
+                    End="-139.515878516801,35.9581700824036" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-129.31432597715,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -2571,7 +3554,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2581,7 +3564,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2607,7 +3590,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2617,7 +3600,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2634,6 +3617,52 @@ where [refTable].[TenTrangThai] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lấy giá trị từ bảng Country_NDS dựa trên country_code">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Country_NDS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lấy giá trị từ bảng Region_NDS dựa trên region_code">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Region_NDS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

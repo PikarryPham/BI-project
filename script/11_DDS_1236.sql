@@ -70,7 +70,7 @@ CREATE TABLE Dim_Casualties (
     SKCasuality INTEGER PRIMARY KEY NOT NULL,
 	Age_Group_Des VARCHAR(255) NOT NULL,
     Gender_Des VARCHAR(255) NOT NULL,
-    Age_Band_Des VARCHAR(255) NOT NULL,
+    Age INT NOT NULL,
     Casualty_Type_Des VARCHAR(255) NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME,
@@ -78,10 +78,10 @@ CREATE TABLE Dim_Casualties (
 
 CREATE TABLE Dim_Date (
     SKDate INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    Year_ VARCHAR(255) NOT NULL,
-    Quarter_ VARCHAR(255) NOT NULL,
-    Month_ VARCHAR(255) NOT NULL,
-    Day_ VARCHAR(255) NOT NULL,
+    Year_ INT NOT NULL,
+    Quarter_ INT NOT NULL,
+    Month_ INT NOT NULL,
+    Day_ DATE NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME,
 );
@@ -123,3 +123,10 @@ FOREIGN KEY (SKLocal_Authority_District) REFERENCES Dim_Local_Authority_District
 ALTER TABLE Fact_Accidents
 ADD CONSTRAINT Fact_Accident_Casualities
 FOREIGN KEY (SKCasuality) REFERENCES Dim_Casualties(SKCasuality);
+
+------------------------ CREATE METADATA FOR FLOW DDS_1236
+USE QLBI_METADATA;
+
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_To_DDS1236','1900-01-01',NULL);
+
+SELECT * FROM Metadata_Table

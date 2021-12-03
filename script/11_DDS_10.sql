@@ -138,3 +138,10 @@ FOREIGN KEY (SKRoad_Surface_Conditions) REFERENCES Dim_Road_Surface_Conditions(S
 ALTER TABLE Fact_Accidents
 ADD CONSTRAINT FK_Fact_Casualties
 FOREIGN KEY (SKCasuality) REFERENCES Dim_Casualties(SKCasuality);
+
+------------------------ CREATE METADATA FOR FLOW DDS_1236
+USE QLBI_METADATA;
+
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_To_DDS10','1900-01-01',NULL);
+
+SELECT * FROM Metadata_Table
