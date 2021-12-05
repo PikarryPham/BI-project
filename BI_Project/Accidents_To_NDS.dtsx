@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Accidents_To_NDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="129"
-  DTS:VersionGUID="{2D8FD2E7-3B3F-4842-AB9F-57991F68FFB0}">
+  DTS:VersionBuild="135"
+  DTS:VersionGUID="{B7D36F50-122A-4FB6-B257-C305CB7EB439}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -587,6 +587,125 @@
                       refId="Package\Data Flow Task\Accident_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Accident_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[LSOA_of_Accident_Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="LSOA_of_Accident_Location"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LSOA_of_Accident_Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[LSOA IS NOT NULL]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="LSOA IS NOT NULL"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LSOA_of_Accident_Location]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(LSOA_of_Accident_Location)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[LSOA IS NULL]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="LSOA IS NULL"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LSOA_of_Accident_Location]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(LSOA_of_Accident_Location)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7362,6 +7481,367 @@ where [refTable].[TenTrangThai] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\No_Match Table_Have_Null"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="No_Match Table_Have_Null"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Accidents2011_2014_No_Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\No_Match Table_Have_Null.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[create_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="create_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[create_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[update_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="update_date"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[trangthai]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="trangthai"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[trangthai]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[MaNguonDL]"
+                      cachedDataType="i4"
+                      cachedName="MaNguonDL"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      lineageId="Package\Data Flow Task\Them nguon du lieu.Outputs[Derived Column Output].Columns[MaNguonDL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Accident_Severity]"
+                      cachedDataType="i4"
+                      cachedName="Accident_Severity"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Accident_Severity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Number_of_Vehicles]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Vehicles"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Number_of_Vehicles]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Number_of_Casualties]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Casualties"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Date_]"
+                      cachedDataType="dbDate"
+                      cachedName="Date_"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Date_]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
+                      cachedDataType="i4"
+                      cachedName="Day_of_Week"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Day_of_Week]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Time_]"
+                      cachedDataType="dbTime2"
+                      cachedName="Time_"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Time_]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Local_Authority_District]"
+                      cachedDataType="i4"
+                      cachedName="Local_Authority_District"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_District]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Local_Authority_District]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Local_Authority_Highway]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="Local_Authority_Highway"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_Highway]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Local_Authority_Highway]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Road_Type]"
+                      cachedDataType="i4"
+                      cachedName="Road_Type"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Road_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Speed_limit]"
+                      cachedDataType="i4"
+                      cachedName="Speed_limit"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Speed_limit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Light_Conditions]"
+                      cachedDataType="i4"
+                      cachedName="Light_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Light_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Weather_Conditions]"
+                      cachedDataType="i4"
+                      cachedName="Weather_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weather_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Road_Surface_Conditions]"
+                      cachedDataType="i4"
+                      cachedName="Road_Surface_Conditions"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Road_Surface_Conditions]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area]"
+                      cachedDataType="i4"
+                      cachedName="Urban_or_Rural_Area"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Urban_or_Rural_Area]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].Columns[LSOA_of_Accident_Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="512"
+                      cachedName="LSOA_of_Accident_Location"
+                      externalMetadataColumnId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LSOA_of_Accident_Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="create_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="update_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[trangthai]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="trangthai" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[source_sys_code]"
+                      dataType="i4"
+                      name="source_sys_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[SKAccident]"
+                      dataType="i4"
+                      name="SKAccident" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
+                      dataType="i4"
+                      name="Accident_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
+                      dataType="i4"
+                      name="Number_of_Vehicles" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
+                      dataType="i4"
+                      name="Number_of_Casualties" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Date_]"
+                      dataType="dbDate"
+                      name="Date_" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                      dataType="i4"
+                      name="Day_of_Week" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Time_]"
+                      dataType="dbTime2"
+                      name="Time_"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_District]"
+                      dataType="i4"
+                      name="Local_Authority_District" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_Highway]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Local_Authority_Highway" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
+                      dataType="i4"
+                      name="Road_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
+                      dataType="i4"
+                      name="Speed_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
+                      dataType="i4"
+                      name="Light_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
+                      dataType="i4"
+                      name="Weather_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
+                      dataType="i4"
+                      name="Road_Surface_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
+                      dataType="i4"
+                      name="Urban_or_Rural_Area" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="LSOA_of_Accident_Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\No_Match Table_Have_Null.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Table_Have_Null.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\No_Match Table_Have_Null.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\No_Match Table_Have_Null.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -7971,9 +8451,14 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output11]"
-              endId="Package\Data Flow Task\Kiem tra Road_Type co trong Road_Type_NDS khong.Inputs[Lookup Input]"
+              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output10]"
+              endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiem tra xem ma accident_index da ton tai trong bang accident chua.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output9]"
               endId="Package\Data Flow Task\Kiem tra xem lsoa khong.Inputs[Lookup Input]"
@@ -7994,11 +8479,6 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
               endId="Package\Data Flow Task\Kiem tra Weather_Condition co trong Weather_Condition_NDS khong.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiem tra Light_Condition co trong Light_Condition_NDS khong.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output10]"
-              endId="Package\Data Flow Task\Cập nhật dữ liệu.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiem tra xem ma accident_index da ton tai trong bang accident chua.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
               endId="Package\Data Flow Task\Kiem tra xem ma accident_index da ton tai trong bang accident chua.Inputs[Lookup Input]"
@@ -8021,74 +8501,84 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
               startId="Package\Data Flow Task\Kiem tra Accident_Severity co trong Accident_Severity_NDS khong.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Kiem tra Local_Authority_Highway co trong Local_Authority_Highway_NDS khong.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
               endId="Package\Data Flow Task\Kiem tra Urban_Or_Rural_Area co trong Urban_Or_Rural_Area_NDS khong.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Kiem tra Road_Surface_Condition co trong Road_Surface_Condition_NDS khong.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output10]"
-              endId="Package\Data Flow Task\NoMatch_Local_Authority_District.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong.Outputs[Lookup No Match Output]" />
+              refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
+              endId="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Kiem tra Local_Authority_Highway co trong Local_Authority_Highway_NDS khong.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output9]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output8]"
               endId="Package\Data Flow Task\NoMatch_Accident_Severity.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra Accident_Severity co trong Accident_Severity_NDS khong.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output8]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output11]"
+              endId="Package\Data Flow Task\NoMatch_RoadType.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Kiem tra Road_Type co trong Road_Type_NDS khong.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output10]"
+              endId="Package\Data Flow Task\NoMatch_LightCondition.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Kiem tra Light_Condition co trong Light_Condition_NDS khong.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output9]"
+              endId="Package\Data Flow Task\NoMatch_Local_Authority_District.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output7]"
               endId="Package\Data Flow Task\NoMatch_DayOfWeek.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra Day_Of_Week co trong Day_Of_Week_NDS khong.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output7]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
+              endId="Package\Data Flow Task\NoMatch_RoadSurfaceCondition.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Kiem tra Road_Surface_Condition co trong Road_Surface_Condition_NDS khong.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output5]"
               endId="Package\Data Flow Task\NoMatch_WeatherCondition.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra Weather_Condition co trong Weather_Condition_NDS khong.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output6]"
-              endId="Package\Data Flow Task\NoMatch_Local_Authority_Highway.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiem tra Local_Authority_Highway co trong Local_Authority_Highway_NDS khong.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output3]"
-              endId="Package\Data Flow Task\NoMatch_RoadType.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiem tra Road_Type co trong Road_Type_NDS khong.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output4]"
               endId="Package\Data Flow Task\No_Match Table.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output3]"
               endId="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra xem ma accident_index da ton tai trong bang accident chua.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
               endId="Package\Data Flow Task\No_Match table.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra xem lsoa khong.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output1]"
               endId="Package\Data Flow Task\NoMatch_UrbanOrRuralArea.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Kiem tra Urban_Or_Rural_Area co trong Urban_Or_Rural_Area_NDS khong.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output11]"
-              endId="Package\Data Flow Task\NoMatch_RoadSurfaceCondition.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output6]"
+              endId="Package\Data Flow Task\NoMatch_Local_Authority_Highway.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiem tra Road_Surface_Condition co trong Road_Surface_Condition_NDS khong.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow Task\Kiem tra Local_Authority_Highway co trong Local_Authority_Highway_NDS khong.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output5]"
-              endId="Package\Data Flow Task\NoMatch_LightCondition.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Kiem tra Light_Condition co trong Light_Condition_NDS khong.Outputs[Lookup No Match Output]" />
+              refId="Package\Data Flow Task.Paths[LSOA IS NOT NULL]"
+              endId="Package\Data Flow Task\Kiem tra Road_Type co trong Road_Type_NDS khong.Inputs[Lookup Input]"
+              name="LSOA IS NOT NULL"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[LSOA IS NOT NULL]" />
+            <path
+              refId="Package\Data Flow Task.Paths[LSOA IS NULL]"
+              endId="Package\Data Flow Task\No_Match Table_Have_Null.Inputs[OLE DB Destination Input]"
+              name="LSOA IS NULL"
+              startId="Package\Data Flow Task\Conditional Split.Outputs[LSOA IS NULL]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Them nguon du lieu.Inputs[Derived Column Input]"
@@ -8128,7 +8618,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           Id="Package\Data Flow Task\Kiem tra Light_Condition co trong Light_Condition_NDS khong"
           TopLeft="320.666666666667,516.189195614474" />
         <NodeLayout
-          Size="196,41.6"
+          Size="195.2,41.6"
           Id="Package\Data Flow Task\Kiem tra xem lsoa khong"
           TopLeft="1012.24762118852,1215.13802347031" />
         <NodeLayout
@@ -8144,29 +8634,29 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           Id="Package\Data Flow Task\NoMatch_Accident_Severity"
           TopLeft="35.9999999999999,1288.02918358036" />
         <NodeLayout
-          Size="157.6,41.6"
-          Id="Package\Data Flow Task\No_Match Table"
-          TopLeft="802.761907596166,407.03914923314" />
-        <NodeLayout
           Size="156,41.6"
           Id="Package\Data Flow Task\Cập nhật dữ liệu"
           TopLeft="1160.71428777004,614.594940450468" />
         <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Data Flow Task\NoMatch_RoadType"
-          TopLeft="78.6666666666666,498.108115226183" />
+          Size="157.6,41.6"
+          Id="Package\Data Flow Task\No_Match Table"
+          TopLeft="892.761909128857,348.921501359238" />
         <NodeLayout
           Size="364.8,41.6"
           Id="Package\Data Flow Task\Kiem tra Day_Of_Week co trong Day_Of_Week_NDS khong"
           TopLeft="380.666666666667,1099.21622391841" />
         <NodeLayout
-          Size="216.8,41.6"
-          Id="Package\Data Flow Task\NoMatch_UrbanOrRuralArea"
-          TopLeft="58.6666666666669,1057.10812578104" />
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\Error_Accidents"
+          TopLeft="1110.19366223342,338.336999325504" />
         <NodeLayout
           Size="392,41.6"
           Id="Package\Data Flow Task\Kiem tra Weather_Condition co trong Weather_Condition_NDS khong"
           TopLeft="324.666666666667,666.783792165181" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\Data Flow Task\NoMatch_UrbanOrRuralArea"
+          TopLeft="58.6666666666669,1057.10812578104" />
         <NodeLayout
           Size="248,41.6"
           Id="Package\Data Flow Task\NoMatch_Local_Authority_Highway"
@@ -8178,27 +8668,19 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         <NodeLayout
           Size="435.2,41.6"
           Id="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa"
-          TopLeft="553.746037140184,306.541179344811" />
+          TopLeft="583.031751924631,216.305883961648" />
         <NodeLayout
           Size="185.6,42.4"
           Id="Package\Data Flow Task\NoMatch_DayOfWeek"
           TopLeft="70.3333333333333,1188.4886431349" />
         <NodeLayout
-          Size="450.4,41.6"
-          Id="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong"
-          TopLeft="815.333333333333,1440.91894625015" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="650.571435614509,98.6470602070172" />
+          TopLeft="448.42857502918,94.0588248485513" />
         <NodeLayout
           Size="396.8,41.6"
           Id="Package\Data Flow Task\Kiem tra Accident_Severity co trong Accident_Severity_NDS khong"
           TopLeft="411.666666666667,1233.24325171973" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Them nguon du lieu"
-          TopLeft="639.85714971776,201.8823557725" />
         <NodeLayout
           Size="439.2,41.6"
           Id="Package\Data Flow Task\Kiem tra Urban_Or_Rural_Area co trong Urban_Or_Rural_Area_NDS khong"
@@ -8208,9 +8690,13 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           Id="Package\Data Flow Task\NoMatch_WeatherCondition"
           TopLeft="102,752.612625639777" />
         <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
-          TopLeft="1512.23810280153,645.379959764399" />
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Them nguon du lieu"
+          TopLeft="696.285722107304,100.94117788625" />
+        <NodeLayout
+          Size="450.4,41.6"
+          Id="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong"
+          TopLeft="815.333333333333,1440.91894625015" />
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\Data Flow Task\NoMatch_RoadSurfaceCondition"
@@ -8220,51 +8706,43 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           Id="Package\Data Flow Task\Kiem tra xem ma accident_index da ton tai trong bang accident chua"
           TopLeft="1127.90476775575,831.98064458326" />
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task\Error_Accidents"
-          TopLeft="1110.19366223342,338.336999325504" />
+          Size="176.8,41.6"
+          Id="Package\Data Flow Task\NoMatch_RoadType"
+          TopLeft="78.6666666666666,498.108115226183" />
         <NodeLayout
           Size="196,41.6"
           Id="Package\Data Flow Task\NoMatch_LightCondition"
           TopLeft="76.3333333333333,605.081090943147" />
         <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Data Flow Task\Cập nhật giá trị createdate và updatedate"
+          TopLeft="1512.23810280153,645.379959764399" />
+        <NodeLayout
           Size="336,41.6"
           Id="Package\Data Flow Task\Kiem tra Road_Type co trong Road_Type_NDS khong"
           TopLeft="237.333333333333,409.135135488322" />
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Data Flow Task\No_Match table"
-          TopLeft="808.333333333333,1006.89988628309" />
-        <NodeLayout
           Size="144,41.6"
           Id="Package\Data Flow Task\Accident_NDS"
           TopLeft="1603.7777838707,973.686836959018" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Data Flow Task\No_Match table"
+          TopLeft="808.333333333333,1006.89988628309" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="725.371435614507,140.247060207017">
+          TopLeft="598.82857502918,118.300001367401">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.11428589674875,61.6352955654831"
+              EndConnector="97.4571470781248,0"
               Start="0,0"
-              End="-9.11428589674875,54.1352955654831">
+              End="89.9571470781248,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.8176477827415" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.8176477827415"
-                    Point2="0,30.8176477827415"
-                    Point3="-4,30.8176477827415" />
-                  <mssgle:LineSegment
-                    End="-5.11428589674875,30.8176477827415" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.11428589674875,30.8176477827415"
-                    Point2="-9.11428589674875,30.8176477827415"
-                    Point3="-9.11428589674875,34.8176477827415" />
-                  <mssgle:LineSegment
-                    End="-9.11428589674875,54.1352955654831" />
+                    End="89.9571470781248,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8275,42 +8753,78 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output11]"
-          TopLeft="562.5,828.918926145667">
+          TopLeft="405.333333333333,451.135135488322">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-352.333333333333,54.2003365352331"
+              EndConnector="-238.333333333333,46.9729797378608"
               Start="0,0"
-              End="-352.333333333333,46.7003365352331">
+              End="-238.333333333333,39.4729797378608">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.1001682676165" />
+                    End="0,19.4864898689304" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.1001682676165"
-                    Point2="0,27.1001682676165"
-                    Point3="-4,27.1001682676165" />
+                    Point1="0,19.4864898689304"
+                    Point2="0,23.4864898689304"
+                    Point3="-4,23.4864898689304" />
                   <mssgle:LineSegment
-                    End="-348.333333333333,27.1001682676165" />
+                    End="-234.333333333333,23.4864898689304" />
                   <mssgle:CubicBezierSegment
-                    Point1="-348.333333333333,27.1001682676165"
-                    Point2="-352.333333333333,27.1001682676165"
-                    Point3="-352.333333333333,31.1001682676165" />
+                    Point1="-234.333333333333,23.4864898689304"
+                    Point2="-238.333333333333,23.4864898689304"
+                    Point3="-238.333333333333,27.4864898689304" />
                   <mssgle:LineSegment
-                    End="-352.333333333333,46.7003365352331" />
+                    End="-238.333333333333,39.4729797378608" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-231.973053385417,32.1001682676165,111.6127734375,11.609375"
+              BoundingBox="-174.973053385417,28.4864898689304,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output10]"
+          TopLeft="507.833333333333,558.189195614474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-333.5,46.8918953286721"
+              Start="0,0"
+              End="-333.5,39.3918953286721">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4459476643361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4459476643361"
+                    Point2="0,23.4459476643361"
+                    Point3="-4,23.4459476643361" />
+                  <mssgle:LineSegment
+                    End="-329.5,23.4459476643361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-329.5,23.4459476643361"
+                    Point2="-333.5,23.4459476643361"
+                    Point3="-333.5,27.4459476643361" />
+                  <mssgle:LineSegment
+                    End="-333.5,39.3918953286721" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-222.55638671875,28.4459476643361,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output9]"
           TopLeft="1040.5,1482.91894625015">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8346,7 +8860,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output9]"
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output8]"
           TopLeft="411.666666666667,1254.24325171973">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8382,7 +8896,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output8]"
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output7]"
           TopLeft="503.555555555556,1141.21622391841">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8414,42 +8928,6 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-226.084164496528,24.0328706419505,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output7]"
-          TopLeft="520.5,708.783792165181">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-312,43.8288334745954"
-              Start="0,0"
-              End="-312,36.3288334745954">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.9144167372977" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.9144167372977"
-                    Point2="0,21.9144167372977"
-                    Point3="-4,21.9144167372977" />
-                  <mssgle:LineSegment
-                    End="-308,21.9144167372977" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-308,21.9144167372977"
-                    Point2="-312,21.9144167372977"
-                    Point3="-312,25.9144167372977" />
-                  <mssgle:LineSegment
-                    End="-312,36.3288334745954" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-211.80638671875,26.9144167372977,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8491,114 +8969,78 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output5]"
-          TopLeft="507.833333333333,558.189195614474">
+          TopLeft="520.5,708.783792165181">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-333.5,46.8918953286721"
+              EndConnector="-312,43.8288334745954"
               Start="0,0"
-              End="-333.5,39.3918953286721">
+              End="-312,36.3288334745954">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.4459476643361" />
+                    End="0,17.9144167372977" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.4459476643361"
-                    Point2="0,23.4459476643361"
-                    Point3="-4,23.4459476643361" />
+                    Point1="0,17.9144167372977"
+                    Point2="0,21.9144167372977"
+                    Point3="-4,21.9144167372977" />
                   <mssgle:LineSegment
-                    End="-329.5,23.4459476643361" />
+                    End="-308,21.9144167372977" />
                   <mssgle:CubicBezierSegment
-                    Point1="-329.5,23.4459476643361"
-                    Point2="-333.5,23.4459476643361"
-                    Point3="-333.5,27.4459476643361" />
+                    Point1="-308,21.9144167372977"
+                    Point2="-312,21.9144167372977"
+                    Point3="-312,25.9144167372977" />
                   <mssgle:LineSegment
-                    End="-333.5,39.3918953286721" />
+                    End="-312,36.3288334745954" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-222.55638671875,28.4459476643361,111.6127734375,11.609375"
+              BoundingBox="-211.80638671875,26.9144167372977,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output4]"
-          TopLeft="842.546037140184,348.141179344811">
+          TopLeft="729.431751924631,257.905883961648">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="39.0158704559818,58.8979698883286"
+              EndConnector="242.130157204226,91.0156173975904"
               Start="0,0"
-              End="39.0158704559818,51.3979698883286">
+              End="242.130157204226,83.5156173975904">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.6886340429981" />
+                    End="0,32.6062812829869" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.6886340429981"
-                    Point2="0,23.6886340429981"
-                    Point3="4,23.6886340429981" />
+                    Point1="0,32.6062812829869"
+                    Point2="0,36.6062812829869"
+                    Point3="4,36.6062812829869" />
                   <mssgle:LineSegment
-                    End="35.0158704559818,23.6886340429981" />
+                    End="238.130157204226,36.6062812829869" />
                   <mssgle:CubicBezierSegment
-                    Point1="35.0158704559818,23.6886340429981"
-                    Point2="39.0158704559818,23.6886340429981"
-                    Point3="39.0158704559818,27.6886340429981" />
+                    Point1="238.130157204226,36.6062812829869"
+                    Point2="242.130157204226,36.6062812829869"
+                    Point3="242.130157204226,40.6062812829869" />
                   <mssgle:LineSegment
-                    End="39.0158704559818,51.3979698883286" />
+                    End="242.130157204226,83.5156173975904" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-36.2984514907591,28.6886340429981,111.6127734375,11.609375"
+              BoundingBox="65.2586918833629,41.6062812829869,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output3]"
-          TopLeft="405.333333333333,451.135135488322">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-238.333333333333,46.9729797378608"
-              Start="0,0"
-              End="-238.333333333333,39.4729797378608">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.4864898689304" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.4864898689304"
-                    Point2="0,23.4864898689304"
-                    Point3="-4,23.4864898689304" />
-                  <mssgle:LineSegment
-                    End="-234.333333333333,23.4864898689304" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-234.333333333333,23.4864898689304"
-                    Point2="-238.333333333333,23.4864898689304"
-                    Point3="-238.333333333333,27.4864898689304" />
-                  <mssgle:LineSegment
-                    End="-238.333333333333,39.4729797378608" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-174.973053385417,28.4864898689304,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
           TopLeft="1353.07143442242,831.98064458326">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8634,43 +9076,43 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-          TopLeft="1078.91428785519,1215.13802347031">
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="1078.64762118852,1215.13802347031">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-193.747621188521,-166.238137187224"
+              EndConnector="-193.514287855187,-166.63813718722"
               Start="0,0"
-              End="-193.747621188521,-158.738137187224">
+              End="-193.514287855187,-159.13813718722">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-63.3028895494833" />
+                    End="0,-63.4681238367768" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-63.3028895494833"
-                    Point2="0,-67.3028895494833"
-                    Point3="-4,-67.3028895494833" />
+                    Point1="0,-63.4681238367768"
+                    Point2="0,-67.4681238367768"
+                    Point3="-4,-67.4681238367768" />
                   <mssgle:LineSegment
-                    End="-189.747621188521,-67.3028895494833" />
+                    End="-189.514287855187,-67.4681238367768" />
                   <mssgle:CubicBezierSegment
-                    Point1="-189.747621188521,-67.3028895494833"
-                    Point2="-193.747621188521,-67.3028895494833"
-                    Point3="-193.747621188521,-71.3028895494833" />
+                    Point1="-189.514287855187,-67.4681238367768"
+                    Point2="-193.514287855187,-67.4681238367768"
+                    Point3="-193.514287855187,-71.4681238367768" />
                   <mssgle:LineSegment
-                    End="-193.747621188521,-158.738137187224" />
+                    End="-193.514287855187,-159.13813718722" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-152.68019731301,-62.3028895494833,111.6127734375,11.609375"
+              BoundingBox="-152.563530646344,-62.4681238367768,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
           TopLeft="463.333333333333,1013.35135990934">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8706,38 +9148,38 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output11]"
-          TopLeft="700.146037140184,348.141179344811">
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="562.5,828.918926145667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-294.812703806851,60.9939561435106"
+              EndConnector="-352.333333333333,54.2003365352331"
               Start="0,0"
-              End="-294.812703806851,53.4939561435106">
+              End="-352.333333333333,46.7003365352331">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5316351082691" />
+                    End="0,23.1001682676165" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.5316351082691"
-                    Point2="0,24.5316351082691"
-                    Point3="-4,24.5316351082691" />
+                    Point1="0,23.1001682676165"
+                    Point2="0,27.1001682676165"
+                    Point3="-4,27.1001682676165" />
                   <mssgle:LineSegment
-                    End="-290.812703806851,24.5316351082691" />
+                    End="-348.333333333333,27.1001682676165" />
                   <mssgle:CubicBezierSegment
-                    Point1="-290.812703806851,24.5316351082691"
-                    Point2="-294.812703806851,24.5316351082691"
-                    Point3="-294.812703806851,28.5316351082691" />
+                    Point1="-348.333333333333,27.1001682676165"
+                    Point2="-352.333333333333,27.1001682676165"
+                    Point3="-352.333333333333,31.1001682676165" />
                   <mssgle:LineSegment
-                    End="-294.812703806851,53.4939561435106" />
+                    End="-352.333333333333,46.7003365352331" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-195.597738622176,29.5316351082691,96.3827734375,11.609375"
+              BoundingBox="-231.973053385416,32.1001682676165,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8779,25 +9221,25 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output9]"
-          TopLeft="1112.23492170537,1440.91894625015">
+          TopLeft="1112.05714392759,1440.91894625015">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-183.780922779836"
+              EndConnector="0,-184.18092277984"
               Start="0,0"
-              End="0,-176.280922779836">
+              End="0,-176.68092277984">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-176.280922779836" />
+                    End="0,-176.68092277984" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,-93.9451488899182,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,-94.14514888992,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8911,73 +9353,73 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
-          TopLeft="638.555555555555,828.918926145667">
+          TopLeft="835.111111111111,1377.54957484317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-175.222222222222,142.432433763676"
+              EndConnector="205.388888888889,63.3693714069864"
               Start="0,0"
-              End="-175.222222222222,134.932433763676">
+              End="205.388888888889,55.8693714069864">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.2664385285346" />
+                    End="0,21.4776629916471" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,53.2664385285346"
-                    Point2="0,57.2664385285346"
-                    Point3="-4,57.2664385285346" />
+                    Point1="0,21.4776629916471"
+                    Point2="0,25.4776629916471"
+                    Point3="4,25.4776629916471" />
                   <mssgle:LineSegment
-                    End="-171.222222222222,57.2664385285346" />
+                    End="201.388888888889,25.4776629916471" />
                   <mssgle:CubicBezierSegment
-                    Point1="-171.222222222222,57.2664385285346"
-                    Point2="-175.222222222222,57.2664385285346"
-                    Point3="-175.222222222222,61.2664385285346" />
+                    Point1="201.388888888889,25.4776629916471"
+                    Point2="205.388888888889,25.4776629916471"
+                    Point3="205.388888888889,29.4776629916471" />
                   <mssgle:LineSegment
-                    End="-175.222222222222,134.932433763676" />
+                    End="205.388888888889,55.8693714069864" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-135.802497829861,62.2664385285346,96.3827734375,11.609375"
+              BoundingBox="54.5030577256945,30.4776629916471,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
-          TopLeft="1141.58095452185,1215.13802347031">
+          TopLeft="1141.04762118852,1215.13802347031">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="211.490479900563,-341.490712220387"
+              EndConnector="212.05714656723,-341.55737888705"
               Start="0,0"
-              End="211.490479900563,-333.990712220387">
+              End="212.05714656723,-334.05737888705">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-134.25534907708" />
+                    End="0,-134.289085110367" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-134.25534907708"
-                    Point2="0,-138.25534907708"
-                    Point3="4,-138.25534907708" />
+                    Point1="0,-134.289085110367"
+                    Point2="0,-138.289085110367"
+                    Point3="4,-138.289085110367" />
                   <mssgle:LineSegment
-                    End="207.490479900563,-138.25534907708" />
+                    End="208.05714656723,-138.289085110367" />
                   <mssgle:CubicBezierSegment
-                    Point1="207.490479900563,-138.25534907708"
-                    Point2="211.490479900563,-138.25534907708"
-                    Point3="211.490479900563,-142.25534907708" />
+                    Point1="208.05714656723,-138.289085110367"
+                    Point2="212.05714656723,-138.289085110367"
+                    Point3="212.05714656723,-142.289085110367" />
                   <mssgle:LineSegment
-                    End="211.490479900563,-333.990712220387" />
+                    End="212.05714656723,-334.05737888705" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="57.5538532315315,-133.25534907708,96.3827734375,11.609375"
+              BoundingBox="57.837186564865,-133.289085110367,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9091,73 +9533,73 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="835.111111111111,1377.54957484317">
+          TopLeft="638.555555555555,828.918926145667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="205.388888888889,63.3693714069864"
+              EndConnector="-175.222222222222,142.432433763676"
               Start="0,0"
-              End="205.388888888889,55.8693714069864">
+              End="-175.222222222222,134.932433763676">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.4776629916471" />
+                    End="0,53.2664385285346" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.4776629916471"
-                    Point2="0,25.4776629916471"
-                    Point3="4,25.4776629916471" />
+                    Point1="0,53.2664385285346"
+                    Point2="0,57.2664385285346"
+                    Point3="-4,57.2664385285346" />
                   <mssgle:LineSegment
-                    End="201.388888888889,25.4776629916471" />
+                    End="-171.222222222222,57.2664385285346" />
                   <mssgle:CubicBezierSegment
-                    Point1="201.388888888889,25.4776629916471"
-                    Point2="205.388888888889,25.4776629916471"
-                    Point3="205.388888888889,29.4776629916471" />
+                    Point1="-171.222222222222,57.2664385285346"
+                    Point2="-175.222222222222,57.2664385285346"
+                    Point3="-175.222222222222,61.2664385285346" />
                   <mssgle:LineSegment
-                    End="205.388888888889,55.8693714069864" />
+                    End="-175.222222222222,134.932433763676" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="54.5030577256945,30.4776629916471,96.3827734375,11.609375"
+              BoundingBox="-135.802497829861,62.2664385285346,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Error Output]"
-          TopLeft="988.946037140184,327.341179344811">
+          TopLeft="871.831751924631,257.905883961648">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="121.247625093236,31.7958199806926"
+              EndConnector="315.561910308789,80.431115363856"
               Start="0,0"
-              End="113.747625093236,31.7958199806926">
+              End="315.561910308789,72.931115363856">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="56.6238125466178,0" />
+                    End="0,28.3492178276608" />
                   <mssgle:CubicBezierSegment
-                    Point1="56.6238125466178,0"
-                    Point2="60.6238125466178,0"
-                    Point3="60.6238125466178,4" />
+                    Point1="0,28.3492178276608"
+                    Point2="0,32.3492178276608"
+                    Point3="4,32.3492178276608" />
                   <mssgle:LineSegment
-                    End="60.6238125466178,27.7958199806926" />
+                    End="311.561910308789,32.3492178276608" />
                   <mssgle:CubicBezierSegment
-                    Point1="60.6238125466178,27.7958199806926"
-                    Point2="60.6238125466178,31.7958199806926"
-                    Point3="64.6238125466178,31.7958199806926" />
+                    Point1="311.561910308789,32.3492178276608"
+                    Point2="315.561910308789,32.3492178276608"
+                    Point3="315.561910308789,36.3492178276608" />
                   <mssgle:LineSegment
-                    End="113.747625093236,31.7958199806926" />
+                    End="315.561910308789,72.931115363856" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="14.7574258278678,-17.609375,91.7327734375,11.609375"
+              BoundingBox="111.914568435645,37.3492178276608,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9197,30 +9639,30 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="716.25714971776,243.4823557725">
+          TopLeft="772.685722107304,142.54117788625">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.0888874224243,63.0588235723114"
+              EndConnector="27.9460298173267,73.7647060753981"
               Start="0,0"
-              End="55.0888874224243,55.5588235723114">
+              End="27.9460298173267,66.2647060753981">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5294117861557" />
+                    End="0,32.882353037699" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.5294117861557"
-                    Point2="0,31.5294117861557"
-                    Point3="4,31.5294117861557" />
+                    Point1="0,32.882353037699"
+                    Point2="0,36.882353037699"
+                    Point3="4,36.882353037699" />
                   <mssgle:LineSegment
-                    End="51.0888874224243,31.5294117861557" />
+                    End="23.9460298173267,36.882353037699" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.0888874224243,31.5294117861557"
-                    Point2="55.0888874224243,31.5294117861557"
-                    Point3="55.0888874224243,35.5294117861557" />
+                    Point1="23.9460298173267,36.882353037699"
+                    Point2="27.9460298173267,36.882353037699"
+                    Point3="27.9460298173267,40.882353037699" />
                   <mssgle:LineSegment
-                    End="55.0888874224243,55.5588235723114" />
+                    End="27.9460298173267,66.2647060753981" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9229,6 +9671,129 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="521.800003831727,309.611768105616" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output11]"
+          TopLeft="693.831751924631,257.905883961648">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.8317480929036,51.7058841439679"
+              Start="0,0"
+              End="-94.8317480929036,44.2058841439679">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4452252227517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4452252227517"
+                    Point2="0,17.4452252227517"
+                    Point3="-4,17.4452252227517" />
+                  <mssgle:LineSegment
+                    End="-90.8317480929036,17.4452252227517" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.8317480929036,17.4452252227517"
+                    Point2="-94.8317480929036,17.4452252227517"
+                    Point3="-94.8317480929036,21.4452252227517" />
+                  <mssgle:LineSegment
+                    End="-94.8317480929036,44.2058841439679" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-95.6072607652018,22.4452252227517,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[LSOA IS NOT NULL]"
+          TopLeft="599.000003831727,351.211768105616">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-193.666670498394,57.9233673827061"
+              Start="0,0"
+              End="-193.666670498394,50.4233673827061">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.961683691353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.961683691353"
+                    Point2="0,28.961683691353"
+                    Point3="-4,28.961683691353" />
+                  <mssgle:LineSegment
+                    End="-189.666670498394,28.961683691353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-189.666670498394,28.961683691353"
+                    Point2="-193.666670498394,28.961683691353"
+                    Point3="-193.666670498394,32.961683691353" />
+                  <mssgle:LineSegment
+                    End="-193.666670498394,50.4233673827061" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-140.000268842947,33.961683691353,86.3338671875,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Data Flow Task\No_Match Table_Have_Null"
+          TopLeft="621.714295688941,413.032959884012" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[LSOA IS NULL]"
+          TopLeft="623.400003831727,351.211768105616">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.1142918572133,61.8211917783966"
+              Start="0,0"
+              End="77.1142918572133,54.3211917783966">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1089148146103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1089148146103"
+                    Point2="0,25.1089148146103"
+                    Point3="4,25.1089148146103" />
+                  <mssgle:LineSegment
+                    End="73.1142918572133,25.1089148146103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.1142918572133,25.1089148146103"
+                    Point2="77.1142918572133,25.1089148146103"
+                    Point3="77.1142918572133,29.1089148146103" />
+                  <mssgle:LineSegment
+                    End="77.1142918572133,54.3211917783966" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="6.75021233485664,30.1089148146103,63.6138671875,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Vì trong dữ liệu của UK_Area_Information&#xD;&#xA;có những dòng có LSOA bị null nên về cơ bản&#xD;&#xA;null = null vẫn được tính là lookup khớp&#xD;&#xA;nên những dòng có LSOA = null vẫn sẽ được&#xD;&#xA;đưa vào NDS ==&gt; KHÔNG ĐÚNG "
+          ParentId="Package\Data Flow Task"
+          FontInfo="{assembly:Null}"
+          Size="272,104"
+          Id="16399d39-ef4f-49ce-90c5-5292c9d0b05c"
+          TopLeft="881.714287855188,694.235296841724" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9261,7 +9826,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9271,7 +9836,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9341,19 +9906,6 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NoMatch_RoadType">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Kiem tra Day_Of_Week co trong Day_Of_Week_NDS khong">
     <Properties>
       <Property>
@@ -9377,7 +9929,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\NoMatch_UrbanOrRuralArea">
+    design-time-name="Package\Data Flow Task\Error_Accidents">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9409,6 +9961,19 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\NoMatch_UrbanOrRuralArea">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9485,29 +10050,6 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Local_Authority_District]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
@@ -9580,6 +10122,29 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Kiem tra Local_Authority_District co trong Local_Authority_District_NDS khong">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Local_Authority_District]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\NoMatch_RoadSurfaceCondition">
     <Properties>
       <Property>
@@ -9616,7 +10181,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Error_Accidents">
+    design-time-name="Package\Data Flow Task\NoMatch_RoadType">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9665,7 +10230,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\No_Match table">
+    design-time-name="Package\Data Flow Task\Accident_NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9678,7 +10243,7 @@ WHERE Accident_Index NOT LIKE '%+%';</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_NDS">
+    design-time-name="Package\Data Flow Task\No_Match table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -171,3 +171,29 @@ USE QLBI_METADATA;
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_To_DDS457','1900-01-01',NULL);
 
 SELECT * FROM Metadata_Table
+
+DROP TABLE IF EXISTS Fact_NumberofAccidents 
+CREATE TABLE Fact_NumberofAccidents (
+    SKFact INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	SKAccident_Severity INTEGER NOT NULL,
+	SKDate VARCHAR(255) NOT NULL,
+    SKTime VARCHAR(255) NOT NULL,
+	Number_Of_Accident INT DEFAULT 0,
+	create_date DATETIME,
+	update_date DATETIME
+);
+SELECT * FROM  Fact_NumberofAccidents
+DELETE FROM Fact_NumberofAccidents
+CREATE TABLE Dim_TestTime (
+    SKTime INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	--- description: morning, evening, afternooon, night
+	Description VARCHAR(255) NOT NULL
+);
+
+SELECT SUM(Number_of_Accident)
+FROM Fact_NumberofAccidents
+WHERE SKAccident_Severity = 2 and SKDate = 1; -- ra 17
+
+--SELECT COUNT(*)
+--FROM Accidents2011_2014_NDS 
+--WHERE Date_ = '2011-01-01' AND Accident_Severity = 2 ==> ra 17

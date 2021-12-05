@@ -1,55 +1,55 @@
--- TẠO CSDL CHO DB Error
+-- TẠO CSDL CHO DB No match
 USE master 
 GO
-IF DB_ID('QLBI_Error') IS NOT NULL
-	DROP DATABASE QLBI_Error
+IF DB_ID('QLBI_NoMatch') IS NOT NULL
+	DROP DATABASE QLBI_NoMatch
 GO
-CREATE DATABASE QLBI_Error
+CREATE DATABASE QLBI_NoMatch
 GO
-USE QLBI_Error
+USE QLBI_NoMatch
 GO
 
 /*
-    
+    THIS IS NDS TABLE WHERE ACCIDENT_INDEX OF EACH TABLE NOT LIKE (not include) '%E+%';
 */
 /*
 	Check if table exists? Drop before creating : create
 */
 
-IF OBJECT_ID(N'dbo.Casualties2011_2014_Error', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Casualties2011_2014_No_Match', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Casualties2011_2014_Error;
+	DROP TABLE dbo.Casualties2011_2014_No_Match;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Vehicles2011_2014_Error', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Vehicles2011_2014_No_Match', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Vehicles2011_2014_Error;
+	DROP TABLE dbo.Vehicles2011_2014_No_Match;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Accidents2011_2014_Error', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Accidents2011_2014_No_Match', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Accidents2011_2014_Error;
+	DROP TABLE dbo.Accidents2011_2014_No_Match;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.UK_Area_Information_Error', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.UK_Area_Information_No_Match', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.UK_Area_Information_Error;
+	DROP TABLE dbo.UK_Area_Information_No_Match;
 	PRINT 'Delete Table Successfully';
 END;
-IF OBJECT_ID(N'dbo.Postcodes_Error', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Postcodes_No_Match', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Postcodes_Error;
+	DROP TABLE dbo.Postcodes_No_Match;
 	PRINT 'Delete Table Successfully';
 END;
 
 
 /* Create new no match table */
-CREATE TABLE Postcodes_Error (
+CREATE TABLE Postcodes_No_Match (
     SKPostcodes INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	postcode VARCHAR(512) NOT NULL,
 	latitude VARCHAR(512) NOT NULL,
@@ -63,12 +63,10 @@ CREATE TABLE Postcodes_Error (
 	create_date VARCHAR(512),
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
+    [source_sys_code] int
 );
 
-CREATE TABLE UK_Area_Information_Error (
+CREATE TABLE UK_Area_Information_No_Match (
     SKUK_Area INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	pcd7 VARCHAR(512) NOT NULL,
 	pcd8 VARCHAR(512) NOT NULL,
@@ -83,12 +81,10 @@ CREATE TABLE UK_Area_Information_Error (
 	create_date VARCHAR(512),
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
+    [source_sys_code] int
 );
 
-CREATE TABLE Casualties2011_2014_Error (
+CREATE TABLE Casualties2011_2014_No_Match (
     SKCasuality INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Accident_Index VARCHAR(512) NOT NULL,
 	Vehicle_Reference INTEGER,
@@ -107,12 +103,10 @@ CREATE TABLE Casualties2011_2014_Error (
 	create_date VARCHAR(512),
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
+    [source_sys_code] int
 );
 
-CREATE TABLE Vehicles2011_2014_Error (
+CREATE TABLE Vehicles2011_2014_No_Match (
     SKVehicle INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Accident_Index VARCHAR(512) NOT NULL,
 	Vehicle_Reference INTEGER,
@@ -126,12 +120,10 @@ CREATE TABLE Vehicles2011_2014_Error (
 	create_date VARCHAR(512),
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
+    [source_sys_code] int
 );
 
-CREATE TABLE Accidents2011_2014_Error (
+CREATE TABLE Accidents2011_2014_No_Match (
     SKAccident INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Accident_Index VARCHAR(512) NOT NULL,
 	Longitude VARCHAR(512),
@@ -154,31 +146,25 @@ CREATE TABLE Accidents2011_2014_Error (
 	create_date VARCHAR(512),
 	update_date VARCHAR(512),
 	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
+    [source_sys_code] int
 );
 
-CREATE TABLE Country_NDS (
-    SKCountry INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	country_code VARCHAR(512),
-	country_name VARCHAR(512),
-	create_date DATETIME,
-	update_date DATETIME,
-	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
-);
+-- CREATE TABLE Country_NoMatch (
+--     SKCountry INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+-- 	country_code VARCHAR(512),
+-- 	country_name VARCHAR(512),
+-- 	create_date DATETIME,
+-- 	update_date DATETIME,
+-- 	trangthai VARCHAR(512),
+--     [source_sys_code] int
+-- );
 
-CREATE TABLE Region_NDS (
-    SKRegion INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	region_code VARCHAR(512),
-	region_name VARCHAR(512),
-	create_date DATETIME,
-	update_date DATETIME,
-	trangthai VARCHAR(512),
-    [source_sys_code] int,
-    Error_Code int,
-    Error_Column int
-);
+-- CREATE TABLE Region_NoMatch (
+--     SKRegion INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+-- 	region_code VARCHAR(512),
+-- 	region_name VARCHAR(512),
+-- 	create_date DATETIME,
+-- 	update_date DATETIME,
+-- 	trangthai VARCHAR(512),
+--     [source_sys_code] int
+-- );

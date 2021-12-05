@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{F2F6E3C8-E513-4C69-A62D-E684B39CD8F4}">
+  DTS:VersionBuild="124"
+  DTS:VersionGUID="{6123A9D1-2644-4DDE-8C3F-5E42FC31B275}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -233,8 +233,8 @@ WHERE source_sys_code = ? AND pcd8 = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Cập nhật dữ liệu.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -697,8 +697,8 @@ where [refTable].[postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem mã pcd8 sau khi tách của từng dòng có tồn tại trong Postcode_NDS không.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -858,8 +858,8 @@ where [refTable].[pcd8] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem pcd8 của từng dòng có tồn tại trong UK_Area_Information NDS chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1003,8 +1003,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Kiểm tra xem TrangThai của từng dòng có tồn tại trong TrangThaiXoa chưa.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1947,8 +1947,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2236,8 +2236,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_No_Match.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2535,8 +2535,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Information_No_Match_.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NoMatch]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NoMatch]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2836,8 +2836,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Infor_Error.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3155,8 +3155,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Infor_Error_.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_Error]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Error]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3468,8 +3468,8 @@ where [refTable].[TenTrangThai] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\UK_Area_Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_STAGE]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_STAGE]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4518,7 +4518,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4528,7 +4528,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4567,7 +4567,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4577,7 +4577,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4603,7 +4603,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4613,7 +4613,7 @@ where [refTable].[TenTrangThai] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

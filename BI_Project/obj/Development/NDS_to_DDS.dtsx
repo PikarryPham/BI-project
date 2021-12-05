@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{AC035C93-0981-4FBA-B030-18F50CD8286D}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{3A92FA53-770A-47F2-9A04-B2E287D45075}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -30,7 +30,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>DDS_1236.dtsx</PackageName>
+          <PackageName>DDS_457.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -47,7 +47,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>DDS_1236.dtsx</PackageName>
+          <PackageName>DDS_457.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -64,11 +64,19 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\NDS_DDS_1236"
+          TopLeft="13.5714288025486,116.235295747803" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\NDS_DDS_457"
+          TopLeft="13.5714288025486,241.411765006174" />
         <AnnotationLayout
           Text="DDS 1-2-3-6"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="95.2,60"
+          Size="95.2,40"
           Id="a84dbdd6-9aa2-4fc6-aabd-a87502e5bf5e"
           TopLeft="53.5714294837446,74.1764716285323" />
         <AnnotationLayout
@@ -92,14 +100,6 @@
           Size="68,40"
           Id="5e00cebc-b25b-4314-a7c1-09dc3638a5ea"
           TopLeft="318.571433996668,78.7647069869982" />
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\NDS_DDS_1236"
-          TopLeft="13.5714288025486,116.235295747803" />
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\NDS_DDS_457"
-          TopLeft="13.5714288025486,241.411765006174" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
