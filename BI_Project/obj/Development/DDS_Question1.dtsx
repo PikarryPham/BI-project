@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/5/2021 10:15:09 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="107"
-  DTS:VersionGUID="{B54C5498-12AC-4E29-AF1D-73DD6BF0C137}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{798425B3-A75B-4A66-B73B-C193C0114135}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -269,11 +269,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one"
+              refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one"
+              name="Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one"
               usesDispositions="true"
               version="6">
               <properties>
@@ -337,7 +337,7 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_DDS]"
                   description="Connection manager used to access lookup data."
@@ -345,11 +345,11 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKDate]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input].Columns[SKDate]"
                       cachedDataType="i4"
                       cachedName="SKDate"
                       lineageId="Package\Data Flow For Fact Table in DDS_Question1\Get and check value if exists for SKDate from Dim_Date.Outputs[Lookup Match Output].Columns[SKDate]">
@@ -365,7 +365,7 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input].Columns[SKLocal_Authority_District]"
                       cachedDataType="i4"
                       cachedName="SKLocal_Authority_District"
                       lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKLADistrict from DIM_LA_District.Outputs[Lookup Match Output].Columns[SKLocal_Authority_District]">
@@ -381,7 +381,7 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKAccident_Severity]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input].Columns[SKAccident_Severity]"
                       cachedDataType="i4"
                       cachedName="SKAccident_Severity"
                       lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKAccident_Severity from Dim_Accident_Severity.Outputs[Lookup Match Output].Columns[SKAccident_Severity]">
@@ -402,17 +402,17 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output].Columns[SKFact]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Match Output].Columns[SKFact]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output].Columns[SKFact]"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Match Output].Columns[SKFact]"
                       name="SKFact"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -426,30 +426,30 @@ where [refTable].[SKDate] = ? and [refTable].[SKLocal_Authority_District] = ? an
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1873,19 +1873,19 @@ WHERE SKAccident_Severity = ? AND SKLocal_Authority_District = ? AND SKDate = ?<
               startId="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKLADistrict from DIM_LA_District.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output2]"
-              endId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]"
+              endId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKAccident_Severity from Dim_Accident_Severity.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output3]"
               endId="Package\Data Flow For Fact Table in DDS_Question1\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup No Match Output]"
               endId="Package\Data Flow For Fact Table in DDS_Question1\Aggregate.Inputs[Aggregate Input 1]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question1.Paths[OLE DB Source Output]"
               endId="Package\Data Flow For Fact Table in DDS_Question1\Get and check value if exists for SKDate from Dim_Date.Inputs[Lookup Input]"
@@ -4294,7 +4294,7 @@ where [refTable].[Day_] = ?</property>
           FontInfo="{assembly:Null}"
           Size="493.6,104"
           Id="943ffabd-6734-4ae4-8e3b-713bcb9d4735"
-          TopLeft="878.714288280935,347.941181350332" />
+          TopLeft="898.714288621533,351.76471081572" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4381,18 +4381,18 @@ where [refTable].[Day_] = ?</property>
         <NodeLayout
           Size="238.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Get data for Fact_Table from NDS"
-          TopLeft="846.428568983565,48.3529405222632" />
+          TopLeft="306.428568983565,48.3529405222632" />
         <NodeLayout
           Size="303.2,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Get and check value if exists for SKDate from Dim_Date"
-          TopLeft="815.857140351315,145.647057836856" />
+          TopLeft="275.857140351315,145.647057836856" />
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Aggregate"
-          TopLeft="1066,528" />
+          TopLeft="526,528" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[OLE DB Source Output]"
-          TopLeft="966.54285466744,89.9529405222632">
+          TopLeft="426.54285466744,89.9529405222632">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4417,10 +4417,10 @@ where [refTable].[Day_] = ?</property>
         <NodeLayout
           Size="354.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKLADistrict from DIM_LA_District"
-          TopLeft="823,249" />
+          TopLeft="283,249" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output]"
-          TopLeft="967.457140351315,187.247057836856">
+          TopLeft="427.457140351315,187.247057836856">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4457,10 +4457,10 @@ where [refTable].[Day_] = ?</property>
         <NodeLayout
           Size="354.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Check value if exists for SKAccident_Severity from Dim_Accident_Severity"
-          TopLeft="829.857140351315,331.6" />
+          TopLeft="289.857140351315,331.6" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output1]"
-          TopLeft="1003.62857017566,290.6">
+          TopLeft="463.628570175657,290.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4485,10 +4485,10 @@ where [refTable].[Day_] = ?</property>
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Update values for create_date and update_date"
-          TopLeft="1029,624" />
+          TopLeft="489,624" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Aggregate Output 1]"
-          TopLeft="1129.2,569.6">
+          TopLeft="589.2,569.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4523,76 +4523,88 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="690.4,41.6"
-          Id="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one"
-          TopLeft="658,422.6" />
+          Size="594.4,41.6"
+          Id="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one"
+          TopLeft="195,423.6" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output2]"
-          TopLeft="1005.12857017566,373.2">
+          TopLeft="467.057140351315,373.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,49.4000000000001"
+              EndConnector="25.1428596486849,50.4000000000001"
               Start="0,0"
-              End="0,41.9000000000001">
+              End="25.1428596486849,42.9000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.9000000000001" />
+                    End="0,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2"
+                    Point2="0,25.2"
+                    Point3="4,25.2" />
+                  <mssgle:LineSegment
+                    End="21.1428596486849,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.1428596486849,25.2"
+                    Point2="25.1428596486849,25.2"
+                    Point3="25.1428596486849,29.2" />
+                  <mssgle:LineSegment
+                    End="25.1428596486849,42.9000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,12.9500000000001,114.120078125,16"
+              BoundingBox="-44.4886092381576,30.2,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup No Match Output]"
-          TopLeft="1116.93333333333,464.2">
+          TopLeft="492.2,465.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.2666666666669,63.7999999999996"
+              EndConnector="97.0000000000003,62.7999999999996"
               Start="0,0"
-              End="12.2666666666669,56.2999999999996">
+              End="97.0000000000003,55.2999999999996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.6085086705201" />
+                    End="0,27.3999999999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.6085086705201"
-                    Point2="0,25.6085086705201"
-                    Point3="4,25.6085086705201" />
+                    Point1="0,27.3999999999998"
+                    Point2="0,31.3999999999998"
+                    Point3="4,31.3999999999998" />
                   <mssgle:LineSegment
-                    End="8.26666666666688,25.6085086705201" />
+                    End="93.0000000000003,31.3999999999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.26666666666688,25.6085086705201"
-                    Point2="12.2666666666669,25.6085086705201"
-                    Point3="12.2666666666669,29.6085086705201" />
+                    Point1="93.0000000000003,31.3999999999998"
+                    Point2="97.0000000000003,31.3999999999998"
+                    Point3="97.0000000000003,35.3999999999998" />
                   <mssgle:LineSegment
-                    End="12.2666666666669,56.2999999999996" />
+                    End="97.0000000000003,55.2999999999996" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.5417057291666,30.6085086705201,129.350078125,16"
+              BoundingBox="-16.1750390624998,36.3999999999998,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\Fact_Table"
-          TopLeft="1061,724" />
+          TopLeft="521,724" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Derived Column Output]"
-          TopLeft="1145.2,665.6">
+          TopLeft="605.2,665.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4615,64 +4627,43 @@ where [refTable].[Day_] = ?</property>
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1\OLE DB Command"
-          TopLeft="758,552.4" />
+          TopLeft="218,552.4" />
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question1.Paths[Lookup Match Output3]"
-          TopLeft="889.466666666666,464.2">
+          TopLeft="394.466666666666,465.2">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49.0666666666663,88.1999999999995"
+              EndConnector="-94.0666666666662,87.1999999999996"
               Start="0,0"
-              End="-49.0666666666663,80.6999999999995">
+              End="-94.0666666666662,79.6999999999996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.4023583815027" />
+                    End="0,31.0204563758388" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.4023583815027"
-                    Point2="0,35.4023583815027"
-                    Point3="-4,35.4023583815027" />
+                    Point1="0,31.0204563758388"
+                    Point2="0,35.0204563758388"
+                    Point3="-4,35.0204563758388" />
                   <mssgle:LineSegment
-                    End="-45.0666666666663,35.4023583815027" />
+                    End="-90.0666666666662,35.0204563758388" />
                   <mssgle:CubicBezierSegment
-                    Point1="-45.0666666666663,35.4023583815027"
-                    Point2="-49.0666666666663,35.4023583815027"
-                    Point3="-49.0666666666663,39.4023583815027" />
+                    Point1="-90.0666666666662,35.0204563758388"
+                    Point2="-94.0666666666662,35.0204563758388"
+                    Point3="-94.0666666666662,39.0204563758388" />
                   <mssgle:LineSegment
-                    End="-49.0666666666663,80.6999999999995" />
+                    End="-94.0666666666662,79.6999999999996" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-81.5933723958331,40.4023583815027,114.120078125,16"
+              BoundingBox="-104.093372395833,40.0204563758388,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Lần chạy 1: Dữ liệu đi vào flow&#xD;&#xA;no_match. Trong quá trình chạy, dữ liệu&#xD;&#xA;sẽ được gom nhóm theo 3 trường LADistrict,&#xD;&#xA;Date vs Accident_Severity để đếm số lượng&#xD;&#xA;tai nạn giao thông (tức là&#xD;&#xA;đếm số lượng tai nạn dựa trên&#xD;&#xA;các giá trị giống nhau tại mỗi trường)"
-          ParentId="Package\Data Flow For Fact Table in DDS_Question1"
-          FontInfo="{assembly:Null}"
-          Size="265.6,136"
-          Id="059becac-4604-4d94-b4bc-774e8c600041"
-          TopLeft="322,42.6000000000001" />
-        <AnnotationLayout
-          Text="Lần chạy 1: Dữ liệu đi vào flow&#xA;no_match. Trong quá trình chạy, dữ liệu&#xA;sẽ được gom nhóm theo 3 trường LADistrict,&#xA;Date vs Accident_Severity để đếm số lượng&#xA;tai nạn giao thông"
-          ParentId="Package\Data Flow For Fact Table in DDS_Question1"
-          FontInfo="{assembly:Null}"
-          Size="265.6,104"
-          Id="3ef07395-74ea-4261-b438-d49633cda158"
-          TopLeft="486,825.6" />
-        <AnnotationLayout
-          Text="Lần chạy 2: Vì làm theo kiểu inc loading, nên nếu&#xD;&#xA;như ở lần chạy 2, tồn tại dòng X có những giá&#xD;&#xA;trị a,b,c ở các cột LADistrict, Date, Accident_Severity trùng với &#xD;&#xA;các giá trị a,b,c cũng ở các cột LADistrict, Date, Accident_Severity tại bất kỳ dòng Y nào đã tồn tại trong DDS thì sẽ không insert&#xD;&#xA;mới vào DDS mà thay vào đó, tại dòng Y có cùng giá trị ở&#xD;&#xA;tất cả các cột vs dòng X (trừ cột SK tự tăng) sẽ có giá trị&#xD;&#xA;tại trường &quot;Number of Accidents&quot; tăng lên 1.&#xD;&#xA;Lần chạy thứ 3: ... tương tự"
-          ParentId="Package\Data Flow For Fact Table in DDS_Question1"
-          FontInfo="{assembly:Null}"
-          Size="612.8,168"
-          Id="97ba8597-3a67-4739-9c14-984a167e4b10"
-          TopLeft="154,216" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4780,7 +4771,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one">
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question1\Check if the record already exists in fact table and if yes then number of accidents of this SKFact rises by one">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
