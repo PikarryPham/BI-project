@@ -1,8 +1,7 @@
 USE QLBI_METADATA
 GO
 
-INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question1','1900-01-01',NULL)
-INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question2','1900-01-01',NULL)
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question1_2','1900-01-01',NULL)
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question3','1900-01-01',NULL)
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question4','1900-01-01',NULL)
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question5','1900-01-01',NULL)
@@ -15,3 +14,4 @@ INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question10.3
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question13','1900-01-01',NULL)
 
 SELECT * FROM Metadata_Table;
+
