@@ -33,9 +33,16 @@ BEGIN
 	DROP TABLE dbo.Dim_Age_Group;
 	PRINT 'Delete Table Successfully';
 END;
+IF OBJECT_ID(N'dbo.Dim_Casualties_Severity', N'U') IS NOT NULL
+BEGIN
+    PRINT 'Table Exists';
+	DROP TABLE dbo.Dim_Casualties_Severity;
+	PRINT 'Delete Table Successfully';
+END;
 
 CREATE TABLE Fact_Table (
     SKFact INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	SKCasualty_Severity INT NOT NULL,
     SKCasualty_Type INT NOT NULL,
     SKDate INT NOT NULL,
     SKAge_Group INTEGER NOT NULL,
@@ -64,6 +71,11 @@ CREATE TABLE Dim_Casualty_Type (
     Description VARCHAR(255) NOT NULL,
 );
 
+CREATE TABLE Dim_Casualties_Severity (
+    SKCasualty_Severity INTEGER PRIMARY KEY NOT NULL,
+    Description VARCHAR(255) NOT NULL
+);
+
 /*
     Check whether the foreign key exists?delete:create new one
 */
@@ -79,6 +91,11 @@ IF (OBJECT_ID('dbo.FK_Casualty_Type', 'F') IS NOT NULL)
 BEGIN
     ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Casualty_Type
 END
+IF (OBJECT_ID('dbo.FK_Fact_Casualties_Severity_DDS6', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Fact_Casualties_Severity_DDS6
+END
+
 
 ALTER TABLE Fact_Table
 ADD CONSTRAINT FK_Fact_Date
@@ -91,4 +108,17 @@ FOREIGN KEY (SKAge_Group) REFERENCES Dim_Age_Group(SKAge_Group);
 ALTER TABLE Fact_Table
 ADD CONSTRAINT FK_Casualty_Type
 FOREIGN KEY (SKCasualty_Type) REFERENCES Dim_Casualty_Type(SKCasualty_Type);
+
+ALTER TABLE Fact_Table
+ADD CONSTRAINT FK_Fact_Casualties_Severity_DDS6
+FOREIGN KEY (SKCasualty_Severity) REFERENCES Dim_Casualties_Severity(SKCasualty_Severity);
+
+DELETE FROM Dim_Age_Group
+
+INSERT INTO Dim_Age_Group VALUES(1, 'Children: 0 - 15');
+INSERT INTO Dim_Age_Group VALUES(2, 'Young adult: 15 - 17');
+INSERT INTO Dim_Age_Group VALUES(3, 'Adult: 15 - 59');
+INSERT INTO Dim_Age_Group VALUES(4, '60 and over: 60 - ...');
+
+SELECT * FROM Dim_Age_Group
 

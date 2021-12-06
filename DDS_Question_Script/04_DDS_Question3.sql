@@ -41,7 +41,12 @@ BEGIN
 	DROP TABLE dbo.Dim_Gender;
 	PRINT 'Delete Table Successfully';
 END;
-
+IF OBJECT_ID(N'dbo.Dim_Casualties_Severity', N'U') IS NOT NULL
+BEGIN
+    PRINT 'Table Exists';
+	DROP TABLE dbo.Dim_Casualties_Severity;
+	PRINT 'Delete Table Successfully';
+END;
 /*
     Check whether the foreign key exists?delete:create new one
 */
@@ -61,6 +66,10 @@ IF (OBJECT_ID('dbo.FK_Casualty_Type', 'F') IS NOT NULL)
 BEGIN
     ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Casualty_Type
 END
+IF (OBJECT_ID('dbo.FK_Fact_Casualties_Severity', 'F') IS NOT NULL)
+BEGIN
+    ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Fact_Casualties_Severity
+END
 
 CREATE TABLE Fact_Table (
     SKFact INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
@@ -68,6 +77,7 @@ CREATE TABLE Fact_Table (
     SKDate INT NOT NULL,
     SKGender INTEGER NOT NULL,
     SKAge_Band INTEGER NOT NULL,
+	SKCasualty_Severity INT NOT NULL,
     Number_of_Casualties INTEGER DEFAULT 0,
 	create_date DATETIME,
 	update_date DATETIME
@@ -88,6 +98,11 @@ CREATE TABLE Dim_Age_Band (
     Description VARCHAR(255) NOT NULL,
 );
 
+CREATE TABLE Dim_Casualties_Severity (
+    SKCasualty_Severity INTEGER PRIMARY KEY NOT NULL,
+    Description VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE Dim_Gender (
     SKGender INTEGER PRIMARY KEY NOT NULL,
     Description VARCHAR(255) NOT NULL,
@@ -97,6 +112,10 @@ CREATE TABLE Dim_Casualty_Type (
     SKCasualty_Type INTEGER PRIMARY KEY NOT NULL,
     Description VARCHAR(255) NOT NULL,
 );
+
+ALTER TABLE Fact_Table
+ADD CONSTRAINT FK_Fact_Casualties_Severity
+FOREIGN KEY (SKCasualty_Severity) REFERENCES Dim_Casualties_Severity(SKCasualty_Severity);
 
 ALTER TABLE Fact_Table
 ADD CONSTRAINT FK_Gender

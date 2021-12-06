@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="164"
-  DTS:VersionGUID="{1697CAF8-D8C0-4917-BAB3-1D9593A2B8A9}">
+  DTS:VersionBuild="172"
+  DTS:VersionGUID="{64208221-594B-45BC-8160-CD59EE672642}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -50,18 +50,6 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_Ques1_2_DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_DDS]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{AFB99F35-CF91-4844-83A5-EAF9CF2DD792}"
-      DTS:ObjectName="DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_DDS">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-ED2S73F\TRANGPHAM;Initial Catalog=QLBI_Ques1_DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -2137,13 +2125,13 @@ WHERE SKCasualty_Severity = ? AND SKLocal_Authority_District = ? AND SKDate = ?<
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow For NDS to Dimension in DDS_Question1"
+      DTS:refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{99c37917-a313-4ca1-9d6b-32c5886f7d3f}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow For NDS to Dimension in DDS_Question1"
+      DTS:ObjectName="Data Flow For NDS to Dimension in DDS_Question1 and 2"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -2151,7 +2139,7 @@ WHERE SKCasualty_Severity = ? AND SKLocal_Authority_District = ? AND SKDate = ?<
           version="1">
           <components>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2171,7 +2159,7 @@ WHERE SKCasualty_Severity = ? AND SKLocal_Authority_District = ? AND SKDate = ?<
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Dim_Casualties_Severity]) [refTable]
-where [refTable].[Description] = ?</property>
+where [refTable].[Description] = ? and [refTable].[SKCasualty_Severity] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2207,7 +2195,7 @@ where [refTable].[Description] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2219,7 +2207,7 @@ where [refTable].[Description] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="Connection manager used to access lookup data."
@@ -2227,21 +2215,37 @@ where [refTable].[Description] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input].Columns[Description]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
                           name="JoinToReferenceColumn">Description</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input].Columns[SKCasualty_Severity]"
+                      cachedDataType="i4"
+                      cachedName="SKCasualty_Severity"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SKCasualty_Severity</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -2254,38 +2258,38 @@ where [refTable].[Description] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2294,7 +2298,7 @@ where [refTable].[Description] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2350,7 +2354,7 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2362,7 +2366,7 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="Connection manager used to access lookup data."
@@ -2370,16 +2374,16 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input].Columns[Description]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2392,10 +2396,10 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input].Columns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input].Columns[SKLocal_Authority_District]"
                       cachedDataType="i4"
                       cachedName="SKLocal_Authority_District"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2413,38 +2417,38 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2453,7 +2457,7 @@ where [refTable].[Description] = ? and [refTable].[SKLocal_Authority_District] =
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2509,7 +2513,7 @@ where [refTable].[Day_] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2521,7 +2525,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="Connection manager used to access lookup data."
@@ -2529,15 +2533,15 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input].Columns[Date_]"
                       cachedDataType="dbDate"
                       cachedName="Date_"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2555,38 +2559,38 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2595,7 +2599,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
@@ -2603,7 +2607,7 @@ where [refTable].[Day_] = ?</property>
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -2611,18 +2615,18 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]"
                       name="create_date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2640,11 +2644,11 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]"
                       name="update_date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2665,23 +2669,23 @@ where [refTable].[Day_] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2690,7 +2694,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -2747,7 +2751,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2755,37 +2759,37 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].Columns[Description]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Description"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].Columns[SKCasualty_Severity]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].Columns[SKCasualty_Severity]"
                       cachedDataType="i4"
                       cachedName="SKCasualty_Severity"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[SKCasualty_Severity]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[SKCasualty_Severity]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[SKCasualty_Severity]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input].ExternalColumns[SKCasualty_Severity]"
                       dataType="i4"
                       name="SKCasualty_Severity" />
                   </externalMetadataColumns>
@@ -2793,22 +2797,22 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2817,7 +2821,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2)"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2)"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -2874,7 +2878,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2882,81 +2886,81 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Year_]"
                       cachedDataType="i4"
                       cachedName="Year_"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Year_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Year_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Quarter_]"
                       cachedDataType="i4"
                       cachedName="Quarter_"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Quarter_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Quarter_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Month_]"
                       cachedDataType="i4"
                       cachedName="Month_"
                       cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Month_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Month_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[create_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[create_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="create_date"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[create_date]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[update_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[update_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="update_date"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output].Columns[update_date]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].Columns[Date_]"
                       cachedDataType="dbDate"
                       cachedName="Date_"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Day_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Day_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[SKDate]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[SKDate]"
                       dataType="i4"
                       name="SKDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Year_]"
                       dataType="i4"
                       name="Year_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Quarter_]"
                       dataType="i4"
                       name="Quarter_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Month_]"
                       dataType="i4"
                       name="Month_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Day_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[Day_]"
                       dataType="dbDate"
                       name="Day_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[create_date]"
                       dataType="dbTimeStamp"
                       name="create_date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input].ExternalColumns[update_date]"
                       dataType="dbTimeStamp"
                       name="update_date" />
                   </externalMetadataColumns>
@@ -2964,22 +2968,22 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2988,7 +2992,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -3045,7 +3049,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3053,37 +3057,37 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].Columns[Description]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Description"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].Columns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].Columns[SKLocal_Authority_District]"
                       cachedDataType="i4"
                       cachedName="SKLocal_Authority_District"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
                       dataType="i4"
                       name="SKLocal_Authority_District" />
                   </externalMetadataColumns>
@@ -3091,22 +3095,22 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3115,7 +3119,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -3164,7 +3168,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3172,89 +3176,89 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Code]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Code]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Code]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Code]"
                       name="Code"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       length="255"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[Description]"
                       name="Description"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[SKCasualty_Severity]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[SKCasualty_Severity]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].Columns[SKCasualty_Severity]"
                       name="SKCasualty_Severity"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Code]"
                       dataType="i4"
                       name="Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[SKCasualty_Severity]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output].ExternalColumns[SKCasualty_Severity]"
                       dataType="i4"
                       name="SKCasualty_Severity" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[SKCasualty_Severity]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[SKCasualty_Severity]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[SKCasualty_Severity]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[SKCasualty_Severity]"
                       name="SKCasualty_Severity" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Code]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Code]"
                       name="Code" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[Description]"
                       name="Description" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3263,7 +3267,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -3314,7 +3318,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3322,101 +3326,101 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Date_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Date_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]"
                       name="Date_"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Year_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Year_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]"
                       name="Year_"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Quarter_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Quarter_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]"
                       name="Quarter_"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Month_]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Month_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]"
                       name="Month_"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Date_]"
                       dataType="dbDate"
                       name="Date_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Year_]"
                       dataType="i4"
                       name="Year_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Quarter_]"
                       dataType="i4"
                       name="Quarter_" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].ExternalColumns[Month_]"
                       dataType="i4"
                       name="Month_" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Date_]"
                       dataType="dbDate"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Date_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Date_]"
                       name="Date_" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Year_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Year_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Year_]"
                       name="Year_" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Quarter_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Quarter_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Quarter_]"
                       name="Quarter_" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Month_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Month_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[Month_]"
                       name="Month_" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3425,7 +3429,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -3474,7 +3478,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3482,89 +3486,89 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Code]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Code]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Code]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Code]"
                       name="Code"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       length="255"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Description]"
                       name="Description"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[SKLocal_Authority_District]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[SKLocal_Authority_District]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]"
                       name="SKLocal_Authority_District"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Code]"
                       dataType="i4"
                       name="Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].ExternalColumns[SKLocal_Authority_District]"
                       dataType="i4"
                       name="SKLocal_Authority_District" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[SKLocal_Authority_District]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[SKLocal_Authority_District]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[SKLocal_Authority_District]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[SKLocal_Authority_District]"
                       name="SKLocal_Authority_District" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Code]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Code]"
                       name="Code" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Description]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[Description]"
                       name="Description" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3573,7 +3577,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
@@ -3592,14 +3596,14 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input].Columns[Date_]"
                       cachedDataType="dbDate"
                       cachedName="Date_"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3612,10 +3616,10 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input].Columns[Year_]"
                       cachedDataType="i4"
                       cachedName="Year_"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3628,10 +3632,10 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input].Columns[Quarter_]"
                       cachedDataType="i4"
                       cachedName="Quarter_"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3644,10 +3648,10 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input].Columns[Month_]"
                       cachedDataType="i4"
                       cachedName="Month_"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]">
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3665,14 +3669,14 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]"
                       dataType="dbDate"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]"
                       name="Date_"
                       sortKeyPosition="1">
                       <properties>
@@ -3680,13 +3684,13 @@ where [refTable].[Day_] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]}</property>
+                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Date_]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]"
                       name="Year_"
                       sortKeyPosition="2">
                       <properties>
@@ -3694,13 +3698,13 @@ where [refTable].[Day_] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]}</property>
+                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Year_]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]"
                       name="Quarter_"
                       sortKeyPosition="3">
                       <properties>
@@ -3708,13 +3712,13 @@ where [refTable].[Day_] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]}</property>
+                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Quarter_]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]"
                       name="Month_"
                       sortKeyPosition="4">
                       <properties>
@@ -3722,7 +3726,7 @@ where [refTable].[Day_] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]}</property>
+                          name="SortColumnId">#{Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output].Columns[Month_]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3731,7 +3735,7 @@ where [refTable].[Day_] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
@@ -3758,7 +3762,7 @@ where [refTable].[Day_] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Connections[OleDbConnection]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ED2S73F\TRANGPHAM.QLBI_Ques1_2_DDS]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3766,45 +3770,45 @@ where [refTable].[Day_] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Year_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Year_]"
                       cachedDataType="i4"
                       cachedName="Year_"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Year_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Quarter_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Quarter_]"
                       cachedDataType="i4"
                       cachedName="Quarter_"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Quarter_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Month_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Month_]"
                       cachedDataType="i4"
                       cachedName="Month_"
                       cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Month_]" />
                     <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Date_]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].Columns[Date_]"
                       cachedDataType="dbDate"
                       cachedName="Date_"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]" />
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output].Columns[Date_]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="i4"
                       name="Param_0">
                       <properties>
@@ -3815,7 +3819,7 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="i4"
                       name="Param_1">
                       <properties>
@@ -3826,7 +3830,7 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="i4"
                       name="Param_2">
                       <properties>
@@ -3837,7 +3841,7 @@ where [refTable].[Day_] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       dataType="dbDate"
                       name="Param_3">
                       <properties>
@@ -3852,29 +3856,29 @@ where [refTable].[Day_] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3885,62 +3889,62 @@ where [refTable].[Day_] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Derived Column Output]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Derived Column Output]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2).Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup Match Output]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date.Inputs[OLE DB Command Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup Match Output]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date.Inputs[Derived Column Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output1]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output1]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output2]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output2]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Outputs[Lookup No Match Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Inputs[Sort Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output1]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim.Inputs[Lookup Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output2]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim.Inputs[Lookup Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output2]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Sort Output]"
-              endId="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]"
+              refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Sort Output]"
+              endId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date.Inputs[Lookup Input]"
               name="Sort Output"
-              startId="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value.Outputs[Sort Output]" />
+              startId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Get CET, LSET for DDS_Question1"
+      DTS:refId="Package\Get CET, LSET for DDS_Question1 and 2"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{a76a3fe5-5c8c-4a19-ae58-d272288985b7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Get CET, LSET for DDS_Question1"
+      DTS:ObjectName="Get CET, LSET for DDS_Question1 and 2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -3959,13 +3963,13 @@ where [refTable].[Day_] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Set CET for metadata_DDS_Question1"
+      DTS:refId="Package\Set CET for metadata_DDS_Question1 and 2"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{4e5ca7fc-44f6-453b-80c6-950815a67c75}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Set CET for metadata_DDS_Question1"
+      DTS:ObjectName="Set CET for metadata_DDS_Question1 and 2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -3976,13 +3980,13 @@ where [refTable].[Day_] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Set LSET for DDS_Question1"
+      DTS:refId="Package\Set LSET for DDS_Question1 and 2"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{80abc94f-f291-404a-8396-ef1a98ddf4bb}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Set LSET for DDS_Question1"
+      DTS:ObjectName="Set LSET for DDS_Question1 and 2"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -3998,18 +4002,18 @@ where [refTable].[Day_] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{6969A6F7-7FCF-4B22-95AE-8D673EEF1E63}"
-      DTS:From="Package\Set CET for metadata_DDS_Question1"
+      DTS:From="Package\Set CET for metadata_DDS_Question1 and 2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Get CET, LSET for DDS_Question1" />
+      DTS:To="Package\Get CET, LSET for DDS_Question1 and 2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{58F5F84D-FF2E-4934-96FC-702598C1CCC1}"
-      DTS:From="Package\Get CET, LSET for DDS_Question1"
+      DTS:From="Package\Get CET, LSET for DDS_Question1 and 2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Data Flow For NDS to Dimension in DDS_Question1" />
+      DTS:To="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -4017,12 +4021,12 @@ where [refTable].[Day_] = ?</property>
       DTS:From="Package\Data Flow For Fact Table in DDS_Question1 and 2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Set LSET for DDS_Question1" />
+      DTS:To="Package\Set LSET for DDS_Question1 and 2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{C11E4C54-F330-44DB-8BBA-F8051106FC49}"
-      DTS:From="Package\Data Flow For NDS to Dimension in DDS_Question1"
+      DTS:From="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Data Flow For Fact Table in DDS_Question1 and 2" />
@@ -4045,19 +4049,19 @@ where [refTable].[Day_] = ?</property>
           TopLeft="91.428571963797,335.294121507954" />
         <NodeLayout
           Size="232.8,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2"
           TopLeft="100.000000681196,261.882355772499" />
         <NodeLayout
           Size="240,41.6"
-          Id="Package\Get CET, LSET for DDS_Question1"
+          Id="Package\Get CET, LSET for DDS_Question1 and 2"
           TopLeft="72.8571430760987,160.176471993172" />
         <NodeLayout
           Size="256.8,41.6"
-          Id="Package\Set CET for metadata_DDS_Question1"
+          Id="Package\Set CET for metadata_DDS_Question1 and 2"
           TopLeft="60,60" />
         <NodeLayout
           Size="213.6,41.6"
-          Id="Package\Set LSET for DDS_Question1"
+          Id="Package\Set LSET for DDS_Question1 and 2"
           TopLeft="98.571429228297,425.788240098788" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
@@ -4188,10 +4192,6 @@ where [refTable].[Day_] = ?</property>
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Fact_Table"
           TopLeft="1061.16666666667,904.333333333333" />
         <NodeLayout
-          Size="230.4,41.6"
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Update values for create_date and update_date"
-          TopLeft="1029.16666666667,804.333333333333" />
-        <NodeLayout
           Size="303.2,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get and check value if exists for SKDate from Dim_Date"
           TopLeft="816.023807017982,325.980391170189" />
@@ -4200,9 +4200,25 @@ where [refTable].[Day_] = ?</property>
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get data for Fact_Table from NDS"
           TopLeft="846.428568983565,48.3529405222632" />
         <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\OLE DB Command"
+          TopLeft="758.166666666667,732.733333333333" />
+        <NodeLayout
+          Size="313.6,41.6"
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Date_ and LA District based on Accident_Index_Ref"
+          TopLeft="811.999999999999,231.166666666667" />
+        <NodeLayout
           Size="354.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Check value if exists for SKLADistrict from DIM_LA_District"
           TopLeft="821.5,429.333333333333" />
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Update values for create_date and update_date"
+          TopLeft="1029.16666666667,804.333333333333" />
+        <NodeLayout
+          Size="425.6,41.6"
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Accident_Index_Ref of Vehicle table based on VehRef_AccIndex_Ref"
+          TopLeft="773.666666666667,144.166666666667" />
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Aggregate"
@@ -4211,101 +4227,39 @@ where [refTable].[Day_] = ?</property>
           Size="794.4,41.6"
           Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Check if the record already exists in fact table and if yes then number of casualties of the record which has the same values for all columns rises by one"
           TopLeft="634,603.766666666667" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\OLE DB Command"
-          TopLeft="758.166666666667,732.733333333333" />
         <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output]"
-          TopLeft="967.623807017982,367.58039117019">
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[OLE DB Source Output]"
+          TopLeft="965.628568983565,89.9529405222632">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.0761929820183,61.7529421631439"
+              EndConnector="20.8380976831021,54.2137261444035"
               Start="0,0"
-              End="31.0761929820183,54.2529421631439">
+              End="20.8380976831021,46.7137261444035">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.876471081572" />
+                    End="0,23.1068630722017" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.876471081572"
-                    Point2="0,30.876471081572"
-                    Point3="4,30.876471081572" />
+                    Point1="0,23.1068630722017"
+                    Point2="0,27.1068630722017"
+                    Point3="4,27.1068630722017" />
                   <mssgle:LineSegment
-                    End="27.0761929820183,30.876471081572" />
+                    End="16.8380976831021,27.1068630722017" />
                   <mssgle:CubicBezierSegment
-                    Point1="27.0761929820183,30.876471081572"
-                    Point2="31.0761929820183,30.876471081572"
-                    Point3="31.0761929820183,34.876471081572" />
+                    Point1="16.8380976831021,27.1068630722017"
+                    Point2="20.8380976831021,27.1068630722017"
+                    Point3="20.8380976831021,31.1068630722017" />
                   <mssgle:LineSegment
-                    End="31.0761929820183,54.2529421631439" />
+                    End="20.8380976831021,46.7137261444035" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-41.5219425714909,35.876471081572,114.120078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Derived Column Output]"
-          TopLeft="1145.36666666667,845.933333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.4"
-              Start="0,0"
-              End="0,50.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Aggregate Output 1]"
-          TopLeft="1129.36666666667,749.933333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15,54.4000000000002"
-              Start="0,0"
-              End="15,46.9000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.2"
-                    Point2="0,27.2"
-                    Point3="4,27.2" />
-                  <mssgle:LineSegment
-                    End="11,27.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11,27.2"
-                    Point2="15,27.2"
-                    Point3="15,31.2" />
-                  <mssgle:LineSegment
-                    End="15,46.9000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-0.5,32.2,16,16"
+              BoundingBox="2.41904884155105,32.1068630722017,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4342,6 +4296,66 @@ where [refTable].[Day_] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-81.1250390625,30.2626063651591,129.350078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output5]"
+          TopLeft="968.211903508991,272.766666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.2137245035227"
+              Start="0,0"
+              End="0,45.7137245035227">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.7137245035227" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.0600390625,14.8568622517614,114.120078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output4]"
+          TopLeft="986.466666666667,185.766666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.6666666666679,45.4000000000001"
+              Start="0,0"
+              End="-17.6666666666679,37.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7"
+                    Point2="0,22.7"
+                    Point3="-4,22.7" />
+                  <mssgle:LineSegment
+                    End="-13.6666666666679,22.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.6666666666679,22.7"
+                    Point2="-17.6666666666679,22.7"
+                    Point3="-17.6666666666679,26.7" />
+                  <mssgle:LineSegment
+                    End="-17.6666666666679,37.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-65.893372395834,27.7,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4453,6 +4467,100 @@ where [refTable].[Day_] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output]"
+          TopLeft="967.623807017982,367.58039117019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.0761929820183,61.7529421631439"
+              Start="0,0"
+              End="31.0761929820183,54.2529421631439">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.876471081572" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.876471081572"
+                    Point2="0,30.876471081572"
+                    Point3="4,30.876471081572" />
+                  <mssgle:LineSegment
+                    End="27.0761929820183,30.876471081572" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.0761929820183,30.876471081572"
+                    Point2="31.0761929820183,30.876471081572"
+                    Point3="31.0761929820183,34.876471081572" />
+                  <mssgle:LineSegment
+                    End="31.0761929820183,54.2529421631439" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-41.5219425714909,35.876471081572,114.120078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Derived Column Output]"
+          TopLeft="1145.36666666667,845.933333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.4"
+              Start="0,0"
+              End="0,50.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Aggregate Output 1]"
+          TopLeft="1129.36666666667,749.933333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15,54.4000000000002"
+              Start="0,0"
+              End="15,46.9000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.2"
+                    Point2="0,27.2"
+                    Point3="4,27.2" />
+                  <mssgle:LineSegment
+                    End="11,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11,27.2"
+                    Point2="15,27.2"
+                    Point3="15,31.2" />
+                  <mssgle:LineSegment
+                    End="15,46.9000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.5,32.2,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="Lần chạy 1: Dữ liệu đi vào flow&#xA;no_match. Trong quá trình chạy, dữ liệu&#xA;sẽ được gom nhóm theo 3 trường LADistrict,&#xA;Date vs Casualty_Severity để đếm số lượng&#xA;thương vong (tức là&#xA;đếm số lượng thương vong dựa trên&#xA;các giá trị giống nhau tại mỗi trường)"
           ParentId="Package\Data Flow For Fact Table in DDS_Question1 and 2"
@@ -4461,116 +4569,12 @@ where [refTable].[Day_] = ?</property>
           Id="059becac-4604-4d94-b4bc-774e8c600041"
           TopLeft="322,42.6000000000001" />
         <AnnotationLayout
-          Text="Lần chạy 2: Vì làm theo kiểu inc loading, nên nếu&#xA;như ở lần chạy 2, tồn tại dòng X có những giá&#xA;trị a,b,c ở các cột LADistrict, Date, Casualty_Severity trùng với &#xA;các giá trị a,b,c cũng ở các cột LADistrict, Date, Casualty&#xD;&#xA;_Severity tại bất kỳ dòng Y nào đã tồn tại trong DDS thì sẽ không insert&#xA;mới vào DDS mà thay vào đó, tại dòng Y có cùng giá trị ở&#xA;tất cả các cột vs dòng X (trừ cột SK tự tăng) sẽ có giá trị&#xA;tại trường &quot;Number of Casualties&quot; tăng lên 1.&#xA;Lần chạy thứ 3: ... tương tự"
+          Text="Lần chạy 2: Vì làm theo kiểu inc loading, nên nếu&#xA;như ở lần chạy 2, tồn tại dòng X có những giá&#xA;trị a,b,c ở các cột LADistrict, Date, Casualty_Severity trùng với &#xA;các giá trị a,b,c cũng ở các cột LADistrict, Date, Casualty&#xA;_Severity tại bất kỳ dòng Y nào đã tồn tại trong DDS thì sẽ không insert&#xA;mới vào DDS mà thay vào đó, tại dòng Y có cùng giá trị ở&#xA;tất cả các cột vs dòng X (trừ cột SK tự tăng) sẽ có giá trị&#xA;tại trường &quot;Number of Casualties&quot; tăng lên 1.&#xA;Lần chạy thứ 3: ... tương tự"
           ParentId="Package\Data Flow For Fact Table in DDS_Question1 and 2"
           FontInfo="{assembly:Null}"
           Size="405.6,168"
           Id="97ba8597-3a67-4739-9c14-984a167e4b10"
           TopLeft="154,212" />
-        <NodeLayout
-          Size="425.6,41.6"
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Accident_Index_Ref of Vehicle table based on VehRef_AccIndex_Ref"
-          TopLeft="773.666666666667,144.166666666667" />
-        <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[OLE DB Source Output]"
-          TopLeft="965.628568983565,89.9529405222632">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.8380976831021,54.2137261444035"
-              Start="0,0"
-              End="20.8380976831021,46.7137261444035">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.1068630722017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.1068630722017"
-                    Point2="0,27.1068630722017"
-                    Point3="4,27.1068630722017" />
-                  <mssgle:LineSegment
-                    End="16.8380976831021,27.1068630722017" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.8380976831021,27.1068630722017"
-                    Point2="20.8380976831021,27.1068630722017"
-                    Point3="20.8380976831021,31.1068630722017" />
-                  <mssgle:LineSegment
-                    End="20.8380976831021,46.7137261444035" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="2.41904884155105,32.1068630722017,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="313.6,41.6"
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Date_ and LA District based on Accident_Index_Ref"
-          TopLeft="811.999999999999,231.166666666667" />
-        <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output4]"
-          TopLeft="986.466666666667,185.766666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.6666666666679,45.4000000000001"
-              Start="0,0"
-              End="-17.6666666666679,37.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7"
-                    Point2="0,22.7"
-                    Point3="-4,22.7" />
-                  <mssgle:LineSegment
-                    End="-13.6666666666679,22.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.6666666666679,22.7"
-                    Point2="-17.6666666666679,22.7"
-                    Point3="-17.6666666666679,26.7" />
-                  <mssgle:LineSegment
-                    End="-17.6666666666679,37.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-65.893372395834,27.7,114.120078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question1 and 2.Paths[Lookup Match Output5]"
-          TopLeft="968.211903508991,272.766666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.2137245035227"
-              Start="0,0"
-              End="0,45.7137245035227">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.7137245035227" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,14.8568622517614,114.120078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4580,7 +4584,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4590,7 +4594,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4616,7 +4620,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4626,7 +4630,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4642,12 +4646,35 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Date_ and LA District based on Accident_Index_Ref">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents2011_2014_NDS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow For Fact Table in DDS_Question1 and 2\Check value if exists for SKLADistrict from DIM_LA_District">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4657,7 +4684,30 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Accident_Index_Ref of Vehicle table based on VehRef_AccIndex_Ref">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Vehicles2011_2014_NDS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4670,7 +4720,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4680,7 +4730,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4688,60 +4738,60 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="185.6,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2)"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2)"
           TopLeft="570.224494244545,485.420173739067" />
         <NodeLayout
           Size="186.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District"
           TopLeft="1255.83266069167,273.630255138998" />
         <NodeLayout
           Size="262.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim"
           TopLeft="1218.2000080892,155.235296294763" />
         <NodeLayout
           Size="314.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1"
           TopLeft="1204.91429679588,57.8436957293314" />
         <NodeLayout
           Size="251.2,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date"
           TopLeft="502,241.020173739067" />
         <NodeLayout
           Size="186.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity"
           TopLeft="872.2653104112,274.78151679534" />
         <NodeLayout
           Size="251.2,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Sort and deduplicate same value"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Sort and deduplicate same value"
           TopLeft="494.2,155.588235358466" />
         <NodeLayout
           Size="314.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS"
           TopLeft="822.775517968318,58.9949573856736" />
         <NodeLayout
           Size="199.2,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Update data for dim_date"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Update data for dim_date"
           TopLeft="305.14285717935,363.638659313888" />
         <NodeLayout
           Size="260,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Create create_date and update_date"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Create create_date and update_date"
           TopLeft="588.714289728476,373.899163757641" />
         <NodeLayout
           Size="262.4,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim"
           TopLeft="836.600000936645,169.764708263239" />
         <NodeLayout
           Size="233.6,41.6"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS"
           TopLeft="493.163268255075,65.0000009116005" />
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output]"
           TopLeft="609.963268255075,106.600000911601">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4777,7 +4827,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output2]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output2]"
           TopLeft="1349.21633439043,196.835296294763">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4801,7 +4851,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output1]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output1]"
           TopLeft="966.632655673923,211.364708263239">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4825,7 +4875,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup No Match Output]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup No Match Output]"
           TopLeft="668.133333333333,282.620173739067">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4861,7 +4911,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Lookup Match Output]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Lookup Match Output]"
           TopLeft="587.066666666667,282.620173739067">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4897,7 +4947,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Derived Column Output]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Derived Column Output]"
           TopLeft="718.714289728476,415.499163757641">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4933,7 +4983,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[Sort Output]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[Sort Output]"
           TopLeft="623.7,197.188235358466">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4957,7 +5007,7 @@ where [refTable].[Day_] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output2]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output2]"
           TopLeft="1362.11429679588,99.4436957293314">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4987,11 +5037,13 @@ where [refTable].[Day_] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question1.Paths[OLE DB Source Output1]"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2.Paths[OLE DB Source Output1]"
           TopLeft="979.975517968318,100.594957385674">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5028,16 +5080,16 @@ where [refTable].[Day_] = ?</property>
         </EdgeLayout>
         <AnnotationLayout
           Text="Ở 2 flow thứ hai và flow thứ ba (không phải flow của dim_date)&#xA;cần sử dụng thêm lookup để kiểm tra xem những giá trị này&#xA;đã nằm trong DDS chưa, nếu đã tồn tại r mà thêm vào thì sẽ bị lỗi &#xA;duplicate key, nên ta chỉ thêm vào những dòng khi lookup notmatch (tức là chưa tồn tại&#xA;trong bảng DDS)"
-          ParentId="Package\Data Flow For NDS to Dimension in DDS_Question1"
+          ParentId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2"
           FontInfo="{assembly:Null}"
-          Size="493.6,104"
+          Size="493.6,NaN"
           Id="943ffabd-6734-4ae4-8e3b-713bcb9d4735"
           TopLeft="878.714288280935,347.941181350332" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Date from NDS">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Date from NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5050,7 +5102,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_Casualty_Severity from NDS">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_Casualty_Severity from NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5063,7 +5115,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Get data for Dim_LA_Distirct from NDS 1">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5076,12 +5128,12 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if LA_District exists in dim">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if LA_District exists in dim">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5091,7 +5143,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5099,7 +5151,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Date (DDS_Question1 and 2)">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Date (DDS_Question1 and 2)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5112,7 +5164,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_Casualty_Severity">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_Casualty_Severity">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5125,12 +5177,12 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if the day_ exists in Dim_Date">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if the day_ exists in Dim_Date">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5140,7 +5192,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5148,12 +5200,12 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Check if casualty_severity exists in dim">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Check if casualty_severity exists in dim">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5163,7 +5215,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5171,7 +5223,7 @@ where [refTable].[Day_] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1\Dim_LA_District">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5180,52 +5232,6 @@ where [refTable].[Day_] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Accident_Index_Ref of Vehicle table based on VehRef_AccIndex_Ref">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Vehicles2011_2014_NDS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question1 and 2\Get value for Date_ and LA District based on Accident_Index_Ref">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accidents2011_2014_NDS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
