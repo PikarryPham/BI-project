@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="132"
-  DTS:VersionGUID="{9164FD8D-7946-4A05-8DF7-018AF0A77396}">
+  DTS:VersionBuild="135"
+  DTS:VersionGUID="{1C47E78B-1937-4030-8A6C-51757EBC3E85}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3049,13 +3049,13 @@ WHERE SKCasualty_Severity = ? AND SKCasualty_Type = ? AND SKDate = ? AND SKAge_G
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &gt;= 0 &amp;&amp; #{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &lt; 15</property>
+                      name="Expression">#{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &gt;= 0 &amp;&amp; #{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &lt;= 15</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Age_of_Casualty &gt;= 0 &amp;&amp; Age_of_Casualty &lt; 15</property>
+                      name="FriendlyExpression">Age_of_Casualty &gt;= 0 &amp;&amp; Age_of_Casualty &lt;= 15</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -3077,13 +3077,13 @@ WHERE SKCasualty_Severity = ? AND SKCasualty_Type = ? AND SKDate = ? AND SKAge_G
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &gt;= 15 &amp;&amp; #{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &lt;= 17</property>
+                      name="Expression">#{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &gt;= 16 &amp;&amp; #{Package\Data Flow For Fact Table in DDS_Question6\Get data for Fact_Table from NDS.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]} &lt;= 17</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">Age_of_Casualty &gt;= 15 &amp;&amp; Age_of_Casualty &lt;= 17</property>
+                      name="FriendlyExpression">Age_of_Casualty &gt;= 16 &amp;&amp; Age_of_Casualty &lt;= 17</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
