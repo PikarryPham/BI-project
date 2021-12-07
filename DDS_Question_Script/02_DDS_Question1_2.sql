@@ -68,6 +68,7 @@ CREATE TABLE Dim_Casualties_Severity (
 
 CREATE TABLE Dim_Local_Authority_District (
     SKLocal_Authority_District INTEGER PRIMARY KEY NOT NULL,
+	Code VARCHAR(512) NOT NULL,
     Description VARCHAR(255) NOT NULL
 );
 CREATE TABLE Fact_Table (

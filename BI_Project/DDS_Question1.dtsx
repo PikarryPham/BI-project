@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="172"
-  DTS:VersionGUID="{64208221-594B-45BC-8160-CD59EE672642}">
+  DTS:VersionBuild="173"
+  DTS:VersionGUID="{9F847DF1-23FE-49B6-9790-EBBDBC5DB7D0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3077,6 +3077,12 @@ where [refTable].[Day_] = ?</property>
                       cachedName="SKLocal_Authority_District"
                       externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
                       lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[SKLocal_Authority_District]" />
+                    <inputColumn
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].Columns[Code]"
+                      cachedDataType="i4"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Get data for Dim_LA_Distirct from NDS 1.Outputs[OLE DB Source Output].Columns[Code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3090,6 +3096,12 @@ where [refTable].[Day_] = ?</property>
                       refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[SKLocal_Authority_District]"
                       dataType="i4"
                       name="SKLocal_Authority_District" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2\Dim_LA_District.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="512"
+                      name="Code" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5037,9 +5049,7 @@ where [refTable].[Day_] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5082,7 +5092,7 @@ where [refTable].[Day_] = ?</property>
           Text="Ở 2 flow thứ hai và flow thứ ba (không phải flow của dim_date)&#xA;cần sử dụng thêm lookup để kiểm tra xem những giá trị này&#xA;đã nằm trong DDS chưa, nếu đã tồn tại r mà thêm vào thì sẽ bị lỗi &#xA;duplicate key, nên ta chỉ thêm vào những dòng khi lookup notmatch (tức là chưa tồn tại&#xA;trong bảng DDS)"
           ParentId="Package\Data Flow For NDS to Dimension in DDS_Question1 and 2"
           FontInfo="{assembly:Null}"
-          Size="493.6,NaN"
+          Size="493.6,104"
           Id="943ffabd-6734-4ae4-8e3b-713bcb9d4735"
           TopLeft="878.714288280935,347.941181350332" />
       </GraphLayout>

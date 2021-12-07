@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BI_Project</Name>
-    <LastWriteTime>2021-12-06T13:11:15.3602434Z</LastWriteTime>
+    <LastWriteTime>2021-12-07T02:32:13.5130856Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -73,7 +73,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS_Question1.dtsx</Name>
-      <LastWriteTime>2021-12-06T09:55:36.8499416Z</LastWriteTime>
+      <LastWriteTime>2021-12-07T02:32:06.139665Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -88,7 +88,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS_Question4.dtsx</Name>
-      <LastWriteTime>2021-12-06T12:58:03.0626192Z</LastWriteTime>
+      <LastWriteTime>2021-12-06T13:16:55.5085349Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
