@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="86"
-  DTS:VersionGUID="{DE7AF777-25FB-4722-81A5-8CA75CC43B88}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{043E0ABF-3443-41D7-AF90-DE1B8B4D7398}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2080,7 +2080,7 @@ where [refTable].[Day_] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Dim_Vehicles_Type]) [refTable]
-where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</property>
+where [refTable].[SKVehicles_Type] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2116,7 +2116,7 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Vehicle_Type from NDS.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Vehicle_Type from NDS.Outputs[OLE DB Source Output].Columns[SKVehicle_Type]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Vehicle_Type from NDS.Outputs[OLE DB Source Output].Columns[SKVehicle_Type]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2139,24 +2139,6 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
                   refId="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim.Inputs[Lookup Input].Columns[Description]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Vehicle_Type from NDS.Outputs[OLE DB Source Output].Columns[Description]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Description</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim.Inputs[Lookup Input].Columns[SKVehicle_Type]"
                       cachedDataType="i4"
@@ -5244,9 +5226,7 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5268,9 +5248,7 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5304,9 +5282,7 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5328,9 +5304,7 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5364,9 +5338,7 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5570,7 +5542,7 @@ where [refTable].[SKRegion] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

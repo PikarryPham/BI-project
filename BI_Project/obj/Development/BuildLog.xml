@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BI_Project</Name>
-    <LastWriteTime>2021-12-08T07:53:34.8204419Z</LastWriteTime>
+    <LastWriteTime>2021-12-08T13:28:19.5642594Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -93,17 +93,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS_Question5.dtsx</Name>
-      <LastWriteTime>2021-12-07T17:16:36.3398295Z</LastWriteTime>
+      <LastWriteTime>2021-12-08T13:17:42.9457725Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS_Question13_1.dtsx</Name>
-      <LastWriteTime>2021-12-08T07:44:26.0617373Z</LastWriteTime>
+      <LastWriteTime>2021-12-08T13:15:03.746472Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS_Question13_2.dtsx</Name>
       <LastWriteTime>2021-12-08T08:30:57.2871303Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DDS_Question7.dtsx</Name>
+      <LastWriteTime>2021-12-08T13:28:13.6184927Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

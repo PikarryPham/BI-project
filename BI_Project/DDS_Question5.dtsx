@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{8D138C16-231B-4DA3-81E4-D15AD80B88B1}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{4BE23D59-ED90-40C4-8284-F92424B88FF5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1698,7 +1698,7 @@ WHERE SKAccident_Severity= ? AND SKUrban_Or_Rural_Area= ? AND SKDate = ? AND SKR
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Dim_Accident_Severity]) [refTable]
-where [refTable].[Description] = ? and [refTable].[SKAccident_Severity] = ?</property>
+where [refTable].[SKAccident_Severity] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1734,7 +1734,7 @@ where [refTable].[Description] = ? and [refTable].[SKAccident_Severity] = ?</pro
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity.Outputs[OLE DB Source Output].Columns[SKAccident_Severity]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity.Outputs[OLE DB Source Output].Columns[SKAccident_Severity]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1757,24 +1757,6 @@ where [refTable].[Description] = ? and [refTable].[SKAccident_Severity] = ?</pro
                   refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim.Inputs[Lookup Input].Columns[Description]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity.Outputs[OLE DB Source Output].Columns[Description]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Description</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim.Inputs[Lookup Input].Columns[SKAccident_Severity]"
                       cachedDataType="i4"
@@ -1857,7 +1839,7 @@ where [refTable].[Description] = ? and [refTable].[SKAccident_Severity] = ?</pro
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Dim_Road_Type]) [refTable]
-where [refTable].[Description] = ? and [refTable].[SKRoad_Type] = ?</property>
+where [refTable].[SKRoad_Type] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1893,7 +1875,7 @@ where [refTable].[Description] = ? and [refTable].[SKRoad_Type] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS.Outputs[OLE DB Source Output].Columns[SKRoad_Type]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS.Outputs[OLE DB Source Output].Columns[SKRoad_Type]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1916,24 +1898,6 @@ where [refTable].[Description] = ? and [refTable].[SKRoad_Type] = ?</property>
                   refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim.Inputs[Lookup Input].Columns[Description]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS.Outputs[OLE DB Source Output].Columns[Description]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Description</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim.Inputs[Lookup Input].Columns[SKRoad_Type]"
                       cachedDataType="i4"
@@ -2158,7 +2122,7 @@ where [refTable].[Day_] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Dim_Urban_Or_Rural_Area]) [refTable]
-where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</property>
+where [refTable].[SKUrban_Or_Rural_Area] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2194,7 +2158,7 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area.Outputs[OLE DB Source Output].Columns[Description]};#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area.Outputs[OLE DB Source Output].Columns[SKUrban_or_Rural_Area]};</property>
+                  name="ParameterMap">#{Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area.Outputs[OLE DB Source Output].Columns[SKUrban_or_Rural_Area]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2217,24 +2181,6 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
                   refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Urban_Or_Rural_Area exists in dim.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Urban_Or_Rural_Area exists in dim.Inputs[Lookup Input].Columns[Description]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Description"
-                      lineageId="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area.Outputs[OLE DB Source Output].Columns[Description]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Description</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Urban_Or_Rural_Area exists in dim.Inputs[Lookup Input].Columns[SKUrban_or_Rural_Area]"
                       cachedDataType="i4"
@@ -4408,7 +4354,66 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Get and check value if exists for SKDate from Dim_Date">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Date]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Fact_Table]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Get data for Fact_Table from NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Fact_Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4426,41 +4431,33 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="233.666666666667,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Date from NDS"
-          TopLeft="493.163268255075,73.0000009116005" />
-        <NodeLayout
-          Size="265.333333333334,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS"
-          TopLeft="822.775517968318,66.9949573856736" />
-        <NodeLayout
-          Size="231,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity"
-          TopLeft="1220.14286514556,56.228756290727" />
-        <NodeLayout
-          Size="210.666666666667,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Date (DDS_Question5)"
-          TopLeft="570.224494244545,493.420173739067" />
-        <NodeLayout
-          Size="265,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim"
-          TopLeft="1215.92064188262,181.130718826743" />
+          Size="199.333333333334,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Update data for dim_date"
+          TopLeft="305.14285717935,371.638659313888" />
         <NodeLayout
           Size="260,41.6666666666667"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Create create_date and update_date"
           TopLeft="588.714289728476,381.899163757641" />
         <NodeLayout
-          Size="186.666666666667,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Accident_Severity"
-          TopLeft="1213.53968946112,288.189543857615" />
+          Size="234.666666666667,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim"
+          TopLeft="836.600000936645,177.764708263239" />
         <NodeLayout
-          Size="251.333333333334,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Sort and deduplicate same value"
-          TopLeft="494.2,163.588235358466" />
+          Size="206.333333333334,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Urban_Or_Rural_Area"
+          TopLeft="1496.56247769948,281.294120900221" />
         <NodeLayout
-          Size="199.333333333334,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Update data for dim_date"
-          TopLeft="305.14285717935,371.638659313888" />
+          Size="210.666666666667,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Date (DDS_Question5)"
+          TopLeft="570.224494244545,493.420173739067" />
+        <NodeLayout
+          Size="251,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area"
+          TopLeft="1503.16565338392,49.3333333333335" />
+        <NodeLayout
+          Size="233.666666666667,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Date from NDS"
+          TopLeft="493.163268255075,73.0000009116005" />
         <NodeLayout
           Size="156.333333333334,42"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Road_Type"
@@ -4470,103 +4467,29 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if the day_ exists in Dim_Date"
           TopLeft="502,249.020173739067" />
         <NodeLayout
-          Size="234.666666666667,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim"
-          TopLeft="836.600000936645,177.764708263239" />
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[OLE DB Source Output]"
-          TopLeft="609.963268255075,114.600000911601">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.83673174492526,48.9882344468654"
-              Start="0,0"
-              End="9.83673174492526,41.4882344468654">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4941172234327" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4941172234327"
-                    Point2="0,24.4941172234327"
-                    Point3="4,24.4941172234327" />
-                  <mssgle:LineSegment
-                    End="5.83673174492526,24.4941172234327" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.83673174492526,24.4941172234327"
-                    Point2="9.83673174492526,24.4941172234327"
-                    Point3="9.83673174492526,28.4941172234327" />
-                  <mssgle:LineSegment
-                    End="9.83673174492526,41.4882344468654" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output2]"
-          TopLeft="1348.42064188262,223.130718826743">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-41.5476190881668,65.058825030872"
-              Start="0,0"
-              End="-41.5476190881668,57.558825030872">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.529412515436" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.529412515436"
-                    Point2="0,32.529412515436"
-                    Point3="-4,32.529412515436" />
-                  <mssgle:LineSegment
-                    End="-37.5476190881668,32.529412515436" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-37.5476190881668,32.529412515436"
-                    Point2="-41.5476190881668,32.529412515436"
-                    Point3="-41.5476190881668,36.529412515436" />
-                  <mssgle:LineSegment
-                    End="-41.5476190881668,57.558825030872" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-76.5801962628334,37.529412515436,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output1]"
-          TopLeft="952.182655673922,219.764708263239">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.016808532101"
-              Start="0,0"
-              End="0,55.516808532101">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.516808532101" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,21.9537167660505,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="265.333333333334,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS"
+          TopLeft="822.775517968318,66.9949573856736" />
+        <NodeLayout
+          Size="251.333333333334,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Sort and deduplicate same value"
+          TopLeft="494.2,163.588235358466" />
+        <NodeLayout
+          Size="186.666666666667,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Accident_Severity"
+          TopLeft="1213.53968946112,288.189543857615" />
+        <NodeLayout
+          Size="285,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Urban_Or_Rural_Area exists in dim"
+          TopLeft="1498.94343012098,174.235295869349" />
+        <NodeLayout
+          Size="265,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim"
+          TopLeft="1215.92064188262,181.130718826743" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity"
+          TopLeft="1220.14286514556,56.228756290727" />
         <EdgeLayout
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output]"
           TopLeft="668.133333333333,290.620173739067">
@@ -4696,6 +4619,40 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[OLE DB Source Output3]"
+          TopLeft="1628.66565338392,91.3333333333335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.7777767370599,82.901962536016"
+              Start="0,0"
+              End="12.7777767370599,75.401962536016">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.450981268008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.450981268008"
+                    Point2="0,41.450981268008"
+                    Point3="4,41.450981268008" />
+                  <mssgle:LineSegment
+                    End="8.77777673705987,41.450981268008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.77777673705987,41.450981268008"
+                    Point2="12.7777767370599,41.450981268008"
+                    Point3="12.7777767370599,45.450981268008" />
+                  <mssgle:LineSegment
+                    End="12.7777767370599,75.401962536016" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[OLE DB Source Output2]"
           TopLeft="1335.64286514556,98.228756290727">
           <EdgeLayout.Curve>
@@ -4751,25 +4708,40 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Ở 2 flow thứ hai và flow thứ ba (không phải flow của dim_date)&#xA;cần sử dụng thêm lookup để kiểm tra xem những giá trị này&#xA;đã nằm trong DDS chưa, nếu đã tồn tại r mà thêm vào thì sẽ bị lỗi &#xA;duplicate key, nên ta chỉ thêm vào những dòng khi lookup notmatch (tức là chưa tồn tại&#xA;trong bảng DDS)"
-          ParentId="Package\Data Flow For NDS to Dimension in DDS_Question5"
-          FontInfo="{assembly:Null}"
-          Size="493.666666666667,103.666666666667"
-          Id="943ffabd-6734-4ae4-8e3b-713bcb9d4735"
-          TopLeft="1857.03274305727,73.5294128193026" />
-        <NodeLayout
-          Size="251,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area"
-          TopLeft="1503.16565338392,49.3333333333335" />
-        <NodeLayout
-          Size="285,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Urban_Or_Rural_Area exists in dim"
-          TopLeft="1498.94343012098,174.235295869349" />
-        <NodeLayout
-          Size="206.333333333334,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Urban_Or_Rural_Area"
-          TopLeft="1496.56247769948,281.294120900221" />
+        <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[OLE DB Source Output]"
+          TopLeft="609.963268255075,114.600000911601">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.83673174492526,48.9882344468654"
+              Start="0,0"
+              End="9.83673174492526,41.4882344468654">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4941172234327" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4941172234327"
+                    Point2="0,24.4941172234327"
+                    Point3="4,24.4941172234327" />
+                  <mssgle:LineSegment
+                    End="5.83673174492526,24.4941172234327" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.83673174492526,24.4941172234327"
+                    Point2="9.83673174492526,24.4941172234327"
+                    Point3="9.83673174492526,28.4941172234327" />
+                  <mssgle:LineSegment
+                    End="9.83673174492526,41.4882344468654" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output3]"
           TopLeft="1641.44343012098,216.235295869349">
@@ -4807,70 +4779,100 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[OLE DB Source Output3]"
-          TopLeft="1628.66565338392,91.3333333333335">
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output2]"
+          TopLeft="1348.42064188262,223.130718826743">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.7777767370599,82.901962536016"
+              EndConnector="-41.5476190881668,65.058825030872"
               Start="0,0"
-              End="12.7777767370599,75.401962536016">
+              End="-41.5476190881668,57.558825030872">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.450981268008" />
+                    End="0,28.529412515436" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.450981268008"
-                    Point2="0,41.450981268008"
-                    Point3="4,41.450981268008" />
+                    Point1="0,28.529412515436"
+                    Point2="0,32.529412515436"
+                    Point3="-4,32.529412515436" />
                   <mssgle:LineSegment
-                    End="8.77777673705987,41.450981268008" />
+                    End="-37.5476190881668,32.529412515436" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.77777673705987,41.450981268008"
-                    Point2="12.7777767370599,41.450981268008"
-                    Point3="12.7777767370599,45.450981268008" />
+                    Point1="-37.5476190881668,32.529412515436"
+                    Point2="-41.5476190881668,32.529412515436"
+                    Point3="-41.5476190881668,36.529412515436" />
                   <mssgle:LineSegment
-                    End="12.7777767370599,75.401962536016" />
+                    End="-41.5476190881668,57.558825030872" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-76.5801962628334,37.529412515436,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question5.Paths[Lookup No Match Output1]"
+          TopLeft="952.182655673922,219.764708263239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.016808532101"
+              Start="0,0"
+              End="0,55.516808532101">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.516808532101" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,21.9537167660505,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Ở 2 flow thứ hai và flow thứ ba (không phải flow của dim_date)&#xA;cần sử dụng thêm lookup để kiểm tra xem những giá trị này&#xA;đã nằm trong DDS chưa, nếu đã tồn tại r mà thêm vào thì sẽ bị lỗi &#xA;duplicate key, nên ta chỉ thêm vào những dòng khi lookup notmatch (tức là chưa tồn tại&#xA;trong bảng DDS)"
+          ParentId="Package\Data Flow For NDS to Dimension in DDS_Question5"
+          FontInfo="{assembly:Null}"
+          Size="493.666666666667,103.666666666667"
+          Id="943ffabd-6734-4ae4-8e3b-713bcb9d4735"
+          TopLeft="1857.03274305727,73.5294128193026" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Date from NDS">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Road_Type]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
       </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Urban_Or_Rural_Area">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4896,30 +4898,20 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Accident_Severity]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Accident_Severity">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Date from NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4950,7 +4942,7 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4960,7 +4952,7 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4968,30 +4960,20 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Road_Type exists in dim">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data for Dim_Road_Type from NDS">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Road_Type]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Urban_Or_Rural_Area">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Accident_Severity">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5027,33 +5009,7 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Dim_Urban_Or_Rural_Area">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Fact_Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Check if Accident_Severity exists in dim">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5063,12 +5019,12 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Fact_Table]</Value>
+          type="q3:string">[dbo].[Dim_Accident_Severity]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5076,25 +5032,15 @@ where [refTable].[Description] = ? and [refTable].[SKUrban_Or_Rural_Area] = ?</p
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question5\Get and check value if exists for SKDate from Dim_Date">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question5\Get data from Accident_Severity">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Date]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
