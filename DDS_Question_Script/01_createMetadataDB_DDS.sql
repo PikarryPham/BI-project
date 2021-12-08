@@ -11,7 +11,7 @@ INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question8_9'
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question10.1','1900-01-01',NULL)
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question10.2','1900-01-01',NULL)
 INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question10.3','1900-01-01',NULL)
-INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question13','1900-01-01',NULL)
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question13_1','1900-01-01',NULL)
+INSERT INTO Metadata_Table(Name_DataFlow,LSET,CET) VALUES ('NDS_DDS_Question13_2','1900-01-01',NULL)
 
 SELECT * FROM Metadata_Table;
-
