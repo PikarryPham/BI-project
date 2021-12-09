@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{B1EF9199-5FBD-400B-ADB6-9A9B72EE7386}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{C6256EE2-2B51-4A5D-9DCB-EC058EB59A10}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -672,8 +672,8 @@ where [refTable].[SKVehicles_Type] = ? and [refTable].[SKDim_Journey_Purpose_Des
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-  FROM Vehicles2011_2014_No_Match 
-  WHERE trangthai = 'False' AND Vehicle_Type = 7 AND ((create_date &gt;= ? AND create_date&lt; ?) OR (update_date &gt;= ? AND update_date &lt; ?))</property>
+  FROM Vehicles2011_2014_NDS
+  WHERE status_code = 1 AND ((create_date &gt;= ? AND create_date&lt; ?) OR (update_date &gt;= ? AND update_date &lt; ?))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -690,11 +690,11 @@ where [refTable].[SKVehicles_Type] = ? and [refTable].[SKDim_Journey_Purpose_Des
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{CDA26793-85EF-4E33-BB87-97658714CB33};"Parameter1:Input",{6D24AB40-68E4-43E8-8E56-2D6A7D34A0DD};"Parameter2:Input",{CDA26793-85EF-4E33-BB87-97658714CB33};"Parameter3:Input",{6D24AB40-68E4-43E8-8E56-2D6A7D34A0DD};</property>
+                  name="ParameterMapping">"Parameter0:Input",{17A861DE-A040-4FBF-B849-1F1D439B5769};"Parameter1:Input",{161EFFD1-4F85-4B07-982E-6BC14A2897E8};"Parameter2:Input",{17A861DE-A040-4FBF-B849-1F1D439B5769};"Parameter3:Input",{161EFFD1-4F85-4B07-982E-6BC14A2897E8};</property>
               </properties>
               <connections>
                 <connection
@@ -2288,55 +2288,55 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="130.333333333334,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question7\Fact_Table"
+          TopLeft="1052.60000902585,504.322551038536" />
+        <NodeLayout
+          Size="793.333333333334,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question7\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one"
+          TopLeft="564.4,175.1" />
+        <NodeLayout
           Size="239.333333333334,42"
           Id="Package\Data Flow For Fact Table in DDS_Question7\Get data for Fact_Table from NDS"
           TopLeft="859.295235650232,85.3529405222632" />
-        <NodeLayout
-          Size="164.666666666667,41.6666666666667"
-          Id="Package\Data Flow For Fact Table in DDS_Question7\OLE DB Command"
-          TopLeft="600.185722320178,301.55294152502" />
         <NodeLayout
           Size="298.333333333334,41.6666666666667"
           Id="Package\Data Flow For Fact Table in DDS_Question7\Create new values for create_date and update_date"
           TopLeft="960.242865651724,409.65000177762" />
         <NodeLayout
-          Size="130.333333333334,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question7\Fact_Table"
-          TopLeft="1052.60000902585,504.322551038536" />
-        <NodeLayout
           Size="126.333333333334,41.6666666666667"
           Id="Package\Data Flow For Fact Table in DDS_Question7\Aggregate"
           TopLeft="1067.53572238404,297.45882384579" />
         <NodeLayout
-          Size="793.333333333334,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question7\Check if the record already exists in fact table and if yes then number of accidents of the record which has the same values for all columns rises by one"
-          TopLeft="564.4,175.1" />
+          Size="164.666666666667,41.6666666666667"
+          Id="Package\Data Flow For Fact Table in DDS_Question7\OLE DB Command"
+          TopLeft="600.185722320178,301.55294152502" />
         <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question7.Paths[Aggregate Output 1]"
-          TopLeft="1130.70238905071,339.125490512457">
+          Id="Package\Data Flow For Fact Table in DDS_Question7.Paths[OLE DB Source Output]"
+          TopLeft="978.961902316898,127.352940522263">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.2928567323158,70.5245112651633"
+              EndConnector="-17.8952356502317,47.7470594777368"
               Start="0,0"
-              End="-21.2928567323158,63.0245112651633">
+              End="-17.8952356502317,40.2470594777368">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.2622556325817" />
+                    End="0,19.8735297388684" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.2622556325817"
-                    Point2="0,35.2622556325817"
-                    Point3="-4,35.2622556325817" />
+                    Point1="0,19.8735297388684"
+                    Point2="0,23.8735297388684"
+                    Point3="-4,23.8735297388684" />
                   <mssgle:LineSegment
-                    End="-17.2928567323158,35.2622556325817" />
+                    End="-13.8952356502317,23.8735297388684" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.2928567323158,35.2622556325817"
-                    Point2="-21.2928567323158,35.2622556325817"
-                    Point3="-21.2928567323158,39.2622556325817" />
+                    Point1="-13.8952356502317,23.8735297388684"
+                    Point2="-17.8952356502317,23.8735297388684"
+                    Point3="-17.8952356502317,27.8735297388684" />
                   <mssgle:LineSegment
-                    End="-21.2928567323158,63.0245112651633" />
+                    End="-17.8952356502317,40.2470594777368" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2418,40 +2418,6 @@ where [refTable].[SKVehicles_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow For Fact Table in DDS_Question7.Paths[OLE DB Source Output]"
-          TopLeft="978.961902316898,127.352940522263">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17.8952356502317,47.7470594777368"
-              Start="0,0"
-              End="-17.8952356502317,40.2470594777368">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.8735297388684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.8735297388684"
-                    Point2="0,23.8735297388684"
-                    Point3="-4,23.8735297388684" />
-                  <mssgle:LineSegment
-                    End="-13.8952356502317,23.8735297388684" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.8952356502317,23.8735297388684"
-                    Point2="-17.8952356502317,23.8735297388684"
-                    Point3="-17.8952356502317,27.8735297388684" />
-                  <mssgle:LineSegment
-                    End="-17.8952356502317,40.2470594777368" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question7.Paths[Derived Column Output]"
           TopLeft="1109.40953231839,451.316668444287">
           <EdgeLayout.Curve>
@@ -2485,22 +2451,43 @@ where [refTable].[SKVehicles_Type] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For Fact Table in DDS_Question7.Paths[Aggregate Output 1]"
+          TopLeft="1130.70238905071,339.125490512457">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.2928567323158,70.5245112651633"
+              Start="0,0"
+              End="-21.2928567323158,63.0245112651633">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.2622556325817" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.2622556325817"
+                    Point2="0,35.2622556325817"
+                    Point3="-4,35.2622556325817" />
+                  <mssgle:LineSegment
+                    End="-17.2928567323158,35.2622556325817" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.2928567323158,35.2622556325817"
+                    Point2="-21.2928567323158,35.2622556325817"
+                    Point3="-21.2928567323158,39.2622556325817" />
+                  <mssgle:LineSegment
+                    End="-21.2928567323158,63.0245112651633" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question7\Get data for Fact_Table from NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow For Fact Table in DDS_Question7\Fact_Table">
     <Properties>
@@ -2520,7 +2507,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2530,10 +2517,23 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question7\Get data for Fact_Table from NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -2662,6 +2662,19 @@ where [refTable].[SKVehicles_Type] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question7\Dim_Journey_Purpose">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question7\Get data for Dim_Vehicle_Type from NDS">
     <Properties>
       <Property>
@@ -2680,7 +2693,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2690,23 +2703,10 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question7\Dim_Vehicle_Type">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -2729,7 +2729,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2739,7 +2739,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2747,7 +2747,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question7\Dim_Journey_Purpose">
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question7\Dim_Vehicle_Type">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

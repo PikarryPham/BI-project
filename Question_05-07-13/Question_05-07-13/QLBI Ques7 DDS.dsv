@@ -1,0 +1,114 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15d2b859-18c9-4afb-b502-10c4ddb9ded6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI Ques7 DDS</ID>
+  <Name>QLBI Ques7 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>QLBI Ques7 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="QLBI_x0020_Ques7_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="QLBI_x0020_Ques7_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="8216e13d-4950-4394-b423-1b4d5acfaf8d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Journey_Purpose" msprop:design-time-name="a6722940-cffb-4fee-b416-7984f8179776" msprop:DbTableName="Dim_Journey_Purpose" msprop:FriendlyName="Dim_Journey_Purpose" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKDim_Journey_Purpose_Des" msprop:design-time-name="05ec7e02-a963-49e4-9f86-cfed05ec3bea" msprop:DbColumnName="SKDim_Journey_Purpose_Des" msprop:FriendlyName="SKDim_Journey_Purpose_Des" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="1083388a-f824-4d30-b986-3dd97b924ea0" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Vehicles_Type" msprop:design-time-name="3989dc5b-18d4-4cfb-891f-4b20578d0d9c" msprop:DbTableName="Dim_Vehicles_Type" msprop:FriendlyName="Dim_Vehicles_Type" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKVehicles_Type" msprop:design-time-name="10939b74-55ee-4a3f-a512-562a521ed40c" msprop:DbColumnName="SKVehicles_Type" msprop:FriendlyName="SKVehicles_Type" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="fd8e9cab-ea07-4587-bb9a-f37fa9ad0296" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Table" msprop:design-time-name="4848de48-1740-418a-b604-b3ab8917e511" msprop:DbTableName="Fact_Table" msprop:FriendlyName="Fact_Table" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKFact" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="3de9cb86-a260-4930-928d-f03a56686f07" msprop:DbColumnName="SKFact" msprop:FriendlyName="SKFact" type="xs:int" />
+                  <xs:element name="SKVehicles_Type" msprop:design-time-name="77cab1ad-05e5-499d-8597-170bb343409b" msprop:DbColumnName="SKVehicles_Type" msprop:FriendlyName="SKVehicles_Type" type="xs:int" />
+                  <xs:element name="SKDim_Journey_Purpose_Des" msprop:design-time-name="28bbaf44-8882-4d90-b128-6cd6ba33e7c9" msprop:DbColumnName="SKDim_Journey_Purpose_Des" msprop:FriendlyName="SKDim_Journey_Purpose_Des" type="xs:int" />
+                  <xs:element name="Number_of_Accidents" msprop:design-time-name="b50f6aa6-ec84-4587-afd5-f9add393081a" msprop:DbColumnName="Number_of_Accidents" msprop:FriendlyName="Number_of_Accidents" type="xs:int" minOccurs="0" />
+                  <xs:element name="create_date" msprop:design-time-name="51042c7f-dffe-4ea3-8244-e486bb5575ba" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="c7148503-cb72-4d1e-8648-d0acb29220d5" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Journey_Purpose" />
+          <xs:field xpath="SKDim_Journey_Purpose_Des" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Vehicles_Type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Vehicles_Type" />
+          <xs:field xpath="SKVehicles_Type" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKFact" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Journey_Purpose" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKDim_Journey_Purpose_Des" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Vehicles_Type" refer="dbo_Dim_Vehicles_Type_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKVehicles_Type" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <QLBI_x0020_Ques7_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

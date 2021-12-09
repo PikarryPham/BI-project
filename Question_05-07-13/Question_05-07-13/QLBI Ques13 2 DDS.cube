@@ -1,0 +1,174 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a8439a92-3ba6-41c3-9709-cf4ba84925f4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI Ques13 2 DDS</ID>
+  <Name>QLBI Ques13 2 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="501d601d-339b-41ed-8741-d66dad671d18">
+      <ID>Dim Date 1</ID>
+      <Name>Dim Date 1</Name>
+      <DimensionID>Dim Date 1 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b33605ac-24df-433d-9ed3-1beabf50184e">
+          <AttributeID>SK Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f671c226-d27d-40eb-a919-36b5ac698974">
+      <ID>Dim Vehicles Type</ID>
+      <Name>Dim Vehicles Type</Name>
+      <DimensionID>Dim Vehicles Type 2</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dcb47e4d-b250-4894-8794-3f0194beab55">
+          <AttributeID>SK Vehicles Type</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3271b6de-37a8-4b73-857a-edc6ffefc826">
+      <ID>Dim Location</ID>
+      <Name>Dim Location</Name>
+      <DimensionID>Dim Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8a003bee-c55d-4033-b8bd-983184f4103c">
+          <AttributeID>SK Location</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="7a8e8357-acae-4adb-ab63-0109b5095fd2">
+      <ID>Fact Table</ID>
+      <Name>Fact Table</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f068d9e5-a11e-4975-be92-146aa0960e6f">
+          <ID>Number Car Accidents</ID>
+          <Name>Number Car Accidents</Name>
+          <Source dwd:design-time-name="fb74c67e-8865-4357-a611-fda2bdafe137">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4378321e-a9f2-4cb9-a235-b026cc3a69a6">
+              <TableID>dbo_Fact_Table</TableID>
+              <ColumnID>Number_Car_Accidents</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e1c0f719-31b5-496f-965d-6775f4646201">
+          <ID>Fact Table Count</ID>
+          <Name>Fact Table Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="814a5373-a2fe-4fc3-b12c-1c71fde4ec07">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d65228ec-6d64-4353-aa0b-020bb1f7bc01">
+              <TableID>dbo_Fact_Table</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f1aec4ae-d45e-407e-bfcc-5c9386e6e137">
+          <CubeDimensionID>Dim Date 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b7270737-b1f9-4087-ae1d-769149a6d52c">
+              <AttributeID>SK Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8fb96b9d-63a6-4ec6-9046-613e1e091a7b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="50989bae-71aa-49eb-900b-3f30468a4d41">
+                    <TableID>dbo_Fact_Table</TableID>
+                    <ColumnID>SKDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="accce93d-5524-4ac9-a60d-eb83f2942c90">
+          <CubeDimensionID>Dim Vehicles Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb8e894d-7272-4fe3-82ae-886b946e6445">
+              <AttributeID>SK Vehicles Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5333210b-2a44-490c-aded-58884f552f3c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="adb3bc6f-6636-4fb6-83ad-767daf84f6fe">
+                    <TableID>dbo_Fact_Table</TableID>
+                    <ColumnID>SKVehicles_Type</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="388a0d30-92cd-4016-a687-584991859b52">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="73dc95be-d8a9-48d5-bb4f-9fb34fbe3339">
+              <AttributeID>SK Location</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="91bed7fe-3f31-4d2b-bae5-a2051aa4f0b4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d4b132a2-a9c6-482b-b083-a56f2fe1e822">
+                    <TableID>dbo_Fact_Table</TableID>
+                    <ColumnID>SKLocation</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="1c341653-bfcf-4c07-ace4-895ac04945ea">
+    <DataSourceViewID>QLBI Ques13 2 DDS</DataSourceViewID>
+  </Source>
+</Cube>
