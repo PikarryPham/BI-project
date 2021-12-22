@@ -11,11 +11,47 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{989708E1-905D-4312-A13A-E3B966260F91}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{46695819-18BD-4E33-BBEB-CCF30A0031B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{774464B9-79D9-48E8-BEB8-A57317392D3E}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_11_DDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_11_DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_METADATA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F62F44BB-F2ED-4210-BD2B-9E839D170A63}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_METADATA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{203A3E58-DC8A-47CB-820B-C0917A447E44}"
+      DTS:ObjectName="DESKTOP-LATGDUJ.QLBI_NDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-LATGDUJ;Initial Catalog=QLBI_NDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
       DTS:CreationName="OLEDB"
@@ -324,8 +360,8 @@ where [refTable].[SKDate] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data flow for fact table in DDS_Question11\Check the record already exist in  Fact Variance and if yes the number of accident is rises by one.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -465,8 +501,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data flow for fact table in DDS_Question11\Get and check value if exists for SKDate from Dim_Date.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -604,8 +640,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data flow for fact table in DDS_Question11\Get data for Variance from Vehicle_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS 2]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1135,8 +1171,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data flow for fact table in DDS_Question11\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1347,8 +1383,8 @@ WHERE  [SKDate]= ? </property>
               <connections>
                 <connection
                   refId="Package\Data flow for fact table in DDS_Question11\Update the number of accident.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1535,8 +1571,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow for NDS to DIM table in DDS_Question11\Check if the day_ exists in Dim_Date.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1761,8 +1797,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow for NDS to DIM table in DDS_Question11\Dim_Date (DDS_Question11).Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1926,8 +1962,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow for NDS to DIM table in DDS_Question11\Get data for Dim_Date from NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_NDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_NDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2222,8 +2258,8 @@ where [refTable].[Day_] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow for NDS to DIM table in DDS_Question11\Update data for dim_date.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.QLBI_11_DDS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LATGDUJ.QLBI_11_DDS]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2389,7 +2425,7 @@ where [refTable].[Day_] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{ABF1459E-BA4A-4F5D-ABBC-B97828C685A3}"
+          SQLTask:Connection="{F62F44BB-F2ED-4210-BD2B-9E839D170A63}"
           SQLTask:SqlStatementSource="SELECT CET, LSET&#xA;FROM Metadata_Table&#xA;WHERE Name_DataFlow = 'NDS_DDS_Question11'&#xA;"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -2414,7 +2450,7 @@ where [refTable].[Day_] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{ABF1459E-BA4A-4F5D-ABBC-B97828C685A3}"
+          SQLTask:Connection="{F62F44BB-F2ED-4210-BD2B-9E839D170A63}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;  SET CET = GETDATE()&#xA;  WHERE Name_DataFlow = 'NDS_DDS_Question11'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2431,7 +2467,7 @@ where [refTable].[Day_] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{ABF1459E-BA4A-4F5D-ABBC-B97828C685A3}"
+          SQLTask:Connection="{F62F44BB-F2ED-4210-BD2B-9E839D170A63}"
           SQLTask:SqlStatementSource="UPDATE Metadata_Table&#xA;  SET LSET = CET&#xA;  WHERE Name_DataFlow = 'NDS_DDS_Question11'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2857,7 +2893,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2867,7 +2903,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2893,7 +2929,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2903,7 +2939,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2924,6 +2960,14 @@ where [refTable].[Day_] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="233.333333333334,41.3333333333334"
+          Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Get data for Dim_Date from NDS"
+          TopLeft="237.448982504296,24.9999999999998" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Sort and deduplicate same value"
+          TopLeft="238.485714249221,115.588234446865" />
+        <NodeLayout
           Size="252,42.6666666666667"
           Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Create create_date and update_date"
           TopLeft="333.000003977698,333.899162846041" />
@@ -2939,10 +2983,62 @@ where [refTable].[Day_] = ?</property>
           Size="200.666666666667,42.6666666666667"
           Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Update data for dim_date"
           TopLeft="49.4285714285713,323.638658402288" />
-        <NodeLayout
-          Size="233.333333333334,41.3333333333334"
-          Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Get data for Dim_Date from NDS"
-          TopLeft="237.448982504296,24.9999999999998" />
+        <EdgeLayout
+          Id="Package\Data Flow for NDS to DIM table in DDS_Question11.Paths[Sort Output]"
+          TopLeft="355.152380915888,158.254901113532">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.8,42.7652717139343"
+              Start="0,0"
+              End="16.8,35.2652717139343">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.3826358569672" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.3826358569672"
+                    Point2="0,21.3826358569672"
+                    Point3="4,21.3826358569672" />
+                  <mssgle:LineSegment
+                    End="12.8,21.3826358569672" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.8,21.3826358569672"
+                    Point2="16.8,21.3826358569672"
+                    Point3="16.8,25.3826358569672" />
+                  <mssgle:LineSegment
+                    End="16.8,35.2652717139343" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow for NDS to DIM table in DDS_Question11.Paths[OLE DB Source Output]"
+          TopLeft="354.634015043425,66.3333333333331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.2549011135319"
+              Start="0,0"
+              End="0,41.7549011135319">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.7549011135319" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow for NDS to DIM table in DDS_Question11.Paths[Lookup No Match Output]"
           TopLeft="412.507936471443,242.353506160799">
@@ -3049,66 +3145,6 @@ where [refTable].[Day_] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="233.333333333334,42.6666666666667"
-          Id="Package\Data Flow for NDS to DIM table in DDS_Question11\Sort and deduplicate same value"
-          TopLeft="238.485714249221,115.588234446865" />
-        <EdgeLayout
-          Id="Package\Data Flow for NDS to DIM table in DDS_Question11.Paths[Sort Output]"
-          TopLeft="355.152380915888,158.254901113532">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="16.8,42.7652717139343"
-              Start="0,0"
-              End="16.8,35.2652717139343">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.3826358569672" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.3826358569672"
-                    Point2="0,21.3826358569672"
-                    Point3="4,21.3826358569672" />
-                  <mssgle:LineSegment
-                    End="12.8,21.3826358569672" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.8,21.3826358569672"
-                    Point2="16.8,21.3826358569672"
-                    Point3="16.8,25.3826358569672" />
-                  <mssgle:LineSegment
-                    End="16.8,35.2652717139343" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow for NDS to DIM table in DDS_Question11.Paths[OLE DB Source Output]"
-          TopLeft="354.634015043425,66.3333333333331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.2549011135319"
-              Start="0,0"
-              End="0,41.7549011135319">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.7549011135319" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3139,7 +3175,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3149,7 +3185,7 @@ where [refTable].[Day_] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

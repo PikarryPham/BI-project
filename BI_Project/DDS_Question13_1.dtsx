@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="87"
-  DTS:VersionGUID="{043E0ABF-3443-41D7-AF90-DE1B8B4D7398}">
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{CE5CC25D-AD84-4CCB-AD63-AD1784EA2275}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -900,7 +900,7 @@ where [refTable].[Day_] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
   FROM Vehicles2011_2014_NDS
-  WHERE status_code = 1 AND Vehicle_Type = 7 AND ((create_date &gt;= ? AND create_date&lt; ?) OR (update_date &gt;= ? AND update_date &lt; ?))</property>
+  WHERE status_code = 1 AND ((create_date &gt;= ? AND create_date&lt; ?) OR (update_date &gt;= ? AND update_date &lt; ?))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5060,13 +5060,21 @@ where [refTable].[SKRegion] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="244,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim"
-          TopLeft="1403.91249251283,177.764708263239" />
+          Size="260,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Create create_date and update_date"
+          TopLeft="1156.02678130466,381.899163757641" />
+        <NodeLayout
+          Size="251.333333333334,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Sort and deduplicate same value"
+          TopLeft="1061.51249157619,163.588235358466" />
         <NodeLayout
           Size="163.333333333334,42"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get country name"
           TopLeft="119.999998211861,238" />
+        <NodeLayout
+          Size="199.333333333334,41.6666666666667"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Update data for dim_date"
+          TopLeft="872.455348755537,371.638659313888" />
         <NodeLayout
           Size="251.333333333334,41.6666666666667"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if the day_ exists in Dim_Date"
@@ -5076,18 +5084,6 @@ where [refTable].[SKRegion] = ?</property>
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Vehicle_Type from NDS"
           TopLeft="1390.08800954451,66.9949573856736" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get resion_name"
-          TopLeft="75.937498868443,136.086840405734" />
-        <NodeLayout
-          Size="228,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Dim_Date (DDS_Question13_1)"
-          TopLeft="1137.53698582073,493.420173739067" />
-        <NodeLayout
-          Size="221.666666666667,42"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Update data for dim_Postcode"
-          TopLeft="256.517857933721,361.392165474688" />
-        <NodeLayout
           Size="233.666666666667,41.6666666666667"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Date from NDS"
           TopLeft="1060.47575983126,73.0000009116005" />
@@ -5096,9 +5092,9 @@ where [refTable].[SKRegion] = ?</property>
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Dim_Postcode (DDS_Question13_1)"
           TopLeft="521.599494998916,483.173679899866" />
         <NodeLayout
-          Size="251.333333333334,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Sort and deduplicate same value"
-          TopLeft="1061.51249157619,163.588235358466" />
+          Size="244,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim"
+          TopLeft="1403.91249251283,177.764708263239" />
         <NodeLayout
           Size="259,42"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Create create_date and update_date -"
@@ -5112,17 +5108,117 @@ where [refTable].[SKRegion] = ?</property>
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Postcode from NDS"
           TopLeft="497.038268227135,78.7535070724003" />
         <NodeLayout
-          Size="199.333333333334,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Update data for dim_date"
-          TopLeft="872.455348755537,371.638659313888" />
+          Size="221.666666666667,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Update data for dim_Postcode"
+          TopLeft="256.517857933721,361.392165474688" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Dim_Date (DDS_Question13_1)"
+          TopLeft="1137.53698582073,493.420173739067" />
         <NodeLayout
           Size="273.333333333334,42"
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if postcode exists in Dim_Postcode"
           TopLeft="453.375000754371,238.773679899866" />
         <NodeLayout
-          Size="260,41.6666666666667"
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Create create_date and update_date"
-          TopLeft="1156.02678130466,381.899163757641" />
+          Size="159,42"
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get resion_name"
+          TopLeft="75.937498868443,136.086840405734" />
+        <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output3]"
+          TopLeft="283.333331545194,259.386839949933">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170.041669209177,0"
+              Start="0,0"
+              End="162.541669209177,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="162.541669209177,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.0794478858385,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output2]"
+          TopLeft="155.437498868443,178.086840405734">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.2291660100847,59.913159594266"
+              Start="0,0"
+              End="46.2291660100847,52.413159594266">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.956579797133" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.956579797133"
+                    Point2="0,29.956579797133"
+                    Point3="4,29.956579797133" />
+                  <mssgle:LineSegment
+                    End="42.2291660100847,29.956579797133" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.2291660100847,29.956579797133"
+                    Point2="46.2291660100847,29.956579797133"
+                    Point3="46.2291660100847,33.956579797133" />
+                  <mssgle:LineSegment
+                    End="46.2291660100847,52.413159594266" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.0768037137077,34.956579797133,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output1]"
+          TopLeft="545.819445198816,280.773679899866">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-178.468253931761,80.618485574822"
+              Start="0,0"
+              End="-178.468253931761,73.118485574822">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5288942765528" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5288942765528"
+                    Point2="0,32.5288942765528"
+                    Point3="-4,32.5288942765528" />
+                  <mssgle:LineSegment
+                    End="-174.468253931761,32.5288942765528" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-174.468253931761,32.5288942765528"
+                    Point2="-178.468253931761,32.5288942765528"
+                    Point3="-178.468253931761,36.5288942765528" />
+                  <mssgle:LineSegment
+                    End="-178.468253931761,73.118485574822" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-137.425513684631,37.5288942765528,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output]"
           TopLeft="1154.37915824285,290.620173739067">
@@ -5226,7 +5322,9 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5248,7 +5346,9 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5282,7 +5382,9 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5304,7 +5406,9 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5338,7 +5442,9 @@ where [refTable].[SKRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5437,128 +5543,9 @@ where [refTable].[SKRegion] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output3]"
-          TopLeft="283.333331545194,259.386839949933">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170.041669209177,0"
-              Start="0,0"
-              End="162.541669209177,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="162.541669209177,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="33.0794478858385,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output2]"
-          TopLeft="155.437498868443,178.086840405734">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.2291660100847,59.913159594266"
-              Start="0,0"
-              End="46.2291660100847,52.413159594266">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.956579797133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.956579797133"
-                    Point2="0,29.956579797133"
-                    Point3="4,29.956579797133" />
-                  <mssgle:LineSegment
-                    End="42.2291660100847,29.956579797133" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.2291660100847,29.956579797133"
-                    Point2="46.2291660100847,29.956579797133"
-                    Point3="46.2291660100847,33.956579797133" />
-                  <mssgle:LineSegment
-                    End="46.2291660100847,52.413159594266" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.0768037137077,34.956579797133,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow For NDS to Dimension in DDS_Question13_1.Paths[Lookup Match Output1]"
-          TopLeft="545.819445198816,280.773679899866">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-178.468253931761,80.618485574822"
-              Start="0,0"
-              End="-178.468253931761,73.118485574822">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5288942765528" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5288942765528"
-                    Point2="0,32.5288942765528"
-                    Point3="-4,32.5288942765528" />
-                  <mssgle:LineSegment
-                    End="-174.468253931761,32.5288942765528" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-174.468253931761,32.5288942765528"
-                    Point2="-178.468253931761,32.5288942765528"
-                    Point3="-178.468253931761,36.5288942765528" />
-                  <mssgle:LineSegment
-                    End="-178.468253931761,73.118485574822" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-137.425513684631,37.5288942765528,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Vehicles_Type]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get country name">
     <Properties>
@@ -5619,42 +5606,6 @@ where [refTable].[SKRegion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get resion_name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Region_NDS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Dim_Date (DDS_Question13_1)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get data for Dim_Date from NDS">
     <Properties>
       <Property>
@@ -5672,6 +5623,29 @@ where [refTable].[SKRegion] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if Vehicle_Type exists in dim">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Vehicles_Type]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5697,6 +5671,19 @@ where [refTable].[SKRegion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Dim_Date (DDS_Question13_1)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Check if postcode exists in Dim_Postcode">
     <Properties>
       <Property>
@@ -5708,6 +5695,29 @@ where [refTable].[SKRegion] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Dim_Postcode]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For NDS to Dimension in DDS_Question13_1\Get resion_name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Region_NDS]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
