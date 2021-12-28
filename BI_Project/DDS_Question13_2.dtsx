@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="130"
-  DTS:VersionGUID="{7913DDF1-5734-4300-907C-BA2BD6149C4B}">
+  DTS:VersionBuild="136"
+  DTS:VersionGUID="{8FB0399E-AEE4-433A-B0D9-97E1BF4A89A0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -281,6 +281,95 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Check Date is not null"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input].Columns[SKDate]"
+                      cachedDataType="i4"
+                      cachedName="SKDate"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[SKDATE]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SKDATE"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKDate]}) ==  FALSE </property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(SKDate) ==  FALSE </property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -301,7 +390,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Fact_Table]) [refTable]
-where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
+where [refTable].[SKLocation] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -337,7 +426,7 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKDate]};#{Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKVehicles_Type]};</property>
+                  name="ParameterMap">#{Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKLocation]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -361,31 +450,15 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKDate]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKLocation]"
                       cachedDataType="i4"
-                      cachedName="SKDate"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKDate]">
+                      cachedName="SKLocation"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKLocation]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">SKDate</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input].Columns[SKVehicles_Type]"
-                      cachedDataType="i4"
-                      cachedName="SKVehicles_Type"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKVehicles_Type]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">SKVehicles_Type</property>
+                          name="JoinToReferenceColumn">SKLocation</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -403,22 +476,6 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output].Columns[SKLocation]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check if the record already exists in fact table and if yes then number of car accidents of the record which has the same values for all columns rises by one.Outputs[Lookup Match Output].Columns[SKLocation]"
-                      name="SKLocation"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">SKLocation</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -454,198 +511,20 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split"
+              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
+              name="Check Location is not null"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input].Columns[SKDate]"
-                      cachedDataType="i4"
-                      cachedName="SKDate"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKDate]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[SKDATE]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="SKDATE"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKDate]}) ==  FALSE </property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(SKDate) ==  FALSE </property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input].Columns[SKVehicles_Type]"
-                      cachedDataType="i4"
-                      cachedName="SKVehicles_Type"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKVehicles_Type]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[SK Vehicle]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="SK Vehicle"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKVehicles_Type]}) ==  FALSE </property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(SKVehicles_Type) ==  FALSE </property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split 2"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input].Columns[SKLocation]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input].Columns[SKLocation]"
                       cachedDataType="i4"
                       cachedName="SKLocation"
                       lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKLocation]" />
@@ -655,13 +534,13 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[SK Location]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[SK Location]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="SK Location"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
@@ -683,11 +562,11 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Default Output]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -696,23 +575,112 @@ where [refTable].[SKDate] = ? and [refTable].[SKVehicles_Type] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Error Output]"
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Check Vehicle is not null"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input].Columns[SKVehicles_Type]"
+                      cachedDataType="i4"
+                      cachedName="SKVehicles_Type"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKVehicles_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[SK Vehicle]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="SK Vehicle"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1].Columns[SKVehicles_Type]}) ==  FALSE </property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(SKVehicles_Type) ==  FALSE </property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3212,7 +3180,7 @@ where [refTable].[SKVehicles_Type] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE Fact_Table
 SET Number_Car_Accidents = Number_Car_Accidents + 1, update_date = GETDATE()
-WHERE SKVehicles_Type = ? AND SKDate = ? </property>
+WHERE SKLocation = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3235,17 +3203,11 @@ WHERE SKVehicles_Type = ? AND SKDate = ? </property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].Columns[Vehicle_Type]"
+                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].Columns[SKLocation]"
                       cachedDataType="i4"
-                      cachedName="Vehicle_Type"
+                      cachedName="SKLocation"
                       externalMetadataColumnId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[Vehicle_Type]" />
-                    <inputColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].Columns[SKDate]"
-                      cachedDataType="i4"
-                      cachedName="SKDate"
-                      externalMetadataColumnId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKDate]" />
+                      lineageId="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[SKLocation]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3253,17 +3215,6 @@ WHERE SKVehicles_Type = ? AND SKDate = ? </property>
                       refId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="i4"
                       name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4508,7 +4459,7 @@ WHERE SKVehicles_Type = ? AND SKDate = ? </property>
               startId="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[Derived Column Output]"
-              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Inputs[Conditional Split Input]"
               name="Derived Column Output"
               startId="Package\Data Flow For Fact Table in DDS_Question13_2\Create new values for create_date and update_date.Outputs[Derived Column Output]" />
             <path
@@ -4555,17 +4506,17 @@ WHERE SKVehicles_Type = ? AND SKDate = ? </property>
               refId="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[SK Location]"
               endId="Package\Data Flow For Fact Table in DDS_Question13_2\Fact_Table.Inputs[OLE DB Destination Input]"
               name="SK Location"
-              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Outputs[SK Location]" />
+              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Outputs[SK Location]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[SK Vehicle]"
-              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null.Inputs[Conditional Split Input]"
               name="SK Vehicle"
-              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Outputs[SK Vehicle]" />
+              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Outputs[SK Vehicle]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[SKDATE]"
-              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null.Inputs[Conditional Split Input]"
               name="SKDATE"
-              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split.Outputs[SKDATE]" />
+              startId="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null.Outputs[SKDATE]" />
             <path
               refId="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[Sort Output]"
               endId="Package\Data Flow For Fact Table in DDS_Question13_2\Merge Join.Inputs[Merge Join Left Input]"
@@ -7439,37 +7390,25 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Sort -"
           TopLeft="721.2,67.0769230769231" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Sort"
-          TopLeft="283.466666666667,79.8769230769231" />
+          Size="263,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Vehicles No Match Table"
+          TopLeft="174.420235355313,6.42986359918627" />
         <NodeLayout
           Size="142.666666666667,42"
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Fuzzy Lookup"
           TopLeft="395.520820100792,277.521367521368" />
         <NodeLayout
-          Size="263,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Vehicles No Match Table"
-          TopLeft="174.420235355313,6.42986359918627" />
+          Size="264.666666666667,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Accident No Match Table"
+          TopLeft="906.328205128205,12.8923076923077" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split"
+          Size="181.666666666667,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Check Date is not null"
           TopLeft="1064.19166637175,480.810256410256" />
         <NodeLayout
           Size="298.333333333334,41.6666666666667"
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Create new values for create_date and update_date"
           TopLeft="980.034532023472,412.726924854543" />
-        <NodeLayout
-          Size="264.666666666667,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Accident No Match Table"
-          TopLeft="906.328205128205,12.8923076923077" />
-        <NodeLayout
-          Size="303.333333333334,41.6666666666667"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get and check value if exists for SKDate from Dim_Date"
-          TopLeft="114.358333038415,179.94358974359" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 2"
-          TopLeft="1302,586.010256410257" />
         <NodeLayout
           Size="130,42"
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Merge Join"
@@ -7479,6 +7418,18 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\OLE DB Command"
           TopLeft="619.977388691926,304.629864601943" />
         <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Sort"
+          TopLeft="283.466666666667,79.8769230769231" />
+        <NodeLayout
+          Size="303.333333333334,41.6666666666667"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get and check value if exists for SKDate from Dim_Date"
+          TopLeft="114.358333038415,179.94358974359" />
+        <NodeLayout
+          Size="199.333333333334,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Check Location is not null"
+          TopLeft="1302,586.010256410257" />
+        <NodeLayout
           Size="295.333333333334,42"
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Get and check value if exists for Vehicle_Type"
           TopLeft="145.833333333333,452.24358974359" />
@@ -7487,8 +7438,8 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           Id="Package\Data Flow For Fact Table in DDS_Question13_2\Aggregate"
           TopLeft="1087.32738875579,300.535746922713" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Conditional Split 1"
+          Size="193,42"
+          Id="Package\Data Flow For Fact Table in DDS_Question13_2\Check Vehicle is not null"
           TopLeft="1340,491.410256410256" />
         <NodeLayout
           Size="130.333333333334,42"
@@ -7564,73 +7515,73 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[SKDATE]"
-          TopLeft="1219.19166637175,501.810256410256">
+          TopLeft="1245.85833303842,501.810256410256">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="120.80833362825,10.6000000000003"
+              EndConnector="94.1416669615833,10.6"
               Start="0,0"
-              End="113.30833362825,10.6000000000003">
+              End="86.6416669615833,10.6">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="56.404166814125,0" />
+                    End="43.0708334807916,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="56.404166814125,0"
-                    Point2="60.404166814125,0"
-                    Point3="60.404166814125,4" />
+                    Point1="43.0708334807916,0"
+                    Point2="47.0708334807916,0"
+                    Point3="47.0708334807916,4" />
                   <mssgle:LineSegment
-                    End="60.404166814125,6.60000000000025" />
+                    End="47.0708334807916,6.60000000000002" />
                   <mssgle:CubicBezierSegment
-                    Point1="60.404166814125,6.60000000000025"
-                    Point2="60.404166814125,10.6000000000003"
-                    Point3="64.404166814125,10.6000000000003" />
+                    Point1="47.0708334807916,6.60000000000002"
+                    Point2="47.0708334807916,10.6"
+                    Point3="51.0708334807916,10.6" />
                   <mssgle:LineSegment
-                    End="113.30833362825,10.6000000000003" />
+                    End="86.6416669615833,10.6" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="41.915553532875,-15.5341796875,36.9772265625,9.5341796875"
+              BoundingBox="28.5822201995416,-15.5341796875,36.9772265625,9.5341796875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow For Fact Table in DDS_Question13_2.Paths[SK Vehicle]"
-          TopLeft="1422,533.410256410256">
+          TopLeft="1436.5,533.410256410256">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37.9999999999998,52.6000000000005"
+              EndConnector="-34.8333333333333,52.600000000001"
               Start="0,0"
-              End="-37.9999999999998,45.1000000000005">
+              End="-34.8333333333333,45.100000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.3000000000002" />
+                    End="0,22.3000000000005" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.3000000000002"
-                    Point2="0,26.3000000000002"
-                    Point3="-4,26.3000000000002" />
+                    Point1="0,22.3000000000005"
+                    Point2="0,26.3000000000005"
+                    Point3="-4,26.3000000000005" />
                   <mssgle:LineSegment
-                    End="-33.9999999999998,26.3000000000002" />
+                    End="-30.8333333333333,26.3000000000005" />
                   <mssgle:CubicBezierSegment
-                    Point1="-33.9999999999998,26.3000000000002"
-                    Point2="-37.9999999999998,26.3000000000002"
-                    Point3="-37.9999999999998,30.3000000000002" />
+                    Point1="-30.8333333333333,26.3000000000005"
+                    Point2="-34.8333333333333,26.3000000000005"
+                    Point3="-34.8333333333333,30.3000000000005" />
                   <mssgle:LineSegment
-                    End="-37.9999999999998,45.1000000000005" />
+                    End="-34.8333333333333,45.100000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-42.6020117187499,31.3000000000002,47.2040234375,9.7294921875"
+              BoundingBox="-41.0186783854166,31.3000000000005,47.2040234375,9.7294921875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7640,21 +7591,21 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-99.274991269067,0"
+              EndConnector="-99.2749912690667,0"
               Start="0,0"
-              End="-91.774991269067,0">
+              End="-91.7749912690667,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-91.774991269067,0" />
+                    End="-91.7749912690667,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-72.1300932907835,5,52.4851953125,9.5537109375"
+              BoundingBox="-72.1300932907834,5,52.4851953125,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7766,9 +7717,9 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-39.9476109492934,80.35882384579"
+              EndConnector="-39.9476109492912,80.3588238457899"
               Start="0,0"
-              End="-39.9476109492934,72.85882384579">
+              End="-39.9476109492912,72.8588238457899">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7779,20 +7730,20 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
                     Point2="0,26.9618503603859"
                     Point3="-4,26.9618503603859" />
                   <mssgle:LineSegment
-                    End="-35.9476109492934,26.9618503603859" />
+                    End="-35.9476109492912,26.9618503603859" />
                   <mssgle:CubicBezierSegment
-                    Point1="-35.9476109492934,26.9618503603859"
-                    Point2="-39.9476109492934,26.9618503603859"
-                    Point3="-39.9476109492934,30.9618503603859" />
+                    Point1="-35.9476109492912,26.9618503603859"
+                    Point2="-39.9476109492912,26.9618503603859"
+                    Point3="-39.9476109492912,30.9618503603859" />
                   <mssgle:LineSegment
-                    End="-39.9476109492934,72.85882384579" />
+                    End="-39.9476109492912,72.8588238457899" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-84.6488445371467,31.9618503603859,129.350078125,16"
+              BoundingBox="-84.6488445371456,31.9618503603859,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7900,7 +7851,7 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-191.881858891995,47.22647076251,96.3827734375,11.609375"
+              BoundingBox="-191.881858891994,47.22647076251,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7917,17 +7868,17 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-34.104337930721" />
+                    End="0,-34.1043379307209" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-34.104337930721"
-                    Point2="0,-38.104337930721"
-                    Point3="4,-38.104337930721" />
+                    Point1="0,-34.1043379307209"
+                    Point2="0,-38.1043379307209"
+                    Point3="4,-38.1043379307209" />
                   <mssgle:LineSegment
-                    End="318.087512937623,-38.104337930721" />
+                    End="318.087512937623,-38.1043379307209" />
                   <mssgle:CubicBezierSegment
-                    Point1="318.087512937623,-38.104337930721"
-                    Point2="322.087512937623,-38.104337930721"
-                    Point3="322.087512937623,-42.104337930721" />
+                    Point1="318.087512937623,-38.1043379307209"
+                    Point2="322.087512937623,-38.1043379307209"
+                    Point3="322.087512937623,-42.1043379307209" />
                   <mssgle:LineSegment
                     End="322.087512937623,-49.844444444445" />
                 </mssgle:SegmentCollection>
@@ -7944,26 +7895,26 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.4904676816091,26.4166648890467"
+              EndConnector="25.8238010149446,26.4166648890463"
               Start="0,0"
-              End="12.4904676816091,18.9166648890467">
+              End="25.8238010149446,18.9166648890463">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.20833244452334" />
+                    End="0,9.20833244452317" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.20833244452334"
-                    Point2="0,13.2083324445233"
-                    Point3="4,13.2083324445233" />
+                    Point1="0,9.20833244452317"
+                    Point2="0,13.2083324445232"
+                    Point3="4,13.2083324445232" />
                   <mssgle:LineSegment
-                    End="8.49046768160906,13.2083324445233" />
+                    End="21.8238010149446,13.2083324445232" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.49046768160906,13.2083324445233"
-                    Point2="12.4904676816091,13.2083324445233"
-                    Point3="12.4904676816091,17.2083324445233" />
+                    Point1="21.8238010149446,13.2083324445232"
+                    Point2="25.8238010149446,13.2083324445232"
+                    Point3="25.8238010149446,17.2083324445232" />
                   <mssgle:LineSegment
-                    End="12.4904676816091,18.9166648890467" />
+                    End="25.8238010149446,18.9166648890463" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8017,7 +7968,7 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8027,8 +7978,16 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Vehicles No Match Table">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -8044,14 +8003,6 @@ where [refTable].[Description] = ? and [refTable].[SKVehicles_Type] = ?</propert
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow For Fact Table in DDS_Question13_2\Get data from Vehicles No Match Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
