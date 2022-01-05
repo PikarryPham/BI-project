@@ -74,7 +74,7 @@ CREATE TABLE Fact_Table (
 	SKGender INTEGER NOT NULL,
 	SKAge_Band INTEGER NOT NULL,
 	SKWas_Vehicle_Left_Hand_Drive INTEGER NOT NULL,
-	number_of_accidents INTEGER NOT NULL,
+	number_of_drivers INTEGER NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME
 );

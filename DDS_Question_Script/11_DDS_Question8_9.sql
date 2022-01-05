@@ -19,10 +19,10 @@ BEGIN
 	PRINT 'Delete Table Successfully';
 END;
 ------------------- DIM----------------
-IF OBJECT_ID(N'dbo.Dim_Casualty_Severity', N'U') IS NOT NULL
+IF OBJECT_ID(N'dbo.Dim_Accident_Severity', N'U') IS NOT NULL
 BEGIN
     PRINT 'Table Exists';
-	DROP TABLE dbo.Dim_Casualty_Severity;
+	DROP TABLE dbo.Dim_Accident_Severity;
 	PRINT 'Delete Table Successfully';
 END;
 IF OBJECT_ID(N'dbo.Dim_BuiltUp_Road', N'U') IS NOT NULL
@@ -47,9 +47,9 @@ END;
 /*
     Check whether the foreign key exists?delete:create new one
 */
-IF (OBJECT_ID('dbo.FK_Fact_Casualty_Severity', 'F') IS NOT NULL)
+IF (OBJECT_ID('dbo.FK_Fact_Accident_Severity', 'F') IS NOT NULL)
 BEGIN
-    ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Fact_Casualty_Severity
+    ALTER TABLE dbo.Fact_Table DROP CONSTRAINT FK_Fact_Accident_Severity
 END
 IF (OBJECT_ID('dbo.FK_Fact_BuiltUp_Road', 'F') IS NOT NULL)
 BEGIN
@@ -69,8 +69,8 @@ END
     Create table
 */
 
-CREATE TABLE Dim_Casualty_Severity (
-  SKCasualty_Severity INTEGER PRIMARY KEY NOT NULL,
+CREATE TABLE Dim_Accident_Severity (
+  SKAccident_Severity INTEGER PRIMARY KEY NOT NULL,
   Description VARCHAR(255)
 );
 CREATE TABLE Dim_BuiltUp_Road (
@@ -94,19 +94,19 @@ CREATE TABLE Dim_Date (
 
 
 CREATE TABLE Fact_Table (
-    SKAccident INTEGER PRIMARY KEY NOT NULL,
+    SKFact INTEGER IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	SKVehicle_Type INTEGER NOT NULL,
 	SKDate INTEGER NOT NULL,
 	SKBuiltUp_Road INTEGER NOT NULL,
-	SKCasualty_Severity INTEGER NOT NULL,
+	SKAccident_Severity INTEGER NOT NULL,
 	number_of_accidents INTEGER NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME
 );
 
 ALTER TABLE Fact_Table
-ADD CONSTRAINT FK_Fact_Casualty_Severity
-FOREIGN KEY (SKCasualty_Severity) REFERENCES Dim_Casualty_Severity(SKCasualty_Severity);
+ADD CONSTRAINT FK_Fact_Accident_Severity
+FOREIGN KEY (SKAccident_Severity) REFERENCES Dim_Accident_Severity(SKAccident_Severity);
 
 ALTER TABLE Fact_Table
 ADD CONSTRAINT FK_Fact_BuiltUp_Road
@@ -120,3 +120,4 @@ FOREIGN KEY (SKVehicle_Type) REFERENCES Dim_Vehicle_Type(SKVehicle_Type);
 ALTER TABLE Fact_Table
 ADD CONSTRAINT FK_Fact_Date
 FOREIGN KEY (SKDate) REFERENCES Dim_Date(SKDate);
+insert into Dim_BuiltUp_Road values (1,'Below 50'),(2,'Above 50');

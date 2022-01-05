@@ -75,7 +75,7 @@ CREATE TABLE Fact_Table (
 	SKPedestrian_Movement INTEGER NOT NULL,
 	SKPedestrian_Location INTEGER NOT NULL,
 	SKHome_Area_Type INTEGER NOT NULL,
-	number_of_accidents INTEGER NOT NULL,
+	number_of_casualties INTEGER NOT NULL,
 	create_date DATETIME,
 	update_date DATETIME
 );
